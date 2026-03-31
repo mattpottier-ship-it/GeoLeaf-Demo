@@ -1,0 +1,150 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/ui",
+    "title": "GeoLeaf UI Config",
+    "description": "ui.json — UI controls, search/filter panel, layer manager, legend, table and scale configuration.",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "ui": {
+            "type": "object",
+            "description": "UI control visibility flags and global settings.",
+            "additionalProperties": true,
+            "properties": {
+                "theme": { "type": "string", "enum": ["light", "dark", "auto"] },
+                "language": { "type": "string" },
+                "showBaseLayerControls": { "type": "boolean" },
+                "showLayerManager": { "type": "boolean" },
+                "showFilterPanel": { "type": "boolean" },
+                "enableGeolocation": { "type": "boolean" },
+                "showCoordinates": { "type": "boolean" },
+                "showThemeSelector": { "type": "boolean" },
+                "showLegend": { "type": "boolean" },
+                "showCacheButton": { "type": "boolean" },
+                "showAddPoi": { "type": "boolean" },
+                "showTable": { "type": "boolean" },
+                "permalink": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": { "type": "boolean" },
+                        "mode": { "type": "string", "enum": ["hash", "query", "compact"] }
+                    }
+                }
+            }
+        },
+        "search": {
+            "type": "object",
+            "description": "Filter/search panel configuration.",
+            "additionalProperties": true,
+            "properties": {
+                "title": { "type": "string" },
+                "radiusMin": { "type": "number" },
+                "radiusMax": { "type": "number" },
+                "radiusStep": { "type": "number" },
+                "radiusDefault": { "type": "number" },
+                "searchPlaceholder": { "type": "string" },
+                "filters": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["id", "type"],
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": { "type": "string" },
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "search",
+                                    "proximity",
+                                    "tree",
+                                    "multiselect-tags",
+                                    "select",
+                                    "range"
+                                ]
+                            },
+                            "label": { "type": "string" },
+                            "field": { "type": "string" },
+                            "placeholder": { "type": "string" },
+                            "searchFields": { "type": "array", "items": { "type": "string" } }
+                        }
+                    }
+                },
+                "actions": {
+                    "type": "object",
+                    "properties": {
+                        "applyLabel": { "type": "string" },
+                        "resetLabel": { "type": "string" }
+                    }
+                }
+            }
+        },
+        "layerManagerConfig": {
+            "type": "object",
+            "description": "Layer manager panel configuration.",
+            "additionalProperties": true,
+            "properties": {
+                "title": { "type": "string" },
+                "collapsedByDefault": { "type": "boolean" },
+                "sections": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["id"],
+                        "properties": {
+                            "id": { "type": "string" },
+                            "label": { "type": "string" },
+                            "order": { "type": "number" },
+                            "collapsedByDefault": { "type": "boolean" }
+                        }
+                    }
+                }
+            }
+        },
+        "legendConfig": {
+            "type": "object",
+            "description": "Legend panel configuration.",
+            "additionalProperties": true,
+            "properties": {
+                "title": { "type": "string" },
+                "collapsedByDefault": { "type": "boolean" },
+                "position": {
+                    "type": "string",
+                    "enum": ["bottomleft", "bottomright", "topleft", "topright"]
+                }
+            }
+        },
+        "tableConfig": {
+            "type": "object",
+            "description": "Data table panel configuration.",
+            "additionalProperties": true,
+            "properties": {
+                "title": { "type": "string" },
+                "enabled": { "type": "boolean" },
+                "defaultVisible": { "type": "boolean" },
+                "pageSize": { "type": "number", "minimum": 1 },
+                "maxRowsPerLayer": { "type": "number", "minimum": 1 },
+                "enableExportButton": { "type": "boolean" },
+                "virtualScrolling": { "type": "boolean" },
+                "defaultHeight": { "type": "string" },
+                "minHeight": { "type": "string" },
+                "maxHeight": { "type": "string" },
+                "resizable": { "type": "boolean" }
+            }
+        },
+        "scaleConfig": {
+            "type": "object",
+            "description": "Scale bar / scale display configuration.",
+            "additionalProperties": true,
+            "properties": {
+                "scaleGraphic": { "type": "boolean" },
+                "scaleNumeric": { "type": "boolean" },
+                "scaleNumericEditable": { "type": "boolean" },
+                "scaleNivel": { "type": "boolean" },
+                "position": {
+                    "type": "string",
+                    "enum": ["bottomleft", "bottomright", "topleft", "topright"]
+                }
+            }
+        }
+    }
+}

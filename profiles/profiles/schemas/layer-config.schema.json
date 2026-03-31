@@ -1,0 +1,224 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/layer-config",
+    "title": "GeoLeaf Layer Config",
+    "description": "Per-layer configuration file (layers/*/[name]_config.json). Defines data source, styles, popup, table, clustering.",
+    "type": "object",
+    "required": ["id"],
+    "additionalProperties": true,
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique layer identifier. Must match the key in layers.json."
+        },
+        "label": {
+            "type": "string",
+            "description": "Display label shown in the layer manager."
+        },
+        "zIndex": {
+            "type": "number",
+            "description": "Rendering z-order. Higher values render on top."
+        },
+        "geometry": {
+            "type": "string",
+            "enum": [
+                "polygon",
+                "polyline",
+                "line",
+                "point",
+                "multipolygon",
+                "multiline",
+                "multipoint"
+            ],
+            "description": "Geometry type of this layer's features."
+        },
+        "tooltipMode": {
+            "type": "string",
+            "enum": ["hover", "click", "never"],
+            "description": "When to show feature tooltips."
+        },
+        "interactiveShape": {
+            "type": "boolean",
+            "description": "Whether features are clickable/hoverable."
+        },
+        "showIconsOnMap": {
+            "type": "boolean",
+            "description": "Show custom icons on the map (requires taxonomy icon config)."
+        },
+        "data": {
+            "type": "object",
+            "description": "Data source configuration.",
+            "required": ["directory"],
+            "properties": {
+                "directory": {
+                    "type": "string",
+                    "description": "Relative directory containing data files."
+                },
+                "file": { "type": "string", "description": "GeoJSON filename." },
+                "vectorTiles": {
+                    "type": "object",
+                    "description": "Optional vector tile source (MVT).",
+                    "properties": {
+                        "enabled": { "type": "boolean" },
+                        "tilesDirectory": { "type": "string" },
+                        "layerName": { "type": "string" },
+                        "minZoom": { "type": "number" },
+                        "maxNativeZoom": { "type": "number" },
+                        "maxZoom": { "type": "number" },
+                        "interactive": { "type": "boolean" }
+                    }
+                }
+            }
+        },
+        "styles": {
+            "type": "object",
+            "description": "Style references for this layer.",
+            "required": ["directory", "default"],
+            "properties": {
+                "directory": {
+                    "type": "string",
+                    "description": "Relative directory containing style JSON files."
+                },
+                "default": {
+                    "type": "string",
+                    "description": "Filename of the default style (e.g. \"defaut.json\")."
+                },
+                "available": {
+                    "type": "array",
+                    "description": "All available styles for this layer.",
+                    "items": {
+                        "type": "object",
+                        "required": ["id", "file"],
+                        "properties": {
+                            "id": { "type": "string" },
+                            "label": { "type": "string" },
+                            "file": { "type": "string" }
+                        }
+                    }
+                }
+            }
+        },
+        "clustering": {
+            "type": "object",
+            "description": "Point clustering configuration.",
+            "properties": {
+                "enabled": { "type": "boolean" },
+                "maxClusterRadius": { "type": "number", "minimum": 0 },
+                "disableClusteringAtZoom": { "type": "number" }
+            }
+        },
+        "table": {
+            "type": "object",
+            "description": "Data table panel configuration.",
+            "properties": {
+                "enabled": { "type": "boolean" },
+                "columns": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["field"],
+                        "properties": {
+                            "field": { "type": "string" },
+                            "label": { "type": "string" },
+                            "sortable": { "type": "boolean" },
+                            "width": { "type": "string" }
+                        }
+                    }
+                },
+                "searchFields": { "type": "array", "items": { "type": "string" } },
+                "defaultSort": {
+                    "type": "object",
+                    "properties": {
+                        "field": { "type": "string" },
+                        "order": { "type": "string", "enum": ["asc", "desc"] }
+                    }
+                }
+            }
+        },
+        "tooltip": {
+            "type": "object",
+            "description": "Feature tooltip configuration.",
+            "properties": {
+                "mode": { "type": "string", "enum": ["hover", "click", "never"] },
+                "fields": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": { "type": "string" },
+                            "field": { "type": "string" },
+                            "label": { "type": "string" }
+                        }
+                    }
+                }
+            }
+        },
+        "popup": {
+            "type": "object",
+            "description": "Feature popup configuration.",
+            "properties": {
+                "enabled": { "type": "boolean" },
+                "fields": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": { "type": "string" },
+                            "field": { "type": "string" },
+                            "label": { "type": "string" },
+                            "variant": { "type": "string" }
+                        }
+                    }
+                }
+            }
+        },
+        "sidepanelConfig": {
+            "type": "object",
+            "description": "Feature side-panel (detail view) configuration.",
+            "properties": {
+                "enabled": { "type": "boolean" },
+                "detailLayout": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": { "type": "string" },
+                            "field": { "type": "string" },
+                            "label": { "type": "string" },
+                            "variant": { "type": "string" },
+                            "style": { "type": "string" },
+                            "accordion": { "type": "boolean" },
+                            "defaultOpen": { "type": "boolean" },
+                            "search": { "type": "boolean" }
+                        }
+                    }
+                }
+            }
+        },
+        "pointStyle": {
+            "type": "object",
+            "description": "Point marker style override (same structure as flatStyle).",
+            "additionalProperties": true
+        },
+        "legends": {
+            "type": "object",
+            "description": "Legend file references for this layer.",
+            "properties": {
+                "directory": {
+                    "type": "string",
+                    "description": "Relative directory containing legend JSON files.",
+                    "default": "legends"
+                },
+                "default": { "type": "string", "description": "Filename of the default legend." }
+            }
+        },
+        "search": {
+            "type": "object",
+            "description": "Search/filter integration for this layer.",
+            "properties": {
+                "enabled": { "type": "boolean" },
+                "indexingFields": { "type": "array", "items": { "type": "string" } }
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "ui": {
+        "theme": "light",
+        "language": "fr",
+        "showBaseLayerControls": false,
+        "showLayerManager": true,
+        "showFilterPanel": true,
+        "enableGeolocation": true,
+        "showCoordinates": true,
+        "showThemeSelector": true,
+        "showLegend": true,
+        "showCacheButton": true,
+        "showAddPoi": true,
+        "showTable": true,
+        "permalink": {
+            "enabled": true,
+            "mode": "hash"
+        }
+    },
+    "search": {
+        "title": "Filtrer",
+        "radiusMin": 1,
+        "radiusMax": 200,
+        "radiusStep": 1,
+        "radiusDefault": 10,
+        "searchPlaceholder": "Rechercher un POI…",
+        "filters": [
+            {
+                "id": "searchText",
+                "type": "search",
+                "label": "Recherche textuelle",
+                "placeholder": "Rechercher...",
+                "searchFields": [
+                    "title",
+                    "properties.name",
+                    "description",
+                    "attributes.description_long",
+                    "properties.description_long"
+                ]
+            },
+            {
+                "id": "proximity",
+                "type": "proximity",
+                "label": "Recherche par proximité",
+                "buttonLabel": "Activer",
+                "instructionText": "Cliquez sur la carte pour définir le point central"
+            },
+            {
+                "id": "categories",
+                "type": "tree",
+                "label": "Catégories"
+            },
+            {
+                "id": "tags",
+                "type": "multiselect-tags",
+                "label": "Tags",
+                "field": "attributes.tags"
+            }
+        ],
+        "actions": {
+            "applyLabel": "Appliquer",
+            "resetLabel": "Réinitialiser"
+        }
+    },
+    "layerManagerConfig": {
+        "title": "Couches",
+        "collapsedByDefault": true,
+        "sections": [
+            {
+                "id": "data-tourism",
+                "label": "Données touristiques",
+                "order": 1,
+                "collapsedByDefault": false
+            },
+            {
+                "id": "data-climate",
+                "label": "Données climatiques",
+                "order": 2,
+                "collapsedByDefault": true
+            },
+            {
+                "id": "data-conservation",
+                "label": "Environnement",
+                "order": 3,
+                "collapsedByDefault": true
+            },
+            {
+                "id": "data-administration",
+                "label": "Découpage administratif",
+                "order": 4,
+                "collapsedByDefault": true
+            },
+            {
+                "id": "basemap",
+                "label": "Fonds de carte",
+                "order": 5,
+                "collapsedByDefault": true
+            }
+        ]
+    },
+    "legendConfig": {
+        "title": "Légende",
+        "collapsedByDefault": true,
+        "position": "bottomleft"
+    },
+    "tableConfig": {
+        "title": "Tableau",
+        "enabled": true,
+        "defaultVisible": false,
+        "pageSize": 50,
+        "maxRowsPerLayer": 10000,
+        "enableExportButton": true,
+        "virtualScrolling": true,
+        "defaultHeight": "40%",
+        "minHeight": "20%",
+        "maxHeight": "60%",
+        "resizable": true
+    },
+    "scaleConfig": {
+        "scaleGraphic": true,
+        "scaleNumeric": true,
+        "scaleNumericEditable": true,
+        "scaleNivel": true,
+        "position": "bottomleft"
+    }
+}

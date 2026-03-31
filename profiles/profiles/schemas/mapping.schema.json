@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/mapping",
+    "title": "GeoLeaf Data Mapping",
+    "description": "mapping.json — POI data normalization mapping for a GeoLeaf profile. Maps raw external data fields to GeoLeaf's normalized POI format.",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "source": {
+            "type": "string",
+            "description": "Identifier or description of the data source."
+        },
+        "mapping": {
+            "type": "object",
+            "description": "Field mapping object. Keys are normalized GeoLeaf field names (e.g. \"id\", \"title\", \"location.lat\"), values are dot-notation paths in the raw data source.",
+            "additionalProperties": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,2038 @@
+{
+  "_bundleVersion": "1.0",
+  "_profileId": "tourism",
+  "_generatedAt": 1774982257042,
+  "taxonomy": {
+    "icons": {
+      "spriteUrl": "profiles/tourism/icons/sprite_tourism.svg",
+      "symbolPrefix": "tourism-poi-cat-",
+      "defaultIcon": "activity-generic"
+    },
+    "defaults": {
+      "icon": "activity-generic"
+    },
+    "categories": {
+      "activites": {
+        "label": "Activités",
+        "icon": "activity-generic",
+        "subcategories": {
+          "randonnee": {
+            "label": "Randonnée",
+            "icon": "activity-mountain"
+          },
+          "velo": {
+            "label": "Vélo",
+            "icon": "activity-vehicle"
+          },
+          "balade": {
+            "label": "Balade",
+            "icon": "activity-generic"
+          }
+        }
+      },
+      "CULTURES": {
+        "label": "Culture",
+        "icon": "culture-building",
+        "subcategories": {
+          "SITE ARCHEOLOGIQUE": {
+            "label": "Site archéologique",
+            "icon": "culture-building"
+          },
+          "MUSEE": {
+            "label": "Musée",
+            "icon": "culture-building"
+          }
+        }
+      },
+      "nature": {
+        "label": "Nature",
+        "icon": "nature-mountain",
+        "subcategories": {
+          "parc": {
+            "label": "Parc",
+            "icon": "nature-mountain"
+          },
+          "reserve": {
+            "label": "Réserve",
+            "icon": "nature-protected"
+          },
+          "viewpoint": {
+            "label": "Point de vue",
+            "icon": "nature-mountain"
+          },
+          "jardin": {
+            "label": "Jardin",
+            "icon": "nature-forest"
+          },
+          "lac": {
+            "label": "Lac",
+            "icon": "nature-water"
+          },
+          "foret": {
+            "label": "Forêt",
+            "icon": "nature-forest"
+          }
+        }
+      },
+      "HEBERGEMENT": {
+        "label": "Hébergements",
+        "icon": "lodging-hotel",
+        "subcategories": {
+          "CAMPING": {
+            "label": "Camping",
+            "icon": "lodging-camping"
+          },
+          "HOTEL": {
+            "label": "Hôtel",
+            "icon": "lodging-hotel"
+          }
+        }
+      },
+      "Environnement": {
+        "label": "Environnement",
+        "icon": "nature-protected",
+        "subcategories": {
+          "PARC": {
+            "label": "Parc national",
+            "icon": "nature-mountain"
+          }
+        }
+      }
+    }
+  },
+  "themes": {
+    "config": {
+      "defautTheme": "defaut",
+      "primaryThemes": {
+        "enabled": true,
+        "position": "top-map"
+      },
+      "secondaryThemes": {
+        "enabled": true,
+        "placeholder": "Météo mensuelle..",
+        "showNavigationButtons": true,
+        "position": "top-layermanager"
+      }
+    },
+    "themes": [
+      {
+        "id": "defaut",
+        "label": "Administratif",
+        "type": "primary",
+        "description": "Affiche les données environnementales et les villes",
+        "icon": "🗺️",
+        "layers": [
+          {
+            "id": "pays",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "departements",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "routes_principales",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "provinces",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "reseau_ferroviaire",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "environnement",
+        "label": "Environnement",
+        "type": "primary",
+        "description": "Affiche les données environnementales et les villes",
+        "icon": "🌍",
+        "layers": [
+          {
+            "id": "aires_protegees_nationales_sib",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "zones_de_conservation_wdpa",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "sites_de_conservation_wdpa",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "provinces",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "routes_principales",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "paysage",
+        "label": "Paysage",
+        "type": "primary",
+        "description": "Affiche les données paysagères et les villes",
+        "icon": "🌄",
+        "layers": [
+          {
+            "id": "eco_regions",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "provinces",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "tourisme",
+        "label": "Tourisme",
+        "type": "primary",
+        "description": "Affiche les données touristiques et les villes",
+        "icon": "✈️",
+        "layers": [
+          {
+            "id": "cultures",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "hebergements",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_janvier",
+        "label": "Climat - Janvier",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de janvier",
+        "icon": "❄️",
+        "layers": [
+          {
+            "id": "pluviometrie_janvier",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_janvier",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_février",
+        "label": "Climat - Février",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de février",
+        "icon": "🌨️",
+        "layers": [
+          {
+            "id": "pluviometrie_fevrier",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_fevrier",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_mars",
+        "label": "Climat - Mars",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de mars",
+        "icon": "🌸",
+        "layers": [
+          {
+            "id": "pluviometrie_mars",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_mars",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_avril",
+        "label": "Climat - Avril",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois d'avril",
+        "icon": "🌷",
+        "layers": [
+          {
+            "id": "pluviometrie_avril",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_avril",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_mai",
+        "label": "Climat - Mai",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de mai",
+        "icon": "🌺",
+        "layers": [
+          {
+            "id": "pluviometrie_mai",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_mai",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_juin",
+        "label": "Climat - Juin",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de juin",
+        "icon": "☀️",
+        "layers": [
+          {
+            "id": "pluviometrie_juin",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_juin",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_juillet",
+        "label": "Climat - Juillet",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de juillet",
+        "icon": "🌞",
+        "layers": [
+          {
+            "id": "pluviometrie_juillet",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_juillet",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_aout",
+        "label": "Climat - Août",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois d'août",
+        "icon": "🏖️",
+        "layers": [
+          {
+            "id": "pluviometrie_aout",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_aout",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_septembre",
+        "label": "Climat - Septembre",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de septembre",
+        "icon": "🍂",
+        "layers": [
+          {
+            "id": "pluviometrie_septembre",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_septembre",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_octobre",
+        "label": "Climat - Octobre",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois d'octobre",
+        "icon": "🍁",
+        "layers": [
+          {
+            "id": "pluviometrie_octobre",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_octobre",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_novembre",
+        "label": "Climat - Novembre",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de novembre",
+        "icon": "🌧️",
+        "layers": [
+          {
+            "id": "pluviometrie_novembre",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_novembre",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "climat_décembre",
+        "label": "Climat - Décembre",
+        "type": "secondary",
+        "description": "Données climatiques pour le mois de décembre",
+        "icon": "⛄",
+        "layers": [
+          {
+            "id": "pluviometrie_decembre",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "temperature_decembre",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "villes_principales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      }
+    ]
+  },
+  "basemaps": {
+    "basemaps": {
+      "street": {
+        "id": "street",
+        "label": "Street",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, TomTom",
+        "minZoom": 3,
+        "maxZoom": 20,
+        "defaultBasemap": true,
+        "offline": false
+      },
+      "satellite": {
+        "id": "satellite",
+        "label": "Satellite",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        "minZoom": 5,
+        "maxZoom": 18,
+        "offline": false
+      },
+      "topo": {
+        "id": "topo",
+        "label": "Topographique",
+        "url": "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+        "attribution": "Map data: &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors, <a href='http://viewfinderpanoramas.org'>SRTM</a> | Map style: &copy; <a href='https://opentopomap.org'>OpenTopoMap</a> (<a href='https://creativecommons.org/licenses/by-sa/3.0/'>CC-BY-SA</a>)",
+        "minZoom": 5,
+        "maxZoom": 17,
+        "offline": false
+      },
+      "positron": {
+        "id": "positron",
+        "label": "Clair",
+        "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "attribution": "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        "minZoom": 3,
+        "maxZoom": 19,
+        "offline": false
+      },
+      "dark-matter": {
+        "id": "dark-matter",
+        "label": "Sombre",
+        "url": "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "attribution": "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        "minZoom": 3,
+        "maxZoom": 19,
+        "offline": false
+      },
+      "voyager": {
+        "id": "voyager",
+        "label": "Lite",
+        "url": "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "attribution": "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        "minZoom": 3,
+        "maxZoom": 19,
+        "offline": false
+      }
+    }
+  },
+  "ui": {
+    "ui": {
+      "theme": "light",
+      "language": "fr",
+      "showBaseLayerControls": false,
+      "showLayerManager": true,
+      "showFilterPanel": true,
+      "enableGeolocation": true,
+      "showCoordinates": true,
+      "showThemeSelector": true,
+      "showLegend": true,
+      "showCacheButton": true,
+      "showAddPoi": true,
+      "showTable": true,
+      "permalink": {
+        "enabled": true,
+        "mode": "hash"
+      }
+    },
+    "search": {
+      "title": "Filtrer",
+      "radiusMin": 1,
+      "radiusMax": 200,
+      "radiusStep": 1,
+      "radiusDefault": 10,
+      "searchPlaceholder": "Rechercher un POI…",
+      "filters": [
+        {
+          "id": "searchText",
+          "type": "search",
+          "label": "Recherche textuelle",
+          "placeholder": "Rechercher...",
+          "searchFields": [
+            "title",
+            "properties.name",
+            "description",
+            "attributes.description_long",
+            "properties.description_long"
+          ]
+        },
+        {
+          "id": "proximity",
+          "type": "proximity",
+          "label": "Recherche par proximité",
+          "buttonLabel": "Activer",
+          "instructionText": "Cliquez sur la carte pour définir le point central"
+        },
+        {
+          "id": "categories",
+          "type": "tree",
+          "label": "Catégories"
+        },
+        {
+          "id": "tags",
+          "type": "multiselect-tags",
+          "label": "Tags",
+          "field": "attributes.tags"
+        }
+      ],
+      "actions": {
+        "applyLabel": "Appliquer",
+        "resetLabel": "Réinitialiser"
+      }
+    },
+    "layerManagerConfig": {
+      "title": "Couches",
+      "collapsedByDefault": true,
+      "sections": [
+        {
+          "id": "data-tourism",
+          "label": "Données touristiques",
+          "order": 1,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-climate",
+          "label": "Données climatiques",
+          "order": 2,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "data-conservation",
+          "label": "Environnement",
+          "order": 3,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "data-administration",
+          "label": "Découpage administratif",
+          "order": 4,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "basemap",
+          "label": "Fonds de carte",
+          "order": 5,
+          "collapsedByDefault": true
+        }
+      ]
+    },
+    "legendConfig": {
+      "title": "Légende",
+      "collapsedByDefault": true,
+      "position": "bottomleft"
+    },
+    "tableConfig": {
+      "title": "Tableau",
+      "enabled": true,
+      "defaultVisible": false,
+      "pageSize": 50,
+      "maxRowsPerLayer": 10000,
+      "enableExportButton": true,
+      "virtualScrolling": true,
+      "defaultHeight": "40%",
+      "minHeight": "20%",
+      "maxHeight": "60%",
+      "resizable": true
+    },
+    "scaleConfig": {
+      "scaleGraphic": true,
+      "scaleNumeric": true,
+      "scaleNumericEditable": true,
+      "scaleNivel": true,
+      "position": "bottomleft"
+    }
+  },
+  "layersFile": {
+    "layers": [
+      {
+        "id": "eco_regions",
+        "configFile": "layers/eco_regions/eco_regions_config.json",
+        "layerManagerId": "data-conservation"
+      },
+      {
+        "id": "aires_protegees_nationales_sib",
+        "configFile": "layers/aires_protegees_nationales_sib/aires_protegees_nationales_sib_config.json",
+        "layerManagerId": "data-conservation"
+      },
+      {
+        "id": "villes_principales",
+        "configFile": "layers/villes_principales/villes_principales_config.json",
+        "layerManagerId": "data-administration"
+      },
+      {
+        "id": "cultures",
+        "configFile": "layers/cultures/cultures_config.json",
+        "layerManagerId": "data-tourism"
+      },
+      {
+        "id": "departements",
+        "configFile": "layers/departements/departements_config.json",
+        "layerManagerId": "data-administration"
+      },
+      {
+        "id": "hebergements",
+        "configFile": "layers/hebergements/hebergements_config.json",
+        "layerManagerId": "data-tourism"
+      },
+      {
+        "id": "pays",
+        "configFile": "layers/pays/pays_config.json",
+        "layerManagerId": "data-administration"
+      },
+      {
+        "id": "provinces",
+        "configFile": "layers/provinces/provinces_config.json",
+        "layerManagerId": "data-administration"
+      },
+      {
+        "id": "reseau_ferroviaire",
+        "configFile": "layers/reseau_ferroviaire/reseau_ferroviaire_config.json",
+        "layerManagerId": "data-administration"
+      },
+      {
+        "id": "routes_principales",
+        "configFile": "layers/routes_principales/routes_principales_config.json",
+        "layerManagerId": "data-administration"
+      },
+      {
+        "id": "sites_de_conservation_wdpa",
+        "configFile": "layers/sites_de_conservation_wdpa/sites_de_conservation_wdpa_config.json",
+        "layerManagerId": "data-conservation"
+      },
+      {
+        "id": "zones_de_conservation_wdpa",
+        "configFile": "layers/zones_de_conservation_wdpa/zones_de_conservation_wdpa_config.json",
+        "layerManagerId": "data-conservation"
+      }
+    ],
+    "layerTemplates": [
+      {
+        "templateId": "pluviometrie",
+        "layerManagerId": "data-climate",
+        "template": {
+          "zIndex": 93,
+          "geometry": "polygon",
+          "data": {
+            "directory": "data"
+          },
+          "styles": {
+            "directory": "styles",
+            "default": "defaut.json",
+            "available": [
+              {
+                "id": "defaut",
+                "label": "défaut",
+                "file": "defaut.json"
+              }
+            ]
+          },
+          "table": {
+            "enabled": false
+          },
+          "clustering": {
+            "enabled": false,
+            "maxClusterRadius": 80,
+            "disableClusteringAtZoom": 12
+          }
+        },
+        "instances": [
+          {
+            "id": "pluviometrie_janvier",
+            "label": "Pluviométrie - Janvier",
+            "dataFile": "pluviometrie_janvier.geojson"
+          },
+          {
+            "id": "pluviometrie_fevrier",
+            "label": "Pluviométrie - Février",
+            "dataFile": "pluviometrie_fevrier.geojson"
+          },
+          {
+            "id": "pluviometrie_mars",
+            "label": "Pluviométrie - Mars",
+            "dataFile": "pluviometrie_mars.geojson"
+          },
+          {
+            "id": "pluviometrie_avril",
+            "label": "Pluviométrie - Avril",
+            "dataFile": "pluviometrie_avril.geojson"
+          },
+          {
+            "id": "pluviometrie_mai",
+            "label": "Pluviométrie - Mai",
+            "dataFile": "pluviometrie_mai.geojson"
+          },
+          {
+            "id": "pluviometrie_juin",
+            "label": "Pluviométrie - Juin",
+            "dataFile": "pluviometrie_juin.geojson"
+          },
+          {
+            "id": "pluviometrie_juillet",
+            "label": "Pluviométrie - Juillet",
+            "dataFile": "pluviometrie_juillet.geojson"
+          },
+          {
+            "id": "pluviometrie_aout",
+            "label": "Pluviométrie - Août",
+            "dataFile": "pluviometrie_aout.geojson"
+          },
+          {
+            "id": "pluviometrie_septembre",
+            "label": "Pluviométrie - Septembre",
+            "dataFile": "pluviometrie_septembre.geojson"
+          },
+          {
+            "id": "pluviometrie_octobre",
+            "label": "Pluviométrie - Octobre",
+            "dataFile": "pluviometrie_octobre.geojson"
+          },
+          {
+            "id": "pluviometrie_novembre",
+            "label": "Pluviométrie - Novembre",
+            "dataFile": "pluviometrie_novembre.geojson"
+          },
+          {
+            "id": "pluviometrie_decembre",
+            "label": "Pluviométrie - Décembre",
+            "dataFile": "pluviometrie_decembre.geojson"
+          }
+        ]
+      },
+      {
+        "templateId": "temperature",
+        "layerManagerId": "data-climate",
+        "template": {
+          "zIndex": 74,
+          "geometry": "polygon",
+          "data": {
+            "directory": "data"
+          },
+          "styles": {
+            "directory": "styles",
+            "default": "defaut.json",
+            "available": [
+              {
+                "id": "defaut",
+                "label": "défaut",
+                "file": "defaut.json"
+              }
+            ]
+          },
+          "table": {
+            "enabled": false
+          },
+          "clustering": {
+            "enabled": false,
+            "maxClusterRadius": 80,
+            "disableClusteringAtZoom": 12
+          }
+        },
+        "instances": [
+          {
+            "id": "temperature_janvier",
+            "label": "Température - Janvier",
+            "dataFile": "temperature_janvier.geojson"
+          },
+          {
+            "id": "temperature_fevrier",
+            "label": "Température - Février",
+            "dataFile": "temperature_fevrier.geojson"
+          },
+          {
+            "id": "temperature_mars",
+            "label": "Température - Mars",
+            "dataFile": "temperature_mars.geojson"
+          },
+          {
+            "id": "temperature_avril",
+            "label": "Température - Avril",
+            "dataFile": "temperature_avril.geojson"
+          },
+          {
+            "id": "temperature_mai",
+            "label": "Température - Mai",
+            "dataFile": "temperature_mai.geojson"
+          },
+          {
+            "id": "temperature_juin",
+            "label": "Température - Juin",
+            "dataFile": "temperature_juin.geojson"
+          },
+          {
+            "id": "temperature_juillet",
+            "label": "Température - Juillet",
+            "dataFile": "temperature_juillet.geojson"
+          },
+          {
+            "id": "temperature_aout",
+            "label": "Température - Août",
+            "dataFile": "temperature_aout.geojson"
+          },
+          {
+            "id": "temperature_septembre",
+            "label": "Température - Septembre",
+            "dataFile": "temperature_septembre.geojson"
+          },
+          {
+            "id": "temperature_octobre",
+            "label": "Température - Octobre",
+            "dataFile": "temperature_octobre.geojson"
+          },
+          {
+            "id": "temperature_novembre",
+            "label": "Température - Novembre",
+            "dataFile": "temperature_novembre.geojson"
+          },
+          {
+            "id": "temperature_decembre",
+            "label": "Température - Décembre",
+            "dataFile": "temperature_decembre.geojson"
+          }
+        ]
+      }
+    ]
+  },
+  "layerConfigs": {
+    "eco_regions": {
+      "id": "eco_regions",
+      "label": "Eco régions",
+      "zIndex": 50,
+      "geometry": "polygon",
+      "data": {
+        "directory": "data",
+        "file": "eco_regions.geojson",
+        "vectorTiles": {
+          "enabled": true,
+          "tilesDirectory": "tiles",
+          "layerName": "eco_regions",
+          "minZoom": 0,
+          "maxNativeZoom": 14,
+          "maxZoom": 18,
+          "interactive": true
+        }
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "aires_protegees_nationales_sib": {
+      "id": "aires_protegees_nationales_sib",
+      "label": "Parcs nationaux – Aires protégées",
+      "type": "geojson",
+      "geometry": "polygon",
+      "zIndex": 53,
+      "interactiveShape": true,
+      "data": {
+        "directory": "data",
+        "file": "aires_protegees_nationales_sib.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.Name"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": true,
+        "fields": [
+          {
+            "type": "image",
+            "field": "attributes.photo",
+            "variant": "hero"
+          },
+          {
+            "type": "text",
+            "field": "properties.Name",
+            "variant": "title"
+          },
+          {
+            "type": "text",
+            "field": "attributes.short_desc"
+          },
+          {
+            "type": "badge",
+            "field": "attributes.categoryId"
+          },
+          {
+            "type": "badge",
+            "field": "attributes.subCategoryId"
+          }
+        ]
+      },
+      "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+          {
+            "type": "image",
+            "label": "Image principale",
+            "field": "attributes.photo",
+            "variant": "hero",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "badge",
+            "label": "Catégorie",
+            "field": "attributes.categoryId",
+            "style": "category",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "badge",
+            "label": "Sous-catégorie",
+            "field": "attributes.subCategoryId",
+            "style": "subcategory",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "text",
+            "label": "Nom",
+            "field": "properties.Name",
+            "style": "title",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "text",
+            "label": "Résumé",
+            "field": "attributes.short_desc",
+            "variant": "multiline",
+            "accordion": true,
+            "defaultOpen": true
+          },
+          {
+            "type": "list",
+            "label": "Informations",
+            "field": "attributes.informations",
+            "listStyle": "bullet",
+            "accordion": true,
+            "defaultOpen": false
+          },
+          {
+            "type": "list",
+            "label": "Points forts",
+            "field": "attributes.highlights",
+            "listStyle": "bullet",
+            "accordion": true,
+            "defaultOpen": false
+          },
+          {
+            "type": "gallery",
+            "label": "Galerie photos",
+            "field": "attributes.gallery",
+            "accordion": true,
+            "defaultOpen": false
+          },
+          {
+            "type": "link",
+            "label": "Site officiel",
+            "field": "attributes.link_official",
+            "iconId": "link_external",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "link",
+            "label": "Wikipedia",
+            "field": "attributes.link_wikipedia",
+            "iconId": "link_external",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "tags",
+            "label": "Tags",
+            "field": "attributes.tags",
+            "accordion": false,
+            "defaultOpen": false
+          }
+        ]
+      },
+      "search": {
+        "enabled": true,
+        "indexingFields": [
+          "properties.Name",
+          "properties.tags",
+          "properties.categoryId",
+          "properties.subCategoryId"
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.Name",
+            "label": "Nom",
+            "sortable": true,
+            "width": "60%"
+          },
+          {
+            "field": "properties.categoryId",
+            "label": "Catégorie",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.subCategoryId",
+            "label": "Sous-catégorie",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "defaultSort": {
+          "field": "properties.Name",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "villes_principales": {
+      "id": "villes_principales",
+      "label": "villes principales",
+      "zIndex": 94,
+      "geometry": "point",
+      "data": {
+        "directory": "data",
+        "file": "villes_principales.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          },
+          {
+            "id": "population",
+            "label": "population",
+            "file": "population.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "cultures": {
+      "id": "cultures",
+      "label": "Cultures",
+      "zIndex": 99,
+      "geometry": "point",
+      "interactiveShape": true,
+      "showIconsOnMap": true,
+      "data": {
+        "directory": "data",
+        "file": "cultures.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.NAME"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": true,
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.name",
+            "variant": "title"
+          },
+          {
+            "type": "text",
+            "label": "Type",
+            "field": "properties.fclass"
+          },
+          {
+            "type": "badge",
+            "label": "Catégorie",
+            "field": "properties.categoryId"
+          },
+          {
+            "type": "badge",
+            "label": "Sous-catégorie",
+            "field": "properties.subcategoryId"
+          },
+          {
+            "type": "rating",
+            "label": "Note",
+            "field": "attributes.reviews.rating"
+          }
+        ]
+      },
+      "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+          {
+            "type": "image",
+            "label": "Image principale",
+            "field": "attributes.photo",
+            "variant": "hero",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "badge",
+            "label": "Catégorie",
+            "field": "properties.categoryId",
+            "style": "category",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "badge",
+            "label": "Sous-catégorie",
+            "field": "properties.subcategoryId",
+            "style": "subcategory",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "text",
+            "label": "Nom",
+            "field": "properties.name",
+            "style": "title",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "text",
+            "label": "Résumé",
+            "field": "properties.short_desc",
+            "variant": "multiline",
+            "accordion": true,
+            "defaultOpen": true
+          },
+          {
+            "type": "list",
+            "label": "Informations",
+            "field": "properties.informations",
+            "listStyle": "bullet",
+            "accordion": true,
+            "defaultOpen": false
+          },
+          {
+            "type": "list",
+            "label": "Points forts",
+            "field": "properties.highlights",
+            "listStyle": "bullet",
+            "accordion": true,
+            "defaultOpen": false
+          },
+          {
+            "type": "gallery",
+            "label": "Galerie photos",
+            "field": "attributes.gallery",
+            "accordion": true,
+            "defaultOpen": false
+          },
+          {
+            "type": "link",
+            "label": "Site officiel",
+            "field": "properties.link_official",
+            "iconId": "link_external",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "link",
+            "label": "Wikipedia",
+            "field": "properties.link_wikipedia",
+            "iconId": "link_external",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "tags",
+            "label": "Tags",
+            "field": "properties.tags",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "rating",
+            "label": "Note globale",
+            "field": "attributes.reviews.rating",
+            "variant": "stat",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "reviews",
+            "label": "Avis récents",
+            "field": "attributes.reviews.recent",
+            "maxCount": 5,
+            "accordion": true,
+            "defaultOpen": false
+          }
+        ]
+      },
+      "search": {
+        "enabled": true,
+        "indexingFields": [
+          "properties.name",
+          "properties.fclass"
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.name",
+            "label": "Nom",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.fclass",
+            "label": "Type",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.categoryId",
+            "label": "Catégorie",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.subcategoryId",
+            "label": "Sous-catégorie",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.name"
+        ],
+        "defaultSort": {
+          "field": "properties.name",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "departements": {
+      "id": "departements",
+      "label": "Départements",
+      "tooltipMode": "never",
+      "zIndex": 42,
+      "geometry": "polygon",
+      "data": {
+        "directory": "data",
+        "file": "departements.geojson",
+        "vectorTiles": {
+          "enabled": true,
+          "tilesDirectory": "tiles",
+          "layerName": "departements",
+          "minZoom": 0,
+          "maxNativeZoom": 14,
+          "maxZoom": 18,
+          "interactive": true
+        }
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.NAM",
+            "label": "Nom",
+            "sortable": true,
+            "width": "50%"
+          },
+          {
+            "field": "properties.GNA",
+            "label": "Type",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.IN1",
+            "label": "Code",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.NAM"
+        ],
+        "defaultSort": {
+          "field": "properties.NAM",
+          "order": "asc"
+        }
+      }
+    },
+    "hebergements": {
+      "id": "hebergements",
+      "label": "Hébergements",
+      "zIndex": 96,
+      "geometry": "point",
+      "interactiveShape": true,
+      "showIconsOnMap": true,
+      "data": {
+        "directory": "data",
+        "file": "hebergements.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.name"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": true,
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.name",
+            "variant": "title"
+          },
+          {
+            "type": "text",
+            "label": "Type",
+            "field": "properties.fclass"
+          },
+          {
+            "type": "text",
+            "label": "Catégorie",
+            "field": "properties.categoryId"
+          },
+          {
+            "type": "text",
+            "label": "Sous-catégorie",
+            "field": "properties.subcategoryId"
+          }
+        ]
+      },
+      "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+          {
+            "type": "text",
+            "label": "Nom",
+            "field": "properties.name",
+            "variant": "short",
+            "style": "title",
+            "accordion": false,
+            "defaultOpen": false,
+            "search": true
+          },
+          {
+            "type": "text",
+            "label": "Type",
+            "field": "properties.fclass",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "text",
+            "label": "Catégorie",
+            "field": "properties.categoryId",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "text",
+            "label": "Sous-catégorie",
+            "field": "properties.subcategoryId",
+            "accordion": false,
+            "defaultOpen": false
+          }
+        ]
+      },
+      "search": {
+        "enabled": true,
+        "indexingFields": [
+          "properties.name",
+          "properties.fclass"
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.name",
+            "label": "Nom",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.fclass",
+            "label": "Type",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.categoryId",
+            "label": "Catégorie",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.subcategoryId",
+            "label": "Sous-catégorie",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.name"
+        ],
+        "defaultSort": {
+          "field": "properties.name",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "pays": {
+      "id": "pays",
+      "label": "Pays",
+      "zIndex": 40,
+      "geometry": "polyline",
+      "data": {
+        "directory": "data",
+        "file": "pays.geojson",
+        "vectorTiles": {
+          "enabled": true,
+          "tilesDirectory": "tiles",
+          "layerName": "pays",
+          "minZoom": 0,
+          "maxNativeZoom": 12,
+          "maxZoom": 18,
+          "interactive": true
+        }
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "provinces": {
+      "id": "provinces",
+      "label": "Provinces",
+      "zIndex": 43,
+      "geometry": "polygon",
+      "data": {
+        "directory": "data",
+        "file": "provinces.geojson",
+        "vectorTiles": {
+          "enabled": true,
+          "tilesDirectory": "tiles",
+          "layerName": "provinces",
+          "minZoom": 0,
+          "maxNativeZoom": 14,
+          "maxZoom": 18,
+          "interactive": false
+        }
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          },
+          {
+            "id": "par_population",
+            "label": "par population",
+            "file": "par_population.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.NAM",
+            "label": "Nom",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.GNA",
+            "label": "Type",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.argentina_population_2022",
+            "label": "Population",
+            "sortable": true,
+            "width": "30%"
+          }
+        ],
+        "searchFields": [
+          "properties.NAM"
+        ],
+        "defaultSort": {
+          "field": "properties.NAM",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "reseau_ferroviaire": {
+      "id": "reseau_ferroviaire",
+      "label": "Réseau ferroviaire",
+      "zIndex": 45,
+      "geometry": "polyline",
+      "data": {
+        "directory": "data",
+        "file": "reseau_ferroviaire.geojson",
+        "vectorTiles": {
+          "enabled": true,
+          "tilesDirectory": "tiles",
+          "layerName": "reseau_ferroviaire",
+          "minZoom": 0,
+          "maxNativeZoom": 14,
+          "maxZoom": 18,
+          "interactive": false
+        }
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "routes_principales": {
+      "id": "routes_principales",
+      "label": "Routes principales",
+      "zIndex": 47,
+      "geometry": "polyline",
+      "data": {
+        "directory": "data",
+        "file": "routes_principales.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "sites_de_conservation_wdpa": {
+      "id": "sites_de_conservation_wdpa",
+      "label": "Sites de conservation WDPA",
+      "type": "geojson",
+      "geometry": "point",
+      "zIndex": 54,
+      "interactiveShape": true,
+      "showIconsOnMap": false,
+      "data": {
+        "directory": "data",
+        "file": "sites_de_conservation_wdpa.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.NAME"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": true,
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.NAME",
+            "variant": "title"
+          },
+          {
+            "type": "text",
+            "label": "Désignation",
+            "field": "properties.DESIG"
+          },
+          {
+            "type": "text",
+            "label": "Catégorie IUCN",
+            "field": "properties.IUCN_CAT"
+          },
+          {
+            "type": "text",
+            "label": "Statut",
+            "field": "properties.STATUS"
+          },
+          {
+            "type": "number",
+            "label": "Année de désignation",
+            "field": "properties.STATUS_YR"
+          },
+          {
+            "type": "metric",
+            "label": "Superficie",
+            "field": "properties.REP_AREA",
+            "suffix": " km²"
+          }
+        ]
+      },
+      "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+          {
+            "type": "text",
+            "label": "Nom",
+            "field": "properties.NAME",
+            "variant": "short",
+            "style": "title",
+            "accordion": false,
+            "defaultOpen": false,
+            "search": true
+          },
+          {
+            "type": "text",
+            "label": "Désignation",
+            "field": "properties.DESIG",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "text",
+            "label": "Catégorie IUCN",
+            "field": "properties.IUCN_CAT",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "text",
+            "label": "Statut",
+            "field": "properties.STATUS",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "number",
+            "label": "Année de désignation",
+            "field": "properties.STATUS_YR",
+            "accordion": false,
+            "defaultOpen": false
+          },
+          {
+            "type": "metric",
+            "label": "Superficie",
+            "field": "properties.REP_AREA",
+            "suffix": " km²",
+            "accordion": false,
+            "defaultOpen": false
+          }
+        ]
+      },
+      "search": {
+        "enabled": true,
+        "indexingFields": [
+          "properties.NAME",
+          "properties.DESIG"
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.NAME",
+            "label": "Nom du site",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.DESIG",
+            "label": "Désignation",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.IUCN_CAT",
+            "label": "Catégorie UICN",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.REP_AREA",
+            "label": "Surface (km²)",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.STATUS_YR",
+            "label": "Année",
+            "sortable": true,
+            "width": "10%"
+          }
+        ],
+        "searchFields": [
+          "properties.NAME",
+          "properties.NAME_ENG"
+        ],
+        "defaultSort": {
+          "field": "properties.NAME",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "zones_de_conservation_wdpa": {
+      "id": "zones_de_conservation_wdpa",
+      "label": "Zones de conservation WDPA",
+      "zIndex": 51,
+      "geometry": "polygon",
+      "interactiveShape": true,
+      "data": {
+        "directory": "data",
+        "file": "zones_de_conservation_wdpa.geojson",
+        "vectorTiles": {
+          "enabled": true,
+          "tilesDirectory": "tiles",
+          "layerName": "zones_de_conservation_wdpa",
+          "minZoom": 0,
+          "maxNativeZoom": 14,
+          "maxZoom": 18,
+          "interactive": true
+        }
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "debug": false,
+  "_comment": "branding est la source unique pour le branding GeoLeaf. Ne pas dupliquer dans profile.json.",
+  "branding": {
+    "enabled": true,
+    "text": "Propulsé par © GeoLeaf with MapLibre - Données © OpenStreetMap contributors",
+    "position": "bottomleft"
+  },
+  "data": {
+    "activeProfile": "tourism",
+    "profilesBasePath": "./profiles"
+  },
+  "pwa": {
+    "_comment": "PWA configuration. name/short_name/theme_color/background_color are merged into the deployed manifest.json by build-deploy.cjs.",
+    "name": "GeoLeaf",
+    "short_name": "GeoLeaf",
+    "description": "Cartographie interactive configurable",
+    "theme_color": "#2d6a4f",
+    "background_color": "#ffffff",
+    "installPrompt": {
+      "_comment": "Set enabled:true to show the install banner on Android and iOS.",
+      "enabled": false
+    }
+  }
+}

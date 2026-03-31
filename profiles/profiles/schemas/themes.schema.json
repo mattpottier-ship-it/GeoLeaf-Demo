@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/themes",
+    "title": "GeoLeaf Themes",
+    "description": "themes.json — layer visibility presets (themes) for a GeoLeaf profile.",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "config": {
+            "type": "object",
+            "description": "Global theme configuration.",
+            "properties": {
+                "defautTheme": {
+                    "type": "string",
+                    "description": "ID of the theme active on startup."
+                },
+                "primaryThemes": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": { "type": "boolean", "description": "Show primary themes UI." },
+                        "position": {
+                            "type": "string",
+                            "enum": ["top-map", "top-layermanager"],
+                            "description": "Position of primary themes control."
+                        }
+                    }
+                },
+                "secondaryThemes": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "description": "Show secondary themes UI."
+                        },
+                        "placeholder": {
+                            "type": "string",
+                            "description": "Placeholder text for secondary theme selector."
+                        },
+                        "showNavigationButtons": {
+                            "type": "boolean",
+                            "description": "Show prev/next navigation buttons."
+                        },
+                        "position": {
+                            "type": "string",
+                            "enum": ["top-map", "top-layermanager"],
+                            "description": "Position of secondary themes control."
+                        }
+                    }
+                }
+            }
+        },
+        "themes": {
+            "type": "array",
+            "description": "Theme definitions.",
+            "items": {
+                "$ref": "#/definitions/themeEntry"
+            }
+        }
+    },
+    "definitions": {
+        "themeEntry": {
+            "type": "object",
+            "required": ["id"],
+            "additionalProperties": true,
+            "properties": {
+                "id": { "type": "string", "description": "Unique theme identifier." },
+                "label": { "type": "string", "description": "Display label (defaults to id)." },
+                "type": {
+                    "type": "string",
+                    "enum": ["primary", "secondary"],
+                    "default": "secondary",
+                    "description": "Theme type. Affects UI placement."
+                },
+                "description": { "type": "string", "description": "Theme description." },
+                "icon": { "type": "string", "description": "Emoji or icon name." },
+                "layers": {
+                    "type": "array",
+                    "description": "Layer visibility settings for this theme.",
+                    "items": {
+                        "type": "object",
+                        "required": ["id"],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "Layer ID (must match layers.json)."
+                            },
+                            "visible": {
+                                "type": "boolean",
+                                "description": "Layer visibility in this theme."
+                            },
+                            "style": {
+                                "type": "string",
+                                "description": "Style ID to apply in this theme."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

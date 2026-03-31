@@ -1,0 +1,288 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/style",
+    "title": "GeoLeaf Layer Style",
+    "description": "Style definition for a GeoLeaf layer (flat format). Used in layers/*/styles/*.json.",
+    "type": "object",
+    "required": ["id"],
+    "additionalProperties": false,
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier for this style."
+        },
+        "label": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "description": "Display label shown in the style selector."
+                },
+                {
+                    "type": "object",
+                    "description": "Label/text configuration for map features of this layer.",
+                    "required": ["enabled"],
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "description": "Enable/disable labels for this style."
+                        },
+                        "visibleByDefault": {
+                            "type": "boolean",
+                            "default": false,
+                            "description": "Labels visible on layer load without user action."
+                        },
+                        "field": {
+                            "type": "string",
+                            "description": "GeoJSON properties field name to display as label text."
+                        },
+                        "font": {
+                            "type": "object",
+                            "properties": {
+                                "family": { "type": "string", "default": "Arial" },
+                                "sizePt": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "maximum": 72,
+                                    "default": 12
+                                },
+                                "weight": {
+                                    "type": "number",
+                                    "minimum": 1,
+                                    "maximum": 100,
+                                    "default": 50
+                                },
+                                "bold": { "type": "boolean", "default": false },
+                                "italic": { "type": "boolean", "default": false }
+                            }
+                        },
+                        "color": {
+                            "type": "string",
+                            "pattern": "^#[0-9a-fA-F]{6}$",
+                            "default": "#000000"
+                        },
+                        "opacity": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1,
+                            "default": 1
+                        },
+                        "buffer": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": { "type": "boolean", "default": false },
+                                "color": {
+                                    "type": "string",
+                                    "pattern": "^#[0-9a-fA-F]{6}$",
+                                    "default": "#ffffff"
+                                },
+                                "opacity": {
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1,
+                                    "default": 1
+                                },
+                                "sizePx": { "type": "number", "minimum": 0, "default": 2 }
+                            }
+                        },
+                        "background": {
+                            "type": "object",
+                            "properties": {
+                                "enabled": { "type": "boolean", "default": false },
+                                "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+                                "opacity": { "type": "number", "minimum": 0, "maximum": 1 },
+                                "paddingPx": { "type": "number", "minimum": 0 }
+                            }
+                        },
+                        "offset": {
+                            "type": "object",
+                            "properties": {
+                                "distancePx": { "type": "number", "default": 0 },
+                                "angleDeg": { "type": "number", "minimum": 0, "maximum": 360 }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "description": {
+            "type": "string",
+            "description": "Optional description for this style."
+        },
+        "zoomConfig": {
+            "type": "object",
+            "description": "Zoom visibility range for this style.",
+            "additionalProperties": false,
+            "properties": {
+                "minZoom": {
+                    "type": ["number", "null"],
+                    "description": "Minimum scale denominator (show below this zoom)."
+                },
+                "maxZoom": {
+                    "type": ["number", "null"],
+                    "description": "Maximum scale denominator (hide below this zoom)."
+                }
+            }
+        },
+        "labelScale": {
+            "type": "object",
+            "description": "Legacy label scale config.",
+            "properties": {
+                "minScale": { "type": ["number", "null"] },
+                "maxScale": { "type": ["number", "null"] }
+            }
+        },
+        "style": {
+            "$ref": "#/definitions/flatStyle"
+        },
+        "styleRules": {
+            "type": "array",
+            "description": "Data-driven style rules applied in order. First matching rule wins.",
+            "items": {
+                "$ref": "#/definitions/styleRule"
+            }
+        },
+        "legend": {
+            "type": "object",
+            "description": "Legend entry for this style.",
+            "properties": {
+                "label": { "type": "string" }
+            }
+        }
+    },
+    "definitions": {
+        "flatStyle": {
+            "type": "object",
+            "description": "Flat GeoLeaf style (v2 format). See also expressionPaint for native MapLibre expressions.",
+            "additionalProperties": true,
+            "properties": {
+                "fillColor": {
+                    "type": "string",
+                    "description": "Fill color (hex/CSS). Polygon layers."
+                },
+                "fillOpacity": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Fill opacity (0–1)."
+                },
+                "color": { "type": "string", "description": "Stroke/line color (hex/CSS)." },
+                "weight": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Stroke width in pixels."
+                },
+                "opacity": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Stroke opacity (0–1)."
+                },
+                "dashArray": { "type": "string", "description": "Dash pattern, e.g. \"5 10\"." },
+                "lineCap": {
+                    "type": "string",
+                    "enum": ["butt", "round", "square"],
+                    "description": "Line cap style."
+                },
+                "lineJoin": {
+                    "type": "string",
+                    "enum": ["bevel", "miter", "round"],
+                    "description": "Line join style."
+                },
+                "radius": {
+                    "type": "number",
+                    "minimum": 0,
+                    "description": "Circle radius in pixels. Point layers."
+                },
+                "shape": {
+                    "type": "string",
+                    "description": "Point shape: \"circle\", \"square\", etc."
+                },
+                "hatch": {
+                    "type": "object",
+                    "description": "Canvas-based hatch fill pattern.",
+                    "properties": {
+                        "enabled": { "type": "boolean" },
+                        "type": { "type": "string" },
+                        "spacingPx": { "type": "number" },
+                        "renderMode": { "type": "string", "enum": ["overlay", "pattern_only"] }
+                    }
+                },
+                "casing": {
+                    "type": "object",
+                    "description": "Double-line casing effect (thick outline rendered behind the main stroke).",
+                    "properties": {
+                        "enabled": { "type": "boolean" },
+                        "color": { "type": "string" },
+                        "opacity": { "type": "number", "minimum": 0, "maximum": 1 },
+                        "widthPx": { "type": "number", "minimum": 0 }
+                    }
+                },
+                "expressionPaint": {
+                    "type": "object",
+                    "description": "Native MapLibre GL paint properties passed through as-is. Keys are MapLibre property names (e.g. \"fill-color\"), values can be scalars or MapLibre expression arrays.",
+                    "additionalProperties": true
+                }
+            }
+        },
+        "styleRule": {
+            "type": "object",
+            "required": ["when", "style"],
+            "additionalProperties": false,
+            "properties": {
+                "when": {
+                    "$ref": "#/definitions/styleCondition"
+                },
+                "style": {
+                    "$ref": "#/definitions/flatStyle"
+                },
+                "legend": {
+                    "type": "object",
+                    "properties": {
+                        "label": { "type": "string" }
+                    }
+                }
+            }
+        },
+        "styleCondition": {
+            "type": "object",
+            "description": "Style rule condition. Either a single field/operator/value check, or an \"all\" compound.",
+            "additionalProperties": false,
+            "properties": {
+                "field": {
+                    "type": "string",
+                    "description": "Feature property path, e.g. \"properties.type\"."
+                },
+                "operator": {
+                    "type": "string",
+                    "enum": [
+                        "==",
+                        "===",
+                        "eq",
+                        "!=",
+                        "!==",
+                        "neq",
+                        ">",
+                        ">=",
+                        "<",
+                        "<=",
+                        "contains",
+                        "startsWith",
+                        "endsWith",
+                        "in",
+                        "notIn",
+                        "between"
+                    ],
+                    "description": "Comparison operator."
+                },
+                "value": {
+                    "description": "Value to compare against. Can be string, number, boolean, or array (for in/notIn/between)."
+                },
+                "all": {
+                    "type": "array",
+                    "description": "Compound AND condition.",
+                    "items": { "$ref": "#/definitions/styleCondition" }
+                }
+            }
+        }
+    }
+}

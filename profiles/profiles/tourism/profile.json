@@ -1,0 +1,52 @@
+{
+    "id": "tourism",
+    "label": "Profil tourisme",
+    "description": "Profil optimisé pour les POI touristiques (hébergements, activités, nature…). Version 1.3.0 avec structure modulaire complète.",
+    "version": "1.3.0",
+    "map": {
+        "bounds": [
+            [-55, -73.5],
+            [-21.78, -53.5]
+        ],
+        "initialMaxZoom": 12,
+        "padding": [50, 50],
+        "positionFixed": true
+    },
+    "Files": {
+        "taxonomyFile": "taxonomy.json",
+        "themesFile": "themes.json",
+        "layersFile": "layers.json",
+        "basemapsFile": "basemaps.json",
+        "uiFile": "ui.json"
+    },
+    "performance": {
+        "maxConcurrentLayers": 10,
+        "layerLoadDelay": 200,
+        "fitBoundsOnThemeChange": false
+    },
+    "clusteringConfig": {
+        "enabled": true,
+        "strategy": "by-layer",
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+    },
+    "poiConfig": {
+        "enabled": false,
+        "clustering": true,
+        "clusterStrategy": "unified",
+        "clusterRadius": 80,
+        "disableClusteringAtZoom": 12
+    },
+    "storage": {
+        "enableOfflineDetector": false,
+        "enableServiceWorker": false,
+        "cache": {
+            "enableProfileCache": true,
+            "enableTileCache": true
+        }
+    },
+    "poiAddConfig": {
+        "enabled": true,
+        "defaultPosition": "geolocation"
+    }
+}

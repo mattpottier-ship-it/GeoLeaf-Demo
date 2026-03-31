@@ -1,0 +1,133 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/profile",
+    "title": "GeoLeaf Profile",
+    "description": "profile.json — core profile metadata and configuration. UI, basemaps, search and table config live in separate files referenced via the Files section.",
+    "type": "object",
+    "required": ["id"],
+    "additionalProperties": true,
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique profile identifier. Must match the directory name."
+        },
+        "label": {
+            "type": "string",
+            "description": "Human-readable profile label."
+        },
+        "description": {
+            "type": "string",
+            "description": "Profile description."
+        },
+        "version": {
+            "type": "string",
+            "description": "Profile version (SemVer).",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "Files": {
+            "type": "object",
+            "description": "Relative paths to companion config files loaded at startup.",
+            "additionalProperties": false,
+            "properties": {
+                "taxonomyFile": { "type": "string", "description": "Path to taxonomy.json." },
+                "themesFile": { "type": "string", "description": "Path to themes.json." },
+                "layersFile": { "type": "string", "description": "Path to layers.json." },
+                "basemapsFile": { "type": "string", "description": "Path to basemaps.json." },
+                "uiFile": { "type": "string", "description": "Path to ui.json." }
+            }
+        },
+        "map": {
+            "type": "object",
+            "description": "Map view configuration.",
+            "additionalProperties": true,
+            "properties": {
+                "bounds": {
+                    "type": "array",
+                    "description": "Geographic bounds [[south, west], [north, east]].",
+                    "items": {
+                        "type": "array",
+                        "items": { "type": "number" },
+                        "minItems": 2,
+                        "maxItems": 2
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                },
+                "center": {
+                    "type": "array",
+                    "items": { "type": "number" },
+                    "minItems": 2,
+                    "maxItems": 2
+                },
+                "zoom": { "type": "number" },
+                "maxZoom": { "type": "number" },
+                "minZoom": { "type": "number" },
+                "initialMaxZoom": {
+                    "type": "number",
+                    "description": "Alias for maxZoom (legacy)."
+                },
+                "padding": {
+                    "type": "array",
+                    "items": { "type": "number" },
+                    "minItems": 2,
+                    "maxItems": 2
+                },
+                "positionFixed": { "type": "boolean" },
+                "boundsMargin": { "type": "number" }
+            }
+        },
+        "performance": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "maxConcurrentLayers": { "type": "number", "minimum": 1 },
+                "layerLoadDelay": { "type": "number", "minimum": 0 },
+                "fitBoundsOnThemeChange": { "type": "boolean" }
+            }
+        },
+        "clusteringConfig": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enabled": { "type": "boolean" },
+                "strategy": { "type": "string", "enum": ["by-layer", "unified"] },
+                "maxClusterRadius": { "type": "number", "minimum": 0 },
+                "disableClusteringAtZoom": { "type": "number" }
+            }
+        },
+        "poiConfig": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enabled": { "type": "boolean" },
+                "clustering": { "type": "boolean" },
+                "clusterStrategy": { "type": "string" },
+                "clusterRadius": { "type": "number" },
+                "disableClusteringAtZoom": { "type": "number" }
+            }
+        },
+        "poiAddConfig": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enabled": { "type": "boolean" },
+                "defaultPosition": { "type": "string", "enum": ["geolocation", "center"] }
+            }
+        },
+        "storage": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+                "enableOfflineDetector": { "type": "boolean" },
+                "enableServiceWorker": { "type": "boolean" },
+                "cache": {
+                    "type": "object",
+                    "properties": {
+                        "enableProfileCache": { "type": "boolean" },
+                        "enableTileCache": { "type": "boolean" }
+                    }
+                }
+            }
+        }
+    }
+}

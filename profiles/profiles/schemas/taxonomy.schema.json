@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/taxonomy",
+    "title": "GeoLeaf Taxonomy",
+    "description": "taxonomy.json — POI category tree and icon configuration for a GeoLeaf profile.",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "icons": {
+            "type": "object",
+            "description": "Global icon configuration for POI markers.",
+            "properties": {
+                "spriteUrl": {
+                    "type": "string",
+                    "description": "Relative path to the SVG sprite file containing all category icons."
+                },
+                "symbolPrefix": {
+                    "type": "string",
+                    "description": "Prefix prepended to icon names to match <symbol id> in the sprite (e.g. \"tourism-poi-cat-\")."
+                },
+                "defaultIcon": {
+                    "type": "string",
+                    "description": "Fallback icon name when a category/subcategory has no icon defined."
+                }
+            }
+        },
+        "defaults": {
+            "type": "object",
+            "description": "Default values for taxonomy.",
+            "properties": {
+                "icon": {
+                    "type": "string",
+                    "description": "Default icon name (alternative to icons.defaultIcon)."
+                }
+            }
+        },
+        "categories": {
+            "type": "object",
+            "description": "Category tree. Keys are category IDs (lowercase, hyphens). Max depth: 2 levels (category → subcategory).",
+            "additionalProperties": {
+                "$ref": "#/definitions/categoryItem"
+            }
+        }
+    },
+    "definitions": {
+        "categoryItem": {
+            "type": "object",
+            "required": ["label"],
+            "additionalProperties": true,
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "description": "Display name of the category."
+                },
+                "icon": {
+                    "type": "string",
+                    "description": "Icon name (resolved with symbolPrefix from icons config)."
+                },
+                "color": {
+                    "type": "string",
+                    "description": "Single color (fill + stroke) as hex CSS."
+                },
+                "colorFill": {
+                    "type": "string",
+                    "description": "Fill color (takes precedence over color)."
+                },
+                "colorStroke": {
+                    "type": "string",
+                    "description": "Stroke color (takes precedence over color)."
+                },
+                "subcategories": {
+                    "type": "object",
+                    "description": "Nested subcategories (same structure as parent, no further nesting recommended).",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/categoryItem"
+                    }
+                }
+            }
+        }
+    }
+}

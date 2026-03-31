@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/basemaps",
+    "title": "GeoLeaf Basemaps",
+    "description": "basemaps.json — basemap tile source definitions for a GeoLeaf profile.",
+    "type": "object",
+    "required": ["basemaps"],
+    "additionalProperties": false,
+    "properties": {
+        "basemaps": {
+            "type": "object",
+            "description": "Map of basemap entries keyed by basemap ID.",
+            "additionalProperties": {
+                "$ref": "#/definitions/basemapEntry"
+            }
+        }
+    },
+    "definitions": {
+        "basemapEntry": {
+            "type": "object",
+            "description": "A single basemap source definition.",
+            "required": ["id"],
+            "additionalProperties": true,
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Basemap ID (mirrors the key in the parent object)."
+                },
+                "label": { "type": "string", "description": "Display label." },
+                "type": {
+                    "type": "string",
+                    "enum": ["tile", "maplibre"],
+                    "description": "\"tile\" for raster, \"maplibre\" for vector tile (MapLibre GL style)."
+                },
+                "url": {
+                    "type": "string",
+                    "description": "Tile URL template with {s}, {z}, {x}, {y} placeholders."
+                },
+                "fallbackUrl": {
+                    "type": "string",
+                    "description": "Raster tile URL fallback when MapLibre GL is unavailable."
+                },
+                "style": {
+                    "type": "string",
+                    "description": "MapLibre GL style URL. Only for type: \"maplibre\"."
+                },
+                "tiles": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Explicit tile URL array for MapLibre raster sources. Overrides url + subdomains expansion."
+                },
+                "attribution": { "type": "string", "description": "HTML attribution string." },
+                "minZoom": { "type": "number" },
+                "maxZoom": { "type": "number" },
+                "subdomains": {
+                    "oneOf": [
+                        { "type": "string" },
+                        { "type": "array", "items": { "type": "string" } }
+                    ],
+                    "description": "Tile subdomains."
+                },
+                "tileSize": { "type": "number", "default": 256 },
+                "defaultBasemap": {
+                    "type": "boolean",
+                    "description": "Set to true to make this the active basemap on startup."
+                },
+                "offline": {
+                    "type": "boolean",
+                    "description": "Whether this basemap supports offline tile caching."
+                },
+                "offlineBounds": {
+                    "type": "object",
+                    "description": "Geographic bounds for offline caching.",
+                    "required": ["north", "south", "east", "west"],
+                    "properties": {
+                        "north": { "type": "number" },
+                        "south": { "type": "number" },
+                        "east": { "type": "number" },
+                        "west": { "type": "number" }
+                    }
+                },
+                "cacheMinZoom": { "type": "number" },
+                "cacheMaxZoom": { "type": "number" }
+            }
+        }
+    }
+}

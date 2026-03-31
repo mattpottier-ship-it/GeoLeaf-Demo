@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "geoleaf/geoleaf-config",
+    "title": "GeoLeaf Root Config",
+    "description": "geoleaf.config.json — root configuration file loaded at application startup.",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+        "debug": {
+            "type": "boolean",
+            "default": false,
+            "description": "Enable verbose debug logging and cache-bust (?t=timestamp) on config requests."
+        },
+        "branding": {
+            "type": "object",
+            "description": "Branding banner displayed on the map.",
+            "properties": {
+                "enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show branding banner."
+                },
+                "text": { "type": "string", "description": "Banner text (HTML allowed)." },
+                "position": {
+                    "type": "string",
+                    "enum": ["bottomleft", "bottomright", "topleft", "topright"],
+                    "default": "bottomleft",
+                    "description": "Banner position on the map."
+                }
+            }
+        },
+        "data": {
+            "type": "object",
+            "description": "Profile and data configuration.",
+            "properties": {
+                "activeProfile": {
+                    "type": "string",
+                    "description": "Name of the active profile to load (must match a directory in profiles/)."
+                },
+                "profilesBasePath": {
+                    "type": "string",
+                    "default": "profiles",
+                    "description": "Base path to the profiles directory."
+                },
+                "enableProfilePoiMapping": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable POI data normalization via mapping.json."
+                }
+            }
+        },
+        "pwa": {
+            "type": "object",
+            "description": "PWA manifest configuration. Merged into deployed manifest.json by build-deploy.cjs.",
+            "properties": {
+                "name": { "type": "string", "description": "Full PWA app name." },
+                "short_name": { "type": "string", "description": "Short PWA app name." },
+                "description": { "type": "string", "description": "PWA app description." },
+                "theme_color": { "type": "string", "description": "PWA theme color (hex CSS)." },
+                "background_color": {
+                    "type": "string",
+                    "description": "PWA background color (hex CSS)."
+                },
+                "installPrompt": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": false,
+                            "description": "Show install banner on Android/iOS."
+                        }
+                    }
+                }
+            }
+        },
+        "security": {
+            "type": "object",
+            "description": "Security options.",
+            "properties": {
+                "httpsOnly": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Reject http: URLs, allow only https: and data: (images)."
+                }
+            }
+        },
+        "logging": {
+            "type": "object",
+            "description": "Logging verbosity.",
+            "properties": {
+                "level": {
+                    "type": "string",
+                    "enum": ["debug", "info", "warn", "error", "production"],
+                    "default": "info",
+                    "description": "Minimum log level displayed in console."
+                }
+            }
+        }
+    }
+}
