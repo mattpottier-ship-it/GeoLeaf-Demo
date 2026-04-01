@@ -2,6 +2,8 @@
     "id": "provinces",
     "label": "Provinces",
     "zIndex": 43,
+    "interactiveShape": false,
+    "tooltip": { "mode": "never" },
     "geometry": "polygon",
     "data": {
         "directory": "data",

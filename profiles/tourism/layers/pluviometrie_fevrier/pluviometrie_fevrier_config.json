@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_fevrier",
   "label": "Pluviométrie - Février",
   "zIndex": 91,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

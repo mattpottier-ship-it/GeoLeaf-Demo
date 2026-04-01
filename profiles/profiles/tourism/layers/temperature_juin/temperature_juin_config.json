@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_juin",
   "label": "Température - Juin",
   "zIndex": 66,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

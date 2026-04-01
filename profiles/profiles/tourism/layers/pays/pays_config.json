@@ -2,6 +2,8 @@
   "id": "pays",
   "label": "Pays",
   "zIndex": 40,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polyline",
   "data": {
     "directory": "data",

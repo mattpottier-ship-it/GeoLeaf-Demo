@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_fevrier",
   "label": "Température - Février",
   "zIndex": 72,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

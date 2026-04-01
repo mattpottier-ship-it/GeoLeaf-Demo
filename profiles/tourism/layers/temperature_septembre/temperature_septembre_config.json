@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_septembre",
   "label": "Température - Septembre",
   "zIndex": 61,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

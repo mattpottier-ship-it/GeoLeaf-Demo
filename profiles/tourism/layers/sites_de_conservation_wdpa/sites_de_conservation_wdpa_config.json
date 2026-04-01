@@ -4,7 +4,7 @@
     "type": "geojson",
     "geometry": "point",
     "zIndex": 54,
-    "interactiveShape": true,
+    "interactiveShape": false,
     "showIconsOnMap": false,
     "data": {
         "directory": "data",

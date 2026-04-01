@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_mai",
   "label": "Pluviométrie - Mai",
   "zIndex": 86,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

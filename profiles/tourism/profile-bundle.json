@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "tourism",
-  "_generatedAt": 1774982257042,
+  "_generatedAt": 1775077042311,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/tourism/icons/sprite_tourism.svg",
@@ -101,8 +101,9 @@
     }
   },
   "themes": {
+    "defaultTheme": "environnement",
     "config": {
-      "defautTheme": "defaut",
+      "defautTheme": "environnement",
       "primaryThemes": {
         "enabled": true,
         "position": "top-map"
@@ -534,7 +535,7 @@
         "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
         "attribution": "Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, TomTom",
         "minZoom": 3,
-        "maxZoom": 20,
+        "maxZoom": 16,
         "defaultBasemap": true,
         "offline": false
       },
@@ -593,21 +594,22 @@
       "theme": "light",
       "language": "fr",
       "showBaseLayerControls": false,
-      "showLayerManager": true,
-      "showFilterPanel": true,
-      "enableGeolocation": true,
-      "showCoordinates": true,
       "showThemeSelector": true,
-      "showLegend": true,
+      "showFilterPanel": true,
+      "showLayerManager": true,
+      "showLegend": false,
+      "showTable": true,
+      "showGeolocation": true,
+      "showCoordinates": true,
+      "showScale": true,
       "showCacheButton": true,
       "showAddPoi": true,
-      "showTable": true,
       "permalink": {
         "enabled": true,
         "mode": "hash"
       }
     },
-    "search": {
+    "searchConfig": {
       "title": "Filtrer",
       "radiusMin": 1,
       "radiusMax": 200,
@@ -969,6 +971,16 @@
       "id": "eco_regions",
       "label": "Eco régions",
       "zIndex": 50,
+      "interactiveShape": false,
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.ecorregion"
+          }
+        ]
+      },
       "geometry": "polygon",
       "data": {
         "directory": "data",
@@ -1217,6 +1229,19 @@
           }
         ]
       },
+      "interactiveShape": false,
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.ville"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": false
+      },
       "table": {
         "enabled": false
       },
@@ -1448,6 +1473,10 @@
       "label": "Départements",
       "tooltipMode": "never",
       "zIndex": 42,
+      "interactiveShape": false,
+      "tooltip": {
+        "mode": "never"
+      },
       "geometry": "polygon",
       "data": {
         "directory": "data",
@@ -1649,6 +1678,10 @@
       "id": "pays",
       "label": "Pays",
       "zIndex": 40,
+      "interactiveShape": false,
+      "tooltip": {
+        "mode": "never"
+      },
       "geometry": "polyline",
       "data": {
         "directory": "data",
@@ -1687,6 +1720,10 @@
       "id": "provinces",
       "label": "Provinces",
       "zIndex": 43,
+      "interactiveShape": false,
+      "tooltip": {
+        "mode": "never"
+      },
       "geometry": "polygon",
       "data": {
         "directory": "data",
@@ -1757,6 +1794,10 @@
       "id": "reseau_ferroviaire",
       "label": "Réseau ferroviaire",
       "zIndex": 45,
+      "interactiveShape": false,
+      "tooltip": {
+        "mode": "never"
+      },
       "geometry": "polyline",
       "data": {
         "directory": "data",
@@ -1795,6 +1836,10 @@
       "id": "routes_principales",
       "label": "Routes principales",
       "zIndex": 47,
+      "interactiveShape": false,
+      "tooltip": {
+        "mode": "never"
+      },
       "geometry": "polyline",
       "data": {
         "directory": "data",
@@ -1826,7 +1871,7 @@
       "type": "geojson",
       "geometry": "point",
       "zIndex": 54,
-      "interactiveShape": true,
+      "interactiveShape": false,
       "showIconsOnMap": false,
       "data": {
         "directory": "data",
@@ -2000,7 +2045,19 @@
       "label": "Zones de conservation WDPA",
       "zIndex": 51,
       "geometry": "polygon",
-      "interactiveShape": true,
+      "interactiveShape": false,
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.NAME"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": false
+      },
       "data": {
         "directory": "data",
         "file": "zones_de_conservation_wdpa.geojson",

@@ -3,6 +3,8 @@
     "label": "Départements",
     "tooltipMode": "never",
     "zIndex": 42,
+    "interactiveShape": false,
+    "tooltip": { "mode": "never" },
     "geometry": "polygon",
     "data": {
         "directory": "data",

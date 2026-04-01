@@ -1,6 +1,7 @@
 {
+  "defaultTheme": "environnement",
   "config": {
-    "defautTheme": "defaut",
+    "defautTheme": "environnement",
     "primaryThemes": {
       "enabled": true,
       "position": "top-map"

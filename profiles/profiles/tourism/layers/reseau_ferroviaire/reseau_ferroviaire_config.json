@@ -2,6 +2,8 @@
   "id": "reseau_ferroviaire",
   "label": "Réseau ferroviaire",
   "zIndex": 45,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polyline",
   "data": {
     "directory": "data",

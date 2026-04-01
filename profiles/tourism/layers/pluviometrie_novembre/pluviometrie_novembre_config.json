@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_novembre",
   "label": "Pluviométrie - Novembre",
   "zIndex": 77,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

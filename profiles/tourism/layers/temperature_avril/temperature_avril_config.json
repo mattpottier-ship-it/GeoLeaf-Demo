@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_avril",
   "label": "Température - Avril",
   "zIndex": 69,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

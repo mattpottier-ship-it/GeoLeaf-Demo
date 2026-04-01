@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_janvier",
   "label": "Pluviométrie - Janvier",
   "zIndex": 93,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

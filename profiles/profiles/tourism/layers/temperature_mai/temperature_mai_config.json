@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_mai",
   "label": "Température - Mai",
   "zIndex": 67,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

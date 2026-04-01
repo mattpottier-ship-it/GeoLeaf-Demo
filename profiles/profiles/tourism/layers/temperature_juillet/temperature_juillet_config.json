@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_juillet",
   "label": "Température - Juillet",
   "zIndex": 64,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

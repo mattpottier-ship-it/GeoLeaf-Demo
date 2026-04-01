@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_janvier",
   "label": "Température - Janvier",
   "zIndex": 74,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

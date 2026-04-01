@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_aout",
   "label": "Pluviométrie - Août",
   "zIndex": 82,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

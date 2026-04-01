@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_juin",
   "label": "Pluviométrie - Juin",
   "zIndex": 85,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

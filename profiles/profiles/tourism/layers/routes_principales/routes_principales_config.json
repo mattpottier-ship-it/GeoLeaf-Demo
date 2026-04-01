@@ -2,6 +2,8 @@
   "id": "routes_principales",
   "label": "Routes principales",
   "zIndex": 47,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polyline",
   "data": {
     "directory": "data",

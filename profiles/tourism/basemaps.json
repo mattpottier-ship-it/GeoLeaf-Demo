@@ -6,7 +6,7 @@
             "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
             "attribution": "Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, TomTom",
             "minZoom": 3,
-            "maxZoom": 20,
+            "maxZoom": 16,
             "defaultBasemap": true,
             "offline": false
         },

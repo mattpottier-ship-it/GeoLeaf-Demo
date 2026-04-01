@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_aout",
   "label": "Température - Août",
   "zIndex": 62,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

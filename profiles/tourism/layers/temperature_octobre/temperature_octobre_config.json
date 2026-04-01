@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_octobre",
   "label": "Température - Octobre",
   "zIndex": 59,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

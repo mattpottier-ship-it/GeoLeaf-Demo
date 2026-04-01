@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_septembre",
   "label": "Pluviométrie - Septembre",
   "zIndex": 80,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

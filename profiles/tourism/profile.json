@@ -14,12 +14,13 @@
         -53.5
       ]
     ],
-    "initialMaxZoom": 12,
+    "initialMaxZoom": 10,
     "padding": [
       50,
       50
     ],
-    "positionFixed": true
+    "positionFixed": true,
+    "boundsMargin": 0.7
   },
   "Files": {
     "taxonomyFile": "taxonomy.json",

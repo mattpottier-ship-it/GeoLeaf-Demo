@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_mars",
   "label": "Température - Mars",
   "zIndex": 70,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "temperature_decembre",
   "label": "Température - Décembre",
   "zIndex": 56,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

@@ -2,6 +2,13 @@
   "id": "eco_regions",
   "label": "Eco régions",
   "zIndex": 50,
+  "interactiveShape": false,
+  "tooltip": {
+    "mode": "hover",
+    "fields": [
+      { "type": "text", "field": "properties.ecorregion" }
+    ]
+  },
   "geometry": "polygon",
   "data": {
     "directory": "data",
@@ -30,6 +37,7 @@
   "table": {
     "enabled": false
   },
+
   "clustering": {
     "enabled": false,
     "maxClusterRadius": 80,

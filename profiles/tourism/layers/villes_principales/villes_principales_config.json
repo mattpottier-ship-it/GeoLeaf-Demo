@@ -23,6 +23,19 @@
       }
     ]
   },
+  "interactiveShape": false,
+  "tooltip": {
+    "mode": "hover",
+    "fields": [
+      {
+        "type": "text",
+        "field": "properties.ville"
+      }
+    ]
+  },
+  "popup": {
+    "enabled": false
+  },
   "table": {
     "enabled": false
   },

@@ -3,7 +3,19 @@
   "label": "Zones de conservation WDPA",
   "zIndex": 51,
   "geometry": "polygon",
-  "interactiveShape": true,
+  "interactiveShape": false,
+  "tooltip": {
+    "mode": "hover",
+    "fields": [
+      {
+        "type": "text",
+        "field": "properties.NAME"
+      }
+    ]
+  },
+  "popup": {
+    "enabled": false
+  },
   "data": {
     "directory": "data",
     "file": "zones_de_conservation_wdpa.geojson",

@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_mars",
   "label": "Pluviométrie - Mars",
   "zIndex": 89,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",

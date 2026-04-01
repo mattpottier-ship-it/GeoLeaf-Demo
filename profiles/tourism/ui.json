@@ -3,21 +3,23 @@
         "theme": "light",
         "language": "fr",
         "showBaseLayerControls": false,
-        "showLayerManager": true,
-        "showFilterPanel": true,
-        "enableGeolocation": true,
-        "showCoordinates": true,
         "showThemeSelector": true,
-        "showLegend": true,
+        "showFilterPanel": true,
+        "showLayerManager": true,
+        "showLegend": false,
+        "showTable": true,
+        "showGeolocation": true,
+        "showCoordinates": true,
+        "showScale": true,
         "showCacheButton": true,
         "showAddPoi": true,
-        "showTable": true,
         "permalink": {
             "enabled": true,
             "mode": "hash"
         }
     },
-    "search": {
+
+    "searchConfig": {
         "title": "Filtrer",
         "radiusMin": 1,
         "radiusMax": 200,
@@ -62,6 +64,7 @@
             "resetLabel": "Réinitialiser"
         }
     },
+
     "layerManagerConfig": {
         "title": "Couches",
         "collapsedByDefault": true,
@@ -98,11 +101,13 @@
             }
         ]
     },
+
     "legendConfig": {
         "title": "Légende",
         "collapsedByDefault": true,
         "position": "bottomleft"
     },
+
     "tableConfig": {
         "title": "Tableau",
         "enabled": true,
@@ -116,6 +121,7 @@
         "maxHeight": "60%",
         "resizable": true
     },
+
     "scaleConfig": {
         "scaleGraphic": true,
         "scaleNumeric": true,

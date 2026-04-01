@@ -1,7 +1,9 @@
-﻿{
+{
   "id": "pluviometrie_juillet",
   "label": "Pluviométrie - Juillet",
   "zIndex": 83,
+  "interactiveShape": false,
+  "tooltip": { "mode": "never" },
   "geometry": "polygon",
   "data": {
     "directory": "data",
