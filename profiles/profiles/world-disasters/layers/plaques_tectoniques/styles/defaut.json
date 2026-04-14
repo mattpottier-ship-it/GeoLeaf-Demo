@@ -1,0 +1,22 @@
+{
+    "id": "defaut",
+    "label": "Défaut",
+    "description": "Limites des plaques tectoniques",
+    "zoomConfig": {
+        "minZoom": null,
+        "maxZoom": null
+    },
+    "labelScale": {
+        "minScale": null,
+        "maxScale": null
+    },
+    "style": {
+        "color": "#ae2012",
+        "opacity": 0.5,
+        "weight": 1.5,
+        "dashArray": "4 3"
+    },
+    "legend": {
+        "label": "Plaques tectoniques"
+    }
+}

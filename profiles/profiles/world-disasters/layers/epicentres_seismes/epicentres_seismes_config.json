@@ -1,0 +1,52 @@
+{
+    "id": "epicentres_seismes",
+    "label": "Épicentres séismes (7 jours)",
+    "tooltipMode": "hover",
+    "zIndex": 80,
+    "geometry": "point",
+    "data": {
+        "dataUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+        "directory": "data",
+        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Par magnitude",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.place", "label": "Lieu" },
+            { "field": "properties.mag", "label": "Magnitude" },
+            { "field": "properties.time", "label": "Date" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.place", "label": "Lieu", "sortable": true, "width": "40%" },
+            { "field": "properties.mag", "label": "Magnitude", "sortable": true, "width": "15%" },
+            { "field": "properties.depth", "label": "Profondeur (km)", "sortable": true, "width": "15%" },
+            { "field": "properties.time", "label": "Date", "sortable": true, "width": "30%" }
+        ],
+        "searchFields": ["properties.place"],
+        "defaultSort": { "field": "properties.mag", "order": "desc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 6
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT natif via dataUrl polling — les données USGS se mettent à jour toutes les minutes. Configurer refreshInterval dans le profil pour activer le polling automatique.",
+        "refreshInterval": 60000
+    }
+}

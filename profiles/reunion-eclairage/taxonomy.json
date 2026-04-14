@@ -1,0 +1,31 @@
+{
+    "icons": {
+        "spriteUrl": "profiles/reunion-eclairage/icons/sprite_reunion.svg",
+        "symbolPrefix": "reunion-poi-cat-",
+        "defaultIcon": "eclairage-generic"
+    },
+    "categories": {
+        "eclairage": {
+            "label": "Éclairage public",
+            "icon": "eclairage-generic",
+            "subcategories": {
+                "candelabres": {
+                    "label": "Candélabres",
+                    "icon": "candelabres"
+                },
+                "armoires": {
+                    "label": "Armoires électriques",
+                    "icon": "armoires"
+                },
+                "reseau": {
+                    "label": "Réseau câbles",
+                    "icon": "reseau"
+                },
+                "secteurs": {
+                    "label": "Secteurs",
+                    "icon": "secteurs"
+                }
+            }
+        }
+    }
+}

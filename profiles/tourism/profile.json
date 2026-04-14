@@ -41,7 +41,7 @@
     "disableClusteringAtZoom": 12
   },
   "poiConfig": {
-    "enabled": false,
+    "enabled": true,
     "clustering": true,
     "clusterStrategy": "unified",
     "clusterRadius": 80,

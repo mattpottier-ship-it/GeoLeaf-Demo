@@ -1,0 +1,65 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "nom": "Bâtiment A — Île de la Cité",
+                "usage": "Résidentiel",
+                "hauteur": 25
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [2.3468, 48.8530],
+                        [2.3492, 48.8530],
+                        [2.3492, 48.8550],
+                        [2.3468, 48.8550],
+                        [2.3468, 48.8530]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nom": "Bâtiment B — Le Marais",
+                "usage": "Commercial",
+                "hauteur": 50
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [2.3550, 48.8565],
+                        [2.3580, 48.8565],
+                        [2.3580, 48.8590],
+                        [2.3550, 48.8590],
+                        [2.3550, 48.8565]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "nom": "Bâtiment C — 1er arrondissement",
+                "usage": "Industriel",
+                "hauteur": 80
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [2.3370, 48.8580],
+                        [2.3405, 48.8580],
+                        [2.3405, 48.8605],
+                        [2.3370, 48.8605],
+                        [2.3370, 48.8580]
+                    ]
+                ]
+            }
+        }
+    ]
+}

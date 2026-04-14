@@ -1,0 +1,46 @@
+{
+    "id": "capitales",
+    "label": "Capitales & grandes villes",
+    "tooltipMode": "hover",
+    "zIndex": 80,
+    "geometry": "point",
+    "data": {
+        "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_populated_places_simple.geojson",
+        "directory": "data",
+        "licence": "Domaine public — Natural Earth (naturalearthdata.com)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.name", "label": "Nom" },
+            { "field": "properties.adm0name", "label": "Pays" },
+            { "field": "properties.pop_max", "label": "Population" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.name", "label": "Nom", "sortable": true, "width": "35%" },
+            { "field": "properties.adm0name", "label": "Pays", "sortable": true, "width": "35%" },
+            { "field": "properties.pop_max", "label": "Population", "sortable": true, "width": "30%" }
+        ],
+        "searchFields": ["properties.name", "properties.adm0name"],
+        "defaultSort": { "field": "properties.pop_max", "order": "desc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 40,
+        "disableClusteringAtZoom": 4
+    }
+}

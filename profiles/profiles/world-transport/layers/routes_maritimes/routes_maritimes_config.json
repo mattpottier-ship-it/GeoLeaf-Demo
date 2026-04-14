@@ -1,0 +1,43 @@
+{
+    "id": "routes_maritimes",
+    "label": "Routes maritimes",
+    "tooltipMode": "hover",
+    "zIndex": 30,
+    "geometry": "line",
+    "data": {
+        "dataUrl": "https://zenodo.org/record/6361763/files/global_shipping_routes.geojson",
+        "directory": "data",
+        "licence": "CC BY 4.0 — Zenodo (doi.org/10.5281/zenodo.6361763)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.name", "label": "Route" }
+        ]
+    },
+    "table": {
+        "enabled": false
+    },
+    "clustering": {
+        "enabled": false
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT prévu : positions navires AIS en temps réel via WebSocket AISHub — @geoleaf-plugins/websocket. Les navires sont affichés en surcouche sur les routes statiques.",
+        "plugin": "@geoleaf-plugins/websocket",
+        "wsUrl": "wss://data.aishub.net/ws",
+        "overlayLayerId": "ports",
+        "refreshOnConnect": true
+    }
+}

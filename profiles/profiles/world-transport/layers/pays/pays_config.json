@@ -1,0 +1,45 @@
+{
+    "id": "pays",
+    "label": "Pays / frontières",
+    "tooltipMode": "hover",
+    "zIndex": 10,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
+        "directory": "data",
+        "licence": "Domaine public — Natural Earth (naturalearthdata.com)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.NAME", "label": "Pays" },
+            { "field": "properties.CONTINENT", "label": "Continent" },
+            { "field": "properties.POP_EST", "label": "Population estimée" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.NAME", "label": "Pays", "sortable": true, "width": "40%" },
+            { "field": "properties.CONTINENT", "label": "Continent", "sortable": true, "width": "30%" },
+            { "field": "properties.POP_EST", "label": "Population", "sortable": true, "width": "30%" }
+        ],
+        "searchFields": ["properties.NAME", "properties.CONTINENT"],
+        "defaultSort": { "field": "properties.NAME", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

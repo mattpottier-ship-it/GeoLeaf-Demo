@@ -1,0 +1,14 @@
+{
+    "id": "defaut",
+    "label": "Chantiers en cours",
+    "zoomConfig": { "minZoom": null, "maxZoom": null },
+    "style": {
+        "fillColor": "#f4a261",
+        "fillOpacity": 0.6,
+        "color": "#e76f51",
+        "weight": 1.5
+    },
+    "legend": {
+        "label": "Chantiers en cours"
+    }
+}

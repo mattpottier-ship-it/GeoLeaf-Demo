@@ -1,0 +1,78 @@
+{
+    "defaultTheme": "seismes",
+    "config": {
+        "primaryThemes": {
+            "enabled": true,
+            "position": "top-map"
+        },
+        "secondaryThemes": {
+            "enabled": false
+        }
+    },
+    "themes": [
+        {
+            "id": "seismes",
+            "label": "Séismes",
+            "type": "primary",
+            "description": "Séismes récents (7 jours) et zones d'impact ShakeMap — données USGS en temps réel",
+            "icon": "🌍",
+            "layers": [
+                { "id": "epicentres_seismes", "visible": true, "style": "defaut" },
+                { "id": "shakemap_mmi", "visible": true, "style": "defaut" },
+                { "id": "plaques_tectoniques", "visible": true, "style": "defaut" },
+                { "id": "volcans_actifs", "visible": false, "style": "defaut" },
+                { "id": "cyclones_actifs", "visible": false, "style": "defaut" },
+                { "id": "trajectoire_cyclone", "visible": false, "style": "defaut" },
+                { "id": "inondations_mondiales", "visible": false, "style": "defaut" }
+            ]
+        },
+        {
+            "id": "cyclones",
+            "label": "Cyclones",
+            "type": "primary",
+            "description": "Cyclones actifs, trajectoires et cônes d'incertitude — données NOAA NHC",
+            "icon": "🌀",
+            "layers": [
+                { "id": "epicentres_seismes", "visible": false, "style": "defaut" },
+                { "id": "shakemap_mmi", "visible": false, "style": "defaut" },
+                { "id": "plaques_tectoniques", "visible": false, "style": "defaut" },
+                { "id": "volcans_actifs", "visible": false, "style": "defaut" },
+                { "id": "cyclones_actifs", "visible": true, "style": "defaut" },
+                { "id": "trajectoire_cyclone", "visible": true, "style": "defaut" },
+                { "id": "inondations_mondiales", "visible": false, "style": "defaut" }
+            ]
+        },
+        {
+            "id": "tectonique",
+            "label": "Tectonique & Volcans",
+            "type": "primary",
+            "description": "Plaques tectoniques et volcans actifs historiques — Smithsonian GVP",
+            "icon": "🌋",
+            "layers": [
+                { "id": "epicentres_seismes", "visible": false, "style": "defaut" },
+                { "id": "shakemap_mmi", "visible": false, "style": "defaut" },
+                { "id": "plaques_tectoniques", "visible": true, "style": "defaut" },
+                { "id": "volcans_actifs", "visible": true, "style": "defaut" },
+                { "id": "cyclones_actifs", "visible": false, "style": "defaut" },
+                { "id": "trajectoire_cyclone", "visible": false, "style": "defaut" },
+                { "id": "inondations_mondiales", "visible": false, "style": "defaut" }
+            ]
+        },
+        {
+            "id": "vue_globale",
+            "label": "Vue globale",
+            "type": "primary",
+            "description": "Toutes les alertes actives — séismes, cyclones, inondations",
+            "icon": "⚠️",
+            "layers": [
+                { "id": "epicentres_seismes", "visible": true, "style": "defaut" },
+                { "id": "shakemap_mmi", "visible": false, "style": "defaut" },
+                { "id": "plaques_tectoniques", "visible": true, "style": "defaut" },
+                { "id": "volcans_actifs", "visible": true, "style": "defaut" },
+                { "id": "cyclones_actifs", "visible": true, "style": "defaut" },
+                { "id": "trajectoire_cyclone", "visible": true, "style": "defaut" },
+                { "id": "inondations_mondiales", "visible": true, "style": "defaut" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "id": "bdnb_dpe",
+    "label": "DPE Bâtiments (BDNB)",
+    "tooltipMode": "hover",
+    "zIndex": 25,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://www.data.gouv.fr/fr/datasets/r/5f7bf7f6-2e41-4e83-b483-6b97b9a3d654",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — BDNB / CSTB-ADEME (data.gouv.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Par classe DPE",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.classe_dpe", "label": "Classe DPE" },
+            { "field": "properties.adresse", "label": "Adresse" },
+            { "field": "properties.conso_energie", "label": "Consommation (kWh/m²)" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.adresse", "label": "Adresse", "sortable": true, "width": "35%" },
+            { "field": "properties.classe_dpe", "label": "DPE", "sortable": true, "width": "10%" },
+            { "field": "properties.conso_energie", "label": "kWh/m²", "sortable": true, "width": "15%" },
+            { "field": "properties.annee_construction", "label": "Année", "sortable": true, "width": "15%" },
+            { "field": "properties.surface_habitable", "label": "Surface (m²)", "sortable": true, "width": "15%" },
+            { "field": "properties.ges", "label": "GES", "sortable": true, "width": "10%" }
+        ],
+        "searchFields": ["properties.adresse", "properties.classe_dpe"],
+        "defaultSort": { "field": "properties.classe_dpe", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

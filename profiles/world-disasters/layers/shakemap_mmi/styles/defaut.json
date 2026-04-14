@@ -1,0 +1,24 @@
+{
+    "id": "defaut",
+    "label": "Défaut",
+    "description": "Zones d'impact ShakeMap — intensité MMI",
+    "zoomConfig": {
+        "minZoom": null,
+        "maxZoom": null
+    },
+    "labelScale": {
+        "minScale": null,
+        "maxScale": null
+    },
+    "style": {
+        "fillOpacity": 0.2,
+        "fillColor": "#d62828",
+        "color": "#d62828",
+        "opacity": 0.6,
+        "weight": 1,
+        "dashArray": null
+    },
+    "legend": {
+        "label": "Zones impact ShakeMap"
+    }
+}

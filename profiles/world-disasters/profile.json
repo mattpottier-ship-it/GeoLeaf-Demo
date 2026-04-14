@@ -1,0 +1,48 @@
+{
+  "id": "world-disasters",
+  "label": "Catastrophes naturelles & Alertes",
+  "description": "Profil de démonstration GeoLeaf-JS — séismes, cyclones, inondations et activité volcanique en temps réel. Sources open data (USGS, NOAA, GDACS, Smithsonian GVP). RT natif : séismes USGS via dataUrl polling — aucun plugin requis.",
+  "version": "1.0.0",
+  "map": {
+    "center": [
+      20,
+      0
+    ],
+    "zoom": 2,
+    "minZoom": 2,
+    "maxZoom": 16
+  },
+  "Files": {
+    "taxonomyFile": "taxonomy.json",
+    "themesFile": "themes.json",
+    "layersFile": "layers.json",
+    "basemapsFile": "basemaps.json",
+    "uiFile": "ui.json"
+  },
+  "performance": {
+    "maxConcurrentLayers": 10,
+    "layerLoadDelay": 200,
+    "fitBoundsOnThemeChange": false
+  },
+  "clusteringConfig": {
+    "enabled": true,
+    "strategy": "by-layer",
+    "maxClusterRadius": 60,
+    "disableClusteringAtZoom": 6
+  },
+  "poiConfig": {
+    "enabled": false
+  },
+  "storage": {
+    "enableOfflineDetector": false,
+    "enableServiceWorker": false,
+    "cache": {
+      "enableProfileCache": true,
+      "enableTileCache": true
+    }
+  },
+  "poiAddConfig": {
+    "enabled": false
+  },
+  "bundleFile": "profile-bundle.json"
+}

@@ -1,0 +1,22 @@
+{
+    "id": "defaut",
+    "label": "Défaut",
+    "description": "Trajectoire et cône d'incertitude cyclonique",
+    "zoomConfig": {
+        "minZoom": null,
+        "maxZoom": null
+    },
+    "labelScale": {
+        "minScale": null,
+        "maxScale": null
+    },
+    "style": {
+        "color": "#9b2226",
+        "opacity": 0.7,
+        "weight": 2,
+        "dashArray": "6 4"
+    },
+    "legend": {
+        "label": "Trajectoire cyclone"
+    }
+}

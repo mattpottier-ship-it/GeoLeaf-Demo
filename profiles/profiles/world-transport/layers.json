@@ -1,0 +1,39 @@
+{
+    "layers": [
+        {
+            "id": "capitales",
+            "configFile": "layers/capitales/capitales_config.json",
+            "layerManagerId": "data-reference"
+        },
+        {
+            "id": "ports",
+            "configFile": "layers/ports/ports_config.json",
+            "layerManagerId": "data-maritime"
+        },
+        {
+            "id": "aeroports",
+            "configFile": "layers/aeroports/aeroports_config.json",
+            "layerManagerId": "data-aerien"
+        },
+        {
+            "id": "routes_maritimes",
+            "configFile": "layers/routes_maritimes/routes_maritimes_config.json",
+            "layerManagerId": "data-maritime"
+        },
+        {
+            "id": "routes_aeriennes",
+            "configFile": "layers/routes_aeriennes/routes_aeriennes_config.json",
+            "layerManagerId": "data-aerien"
+        },
+        {
+            "id": "pays",
+            "configFile": "layers/pays/pays_config.json",
+            "layerManagerId": "data-reference"
+        },
+        {
+            "id": "oceans",
+            "configFile": "layers/oceans/oceans_config.json",
+            "layerManagerId": "data-reference"
+        }
+    ]
+}

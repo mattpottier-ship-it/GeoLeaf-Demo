@@ -1,0 +1,45 @@
+{
+    "zoomConfig": {
+        "minZoom": 5,
+        "maxZoom": 18,
+        "defaultZoom": 6
+    },
+    "style": {
+        "type": "circle",
+        "paint": {
+            "circle-radius": 5,
+            "circle-color": "#0077b6",
+            "circle-stroke-color": "#023e8a",
+            "circle-stroke-width": 1,
+            "circle-opacity": 0.85
+        }
+    },
+    "styleRules": [
+        {
+            "condition": { "field": "properties.en_service", "operator": "eq", "value": true },
+            "label": "Station active",
+            "style": {
+                "paint": {
+                    "circle-radius": 6,
+                    "circle-color": "#0077b6",
+                    "circle-stroke-color": "#023e8a",
+                    "circle-stroke-width": 1.5,
+                    "circle-opacity": 0.9
+                }
+            }
+        },
+        {
+            "condition": { "field": "properties.en_service", "operator": "eq", "value": false },
+            "label": "Station fermée",
+            "style": {
+                "paint": {
+                    "circle-radius": 4,
+                    "circle-color": "#adb5bd",
+                    "circle-stroke-color": "#6c757d",
+                    "circle-stroke-width": 1,
+                    "circle-opacity": 0.6
+                }
+            }
+        }
+    ]
+}

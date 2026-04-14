@@ -1,0 +1,39 @@
+{
+    "layers": [
+        {
+            "id": "sites_touristiques",
+            "configFile": "layers/sites_touristiques/sites_touristiques_config.json",
+            "layerManagerId": "data-tourisme"
+        },
+        {
+            "id": "itineraires_randonnee",
+            "configFile": "layers/itineraires_randonnee/itineraires_randonnee_config.json",
+            "layerManagerId": "data-tourisme"
+        },
+        {
+            "id": "observations_gbif",
+            "configFile": "layers/observations_gbif/observations_gbif_config.json",
+            "layerManagerId": "data-biodiversite"
+        },
+        {
+            "id": "zones_protegees_pag",
+            "configFile": "layers/zones_protegees_pag/zones_protegees_pag_config.json",
+            "layerManagerId": "data-biodiversite"
+        },
+        {
+            "id": "cours_eau",
+            "configFile": "layers/cours_eau/cours_eau_config.json",
+            "layerManagerId": "data-hydrographie"
+        },
+        {
+            "id": "communes_guyane",
+            "configFile": "layers/communes_guyane/communes_guyane_config.json",
+            "layerManagerId": "data-administration"
+        },
+        {
+            "id": "deforestation_radar",
+            "configFile": "layers/deforestation_radar/deforestation_radar_config.json",
+            "layerManagerId": "data-administration"
+        }
+    ]
+}

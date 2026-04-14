@@ -1,0 +1,77 @@
+{
+    "ui": {
+        "theme": "light",
+        "language": "fr",
+        "showBaseLayerControls": false,
+        "showLayerManager": true,
+        "showFilterPanel": true,
+        "showLegend": true,
+        "showTable": false,
+        "showGeolocation": true,
+        "showCoordinates": true,
+        "showScale": true,
+        "showThemeSelector": true,
+        "showCacheButton": false,
+        "showAddPoi": false,
+        "permalink": {
+            "enabled": true,
+            "mode": "hash"
+        }
+    },
+
+    "searchConfig": {
+        "title": "Filtrer",
+        "searchPlaceholder": "Rechercher…",
+        "filters": [
+            {
+                "id": "searchText",
+                "type": "search",
+                "label": "Recherche textuelle",
+                "placeholder": "Candélabre, secteur…",
+                "searchFields": ["properties.id", "properties.secteur", "properties.adresse"]
+            },
+            {
+                "id": "categories",
+                "type": "tree",
+                "label": "Catégories"
+            }
+        ],
+        "actions": {
+            "applyLabel": "Appliquer",
+            "resetLabel": "Réinitialiser"
+        }
+    },
+
+    "layerManagerConfig": {
+        "title": "Couches",
+        "collapsedByDefault": false,
+        "sections": [
+            {
+                "id": "data-eclairage",
+                "label": "Éclairage public",
+                "order": 1,
+                "collapsedByDefault": false
+            },
+            {
+                "id": "data-administration",
+                "label": "Administration",
+                "order": 2,
+                "collapsedByDefault": true
+            },
+            {
+                "id": "basemap",
+                "label": "Fond de carte",
+                "order": 3,
+                "collapsedByDefault": true
+            }
+        ]
+    },
+
+    "scaleConfig": {
+        "scaleGraphic": true,
+        "scaleNumeric": true,
+        "scaleNumericEditable": true,
+        "scaleNivel": true,
+        "position": "bottomleft"
+    }
+}

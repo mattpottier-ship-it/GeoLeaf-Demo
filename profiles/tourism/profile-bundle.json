@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "tourism",
-  "_generatedAt": 1775077042311,
+  "_generatedAt": 1776191696474,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/tourism/icons/sprite_tourism.svg",
@@ -597,7 +597,7 @@
       "showThemeSelector": true,
       "showFilterPanel": true,
       "showLayerManager": true,
-      "showLegend": false,
+      "showLegend": true,
       "showTable": true,
       "showGeolocation": true,
       "showCoordinates": true,

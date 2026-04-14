@@ -1,14 +1,14 @@
-import { L as Log, M as Errors, u as CONSTANTS, p as Security, N as CSRFToken, U as Utils, O as AnimationHelper, P as getAnimationHelper, E as createElement, D as DOMSecurity, Q as ErrorLogger, R as EventHelpers, V as EventListenerManager, H as events, W as globalEventManager, X as bus, Y as createEventBus, J as FetchHelper, Z as FetchError, _ as FileValidator, $ as MapHelpers, a0 as PerformanceProfiler, a1 as getPerformanceProfiler, a2 as LazyLoader, a3 as getLazyLoader, T as TimerManager, a4 as setNestedValue, a5 as hasNestedPath, K as getNestedValue$1, a6 as clearScaleCache, j as isScaleInRange, i as calculateMapScale, l as domCreate, G as blockMapPropagation, a7 as haversineDistance, v as StyleResolver, y as getColorsFromLayerStyle, a8 as resolvePoiColors, a9 as StyleValidator, aa as StyleValidatorRules, B as AbstractRenderer, ab as SimpleTextRenderer, ac as DataNormalizer, I as StyleLoader, q as Config$3, ad as DataConverter, ae as ProfileLoader, af as ConfigNormalizer, ag as ProfileLoader$1, ah as ProfileManager, ai as StorageHelper, aj as TaxonomyManager, m as getLabel, ak as debounce, o as resolveField, k as escapeHtml, g as getLog, al as getDistance, w as getActiveProfile, am as ensureMap, an as validateCoordinates, ao as validateNumber, C as Core, ap as Helpers$1, aq as Validators, ar as initI18n, as as padBounds, at as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-DZhdQ30U.js';
-import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-CZVZM4MA.js';
-import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-CrFdTD4m.js';
-import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-DhhfOB4W.js';
-import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-BZ5VC56m.js';
-import { _ as _UINotifications, B as BasemapSelector, C as CacheSection, c as LMControl, d as LMRenderer, e as LMShared, b as StyleSelector, N as NotificationSystem, f as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-5bHCsvM2.js';
-import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-D5xTMiuE.js';
-export { c as Themes } from './chunks/geoleaf-chunk-themes-D5xTMiuE.js';
-import { b as POIAddFormContract, c as POI, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-QQprkdbF.js';
-import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-C4yD7z1V.js';
-export { S as Search } from './chunks/geoleaf-search-CBksO4tl.js';
+import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, V as AnimationHelper, W as getAnimationHelper, I as createElement, G as DOMSecurity, X as ErrorLogger, Y as EventHelpers, Z as EventListenerManager, M as events, _ as globalEventManager, $ as bus, a0 as createEventBus, O as FetchHelper, a1 as FetchError, a2 as FileValidator, a3 as MapHelpers, a4 as PerformanceProfiler, a5 as getPerformanceProfiler, a6 as LazyLoader, a7 as getLazyLoader, T as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, o as domCreate, K as blockMapPropagation, ab as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ac as resolvePoiColors, ad as StyleValidator, ae as StyleValidatorRules, H as AbstractRenderer, af as SimpleTextRenderer, ag as DataNormalizer, N as StyleLoader, x as Config$3, ah as DataConverter, ai as ProfileLoader, aj as ConfigNormalizer, ak as ProfileLoader$1, al as ProfileManager, am as StorageHelper, an as TaxonomyManager, p as getLabel, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ao as getDistance, A as getActiveProfile, ap as ensureMap, aq as validateCoordinates, ar as validateNumber, C as Core, as as Helpers$1, at as Validators, au as initI18n, av as padBounds, aw as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-u0egMUiC.js';
+import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-BLYAjSTx.js';
+import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-cM2De5hm.js';
+import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-DezXeuck.js';
+import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-wy104b_O.js';
+import { _ as _UINotifications, B as BasemapSelector, C as CacheSection, c as LMControl, d as LMRenderer, e as LMShared, b as StyleSelector, N as NotificationSystem, f as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-BfECONFx.js';
+import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-D2pTtb1Q.js';
+export { c as Themes } from './chunks/geoleaf-chunk-themes-D2pTtb1Q.js';
+import { b as POIAddFormContract, c as POI, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-8TwVSOIX.js';
+import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-hFFWOW-j.js';
+export { S as Search } from './chunks/geoleaf-search-BMHg_T8Q.js';
 
 /**
  * @module globals.core
@@ -25,7 +25,7 @@ export { S as Search } from './chunks/geoleaf-search-CBksO4tl.js';
  *   - **B2** — `Utils` (animation, DOM, events, fetch, file validation,
  *     lazy loading, map helpers, object utils, performance, scale, timers)
  *
- * Also sets `_g.GeoLeaf._version` from the Rollup-injected `"2.0.0"`
+ * Also sets `_g.GeoLeaf._version` from the Rollup-injected `"2.1.5"`
  * constant, falling back to `'1.1.1-dev'` in development mode.
  *
  * @see globals for the orchestrator and import order
@@ -36,7 +36,7 @@ const _g$j = typeof globalThis !== "undefined" ? globalThis : typeof window !== 
 _g$j.GeoLeaf = _g$j.GeoLeaf || {};
 // Version injectable at build time — fallback for dev without build step
 _g$j.GeoLeaf._version =
-    "2.0.0" ;
+    "2.1.5" ;
 // -- B1 assignations ----------------------------------------------------------
 _g$j.GeoLeaf.Log = Log;
 _g$j.GeoLeaf.Errors = Errors;
@@ -396,7 +396,7 @@ const ScaleControl$1 = {
         const input = this._inputElement.value.trim();
         // Parse only the denominator (number with optional spaces)
         const cleanedInput = input.replace(/\s/g, "");
-        const targetScale = parseInt(cleanedInput, 10);
+        const targetScale = Number.parseInt(cleanedInput, 10);
         if (!isNaN(targetScale) && targetScale > 0) {
             const targetZoom = this._calculateZoomFromScale(targetScale);
             // Use setView without options — adapter signature: setView(center, zoom)
@@ -1254,7 +1254,7 @@ function initGeolocationControl(map, config) {
         Log?.warn("[UI.Controls] initGeolocationControl: carte manquante");
         return;
     }
-    if (!config?.ui?.showGeolocation) {
+    if (!config?.ui?.showGeolocation && !config?.ui?.enableGeolocation) {
         Log?.info("[UI.Controls] Geolocation disabled in configuration");
         return;
     }
@@ -2053,7 +2053,6 @@ const CoordinatesDisplay = {
     },
 };
 
-/* eslint-disable security/detect-object-injection */
 /*!
  * GeoLeaf Core
  * © 2026 Mattieu Pottier
@@ -2380,7 +2379,6 @@ const _UIEventDelegation = {
     getActiveListeners,
 };
 
-/* eslint-disable security/detect-object-injection */
 // Sprint 7: @ts-nocheck removed — progressive typing complete
 /*!
  * GeoLeaf Core
@@ -4069,7 +4067,6 @@ function createLinkElement(href, config) {
     return wrapInParagraph(content, CSS_CLASSES.link, config.className);
 }
 
-/* eslint-disable security/detect-object-injection */
 /**
  * GeoLeaf Content Builder - Media & Collection Template Builders
  * Builders: createImageElement, createListElement, createTableElement,
@@ -4559,7 +4556,6 @@ function createGPSMarker(latlng, map, wrapper) {
     });
     // For dragend, we need to listen on the native marker if available
     const nativeMap = map.getNativeMap?.() ?? null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const nativeMarker = nativeMap
         ? (map._markers?.get(MARKER_ID) ?? null)
         : null;
@@ -4602,7 +4598,6 @@ function createManualMarker(latlng, map, wrapper) {
     }
     map.createMarker(MARKER_ID, latlng, { draggable: true });
     const nativeMap = map.getNativeMap?.() ?? null;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const nativeMarker = nativeMap
         ? (map._markers?.get(MARKER_ID) ?? null)
         : null;
@@ -5303,7 +5298,6 @@ FilterPanelStateReader.resetCategoryTagControls = function (panelEl) {
     }
 };
 
-/* eslint-disable security/detect-object-injection */
 /*!
  * GeoLeaf Core – Filters / Utils
  * © 2026 Mattieu Pottier
@@ -5346,8 +5340,9 @@ function getSearchFieldsFromProfile() {
                 Log.debug("[Filters]  (search:true):", fields);
                 return fields;
             }
-            if (Array.isArray(profile?.panels?.searchConfig?.filters)) {
-                const searchFilter = profile.panels.searchConfig.filters.find((f) => f.type === "search");
+            const searchFilters = profile?.panels?.search?.filters ?? profile?.panels?.searchConfig?.filters;
+            if (Array.isArray(searchFilters)) {
+                const searchFilter = searchFilters.find((f) => f.type === "search");
                 if (searchFilter?.searchFields?.length > 0) {
                     Log.debug("[Filters] ields (fallback):", searchFilter.searchFields);
                     return searchFilter.searchFields;
@@ -5832,7 +5827,7 @@ function _getTags(item) {
             .filter(Boolean);
     return [];
 }
-/* eslint-disable complexity, security/detect-object-injection -- rating extraction; reduce accumulators */
+/* eslint-disable complexity -- rating extraction; reduce accumulators */
 function _extractRating(item) {
     const attrs = item?.attributes || {};
     const props = item?.properties || {};
@@ -5851,7 +5846,7 @@ function _extractRating(item) {
         return props.rating;
     return null;
 }
-/* eslint-enable complexity, security/detect-object-injection */
+/* eslint-enable complexity */
 // ── Public API ─────────────────────────────────────────────────────────────────
 function getUniqueCategories(items = []) {
     if (!Array.isArray(items))
@@ -5868,7 +5863,6 @@ function getUniqueTags(items = []) {
         return [];
     return [...new Set(items.flatMap(_getTags))].sort();
 }
-/* eslint-disable security/detect-object-injection -- reduce accumulator key from _getCatId/_getSubCatId */
 function countByCategory(items = []) {
     if (!Array.isArray(items))
         return {};
@@ -5889,7 +5883,6 @@ function countBySubCategory(items = []) {
         return acc;
     }, {});
 }
-/* eslint-enable security/detect-object-injection */
 function getRatingStats(items = []) {
     if (!Array.isArray(items) || items.length === 0) {
         return { min: 0, max: 0, avg: 0, count: 0, withRating: 0, withoutRating: 0 };
@@ -5940,7 +5933,6 @@ const Filters = {
     getRatingStats,
 };
 
-/* eslint-disable security/detect-object-injection */
 /**
  * GeoLeaf UI Filter Panel - Applier
  * Application des filtres aux layers POI, Routes, GeoJSON
@@ -6357,7 +6349,6 @@ function setToggleIconClosed(icon) {
     icon.appendChild(svg);
 }
 
-/* eslint-disable security/detect-object-injection */
 /**
  * GeoLeaf UI Filter Panel - Lazy Loader
  * Loadsment to the demande des filtres categories et tags
@@ -6931,7 +6922,11 @@ function loadAccordionContentIfNeeded(accordionGroup, _filterDef) {
 function _resolveSearchPanel(profile) {
     if (profile.panels && profile.panels.searchConfig)
         return profile.panels.searchConfig;
-    return profile.searchConfig || null;
+    if (profile.panels && profile.panels.search)
+        return profile.panels.search;
+    if (profile.searchConfig)
+        return profile.searchConfig;
+    return profile.search || null;
 }
 function _resolveFilters(searchPanel) {
     if (!searchPanel)
@@ -8104,7 +8099,6 @@ function createSearchBarDom() {
     return bar;
 }
 
-/* eslint-disable security/detect-object-injection */
 /**
 
 
@@ -8148,7 +8142,10 @@ function _readProximityRadius() {
     try {
         const activeProfile = Config$3?.getActiveProfile?.();
         if (activeProfile) {
-            const searchConfig = (activeProfile.panels && activeProfile.panels.searchConfig) || activeProfile.searchConfig;
+            const searchConfig = (activeProfile.panels &&
+                (activeProfile.panels.searchConfig || activeProfile.panels.search)) ||
+                activeProfile.searchConfig ||
+                activeProfile.search;
             if (searchConfig)
                 _applyRadiusConfig(searchConfig, out);
         }
@@ -8213,7 +8210,7 @@ function createProximityBarDom() {
     cancelBtn.addEventListener("click", () => closeProximityBar(true));
     bar.appendChild(cancelBtn);
     slider.addEventListener("input", () => {
-        const km = parseInt(slider.value, 10);
+        const km = Number.parseInt(slider.value, 10);
         if (domState.proximityRadiusLabel)
             domState.proximityRadiusLabel.textContent = `${km} km`;
         const prox = _g$d.GeoLeaf?._UIFilterPanelProximity;
@@ -8309,7 +8306,6 @@ function closeProximityBar(cancel) {
     }
 }
 
-/* eslint-disable security/detect-object-injection */
 /**
  * GeoLeaf UI – Mobile toolbar: sheet modal (full-height overlay panel).
  * @module ui/mobile-toolbar-sheet
@@ -8576,7 +8572,7 @@ function _handleProximity(target) {
         closeProximityBar(false);
         return;
     }
-    domState.proximityActive = proximity.toggleProximityToolbar(map, parseInt(domState.proximitySlider?.defaultValue || "10", 10), { onPointPlaced: _buildProximityCallback() });
+    domState.proximityActive = proximity.toggleProximityToolbar(map, Number.parseInt(domState.proximitySlider?.defaultValue || "10", 10), { onPointPlaced: _buildProximityCallback() });
     target.classList.toggle("gl-map-toolbar__btn--active", domState.proximityActive);
     if (domState.proximityActive)
         openProximityBar();
@@ -8705,7 +8701,6 @@ function initMobileToolbar(options) {
     domState.filterCheckInterval = window.setInterval(() => refreshFilterButtonState(), 2000);
 }
 
-/* eslint-disable security/detect-object-injection */
 /**
 
  * desktop-panel.ts
@@ -9803,12 +9798,10 @@ class APIController {
             "initialization",
             "factory",
         ];
-        /* eslint-disable security/detect-object-injection -- manager type from config enum */
         managerTypes.forEach((type) => {
             const ManagerClass = this._getManagerClass(type);
             if (ManagerClass) {
                 try {
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
                     this.managers[type] = new ManagerClass();
                     this.healthStatus.managers++;
                     if (Log)
@@ -9824,7 +9817,6 @@ class APIController {
                 }
             }
         });
-        /* eslint-enable security/detect-object-injection */
         if (Log)
             Log.info(`[APIController] Loaded ${this.healthStatus.managers} managers`);
     }
@@ -9832,7 +9824,6 @@ class APIController {
      * Resolves a manager constructor by type key.
      * @private
      */
-    /* eslint-disable security/detect-object-injection -- type from enum, className from map */
     _getManagerClass(type) {
         const classNames = {
             module: "APIModuleManager",
@@ -9843,7 +9834,6 @@ class APIController {
         const api = _g$9.GeoLeaf?.API;
         return api && api[className] ? api[className] : null;
     }
-    /* eslint-enable security/detect-object-injection */
     /** Configures the module access function using the module manager. */
     _setupModuleAccess() {
         // The module manager doit être initialisé en premier
@@ -9871,11 +9861,9 @@ class APIController {
                     return this.managers.module.getModule(name);
                 }
                 // Fallback to global access
-                /* eslint-disable security/detect-object-injection -- name from controlled API arg */
                 if (_g$9.GeoLeaf && _g$9.GeoLeaf[name]) {
                     return _g$9.GeoLeaf[name];
                 }
-                /* eslint-enable security/detect-object-injection */
                 return null;
             }
             catch (error) {
@@ -10420,7 +10408,6 @@ class APIInitializationManager {
     }
 }
 
-/* eslint-disable security/detect-object-injection */
 /**
  * API Module Manager - Sprint 4.3 (Version Robuste)
  * Centralised access manager for GeoLeaf modules.
@@ -11266,6 +11253,7 @@ const PluginRegistry = {
         _registry$1.set(name, {
             name,
             version,
+            type: metadata.type || "standard",
             loaded: true,
             loadedAt: Date.now(),
             requires: metadata.requires || [],
@@ -11348,26 +11336,45 @@ const PluginRegistry = {
         return _registry$1.get(name) || null;
     },
     /**
-     * Prints a console report of loaded premium plugins.
+     * Prints a console report of loaded standard (MIT, non-core) plugins.
+     * Silent if none are loaded.
+     */
+    reportStandardPlugins() {
+        // Fallback name set for plugins that don't declare type
+        const STANDARD_PLUGINS_FALLBACK = new Set([
+            "websocket",
+            "realtime-layer",
+            "connector",
+            "flatgeobuf",
+            "file-import",
+        ]);
+        const standard = [..._registry$1.values()].filter((e) => e.loaded &&
+            (e.type === "standard"
+                ? !_isCoreName(e.name)
+                : STANDARD_PLUGINS_FALLBACK.has(e.name)));
+        if (standard.length === 0)
+            return;
+        // eslint-disable-next-line no-console
+        console.groupCollapsed(`%c[PLUGINS] ${standard.length} plugin(s) MIT chargé(s)`, "color:#0369a1;font-weight:bold");
+        for (const entry of standard) {
+            const healthy = typeof entry.healthCheck === "function" ? entry.healthCheck() : true;
+            const icon = healthy ? "✅" : "⚠️";
+            const color = healthy ? "color:#0284c7" : "color:#d97706";
+            const label = entry.label || entry.name;
+            const version = entry.version ? ` v${entry.version}` : "";
+            const status = healthy ? "OK" : "non connecté";
+            console.log(`%c  ${icon} ${label}${version}  [${status}]`, color); // eslint-disable-line no-console
+        }
+        console.groupEnd(); // eslint-disable-line no-console
+    },
+    /**
+     * Prints a console report of loaded premium (commercial) plugins.
      * Silent if no premium plugin is loaded (core only).
      */
     reportPremiumPlugins() {
-        const CORE_MODULES = new Set([
-            "core",
-            "labels",
-            "route",
-            "table",
-            "legend",
-            "layerManager",
-            "themes",
-            "basemapSelector",
-            "poiCore",
-            "poiRenderers",
-            "poiExtras",
-            "poi",
-            "basemap-selector",
-        ]);
-        const premium = [..._registry$1.values()].filter((e) => e.loaded && !CORE_MODULES.has(e.name));
+        // Fallback name set for plugins that don't declare type
+        const PREMIUM_PLUGINS_FALLBACK = new Set(["storage", "addpoi", "cog"]);
+        const premium = [..._registry$1.values()].filter((e) => e.loaded && (e.type === "premium" || PREMIUM_PLUGINS_FALLBACK.has(e.name)));
         if (premium.length === 0) {
             console.info("%c[PLUGINS] Core MIT — 0 premium plugin loaded", "color:#6b7280;font-style:italic");
             return;
@@ -11383,9 +11390,7 @@ const PluginRegistry = {
             const status = healthy ? "OK" : "ERREUR — module incomplet";
             console.log(`%c  ${icon} ${label}${version}  [${status}]`, color); // eslint-disable-line no-console
             if (!healthy) {
-                console.warn(
-                // eslint-disable-line no-console
-                `     [PLUGINS] ${entry.name} : healthCheck failed — check plugin loading.`);
+                console.warn(`     [PLUGINS] ${entry.name} : healthCheck failed — check plugin loading.`);
             }
         }
         console.groupEnd(); // eslint-disable-line no-console
@@ -11394,6 +11399,24 @@ const PluginRegistry = {
     _registry: _registry$1,
     _lazyResolvers,
 };
+/** Core internal module names — excluded from standard plugin report. */
+function _isCoreName(name) {
+    return [
+        "core",
+        "labels",
+        "route",
+        "table",
+        "legend",
+        "layerManager",
+        "themes",
+        "basemapSelector",
+        "poiCore",
+        "poiRenderers",
+        "poiExtras",
+        "poi",
+        "basemap-selector",
+    ].includes(name);
+}
 
 /*!
  * GeoLeaf Core
@@ -13569,7 +13592,6 @@ _g$2.GeoLeaf.hasModule = function (name) {
     return !!mod;
 };
 _g$2.GeoLeaf.getNamespace = function (name) {
-    // eslint-disable-next-line security/detect-object-injection
     return _g$2.GeoLeaf && name ? _g$2.GeoLeaf[name] || null : null;
 };
 _g$2.GeoLeaf.getHealth = function () {
@@ -13697,6 +13719,10 @@ _app$2.checkPlugins = function (cfg) {
                 "Core/lite SW remains active for basic offline caching.");
         }
     }
+    // Warning if showAddPoi is enabled but AddPOI plugin is not loaded
+    if (cfg?.ui?.showAddPoi && !GeoLeaf$2.POI) {
+        AppLog.warn("AddPOI plugin is not loaded. Include geoleaf-addpoi.plugin.js to enable POI creation.");
+    }
     // Warning if SyncHandler is loaded without Storage
     if (GeoLeaf$2.POI && GeoLeaf$2.POI.SyncHandler && !GeoLeaf$2.Storage) {
         AppLog.warn("⚠️ SyncHandler loaded without Storage plugin — sync operations will be disabled. " +
@@ -13755,7 +13781,6 @@ _app$2.showNotification = function (message, duration) {
  * @param {string} chunkName  - Chunk identifier (e.g. 'poi', 'route')
  * @returns {Promise<void>}
  */
-/* eslint-disable security/detect-object-injection -- intentional GeoLeaf[globalName] lookup */
 _app$2._ensureModule = async function (globalName, chunkName) {
     if (GeoLeaf$2[globalName])
         return; // already loaded (UMD or already imported)
@@ -13783,7 +13808,7 @@ _app$2._ensureModule = async function (globalName, chunkName) {
  * Initialize base tile layers from profile cfg.basemaps.
  * @param {InitDeps} deps
  */
-/* eslint-disable complexity, security/detect-object-injection -- keys from config object */
+/* eslint-disable complexity -- keys from config object */
 function initBasemaps({ GeoLeaf, cfg, map, AppLog }) {
     const baseLayersModule = GeoLeaf.BaseLayers || GeoLeaf.Baselayers;
     if (!baseLayersModule || typeof baseLayersModule.init !== "function") {
@@ -13831,6 +13856,9 @@ function initBasemaps({ GeoLeaf, cfg, map, AppLog }) {
                 entry.subdomains = def.subdomains;
             if (typeof def.tileSize === "number")
                 entry.tileSize = def.tileSize;
+            // 3D terrain configuration
+            if (def.terrain)
+                entry.terrain = def.terrain;
             basemapsFromConfig[key] = entry;
         });
     }
@@ -13847,7 +13875,7 @@ function initBasemaps({ GeoLeaf, cfg, map, AppLog }) {
         AppLog.warn("BaseLayers.init threw an exception:", e);
     }
 }
-/* eslint-enable complexity, security/detect-object-injection */
+/* eslint-enable complexity */
 /**
  * Initialize POI markers from profile cfg.poi.
  * @param {InitDeps} deps
@@ -14072,7 +14100,6 @@ function initGeoJSON({ GeoLeaf, _cfg, map, AppLog, _app }) {
     });
     /* eslint-enable max-lines-per-function */
 }
-/* eslint-enable max-lines-per-function */
 /**
  * Initialize mobile toolbar pill bar and desktop right panel.
  * @param {InitDeps} deps
@@ -14151,21 +14178,9 @@ function initUIPanels({ GeoLeaf, cfg, map, AppLog }) {
  * Released under the MIT License
  * https://geoleaf.dev
  */
-/**
- * GeoLeaf Application Init
- * Main initialisation function for the application:
- * - Map initialisation
- * - Loading modules (POI, Routes, GeoJSON, etc.)
- * - UI component configuration
- * - Reveal mechanism (loader / spinner)
- *
- * @module app/init
- */
+/** App init: map, modules, UI, loader reveal. @module app/init */
 const GeoLeaf$1 = _g$1.GeoLeaf;
 const _app$1 = (GeoLeaf$1._app = GeoLeaf$1._app || {});
-// ============================================================
-// Main function: initialise the application
-// ============================================================
 /* eslint-disable complexity, max-lines-per-function -- init orchestration */
 _app$1.initApp = async function (cfg) {
     cfg = cfg || {};
@@ -14192,43 +14207,71 @@ _app$1.initApp = async function (cfg) {
     }
     // Check plugins
     _app$1.checkPlugins(cfg);
-    // ========================================================
-    // Map initialisation
-    // The map is created directly on the profile extent
-    // (map.bounds is required in the profile).
-    // ========================================================
+    // ── Map initialisation: profile extent (map.bounds or map.center+zoom) ──────────────────
     const mapTarget = (cfg.map && (cfg.map.target || cfg.map.id)) || "geoleaf-map";
     const uiTheme = (cfg.ui && cfg.ui.theme) || "light";
-    // Required bounds — no world map fallback
-    if (!cfg.map || !Array.isArray(cfg.map.bounds) || cfg.map.bounds.length !== 2) {
-        AppLog.error("[GeoLeaf] Active profile does not define valid map.bounds. " +
-            "The extent (map.bounds) is required in profile.json. " +
-            'Example: "bounds": [[43.0, 1.0], [44.0, 2.0]]');
+    // Determine positioning mode: bounds (fitBounds) or center+zoom (setView)
+    const _hasBounds = cfg.map && Array.isArray(cfg.map.bounds) && cfg.map.bounds.length === 2;
+    const _hasCenterZoom = cfg.map &&
+        Array.isArray(cfg.map.center) &&
+        cfg.map.center.length === 2 &&
+        typeof cfg.map.zoom === "number";
+    if (!_hasBounds && !_hasCenterZoom) {
+        AppLog.error("[GeoLeaf] Active profile does not define valid map.bounds or map.center+zoom. " +
+            "Either map.bounds or map.center+map.zoom is required in profile.json. " +
+            'Example: "bounds": [[43.0, 1.0], [44.0, 2.0]]  or  "center": [20, 10], "zoom": 2');
         return;
     }
-    // Calculate the centre from the bounds to avoid the world map flash
-    const profileBoundsRaw = cfg.map.bounds;
-    const profileMaxZoom = cfg.map.initialMaxZoom || cfg.map.maxZoom || 12;
-    const profilePadding = cfg.map.padding || [50, 50];
-    const mapCenter = [
-        (profileBoundsRaw[0][0] + profileBoundsRaw[1][0]) / 2,
-        (profileBoundsRaw[0][1] + profileBoundsRaw[1][1]) / 2,
-    ];
-    // Engine-agnostic bounds object used by IMapAdapter.fitBounds()
-    const profileBounds = {
-        south: profileBoundsRaw[0][0],
-        west: profileBoundsRaw[0][1],
-        north: profileBoundsRaw[1][0],
-        east: profileBoundsRaw[1][1],
-    };
+    // Build positioning variables depending on available config
+    let profileBounds = null;
+    let profilePadding = null;
+    let mapCenter;
+    let profileMaxZoom;
+    if (_hasBounds) {
+        const profileBoundsRaw = cfg.map.bounds;
+        profileMaxZoom = cfg.map.initialMaxZoom || cfg.map.maxZoom || 12;
+        const _rawPadding = cfg.map.padding || [50, 50];
+        profilePadding = Array.isArray(_rawPadding)
+            ? {
+                top: _rawPadding[1] ?? 50,
+                bottom: _rawPadding[1] ?? 50,
+                left: _rawPadding[0] ?? 50,
+                right: _rawPadding[0] ?? 50,
+            }
+            : _rawPadding;
+        mapCenter = [
+            (profileBoundsRaw[0][0] + profileBoundsRaw[1][0]) / 2,
+            (profileBoundsRaw[0][1] + profileBoundsRaw[1][1]) / 2,
+        ];
+        profileBounds = {
+            south: profileBoundsRaw[0][0],
+            west: profileBoundsRaw[0][1],
+            north: profileBoundsRaw[1][0],
+            east: profileBoundsRaw[1][1],
+        };
+    }
+    else {
+        // center+zoom mode (e.g. world-transport, world-disasters)
+        mapCenter = cfg.map.center;
+        profileMaxZoom = cfg.map.zoom;
+        AppLog.log("[GeoLeaf] Profile uses center+zoom positioning (no bounds).");
+    }
     let map = null;
     // Map options — positionFixed constrains panning to the profile extent
     const mapOptions = {};
     const boundsMargin = typeof cfg.map.boundsMargin === "number" ? cfg.map.boundsMargin : 0.3;
-    if (cfg.map.positionFixed === true) {
+    if (cfg.map.positionFixed === true && profileBounds) {
         mapOptions.maxBounds = padBounds(profileBounds, boundsMargin);
         mapOptions.minZoom = typeof cfg.map.minZoom === "number" ? cfg.map.minZoom : 3;
     }
+    if (typeof cfg.map.minZoom === "number" && !mapOptions.minZoom)
+        mapOptions.minZoom = cfg.map.minZoom;
+    if (typeof cfg.map.maxZoom === "number")
+        mapOptions.maxZoom = cfg.map.maxZoom;
+    if (typeof cfg.map.maxPitch === "number")
+        mapOptions.maxPitch = cfg.map.maxPitch;
+    if (typeof cfg.map.pitch === "number")
+        mapOptions.pitch = cfg.map.pitch;
     _pm("geoleaf:init:mapCreate:start");
     try {
         map = GeoLeaf$1.init({
@@ -14262,39 +14305,38 @@ _app$1.initApp = async function (cfg) {
     }
     // positionFixed is now applied via mapOptions in GeoLeaf.init() —
     // no post-creation safety net needed (MapLibre applies maxBounds reliably).
-    if (cfg.map.positionFixed === true) {
+    if (cfg.map.positionFixed === true && profileBounds) {
         AppLog.log("[GeoLeaf] positionFixed enabled — movement restricted to profile extent (margin: " +
             boundsMargin * 100 +
             "%).");
     }
     // Precise positioning via fitBounds (adjusts zoom to real container dimensions)
-    try {
-        if (map && typeof map.fitBounds === "function") {
-            map.fitBounds(profileBounds, {
-                padding: { x: profilePadding[0], y: profilePadding[1] },
-                animate: false,
-            });
+    // Skipped for center+zoom profiles — already positioned via GeoLeaf.init()
+    if (profileBounds) {
+        try {
+            if (map && typeof map.fitBounds === "function") {
+                map.fitBounds(profileBounds, {
+                    padding: profilePadding,
+                    animate: false,
+                });
+            }
+            AppLog.log("Map positioned via profile map.bounds.");
         }
-        AppLog.log("Map positioned via profile map.bounds.");
+        catch (e) {
+            AppLog.warn("Error during fitBounds from profile map.bounds:", e);
+        }
     }
-    catch (e) {
-        AppLog.warn("Error during fitBounds from profile map.bounds:", e);
+    else {
+        AppLog.log("Map positioned via profile center+zoom.");
     }
-    // ========================================================
-    // Service Worker core/lite — UNCONDITIONAL registration
-    // The lite SW (sw-core.js) is part of the free core.
-    // It will be replaced by the premium SW (sw.js) if the
-    // Storage plugin is loaded AND enableServiceWorker = true.
-    // ========================================================
+    // ── SW core/lite: unconditional registration (replaced by premium SW if Storage loaded) ──
     if (GeoLeaf$1._SWRegister) {
         GeoLeaf$1._SWRegister
             .register({ scope: "./" })
             .then(() => AppLog.log("Service Worker (core/lite) registered."))
             .catch((err) => AppLog.warn("Error registering core SW:", err.message));
     }
-    // ========================================================
-    // Initialise Storage with the profile config (if plugin loaded)
-    // ========================================================
+    // ── Storage init (if plugin loaded) ─────────────────────────────────────────────────────
     const storageConfig = cfg.storage || {};
     if (GeoLeaf$1.Storage && typeof GeoLeaf$1.Storage.init === "function") {
         try {
@@ -14599,6 +14641,25 @@ _app$1.initApp = async function (cfg) {
                 AppLog.warn("Error during Legend module initialization:", e);
             }
         }
+        // Load legends for layers active in the current theme (Legend must be init'd first)
+        try {
+            if (GeoLeaf$1._GeoJSONLayerManager &&
+                typeof GeoLeaf$1._GeoJSONLayerManager._loadLayerLegend === "function" &&
+                Array.isArray(GeoLeaf$1._allLayerConfigs)) {
+                const activeTheme = GeoLeaf$1.ThemeSelector?.getActiveTheme?.();
+                const activeIds = Array.isArray(activeTheme?.layers)
+                    ? activeTheme.layers.map((l) => l.id)
+                    : [];
+                GeoLeaf$1._allLayerConfigs.forEach((config) => {
+                    if (activeIds.length === 0 || activeIds.includes(config.id)) {
+                        GeoLeaf$1._GeoJSONLayerManager._loadLayerLegend(config.id, { config });
+                    }
+                });
+            }
+        }
+        catch (e) {
+            AppLog.warn("Error loading initial layer legends:", e);
+        }
         if (cfg.ui &&
             cfg.ui.showLayerManager !== false &&
             GeoLeaf$1.LayerManager &&
@@ -14694,11 +14755,11 @@ _app$1.initApp = async function (cfg) {
             const _hasPermalink = _permalinkCfg.enabled &&
                 typeof GeoLeaf$1.Permalink !== "undefined" &&
                 GeoLeaf$1.Permalink.getState() !== null;
-            if (!_hasPermalink && typeof map.fitBounds === "function") {
+            if (profileBounds && !_hasPermalink && typeof map.fitBounds === "function") {
                 setTimeout(function () {
                     try {
                         map.fitBounds(profileBounds, {
-                            padding: { x: profilePadding[0], y: profilePadding[1] },
+                            padding: profilePadding,
                             animate: false,
                         });
                     }
@@ -15646,6 +15707,8 @@ GeoLeaf.boot = function (options) {
     if (options?.onPerformanceMetrics) {
         GeoLeaf._perfCallback = options.onPerformanceMetrics;
     }
+    // Standard MIT plugin report (websocket, realtime-layer, connector, …)
+    GeoLeaf.plugins?.reportStandardPlugins?.();
     // Premium plugin report — silent if none loaded (core only)
     GeoLeaf.plugins?.reportPremiumPlugins?.();
     if (document.readyState === "loading") {
@@ -15687,45 +15750,45 @@ async function loadModule(moduleName) {
     switch (moduleName) {
         // POI convenience: core first, then renderers + extras in parallel
         case "poi":
-            await import('./chunks/geoleaf-poi-core-DiWyemJV.js');
+            await import('./chunks/geoleaf-poi-core-C3OKeItx.js');
             await Promise.all([
-                import('./chunks/geoleaf-poi-renderers-DB9AM-Sg.js'),
-                import('./chunks/geoleaf-poi-extras-DiWyemJV.js'),
+                import('./chunks/geoleaf-poi-renderers-bmxS1Z4k.js'),
+                import('./chunks/geoleaf-poi-extras-C3OKeItx.js'),
             ]);
             break;
         // Granular POI sub-chunks
         case "poiCore":
-            await import('./chunks/geoleaf-poi-core-DiWyemJV.js');
+            await import('./chunks/geoleaf-poi-core-C3OKeItx.js');
             break;
         case "poiRenderers":
-            await import('./chunks/geoleaf-poi-renderers-DB9AM-Sg.js');
+            await import('./chunks/geoleaf-poi-renderers-bmxS1Z4k.js');
             break;
         case "poiExtras":
-            await import('./chunks/geoleaf-poi-extras-DiWyemJV.js');
+            await import('./chunks/geoleaf-poi-extras-C3OKeItx.js');
             break;
         case "basemapSelector":
-            await import('./chunks/geoleaf-basemap-selector-DB9AM-Sg.js');
+            await import('./chunks/geoleaf-basemap-selector-bmxS1Z4k.js');
             break;
         case "route":
-            await import('./chunks/geoleaf-route-DB9AM-Sg.js');
+            await import('./chunks/geoleaf-route-bmxS1Z4k.js');
             break;
         case "layerManager":
-            await import('./chunks/geoleaf-layer-manager-Da0bIsif.js');
+            await import('./chunks/geoleaf-layer-manager-D7LfF6HG.js');
             break;
         case "legend":
-            await import('./chunks/geoleaf-legend-Cw79QjPn.js');
+            await import('./chunks/geoleaf-legend-CvgRA6HW.js');
             break;
         case "labels":
-            await import('./chunks/geoleaf-labels-Ci70gMro.js');
+            await import('./chunks/geoleaf-labels-D8YldCe0.js');
             break;
         case "themes":
-            await import('./chunks/geoleaf-themes-BEW3DLvX.js');
+            await import('./chunks/geoleaf-themes-CD8Bu1Ao.js');
             break;
         case "table":
-            await import('./chunks/geoleaf-table-mDIxh91S.js');
+            await import('./chunks/geoleaf-table-Cwb-14yx.js');
             break;
         case "search":
-            await import('./chunks/geoleaf-search-CBksO4tl.js').then(function (n) { return n.s; });
+            await import('./chunks/geoleaf-search-BMHg_T8Q.js').then(function (n) { return n.s; });
             break;
         default: {
             // TypeScript exhaustiveness guard — `moduleName` is `never` here for
@@ -15750,16 +15813,16 @@ async function loadModule(moduleName) {
  */
 async function loadAllSecondaryModules() {
     // poi-core must be ready before poi-renderers and poi-extras
-    await import('./chunks/geoleaf-poi-core-DiWyemJV.js');
+    await import('./chunks/geoleaf-poi-core-C3OKeItx.js');
     await Promise.all([
-        import('./chunks/geoleaf-poi-renderers-DB9AM-Sg.js'),
-        import('./chunks/geoleaf-poi-extras-DiWyemJV.js'),
-        import('./chunks/geoleaf-route-DB9AM-Sg.js'),
-        import('./chunks/geoleaf-layer-manager-Da0bIsif.js'),
-        import('./chunks/geoleaf-legend-Cw79QjPn.js'),
-        import('./chunks/geoleaf-labels-Ci70gMro.js'),
-        import('./chunks/geoleaf-themes-BEW3DLvX.js'),
-        import('./chunks/geoleaf-table-mDIxh91S.js'),
+        import('./chunks/geoleaf-poi-renderers-bmxS1Z4k.js'),
+        import('./chunks/geoleaf-poi-extras-C3OKeItx.js'),
+        import('./chunks/geoleaf-route-bmxS1Z4k.js'),
+        import('./chunks/geoleaf-layer-manager-D7LfF6HG.js'),
+        import('./chunks/geoleaf-legend-CvgRA6HW.js'),
+        import('./chunks/geoleaf-labels-D8YldCe0.js'),
+        import('./chunks/geoleaf-themes-CD8Bu1Ao.js'),
+        import('./chunks/geoleaf-table-Cwb-14yx.js'),
     ]);
 }
 
@@ -15898,7 +15961,6 @@ const GeoLeafAPI = Object.assign(existing, {
      * @returns {object | null} The namespace object, or `null` if absent.
      */
     getNamespace: function (name) {
-        // eslint-disable-next-line security/detect-object-injection
         return _g.GeoLeaf && name ? _g.GeoLeaf[name] || null : null;
     },
     /**

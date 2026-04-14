@@ -1,0 +1,672 @@
+﻿{
+    "type":  "FeatureCollection",
+    "name":  "candelabres",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-001",
+                                            "secteur":  "Nord",
+                                            "commune":  "Saint-Denis",
+                                            "altitude":  12,
+                                            "puissance_w":  150,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2018,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4504,
+                                                              -20.8823
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-002",
+                                            "secteur":  "Nord",
+                                            "commune":  "Saint-Denis",
+                                            "altitude":  45,
+                                            "puissance_w":  100,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2019,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4612,
+                                                              -20.8901
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-003",
+                                            "secteur":  "Nord",
+                                            "commune":  "Saint-Denis",
+                                            "altitude":  8,
+                                            "puissance_w":  150,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2020,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4380,
+                                                              -20.8744
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-004",
+                                            "secteur":  "Nord",
+                                            "commune":  "Sainte-Marie",
+                                            "altitude":  28,
+                                            "puissance_w":  100,
+                                            "statut":  "actif",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2015,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.5333,
+                                                              -20.8951
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-005",
+                                            "secteur":  "Nord",
+                                            "commune":  "Sainte-Suzanne",
+                                            "altitude":  60,
+                                            "puissance_w":  150,
+                                            "statut":  "dÃ©faillant",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2013,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.5926,
+                                                              -20.9218
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-006",
+                                            "secteur":  "Est",
+                                            "commune":  "Saint-AndrÃ©",
+                                            "altitude":  35,
+                                            "puissance_w":  150,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2021,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.6498,
+                                                              -20.9639
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-007",
+                                            "secteur":  "Est",
+                                            "commune":  "Saint-BenoÃ®t",
+                                            "altitude":  22,
+                                            "puissance_w":  100,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2020,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.7133,
+                                                              -21.0333
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-008",
+                                            "secteur":  "Est",
+                                            "commune":  "Saint-BenoÃ®t",
+                                            "altitude":  55,
+                                            "puissance_w":  100,
+                                            "statut":  "entretien",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2014,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.7280,
+                                                              -21.0512
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-009",
+                                            "secteur":  "Est",
+                                            "commune":  "Sainte-Anne",
+                                            "altitude":  130,
+                                            "puissance_w":  100,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2022,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.7498,
+                                                              -21.0694
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-010",
+                                            "secteur":  "Est",
+                                            "commune":  "Sainte-Rose",
+                                            "altitude":  18,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2018,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.7958,
+                                                              -21.1282
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-011",
+                                            "secteur":  "Sud",
+                                            "commune":  "Saint-Pierre",
+                                            "altitude":  14,
+                                            "puissance_w":  150,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2019,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4784,
+                                                              -21.3393
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-012",
+                                            "secteur":  "Sud",
+                                            "commune":  "Saint-Pierre",
+                                            "altitude":  42,
+                                            "puissance_w":  150,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2021,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4902,
+                                                              -21.3480
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-013",
+                                            "secteur":  "Sud",
+                                            "commune":  "Saint-Louis",
+                                            "altitude":  32,
+                                            "puissance_w":  100,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2020,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4458,
+                                                              -21.2731
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-014",
+                                            "secteur":  "Sud",
+                                            "commune":  "Saint-Joseph",
+                                            "altitude":  25,
+                                            "puissance_w":  100,
+                                            "statut":  "dÃ©faillant",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2012,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.6158,
+                                                              -21.3791
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-015",
+                                            "secteur":  "Sud",
+                                            "commune":  "Le Tampon",
+                                            "altitude":  520,
+                                            "puissance_w":  100,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2018,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.5187,
+                                                              -21.2693
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-016",
+                                            "secteur":  "Ouest",
+                                            "commune":  "Saint-Paul",
+                                            "altitude":  10,
+                                            "puissance_w":  150,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2019,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.2756,
+                                                              -21.0015
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-017",
+                                            "secteur":  "Ouest",
+                                            "commune":  "Saint-Paul",
+                                            "altitude":  28,
+                                            "puissance_w":  100,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2022,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.2893,
+                                                              -21.0187
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-018",
+                                            "secteur":  "Ouest",
+                                            "commune":  "Saint-Leu",
+                                            "altitude":  15,
+                                            "puissance_w":  150,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2021,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.2836,
+                                                              -21.1544
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-019",
+                                            "secteur":  "Ouest",
+                                            "commune":  "Les Trois-Bassins",
+                                            "altitude":  92,
+                                            "puissance_w":  100,
+                                            "statut":  "actif",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2016,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.3104,
+                                                              -21.1050
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-020",
+                                            "secteur":  "Ouest",
+                                            "commune":  "Saint-Paul",
+                                            "altitude":  165,
+                                            "puissance_w":  100,
+                                            "statut":  "entretien",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2015,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.3420,
+                                                              -21.0580
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-021",
+                                            "secteur":  "Hauts Nord",
+                                            "commune":  "La Montagne",
+                                            "altitude":  385,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2020,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4170,
+                                                              -20.9280
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-022",
+                                            "secteur":  "Hauts Nord",
+                                            "commune":  "Saint-Denis",
+                                            "altitude":  480,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2021,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4350,
+                                                              -20.9620
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-023",
+                                            "secteur":  "Hauts Ouest",
+                                            "commune":  "Salazie",
+                                            "altitude":  620,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2016,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.5272,
+                                                              -21.0333
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-024",
+                                            "secteur":  "Hauts Ouest",
+                                            "commune":  "Salazie",
+                                            "altitude":  780,
+                                            "puissance_w":  70,
+                                            "statut":  "dÃ©faillant",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2013,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.5080,
+                                                              -21.0450
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-025",
+                                            "secteur":  "Hauts Ouest",
+                                            "commune":  "Cilaos",
+                                            "altitude":  1230,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2017,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4741,
+                                                              -21.1344
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-026",
+                                            "secteur":  "Hauts Ouest",
+                                            "commune":  "Cilaos",
+                                            "altitude":  1450,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2019,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.4620,
+                                                              -21.1520
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-027",
+                                            "secteur":  "Hauts Ouest",
+                                            "commune":  "Les Makes",
+                                            "altitude":  920,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2015,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.3950,
+                                                              -21.1870
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-028",
+                                            "secteur":  "Hauts Sud",
+                                            "commune":  "Le Tampon",
+                                            "altitude":  1200,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2022,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.5378,
+                                                              -21.2070
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-029",
+                                            "secteur":  "Hauts Sud",
+                                            "commune":  "Le Tampon",
+                                            "altitude":  1580,
+                                            "puissance_w":  70,
+                                            "statut":  "actif",
+                                            "type_lampe":  "LED",
+                                            "annee_pose":  2022,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.5440,
+                                                              -21.2280
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "id":  "CND-030",
+                                            "secteur":  "Hauts Sud",
+                                            "commune":  "Saint-Joseph",
+                                            "altitude":  840,
+                                            "puissance_w":  70,
+                                            "statut":  "entretien",
+                                            "type_lampe":  "Sodium",
+                                            "annee_pose":  2014,
+                                            "categoryId":  "eclairage",
+                                            "subCategoryId":  "candelabres"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              55.6020,
+                                                              -21.3250
+                                                          ]
+                                      }
+                     }
+                 ]
+}

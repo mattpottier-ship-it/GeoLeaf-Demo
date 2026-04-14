@@ -1,0 +1,874 @@
+{
+  "_bundleVersion": "1.0",
+  "_profileId": "france-risques-inondation",
+  "_generatedAt": 1776191696506,
+  "taxonomy": {
+    "icons": {
+      "spriteUrl": "profiles/france-risques-inondation/icons/sprite_risques.svg",
+      "symbolPrefix": "risques-poi-cat-",
+      "defaultIcon": "risques-poi-cat-station"
+    },
+    "defaults": {
+      "icon": "risques-poi-cat-station"
+    },
+    "categories": {
+      "hydrometrie": {
+        "label": "Hydrométrie",
+        "icon": "risques-poi-cat-station",
+        "subcategories": {
+          "station_active": {
+            "label": "Station active",
+            "icon": "risques-poi-cat-station"
+          },
+          "station_fermee": {
+            "label": "Station fermée",
+            "icon": "risques-poi-cat-station"
+          }
+        }
+      },
+      "hydrographie": {
+        "label": "Hydrographie",
+        "icon": "risques-poi-cat-cours-eau",
+        "subcategories": {
+          "cours_eau": {
+            "label": "Cours d'eau",
+            "icon": "risques-poi-cat-cours-eau"
+          },
+          "bassin": {
+            "label": "Bassin versant",
+            "icon": "risques-poi-cat-bassin"
+          }
+        }
+      },
+      "zones_inondables": {
+        "label": "Zones inondables TRI",
+        "icon": "risques-poi-cat-inondation",
+        "subcategories": {
+          "tri_frequent": {
+            "label": "Scénario fréquent",
+            "icon": "risques-poi-cat-tri-frequent"
+          },
+          "tri_centennal": {
+            "label": "Scénario centennal",
+            "icon": "risques-poi-cat-tri-centennal"
+          },
+          "tri_extreme": {
+            "label": "Scénario extrême",
+            "icon": "risques-poi-cat-tri-extreme"
+          }
+        }
+      }
+    }
+  },
+  "themes": {
+    "defaultTheme": "vigicrues",
+    "config": {
+      "primaryThemes": {
+        "enabled": true,
+        "position": "top-map"
+      },
+      "secondaryThemes": {
+        "enabled": false
+      }
+    },
+    "themes": [
+      {
+        "id": "vigicrues",
+        "label": "Vigicrues RT",
+        "type": "primary",
+        "icon": "💧",
+        "description": "Stations hydrométriques et cours d'eau principaux",
+        "layers": [
+          {
+            "id": "stations_hydrometriques",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "cours_eau_risque",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_frequent",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_centennal",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_extreme",
+            "visible": false,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "scenarios_tri",
+        "label": "Scénarios TRI",
+        "type": "primary",
+        "icon": "🌊",
+        "description": "Les 3 scénarios d'inondation TRI superposés au terrain 3D",
+        "layers": [
+          {
+            "id": "stations_hydrometriques",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "cours_eau_risque",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_frequent",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_centennal",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_extreme",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "vue_complete",
+        "label": "Vue complète",
+        "type": "primary",
+        "icon": "🗺️",
+        "description": "Toutes les couches activées",
+        "layers": [
+          {
+            "id": "stations_hydrometriques",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "cours_eau_risque",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_frequent",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_centennal",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "tri_extreme",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      }
+    ]
+  },
+  "basemaps": {
+    "basemaps": {
+      "ign-plan": {
+        "id": "ign-plan",
+        "label": "IGN Plan",
+        "type": "maplibre",
+        "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
+        "attribution": "© IGN France — Geoportail",
+        "defaultBasemap": true,
+        "terrain": {
+          "enabled": true,
+          "demUrl": "https://data.geopf.fr/tms/1.0.0/ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES.MNT/{z}/{x}/{y}.png",
+          "demEncoding": "terrarium",
+          "exaggeration": 1.5,
+          "default3D": true,
+          "pitch": 45,
+          "bearing": 0
+        }
+      },
+      "satellite": {
+        "id": "satellite",
+        "label": "Satellite",
+        "type": "tile",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles © Esri — Source: Esri, Maxar, GeoEye, Earthstar Geographics",
+        "minZoom": 5,
+        "maxZoom": 18,
+        "offline": false
+      },
+      "terrain3d": {
+        "id": "terrain3d",
+        "label": "Relief 3D",
+        "url": "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp",
+        "encoding": "terrarium",
+        "tileSize": 512,
+        "maxZoom": 12,
+        "attribution": "© Mapterhorn — CC BY",
+        "terrain": {
+          "enabled": true,
+          "demUrl": "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp",
+          "demEncoding": "terrarium",
+          "exaggeration": 1.5,
+          "default3D": true,
+          "pitch": 45,
+          "bearing": 0
+        }
+      },
+      "hillshade-ign": {
+        "id": "hillshade-ign",
+        "label": "Relief ombré (IGN)",
+        "type": "hillshade",
+        "attribution": "© IGN France — Geoportail",
+        "hillshade": {
+          "demUrl": "https://data.geopf.fr/tms/1.0.0/ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES.MNT/{z}/{x}/{y}.png",
+          "demEncoding": "terrarium",
+          "demMaxZoom": 14,
+          "exaggeration": 0.5,
+          "illuminationDirection": 335,
+          "shadowColor": "#3d5a7a",
+          "highlightColor": "#ffffff"
+        }
+      },
+      "wmts-ign-ortho": {
+        "id": "wmts-ign-ortho",
+        "label": "Orthophoto (WMTS IGN)",
+        "type": "wmts",
+        "attribution": "© IGN France — Geoportail",
+        "wmts": {
+          "getCapabilitiesUrl": "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetCapabilities",
+          "layer": "ORTHOIMAGERY.ORTHOPHOTOS",
+          "tileMatrixSet": "PM",
+          "format": "image/jpeg"
+        }
+      },
+      "wms-ign-pentes": {
+        "id": "wms-ign-pentes",
+        "label": "Pentes (WMS IGN)",
+        "type": "wms",
+        "attribution": "© IGN France — Geoportail",
+        "wms": {
+          "url": "https://data.geopf.fr/wms-r",
+          "layers": "ELEVATION.SLOPES",
+          "version": "1.3.0",
+          "format": "image/png",
+          "transparent": true
+        }
+      },
+      "image-ortho-alpes": {
+        "id": "image-ortho-alpes",
+        "label": "Ortho Alpes (image fixe)",
+        "type": "image",
+        "attribution": "© IGN France — HR.ORTHOIMAGERY",
+        "imageSource": {
+          "url": "https://data.geopf.fr/wms-r?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=HR.ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&BBOX=45.0,5.5,45.5,6.2&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg",
+          "coordinates": [
+            [
+              5.5,
+              45.5
+            ],
+            [
+              6.2,
+              45.5
+            ],
+            [
+              6.2,
+              45
+            ],
+            [
+              5.5,
+              45
+            ]
+          ],
+          "opacity": 0.9
+        }
+      }
+    }
+  },
+  "ui": {
+    "ui": {
+      "theme": "light",
+      "language": "fr",
+      "showBaseLayerControls": false,
+      "showThemeSelector": true,
+      "showFilterPanel": true,
+      "showLayerManager": true,
+      "showLegend": true,
+      "showTable": true,
+      "showGeolocation": true,
+      "showCoordinates": true,
+      "showScale": true,
+      "showCacheButton": true,
+      "showAddPoi": true,
+      "permalink": {
+        "enabled": true,
+        "mode": "hash"
+      }
+    },
+    "searchConfig": {
+      "title": "Filtrer",
+      "radiusMin": 1,
+      "radiusMax": 200,
+      "radiusStep": 1,
+      "radiusDefault": 10,
+      "searchPlaceholder": "Rechercher une station…",
+      "filters": [
+        {
+          "id": "searchText",
+          "type": "search",
+          "label": "Recherche textuelle",
+          "placeholder": "Rechercher...",
+          "searchFields": [
+            "title",
+            "properties.name",
+            "properties.libelle_station",
+            "properties.libelle_cours_eau"
+          ]
+        },
+        {
+          "id": "proximity",
+          "type": "proximity",
+          "label": "Recherche par proximité",
+          "buttonLabel": "Activer",
+          "instructionText": "Cliquez sur la carte pour définir le point central"
+        },
+        {
+          "id": "categories",
+          "type": "tree",
+          "label": "Catégories"
+        },
+        {
+          "id": "tags",
+          "type": "multiselect-tags",
+          "label": "Tags",
+          "field": "attributes.tags"
+        }
+      ],
+      "actions": {
+        "applyLabel": "Appliquer",
+        "resetLabel": "Réinitialiser"
+      }
+    },
+    "layerManagerConfig": {
+      "title": "Couches",
+      "collapsedByDefault": true,
+      "sections": [
+        {
+          "id": "data-hydrometrie",
+          "label": "Hydrométrie temps réel",
+          "order": 1,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-hydrographie",
+          "label": "Hydrographie",
+          "order": 2,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "data-tri",
+          "label": "Zones inondables TRI",
+          "order": 3,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "basemap",
+          "label": "Fonds de carte",
+          "order": 4,
+          "collapsedByDefault": true
+        }
+      ]
+    },
+    "legendConfig": {
+      "title": "Légende",
+      "collapsedByDefault": true,
+      "position": "bottomleft"
+    },
+    "tableConfig": {
+      "title": "Tableau",
+      "enabled": true,
+      "defaultVisible": false,
+      "pageSize": 50,
+      "maxRowsPerLayer": 10000,
+      "enableExportButton": true,
+      "virtualScrolling": true,
+      "defaultHeight": "40%",
+      "minHeight": "20%",
+      "maxHeight": "60%",
+      "resizable": true
+    },
+    "scaleConfig": {
+      "scaleGraphic": true,
+      "scaleNumeric": true,
+      "scaleNumericEditable": true,
+      "scaleNivel": true,
+      "position": "bottomleft"
+    }
+  },
+  "layersFile": {
+    "layers": [
+      {
+        "id": "stations_hydrometriques",
+        "configFile": "layers/stations_hydrometriques/stations_hydrometriques_config.json",
+        "layerManagerId": "data-hydrometrie"
+      },
+      {
+        "id": "cours_eau_risque",
+        "configFile": "layers/cours_eau_risque/cours_eau_risque_config.json",
+        "layerManagerId": "data-hydrographie"
+      },
+      {
+        "id": "tri_frequent",
+        "configFile": "layers/tri_frequent/tri_frequent_config.json",
+        "layerManagerId": "data-tri"
+      },
+      {
+        "id": "tri_centennal",
+        "configFile": "layers/tri_centennal/tri_centennal_config.json",
+        "layerManagerId": "data-tri"
+      },
+      {
+        "id": "tri_extreme",
+        "configFile": "layers/tri_extreme/tri_extreme_config.json",
+        "layerManagerId": "data-tri"
+      }
+    ]
+  },
+  "layerConfigs": {
+    "stations_hydrometriques": {
+      "id": "stations_hydrometriques",
+      "label": "Stations hydrométriques",
+      "tooltipMode": "hover",
+      "zIndex": 80,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://hubeau.eaufrance.fr/api/v1/hydrometrie/referentiel/stations?format=geojson&size=10000",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Hub'Eau / EauFrance (hubeau.eaufrance.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Par statut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.libelle_station",
+            "label": "Station"
+          },
+          {
+            "field": "properties.libelle_cours_eau",
+            "label": "Cours d'eau"
+          },
+          {
+            "field": "properties.libelle_commune",
+            "label": "Commune"
+          },
+          {
+            "field": "properties.code_station",
+            "label": "Code station"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.libelle_station",
+            "label": "Station",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.libelle_cours_eau",
+            "label": "Cours d'eau",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.libelle_commune",
+            "label": "Commune",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.code_station",
+            "label": "Code",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.en_service",
+            "label": "En service",
+            "sortable": true,
+            "width": "15%"
+          }
+        ],
+        "searchFields": [
+          "properties.libelle_station",
+          "properties.libelle_cours_eau",
+          "properties.libelle_commune"
+        ],
+        "defaultSort": {
+          "field": "properties.libelle_station",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 60,
+        "disableClusteringAtZoom": 9
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT Vigicrues — polling 15 min pour les observations temps réel des stations hydrométriques via Hub'Eau API /observations_tr.",
+        "refreshInterval": 900000
+      }
+    },
+    "cours_eau_risque": {
+      "id": "cours_eau_risque",
+      "label": "Cours d'eau à risque",
+      "tooltipMode": "hover",
+      "zIndex": 20,
+      "interactiveShape": true,
+      "geometry": "line",
+      "data": {
+        "ogcApi": {
+          "url": "https://data.geopf.fr/ogcapi/collections/BDTOPO_V3:cours_d_eau/items",
+          "limit": 500,
+          "maxFeatures": 5000,
+          "autoRefresh": true,
+          "autoRefreshDebounce": 500
+        },
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.toponyme",
+            "label": "Nom"
+          },
+          {
+            "field": "properties.classe_de_largeur",
+            "label": "Largeur"
+          },
+          {
+            "field": "properties.regime",
+            "label": "Régime"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.toponyme",
+            "label": "Nom",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.classe_de_largeur",
+            "label": "Largeur",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.regime",
+            "label": "Régime",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.etat_de_l_objet",
+            "label": "État",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.toponyme"
+        ],
+        "defaultSort": {
+          "field": "properties.toponyme",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "tri_frequent": {
+      "id": "tri_frequent",
+      "label": "TRI — Scénario fréquent",
+      "tooltipMode": "hover",
+      "zIndex": 10,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://georisques.gouv.fr/api/v1/gaspar/tri?rayon=0&page=1&page_size=100",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Géorisques / MTES-DGPR (georisques.gouv.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.nom_tri",
+            "label": "TRI"
+          },
+          {
+            "field": "properties.scenario",
+            "label": "Scénario"
+          },
+          {
+            "field": "properties.surface_km2",
+            "label": "Surface (km²)"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.nom_tri",
+            "label": "TRI",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.scenario",
+            "label": "Scénario",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.surface_km2",
+            "label": "Surface (km²)",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.departement",
+            "label": "Département",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.nom_tri",
+          "properties.departement"
+        ],
+        "defaultSort": {
+          "field": "properties.nom_tri",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "tri_centennal": {
+      "id": "tri_centennal",
+      "label": "TRI — Scénario centennal",
+      "tooltipMode": "hover",
+      "zIndex": 11,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://georisques.gouv.fr/api/v1/gaspar/tri?rayon=0&page=1&page_size=100",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Géorisques / MTES-DGPR (georisques.gouv.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.nom_tri",
+            "label": "TRI"
+          },
+          {
+            "field": "properties.scenario",
+            "label": "Scénario"
+          },
+          {
+            "field": "properties.surface_km2",
+            "label": "Surface (km²)"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.nom_tri",
+            "label": "TRI",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.scenario",
+            "label": "Scénario",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.surface_km2",
+            "label": "Surface (km²)",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.departement",
+            "label": "Département",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.nom_tri",
+          "properties.departement"
+        ],
+        "defaultSort": {
+          "field": "properties.nom_tri",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "tri_extreme": {
+      "id": "tri_extreme",
+      "label": "TRI — Scénario extrême",
+      "tooltipMode": "hover",
+      "zIndex": 12,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://georisques.gouv.fr/api/v1/gaspar/tri?rayon=0&page=1&page_size=100",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Géorisques / MTES-DGPR (georisques.gouv.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.nom_tri",
+            "label": "TRI"
+          },
+          {
+            "field": "properties.scenario",
+            "label": "Scénario"
+          },
+          {
+            "field": "properties.surface_km2",
+            "label": "Surface (km²)"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.nom_tri",
+            "label": "TRI",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.scenario",
+            "label": "Scénario",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.surface_km2",
+            "label": "Surface (km²)",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.departement",
+            "label": "Département",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.nom_tri",
+          "properties.departement"
+        ],
+        "defaultSort": {
+          "field": "properties.nom_tri",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    }
+  }
+}

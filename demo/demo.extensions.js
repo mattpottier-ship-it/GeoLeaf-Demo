@@ -166,8 +166,19 @@
 
             try {
                 sessionStorage.setItem('gl-selected-profile', newProfileId);
+
+                // Clear SW cache to avoid stale profile data on reload
+                if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+                    var mc = new MessageChannel();
+                    navigator.serviceWorker.controller.postMessage(
+                        { type: 'CLEAR_CACHE' },
+                        [mc.port2]
+                    );
+                }
+
                 DemoLog.log('[Demo] Rechargement de la page avec le profil:', newProfileId);
-                window.location.reload();
+                // Cache-busting: force fresh fetch of profile resources
+                window.location.href = window.location.pathname + '?profile=' + encodeURIComponent(newProfileId) + '&t=' + Date.now();
             } catch (err) {
                 console.error('[GeoLeaf.Demo] Erreur lors du changement de profil:', err);
                 alert('Erreur lors du changement de profil. Voir la console.');

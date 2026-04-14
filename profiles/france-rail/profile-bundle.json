@@ -1,0 +1,450 @@
+{
+  "_bundleVersion": "1.0",
+  "_profileId": "france-rail",
+  "_generatedAt": 1776191696489,
+  "taxonomy": {
+    "icons": {
+      "spriteUrl": "profiles/france-rail/icons/sprite_rail.svg",
+      "symbolPrefix": "rail-poi-cat-",
+      "defaultIcon": "rail-generic"
+    },
+    "defaults": {
+      "icon": "rail-generic"
+    },
+    "categories": {
+      "ferroviaire": {
+        "label": "Réseau ferroviaire",
+        "icon": "gare",
+        "subcategories": {
+          "gare_tgv": {
+            "label": "Gare TGV",
+            "icon": "gare"
+          },
+          "gare_ter": {
+            "label": "Gare TER",
+            "icon": "gare"
+          },
+          "gare_regionale": {
+            "label": "Gare régionale",
+            "icon": "gare"
+          },
+          "ligne": {
+            "label": "Ligne ferroviaire",
+            "icon": "voie-ferree"
+          }
+        }
+      },
+      "routier": {
+        "label": "Infrastructure routière",
+        "icon": "route",
+        "subcategories": {
+          "route_nationale": {
+            "label": "Route nationale",
+            "icon": "route"
+          },
+          "autoroute": {
+            "label": "Autoroute",
+            "icon": "route"
+          }
+        }
+      },
+      "desserte": {
+        "label": "Zones de desserte",
+        "icon": "desserte",
+        "subcategories": {
+          "zone_desserte": {
+            "label": "Zone de desserte gare",
+            "icon": "desserte"
+          }
+        }
+      }
+    }
+  },
+  "themes": {
+    "defaultTheme": "reseau_ferroviaire",
+    "config": {
+      "primaryThemes": {
+        "enabled": false
+      },
+      "secondaryThemes": {
+        "enabled": false
+      }
+    },
+    "themes": [
+      {
+        "id": "reseau_ferroviaire",
+        "label": "Réseau ferroviaire",
+        "type": "primary",
+        "description": "Gares voyageurs et lignes ferroviaires — données SNCF (transport.data.gouv.fr)",
+        "icon": "🚆",
+        "layers": [
+          {
+            "id": "gares_voyageurs",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "lignes_ferroviaires",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      }
+    ]
+  },
+  "basemaps": {
+    "basemaps": {
+      "ign-plan": {
+        "id": "ign-plan",
+        "label": "IGN Plan",
+        "type": "maplibre",
+        "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
+        "attribution": "© IGN France — Geoportail",
+        "defaultBasemap": true
+      },
+      "positron": {
+        "id": "positron",
+        "label": "Clair",
+        "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "attribution": "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        "minZoom": 2,
+        "maxZoom": 19,
+        "offline": false
+      },
+      "satellite": {
+        "id": "satellite",
+        "label": "Satellite",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        "minZoom": 2,
+        "maxZoom": 18,
+        "offline": false
+      }
+    }
+  },
+  "ui": {
+    "ui": {
+      "theme": "light",
+      "language": "fr",
+      "showBaseLayerControls": false,
+      "showThemeSelector": true,
+      "showFilterPanel": true,
+      "showLayerManager": true,
+      "showLegend": true,
+      "showTable": true,
+      "showGeolocation": true,
+      "showCoordinates": true,
+      "showScale": true,
+      "showCacheButton": false,
+      "showAddPoi": false,
+      "permalink": {
+        "enabled": true,
+        "mode": "hash"
+      }
+    },
+    "searchConfig": {
+      "title": "Filtrer",
+      "radiusMin": 1,
+      "radiusMax": 200,
+      "radiusStep": 1,
+      "radiusDefault": 10,
+      "searchPlaceholder": "Rechercher…",
+      "filters": [
+        {
+          "id": "searchText",
+          "type": "search",
+          "label": "Recherche textuelle",
+          "placeholder": "Rechercher...",
+          "searchFields": [
+            "title",
+            "properties.name",
+            "properties.libelle",
+            "description"
+          ]
+        },
+        {
+          "id": "proximity",
+          "type": "proximity",
+          "label": "Recherche par proximité",
+          "buttonLabel": "Activer",
+          "instructionText": "Cliquez sur la carte pour définir le point central"
+        },
+        {
+          "id": "categories",
+          "type": "tree",
+          "label": "Catégories"
+        },
+        {
+          "id": "tags",
+          "type": "multiselect-tags",
+          "label": "Tags",
+          "field": "attributes.tags"
+        }
+      ],
+      "actions": {
+        "applyLabel": "Appliquer",
+        "resetLabel": "Réinitialiser"
+      }
+    },
+    "layerManagerConfig": {
+      "title": "Couches",
+      "collapsedByDefault": true,
+      "sections": [
+        {
+          "id": "data-ferroviaire",
+          "label": "Réseau ferroviaire",
+          "order": 1,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-routier",
+          "label": "Infrastructure routière",
+          "order": 2,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "data-desserte",
+          "label": "Zones de desserte",
+          "order": 3,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "basemap",
+          "label": "Fonds de carte",
+          "order": 4,
+          "collapsedByDefault": true
+        }
+      ]
+    },
+    "legendConfig": {
+      "title": "Légende",
+      "collapsedByDefault": true,
+      "position": "bottomleft"
+    },
+    "tableConfig": {
+      "title": "Tableau",
+      "enabled": true,
+      "defaultVisible": false,
+      "pageSize": 50,
+      "maxRowsPerLayer": 10000,
+      "enableExportButton": true,
+      "virtualScrolling": true,
+      "defaultHeight": "40%",
+      "minHeight": "20%",
+      "maxHeight": "60%",
+      "resizable": true
+    },
+    "scaleConfig": {
+      "scaleGraphic": true,
+      "scaleNumeric": true,
+      "scaleNumericEditable": true,
+      "scaleNivel": true,
+      "position": "bottomleft"
+    }
+  },
+  "layersFile": {
+    "layers": [
+      {
+        "id": "gares_voyageurs",
+        "configFile": "layers/gares_voyageurs/gares_voyageurs_config.json",
+        "layerManagerId": "data-ferroviaire"
+      },
+      {
+        "id": "lignes_ferroviaires",
+        "configFile": "layers/lignes_ferroviaires/lignes_ferroviaires_config.json",
+        "layerManagerId": "data-ferroviaire"
+      }
+    ]
+  },
+  "layerConfigs": {
+    "gares_voyageurs": {
+      "id": "gares_voyageurs",
+      "label": "Gares voyageurs",
+      "tooltipMode": "hover",
+      "zIndex": 80,
+      "geometry": "point",
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Par catégorie de gare",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.libelle",
+            "label": "Gare"
+          },
+          {
+            "field": "properties.commune",
+            "label": "Commune"
+          },
+          {
+            "field": "properties.departement",
+            "label": "Département"
+          },
+          {
+            "field": "properties.voyageurs",
+            "label": "Fréquentation"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.libelle",
+            "label": "Gare",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.commune",
+            "label": "Commune",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.departement",
+            "label": "Département",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.voyageurs",
+            "label": "Fréquentation",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.segment_drg",
+            "label": "Catégorie",
+            "sortable": true,
+            "width": "15%"
+          }
+        ],
+        "searchFields": [
+          "properties.libelle",
+          "properties.commune"
+        ],
+        "defaultSort": {
+          "field": "properties.libelle",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 10
+      },
+      "data": {
+        "dataUrl": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/liste-des-gares/exports/geojson",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — SNCF Réseau (ressources.data.sncf.com)",
+        "realtime": {
+          "enabled": false,
+          "source": "polling",
+          "url": "https://proxy.transport.data.gouv.fr/resource/sncf-gtfs-rt-trip-updates",
+          "intervalMs": 120000,
+          "decoder": "gtfs-rt",
+          "updateMode": "merge",
+          "idField": "code_uic",
+          "mapping": {
+            "idField": "stop_id",
+            "delayField": "delay",
+            "targetLayerId": "gares_voyageurs"
+          },
+          "staleTimeoutMs": 300000,
+          "staleAction": "dim"
+        }
+      }
+    },
+    "lignes_ferroviaires": {
+      "id": "lignes_ferroviaires",
+      "label": "Lignes ferroviaires",
+      "tooltipMode": "hover",
+      "zIndex": 30,
+      "interactiveShape": true,
+      "geometry": "line",
+      "data": {
+        "dataUrl": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/formes-des-lignes-du-rfn/exports/geojson",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — SNCF Réseau (ressources.data.sncf.com)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.lib_ligne",
+            "label": "Ligne"
+          },
+          {
+            "field": "properties.statut",
+            "label": "Statut"
+          },
+          {
+            "field": "properties.rg_troncon",
+            "label": "Tronçon"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.lib_ligne",
+            "label": "Ligne",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.statut",
+            "label": "Statut",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.rg_troncon",
+            "label": "Tronçon",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.pk_debut",
+            "label": "PK début",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.lib_ligne"
+        ],
+        "defaultSort": {
+          "field": "properties.lib_ligne",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    }
+  }
+}

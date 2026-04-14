@@ -70,7 +70,7 @@ function _openDB() {
             }
         };
         req.onsuccess = (e) => resolve(e.target.result);
-        req.onerror = (e) => reject(e.target.error);
+        req.onerror = (e) => reject(e.target.error ?? new Error("IDB open failed"));
     });
 }
 async function _idbGet(baseUrl) {
@@ -80,7 +80,7 @@ async function _idbGet(baseUrl) {
             const tx = db.transaction(STORE_NAME, "readonly");
             const req = tx.objectStore(STORE_NAME).get(baseUrl);
             req.onsuccess = () => resolve(req.result ?? null);
-            req.onerror = () => reject(req.error);
+            req.onerror = () => reject(req.error ?? new Error("IDB get failed"));
             tx.oncomplete = () => db.close();
         });
     }
@@ -95,7 +95,7 @@ async function _idbPut(record) {
             const tx = db.transaction(STORE_NAME, "readwrite");
             const req = tx.objectStore(STORE_NAME).put(record);
             req.onsuccess = () => resolve();
-            req.onerror = () => reject(req.error);
+            req.onerror = () => reject(req.error ?? new Error("IDB put failed"));
             tx.oncomplete = () => db.close();
         });
     }
@@ -110,7 +110,7 @@ async function _idbDelete(baseUrl) {
             const tx = db.transaction(STORE_NAME, "readwrite");
             const req = tx.objectStore(STORE_NAME).delete(baseUrl);
             req.onsuccess = () => resolve();
-            req.onerror = () => reject(req.error);
+            req.onerror = () => reject(req.error ?? new Error("IDB delete failed"));
             tx.oncomplete = () => db.close();
         });
     }
@@ -1037,6 +1037,7 @@ if (_g.GeoLeaf) {
 if (_g.GeoLeaf?.plugins?.register) {
     _g.GeoLeaf.plugins.register("connector", {
         version: "1.0.0",
+        type: "standard",
         optional: ["storage", "addpoi"],
         label: "Connector (Auth + Fetch intercept)",
         healthCheck: () => !!_currentInstance,

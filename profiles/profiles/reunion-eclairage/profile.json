@@ -1,0 +1,29 @@
+{
+    "id": "reunion-eclairage",
+    "label": "Réunion — Éclairage public",
+    "description": "Profil de démonstration — éclairage public de La Réunion avec terrain 3D MNT Mapterhorn. Démontre le rendu terrain 3D, les styleRules par altitude et le format GeoJSON.",
+    "version": "1.0.0",
+    "map": {
+        "bounds": [[-21.4, 55.2], [-20.8, 55.9]],
+        "initialMaxZoom": 14,
+        "padding": { "top": 40, "bottom": 120, "left": 40, "right": 40 },
+        "positionFixed": true,
+        "boundsMargin": 0.7
+    },
+    "Files": {
+        "taxonomyFile": "taxonomy.json",
+        "themesFile": "themes.json",
+        "layersFile": "layers.json",
+        "basemapsFile": "basemaps.json",
+        "uiFile": "ui.json"
+    },
+    "clusteringConfig": {
+        "enabled": true,
+        "strategy": "by-layer",
+        "maxClusterRadius": 60,
+        "disableClusteringAtZoom": 13
+    },
+    "poiAddConfig": {
+        "enabled": false
+    }
+}

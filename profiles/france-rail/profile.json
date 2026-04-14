@@ -1,0 +1,65 @@
+{
+  "id": "france-rail",
+  "label": "Réseau ferroviaire France",
+  "description": "Profil de démonstration GeoLeaf-JS — réseau ferroviaire français, gares, lignes et zones de desserte. Sources open data (transport.data.gouv.fr, SNCF, IGN). RT prévu : GTFS-RT gares colorées par état de retard. Démontre FlatGeobuf et MVT.",
+  "version": "1.0.0",
+  "map": {
+    "bounds": [
+      [
+        41.3,
+        -5.5
+      ],
+      [
+        51.1,
+        10
+      ]
+    ],
+    "center": [
+      46.5,
+      2.5
+    ],
+    "zoom": 6,
+    "minZoom": 5,
+    "maxZoom": 16,
+    "initialMaxZoom": 10,
+    "padding": [
+      40,
+      40
+    ],
+    "positionFixed": true,
+    "boundsMargin": 0.5
+  },
+  "Files": {
+    "taxonomyFile": "taxonomy.json",
+    "themesFile": "themes.json",
+    "layersFile": "layers.json",
+    "basemapsFile": "basemaps.json",
+    "uiFile": "ui.json"
+  },
+  "performance": {
+    "maxConcurrentLayers": 10,
+    "layerLoadDelay": 200,
+    "fitBoundsOnThemeChange": false
+  },
+  "clusteringConfig": {
+    "enabled": true,
+    "strategy": "by-layer",
+    "maxClusterRadius": 50,
+    "disableClusteringAtZoom": 10
+  },
+  "poiConfig": {
+    "enabled": false
+  },
+  "storage": {
+    "enableOfflineDetector": false,
+    "enableServiceWorker": false,
+    "cache": {
+      "enableProfileCache": true,
+      "enableTileCache": true
+    }
+  },
+  "poiAddConfig": {
+    "enabled": false
+  },
+  "bundleFile": "profile-bundle.json"
+}

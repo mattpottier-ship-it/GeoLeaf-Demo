@@ -1,0 +1,82 @@
+{
+    "defaultTheme": "voie_maritime",
+    "config": {
+        "primaryThemes": {
+            "enabled": true,
+            "position": "top-map"
+        },
+        "secondaryThemes": {
+            "enabled": false
+        }
+    },
+    "themes": [
+        {
+            "id": "voie_maritime",
+            "label": "Voies maritimes",
+            "type": "primary",
+            "description": "Flux maritimes mondiaux — ports, routes maritimes, navires AIS",
+            "icon": "🚢",
+            "layers": [
+                {
+                    "id": "oceans",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "pays",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "capitales",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "routes_maritimes",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "ports",
+                    "visible": true,
+                    "style": "defaut"
+                }
+            ]
+        },
+        {
+            "id": "voie_aerienne",
+            "label": "Voies aériennes",
+            "type": "primary",
+            "description": "Flux aériens mondiaux — aéroports, routes aériennes, avions OpenSky",
+            "icon": "✈️",
+            "layers": [
+                {
+                    "id": "oceans",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "pays",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "capitales",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "routes_aeriennes",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "aeroports",
+                    "visible": true,
+                    "style": "defaut"
+                }
+            ]
+        }
+    ]
+}

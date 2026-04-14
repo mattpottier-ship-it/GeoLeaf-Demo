@@ -1,0 +1,132 @@
+{
+    "ui": {
+        "theme": "light",
+        "language": "fr",
+        "showBaseLayerControls": false,
+        "showThemeSelector": true,
+        "showFilterPanel": true,
+        "showLayerManager": true,
+        "showLegend": true,
+        "showTable": true,
+        "showGeolocation": true,
+        "showCoordinates": true,
+        "showScale": true,
+        "showCacheButton": true,
+        "showAddPoi": true,
+        "permalink": {
+            "enabled": true,
+            "mode": "hash"
+        }
+    },
+
+    "searchConfig": {
+        "title": "Filtrer",
+        "radiusMin": 1,
+        "radiusMax": 200,
+        "radiusStep": 1,
+        "radiusDefault": 20,
+        "searchPlaceholder": "Rechercher une espèce, un site…",
+        "filters": [
+            {
+                "id": "searchText",
+                "type": "search",
+                "label": "Recherche textuelle",
+                "placeholder": "Rechercher...",
+                "searchFields": [
+                    "title",
+                    "properties.name",
+                    "properties.species",
+                    "properties.vernacularName",
+                    "properties.nom"
+                ]
+            },
+            {
+                "id": "proximity",
+                "type": "proximity",
+                "label": "Recherche par proximité",
+                "buttonLabel": "Activer",
+                "instructionText": "Cliquez sur la carte pour définir le point central"
+            },
+            {
+                "id": "categories",
+                "type": "tree",
+                "label": "Catégories"
+            },
+            {
+                "id": "tags",
+                "type": "multiselect-tags",
+                "label": "Tags",
+                "field": "attributes.tags"
+            }
+        ],
+        "actions": {
+            "applyLabel": "Appliquer",
+            "resetLabel": "Réinitialiser"
+        }
+    },
+
+    "layerManagerConfig": {
+        "title": "Couches",
+        "collapsedByDefault": true,
+        "sections": [
+            {
+                "id": "data-tourisme",
+                "label": "Tourisme & Randonnée",
+                "order": 1,
+                "collapsedByDefault": false
+            },
+            {
+                "id": "data-biodiversite",
+                "label": "Biodiversité",
+                "order": 2,
+                "collapsedByDefault": false
+            },
+            {
+                "id": "data-hydrographie",
+                "label": "Hydrographie",
+                "order": 3,
+                "collapsedByDefault": true
+            },
+            {
+                "id": "data-administration",
+                "label": "Administration & Territoire",
+                "order": 4,
+                "collapsedByDefault": true
+            },
+            {
+                "id": "basemap",
+                "label": "Fonds de carte",
+                "order": 5,
+                "collapsedByDefault": true
+            }
+        ]
+    },
+
+    "legendConfig": {
+        "title": "Légende",
+        "collapsedByDefault": true,
+        "position": "bottomleft"
+    },
+
+    "tableConfig": {
+        "title": "Tableau",
+        "enabled": true,
+        "defaultVisible": false,
+        "pageSize": 50,
+        "maxRowsPerLayer": 10000,
+        "enableExportButton": true,
+        "virtualScrolling": true,
+        "defaultHeight": "40%",
+        "minHeight": "20%",
+        "maxHeight": "60%",
+        "resizable": true
+    },
+
+    "scaleConfig": {
+        "scaleGraphic": true,
+        "scaleNumeric": true,
+        "scaleNumericEditable": true,
+        "scaleNivel": true,
+        "position": "bottomleft"
+    }
+}

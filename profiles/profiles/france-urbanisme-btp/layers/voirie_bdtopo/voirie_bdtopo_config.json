@@ -1,0 +1,37 @@
+{
+    "id": "voirie_bdtopo",
+    "label": "Voirie BD TOPO",
+    "zIndex": 15,
+    "interactiveShape": true,
+    "geometry": "line",
+    "data": {
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=BDTOPO_V3:troncon_de_route&outputFormat=application/json&count=5000&bbox=2.330,48.849,2.368,48.865,EPSG:4326",
+        "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            {
+                "field": "properties.symbo",
+                "label": "Type"
+            }
+        ]
+    },
+    "table": {
+        "enabled": false
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

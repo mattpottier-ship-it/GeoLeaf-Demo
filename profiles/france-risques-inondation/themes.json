@@ -1,0 +1,56 @@
+{
+    "defaultTheme": "vigicrues",
+    "config": {
+        "primaryThemes": {
+            "enabled": true,
+            "position": "top-map"
+        },
+        "secondaryThemes": {
+            "enabled": false
+        }
+    },
+    "themes": [
+        {
+            "id": "vigicrues",
+            "label": "Vigicrues RT",
+            "type": "primary",
+            "icon": "💧",
+            "description": "Stations hydrométriques et cours d'eau principaux",
+            "layers": [
+                { "id": "stations_hydrometriques", "visible": true, "style": "defaut" },
+                { "id": "cours_eau_risque", "visible": true, "style": "defaut" },
+                { "id": "tri_frequent", "visible": false, "style": "defaut" },
+                { "id": "tri_centennal", "visible": false, "style": "defaut" },
+                { "id": "tri_extreme", "visible": false, "style": "defaut" }
+            ]
+        },
+        {
+            "id": "scenarios_tri",
+            "label": "Scénarios TRI",
+            "type": "primary",
+            "icon": "🌊",
+            "description": "Les 3 scénarios d'inondation TRI superposés au terrain 3D",
+            "layers": [
+                { "id": "stations_hydrometriques", "visible": false, "style": "defaut" },
+                { "id": "cours_eau_risque", "visible": true, "style": "defaut" },
+                { "id": "tri_frequent", "visible": true, "style": "defaut" },
+                { "id": "tri_centennal", "visible": true, "style": "defaut" },
+                { "id": "tri_extreme", "visible": true, "style": "defaut" }
+            ]
+        },
+        {
+            "id": "vue_complete",
+            "label": "Vue complète",
+            "type": "primary",
+            "icon": "🗺️",
+            "description": "Toutes les couches activées",
+            "layers": [
+                { "id": "stations_hydrometriques", "visible": true, "style": "defaut" },
+                { "id": "cours_eau_risque", "visible": true, "style": "defaut" },
+                { "id": "tri_frequent", "visible": true, "style": "defaut" },
+                { "id": "tri_centennal", "visible": true, "style": "defaut" },
+                { "id": "tri_extreme", "visible": true, "style": "defaut" }
+            ]
+        }
+    ]
+}

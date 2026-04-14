@@ -1,0 +1,997 @@
+{
+  "_bundleVersion": "1.0",
+  "_profileId": "guyane-biodiversite",
+  "_generatedAt": 1776191696512,
+  "taxonomy": {
+    "icons": {
+      "spriteUrl": "profiles/guyane-biodiversite/icons/sprite_guyane.svg",
+      "symbolPrefix": "guyane-poi-cat-",
+      "defaultIcon": "guyane-poi-cat-tourisme"
+    },
+    "defaults": {
+      "icon": "guyane-poi-cat-tourisme"
+    },
+    "categories": {
+      "tourisme": {
+        "label": "Tourisme",
+        "icon": "guyane-poi-cat-tourisme",
+        "subcategories": {
+          "site_naturel": {
+            "label": "Site naturel",
+            "icon": "guyane-poi-cat-site-naturel"
+          },
+          "randonnee": {
+            "label": "Randonnée",
+            "icon": "guyane-poi-cat-randonnee"
+          },
+          "heritage": {
+            "label": "Patrimoine",
+            "icon": "guyane-poi-cat-heritage"
+          }
+        }
+      },
+      "biodiversite": {
+        "label": "Biodiversité",
+        "icon": "guyane-poi-cat-biodiversite",
+        "subcategories": {
+          "faune": {
+            "label": "Faune",
+            "icon": "guyane-poi-cat-faune"
+          },
+          "flore": {
+            "label": "Flore",
+            "icon": "guyane-poi-cat-flore"
+          },
+          "zone_protegee": {
+            "label": "Zone protégée",
+            "icon": "guyane-poi-cat-zone-protegee"
+          }
+        }
+      },
+      "territoire": {
+        "label": "Territoire",
+        "icon": "guyane-poi-cat-commune",
+        "subcategories": {
+          "commune": {
+            "label": "Commune",
+            "icon": "guyane-poi-cat-commune"
+          },
+          "deforestation": {
+            "label": "Déforestation",
+            "icon": "guyane-poi-cat-deforestation"
+          },
+          "hydrographie": {
+            "label": "Hydrographie",
+            "icon": "guyane-poi-cat-cours-eau"
+          }
+        }
+      }
+    }
+  },
+  "themes": {
+    "defaultTheme": "biodiversite",
+    "config": {
+      "primaryThemes": {
+        "enabled": true,
+        "position": "top-map"
+      },
+      "secondaryThemes": {
+        "enabled": false
+      }
+    },
+    "themes": [
+      {
+        "id": "biodiversite",
+        "label": "Biodiversité",
+        "type": "primary",
+        "icon": "🌿",
+        "description": "Observations GBIF et zones protégées du Parc Amazonien de Guyane",
+        "layers": [
+          {
+            "id": "sites_touristiques",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "itineraires_randonnee",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "observations_gbif",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "zones_protegees_pag",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "cours_eau",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "communes_guyane",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "deforestation_radar",
+            "visible": false,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "tourisme",
+        "label": "Tourisme & Randonnée",
+        "type": "primary",
+        "icon": "🏕️",
+        "description": "Sites touristiques et itinéraires de randonnée en Guyane",
+        "layers": [
+          {
+            "id": "sites_touristiques",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "itineraires_randonnee",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "observations_gbif",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "zones_protegees_pag",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "cours_eau",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "communes_guyane",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "deforestation_radar",
+            "visible": false,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "territoire",
+        "label": "Territoire",
+        "type": "primary",
+        "icon": "🗺️",
+        "description": "Communes, déforestation radar et découpage administratif",
+        "layers": [
+          {
+            "id": "sites_touristiques",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "itineraires_randonnee",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "observations_gbif",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "zones_protegees_pag",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "cours_eau",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "communes_guyane",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "deforestation_radar",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      }
+    ]
+  },
+  "basemaps": {
+    "basemaps": {
+      "satellite": {
+        "id": "satellite",
+        "label": "Satellite",
+        "type": "tile",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles © Esri — Source: Esri, Maxar, GeoEye, Earthstar Geographics",
+        "minZoom": 5,
+        "maxZoom": 18,
+        "defaultBasemap": true,
+        "offline": false
+      },
+      "positron": {
+        "id": "positron",
+        "label": "Clair (CartoDB)",
+        "type": "tile",
+        "url": "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
+        "attribution": "© OpenStreetMap contributors, © CARTO",
+        "minZoom": 2,
+        "maxZoom": 19,
+        "offline": true
+      },
+      "ign-plan": {
+        "id": "ign-plan",
+        "label": "IGN Plan",
+        "type": "maplibre",
+        "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
+        "attribution": "© IGN France — Geoportail"
+      }
+    }
+  },
+  "ui": {
+    "ui": {
+      "theme": "light",
+      "language": "fr",
+      "showBaseLayerControls": false,
+      "showThemeSelector": true,
+      "showFilterPanel": true,
+      "showLayerManager": true,
+      "showLegend": true,
+      "showTable": true,
+      "showGeolocation": true,
+      "showCoordinates": true,
+      "showScale": true,
+      "showCacheButton": true,
+      "showAddPoi": true,
+      "permalink": {
+        "enabled": true,
+        "mode": "hash"
+      }
+    },
+    "searchConfig": {
+      "title": "Filtrer",
+      "radiusMin": 1,
+      "radiusMax": 200,
+      "radiusStep": 1,
+      "radiusDefault": 20,
+      "searchPlaceholder": "Rechercher une espèce, un site…",
+      "filters": [
+        {
+          "id": "searchText",
+          "type": "search",
+          "label": "Recherche textuelle",
+          "placeholder": "Rechercher...",
+          "searchFields": [
+            "title",
+            "properties.name",
+            "properties.species",
+            "properties.vernacularName",
+            "properties.nom"
+          ]
+        },
+        {
+          "id": "proximity",
+          "type": "proximity",
+          "label": "Recherche par proximité",
+          "buttonLabel": "Activer",
+          "instructionText": "Cliquez sur la carte pour définir le point central"
+        },
+        {
+          "id": "categories",
+          "type": "tree",
+          "label": "Catégories"
+        },
+        {
+          "id": "tags",
+          "type": "multiselect-tags",
+          "label": "Tags",
+          "field": "attributes.tags"
+        }
+      ],
+      "actions": {
+        "applyLabel": "Appliquer",
+        "resetLabel": "Réinitialiser"
+      }
+    },
+    "layerManagerConfig": {
+      "title": "Couches",
+      "collapsedByDefault": true,
+      "sections": [
+        {
+          "id": "data-tourisme",
+          "label": "Tourisme & Randonnée",
+          "order": 1,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-biodiversite",
+          "label": "Biodiversité",
+          "order": 2,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-hydrographie",
+          "label": "Hydrographie",
+          "order": 3,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "data-administration",
+          "label": "Administration & Territoire",
+          "order": 4,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "basemap",
+          "label": "Fonds de carte",
+          "order": 5,
+          "collapsedByDefault": true
+        }
+      ]
+    },
+    "legendConfig": {
+      "title": "Légende",
+      "collapsedByDefault": true,
+      "position": "bottomleft"
+    },
+    "tableConfig": {
+      "title": "Tableau",
+      "enabled": true,
+      "defaultVisible": false,
+      "pageSize": 50,
+      "maxRowsPerLayer": 10000,
+      "enableExportButton": true,
+      "virtualScrolling": true,
+      "defaultHeight": "40%",
+      "minHeight": "20%",
+      "maxHeight": "60%",
+      "resizable": true
+    },
+    "scaleConfig": {
+      "scaleGraphic": true,
+      "scaleNumeric": true,
+      "scaleNumericEditable": true,
+      "scaleNivel": true,
+      "position": "bottomleft"
+    }
+  },
+  "layersFile": {
+    "layers": [
+      {
+        "id": "sites_touristiques",
+        "configFile": "layers/sites_touristiques/sites_touristiques_config.json",
+        "layerManagerId": "data-tourisme"
+      },
+      {
+        "id": "itineraires_randonnee",
+        "configFile": "layers/itineraires_randonnee/itineraires_randonnee_config.json",
+        "layerManagerId": "data-tourisme"
+      },
+      {
+        "id": "observations_gbif",
+        "configFile": "layers/observations_gbif/observations_gbif_config.json",
+        "layerManagerId": "data-biodiversite"
+      },
+      {
+        "id": "zones_protegees_pag",
+        "configFile": "layers/zones_protegees_pag/zones_protegees_pag_config.json",
+        "layerManagerId": "data-biodiversite"
+      },
+      {
+        "id": "cours_eau",
+        "configFile": "layers/cours_eau/cours_eau_config.json",
+        "layerManagerId": "data-hydrographie"
+      },
+      {
+        "id": "communes_guyane",
+        "configFile": "layers/communes_guyane/communes_guyane_config.json",
+        "layerManagerId": "data-administration"
+      },
+      {
+        "id": "deforestation_radar",
+        "configFile": "layers/deforestation_radar/deforestation_radar_config.json",
+        "layerManagerId": "data-administration"
+      }
+    ]
+  },
+  "layerConfigs": {
+    "sites_touristiques": {
+      "id": "sites_touristiques",
+      "label": "Sites touristiques",
+      "tooltipMode": "hover",
+      "zIndex": 70,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://datacarto.geoguyane.fr/wfs?service=WFS&version=2.0.0&request=GetFeature&typeName=tourisme:sites_touristiques&outputFormat=application/json&srsName=EPSG:4326",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — GéoGuyane / CTG (datacarto.geoguyane.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.nom",
+            "label": "Site"
+          },
+          {
+            "field": "properties.type",
+            "label": "Type"
+          },
+          {
+            "field": "properties.commune",
+            "label": "Commune"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.nom",
+            "label": "Site",
+            "sortable": true,
+            "width": "35%"
+          },
+          {
+            "field": "properties.type",
+            "label": "Type",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.commune",
+            "label": "Commune",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.description",
+            "label": "Description",
+            "sortable": false,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.nom",
+          "properties.commune"
+        ],
+        "defaultSort": {
+          "field": "properties.nom",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 10
+      }
+    },
+    "itineraires_randonnee": {
+      "id": "itineraires_randonnee",
+      "label": "Itinéraires de randonnée",
+      "tooltipMode": "hover",
+      "zIndex": 25,
+      "interactiveShape": true,
+      "geometry": "line",
+      "data": {
+        "dataUrl": "https://randoamazonie.guyane-parcnational.fr/api/v2/trek.kml",
+        "format": "kml",
+        "directory": "data",
+        "licence": "Libre — Parc Amazonien de Guyane (randoamazonie.guyane-parcnational.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.name",
+            "label": "Itinéraire"
+          },
+          {
+            "field": "properties.description",
+            "label": "Description"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.name",
+            "label": "Itinéraire",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.description",
+            "label": "Description",
+            "sortable": false,
+            "width": "60%"
+          }
+        ],
+        "searchFields": [
+          "properties.name"
+        ],
+        "defaultSort": {
+          "field": "properties.name",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "observations_gbif": {
+      "id": "observations_gbif",
+      "label": "Observations GBIF",
+      "tooltipMode": "hover",
+      "zIndex": 75,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://api.gbif.org/v1/occurrence/search?country=GF&hasCoordinate=true&limit=300",
+        "directory": "data",
+        "licence": "CC BY 4.0 / CC0 — GBIF (api.gbif.org)",
+        "mapping": "gbif"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Par règne",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.species",
+            "label": "Espèce"
+          },
+          {
+            "field": "properties.vernacularName",
+            "label": "Nom vernaculaire"
+          },
+          {
+            "field": "properties.kingdom",
+            "label": "Règne"
+          },
+          {
+            "field": "properties.eventDate",
+            "label": "Date"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.species",
+            "label": "Espèce",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.vernacularName",
+            "label": "Nom",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.kingdom",
+            "label": "Règne",
+            "sortable": true,
+            "width": "10%"
+          },
+          {
+            "field": "properties.class",
+            "label": "Classe",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.family",
+            "label": "Famille",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.eventDate",
+            "label": "Date",
+            "sortable": true,
+            "width": "15%"
+          }
+        ],
+        "searchFields": [
+          "properties.species",
+          "properties.vernacularName",
+          "properties.family"
+        ],
+        "defaultSort": {
+          "field": "properties.species",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 10
+      }
+    },
+    "zones_protegees_pag": {
+      "id": "zones_protegees_pag",
+      "label": "Zones protégées (PAG)",
+      "tooltipMode": "hover",
+      "zIndex": 10,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://datacarto.geoguyane.fr/wfs?service=WFS&version=2.0.0&request=GetFeature&typeName=environnement:zones_protegees&outputFormat=application/json&srsName=EPSG:4326",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — GéoGuyane / PAG-DEAL (datacarto.geoguyane.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.nom",
+            "label": "Zone"
+          },
+          {
+            "field": "properties.type_protection",
+            "label": "Type"
+          },
+          {
+            "field": "properties.surface_ha",
+            "label": "Surface (ha)"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.nom",
+            "label": "Zone",
+            "sortable": true,
+            "width": "35%"
+          },
+          {
+            "field": "properties.type_protection",
+            "label": "Type",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.surface_ha",
+            "label": "Surface (ha)",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.gestionnaire",
+            "label": "Gestionnaire",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.nom",
+          "properties.type_protection"
+        ],
+        "defaultSort": {
+          "field": "properties.nom",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "cours_eau": {
+      "id": "cours_eau",
+      "label": "Cours d'eau",
+      "tooltipMode": "hover",
+      "zIndex": 20,
+      "interactiveShape": true,
+      "geometry": "line",
+      "data": {
+        "ogcApi": {
+          "url": "https://data.geopf.fr/ogcapi/collections/BDTOPO_V3:cours_d_eau/items",
+          "bbox": [
+            -54.6,
+            2.1,
+            -51.6,
+            5.8
+          ],
+          "limit": 500,
+          "maxFeatures": 5000,
+          "autoRefresh": false
+        },
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.toponyme",
+            "label": "Nom"
+          },
+          {
+            "field": "properties.classe_de_largeur",
+            "label": "Largeur"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.toponyme",
+            "label": "Nom",
+            "sortable": true,
+            "width": "50%"
+          },
+          {
+            "field": "properties.classe_de_largeur",
+            "label": "Largeur",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.regime",
+            "label": "Régime",
+            "sortable": true,
+            "width": "25%"
+          }
+        ],
+        "searchFields": [
+          "properties.toponyme"
+        ],
+        "defaultSort": {
+          "field": "properties.toponyme",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "communes_guyane": {
+      "id": "communes_guyane",
+      "label": "Communes de Guyane",
+      "tooltipMode": "hover",
+      "zIndex": 5,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "ogcApi": {
+          "url": "https://data.geopf.fr/ogcapi/collections/ADMINEXPRESS-COG-CARTO.LATEST:commune/items",
+          "bbox": [
+            -54.6,
+            2.1,
+            -51.6,
+            5.8
+          ],
+          "limit": 50,
+          "maxFeatures": 100,
+          "autoRefresh": false
+        },
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — IGN ADMIN EXPRESS (data.geopf.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.nom",
+            "label": "Commune"
+          },
+          {
+            "field": "properties.code_postal",
+            "label": "Code postal"
+          },
+          {
+            "field": "properties.population",
+            "label": "Population"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.nom",
+            "label": "Commune",
+            "sortable": true,
+            "width": "35%"
+          },
+          {
+            "field": "properties.code_postal",
+            "label": "Code postal",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.population",
+            "label": "Population",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.superficie",
+            "label": "Superficie (km²)",
+            "sortable": true,
+            "width": "25%"
+          }
+        ],
+        "searchFields": [
+          "properties.nom"
+        ],
+        "defaultSort": {
+          "field": "properties.nom",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "deforestation_radar": {
+      "id": "deforestation_radar",
+      "label": "Déforestation radar (ONF)",
+      "tooltipMode": "hover",
+      "zIndex": 15,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://datacarto.geoguyane.fr/wfs?service=WFS&version=2.0.0&request=GetFeature&typeName=foret:deforestation_radar&outputFormat=application/json&srsName=EPSG:4326",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — GéoGuyane / ONF (datacarto.geoguyane.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.date_detection",
+            "label": "Date détection"
+          },
+          {
+            "field": "properties.surface_ha",
+            "label": "Surface (ha)"
+          },
+          {
+            "field": "properties.commune",
+            "label": "Commune"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.date_detection",
+            "label": "Date",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.surface_ha",
+            "label": "Surface (ha)",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.commune",
+            "label": "Commune",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.type_deforestation",
+            "label": "Type",
+            "sortable": true,
+            "width": "30%"
+          }
+        ],
+        "searchFields": [
+          "properties.commune"
+        ],
+        "defaultSort": {
+          "field": "properties.date_detection",
+          "order": "desc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    }
+  }
+}

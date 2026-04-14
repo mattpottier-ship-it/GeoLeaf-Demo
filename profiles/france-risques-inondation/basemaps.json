@@ -1,0 +1,100 @@
+{
+    "basemaps": {
+        "ign-plan": {
+            "id": "ign-plan",
+            "label": "IGN Plan",
+            "type": "maplibre",
+            "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
+            "attribution": "© IGN France — Geoportail",
+            "defaultBasemap": true,
+            "terrain": {
+                "enabled": true,
+                "demUrl": "https://data.geopf.fr/tms/1.0.0/ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES.MNT/{z}/{x}/{y}.png",
+                "demEncoding": "terrarium",
+                "exaggeration": 1.5,
+                "default3D": true,
+                "pitch": 45,
+                "bearing": 0
+            }
+        },
+        "satellite": {
+            "id": "satellite",
+            "label": "Satellite",
+            "type": "tile",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            "attribution": "Tiles © Esri — Source: Esri, Maxar, GeoEye, Earthstar Geographics",
+            "minZoom": 5,
+            "maxZoom": 18,
+            "offline": false
+        },
+        "terrain3d": {
+            "id": "terrain3d",
+            "label": "Relief 3D",
+            "url": "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp",
+            "encoding": "terrarium",
+            "tileSize": 512,
+            "maxZoom": 12,
+            "attribution": "© Mapterhorn — CC BY",
+            "terrain": {
+                "enabled": true,
+                "demUrl": "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp",
+                "demEncoding": "terrarium",
+                "exaggeration": 1.5,
+                "default3D": true,
+                "pitch": 45,
+                "bearing": 0
+            }
+        },
+        "hillshade-ign": {
+            "id": "hillshade-ign",
+            "label": "Relief ombré (IGN)",
+            "type": "hillshade",
+            "attribution": "© IGN France — Geoportail",
+            "hillshade": {
+                "demUrl": "https://data.geopf.fr/tms/1.0.0/ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES.MNT/{z}/{x}/{y}.png",
+                "demEncoding": "terrarium",
+                "demMaxZoom": 14,
+                "exaggeration": 0.5,
+                "illuminationDirection": 335,
+                "shadowColor": "#3d5a7a",
+                "highlightColor": "#ffffff"
+            }
+        },
+        "wmts-ign-ortho": {
+            "id": "wmts-ign-ortho",
+            "label": "Orthophoto (WMTS IGN)",
+            "type": "wmts",
+            "attribution": "© IGN France — Geoportail",
+            "wmts": {
+                "getCapabilitiesUrl": "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetCapabilities",
+                "layer": "ORTHOIMAGERY.ORTHOPHOTOS",
+                "tileMatrixSet": "PM",
+                "format": "image/jpeg"
+            }
+        },
+        "wms-ign-pentes": {
+            "id": "wms-ign-pentes",
+            "label": "Pentes (WMS IGN)",
+            "type": "wms",
+            "attribution": "© IGN France — Geoportail",
+            "wms": {
+                "url": "https://data.geopf.fr/wms-r",
+                "layers": "ELEVATION.SLOPES",
+                "version": "1.3.0",
+                "format": "image/png",
+                "transparent": true
+            }
+        },
+        "image-ortho-alpes": {
+            "id": "image-ortho-alpes",
+            "label": "Ortho Alpes (image fixe)",
+            "type": "image",
+            "attribution": "© IGN France — HR.ORTHOIMAGERY",
+            "imageSource": {
+                "url": "https://data.geopf.fr/wms-r?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=HR.ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&BBOX=45.0,5.5,45.5,6.2&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg",
+                "coordinates": [[5.5, 45.5], [6.2, 45.5], [6.2, 45.0], [5.5, 45.0]],
+                "opacity": 0.9
+            }
+        }
+    }
+}

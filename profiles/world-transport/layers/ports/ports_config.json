@@ -1,0 +1,60 @@
+{
+    "id": "ports",
+    "label": "Ports maritimes majeurs",
+    "tooltipMode": "hover",
+    "zIndex": 75,
+    "geometry": "point",
+    "data": {
+        "dataUrl": "https://data.humdata.org/dataset/world-port-index/resource/3b5c8c73-e473-4e5e-b785-74c5b8a9b1c0",
+        "directory": "data",
+        "licence": "Domaine public — NGA World Port Index via HDX (data.humdata.org)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.PORT_NAME", "label": "Port" },
+            { "field": "properties.COUNTRY", "label": "Pays" },
+            { "field": "properties.HARBORSIZE", "label": "Taille" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.PORT_NAME", "label": "Port", "sortable": true, "width": "40%" },
+            { "field": "properties.COUNTRY", "label": "Pays", "sortable": true, "width": "30%" },
+            { "field": "properties.HARBORSIZE", "label": "Taille", "sortable": true, "width": "15%" },
+            { "field": "properties.HARBORTYPE", "label": "Type", "sortable": true, "width": "15%" }
+        ],
+        "searchFields": ["properties.PORT_NAME", "properties.COUNTRY"],
+        "defaultSort": { "field": "properties.PORT_NAME", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 4
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT prévu : positions navires AIS via WebSocket AISHub — @geoleaf-plugins/websocket",
+        "plugin": "@geoleaf-plugins/websocket",
+        "wsUrl": "wss://data.aishub.net/ws",
+        "refreshOnConnect": true,
+        "fieldMapping": {
+            "title": "SHIPNAME",
+            "description": "DESTINATION",
+            "lat": "LAT",
+            "lng": "LON"
+        }
+    }
+}

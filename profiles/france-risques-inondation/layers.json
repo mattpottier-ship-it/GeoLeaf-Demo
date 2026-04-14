@@ -1,0 +1,29 @@
+{
+    "layers": [
+        {
+            "id": "stations_hydrometriques",
+            "configFile": "layers/stations_hydrometriques/stations_hydrometriques_config.json",
+            "layerManagerId": "data-hydrometrie"
+        },
+        {
+            "id": "cours_eau_risque",
+            "configFile": "layers/cours_eau_risque/cours_eau_risque_config.json",
+            "layerManagerId": "data-hydrographie"
+        },
+        {
+            "id": "tri_frequent",
+            "configFile": "layers/tri_frequent/tri_frequent_config.json",
+            "layerManagerId": "data-tri"
+        },
+        {
+            "id": "tri_centennal",
+            "configFile": "layers/tri_centennal/tri_centennal_config.json",
+            "layerManagerId": "data-tri"
+        },
+        {
+            "id": "tri_extreme",
+            "configFile": "layers/tri_extreme/tri_extreme_config.json",
+            "layerManagerId": "data-tri"
+        }
+    ]
+}

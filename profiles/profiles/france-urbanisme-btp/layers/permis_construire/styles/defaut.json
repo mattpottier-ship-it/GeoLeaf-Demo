@@ -1,0 +1,15 @@
+{
+    "id": "defaut",
+    "label": "Permis de construire",
+    "zoomConfig": { "minZoom": null, "maxZoom": null },
+    "style": {
+        "radius": 5,
+        "fillColor": "#e76f51",
+        "fillOpacity": 0.8,
+        "color": "#264653",
+        "weight": 1
+    },
+    "legend": {
+        "label": "Permis de construire"
+    }
+}

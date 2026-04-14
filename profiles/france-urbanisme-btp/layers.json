@@ -1,0 +1,36 @@
+{
+    "layers": [
+        {
+            "id": "voirie_bdtopo",
+            "label": "Voirie BD TOPO",
+            "configFile": "layers/voirie_bdtopo/voirie_bdtopo_config.json",
+            "layerManagerId": "data-batiments",
+            "defaultVisible": true,
+            "order": 1
+        },
+        {
+            "id": "batiments_bdtopo",
+            "label": "Bâtiments BD TOPO",
+            "configFile": "layers/batiments_bdtopo/batiments_bdtopo_config.json",
+            "layerManagerId": "data-batiments",
+            "defaultVisible": true,
+            "order": 2
+        },
+        {
+            "id": "chantiers_paris",
+            "label": "Chantiers à Paris",
+            "configFile": "layers/chantiers_paris/chantiers_paris_config.json",
+            "layerManagerId": "data-chantiers",
+            "defaultVisible": true,
+            "order": 3
+        },
+        {
+            "id": "batiments_test",
+            "label": "Bâtiments Test GeoJSON",
+            "configFile": "layers/batiments_test/batiments_test_config.json",
+            "layerManagerId": "data-batiments",
+            "defaultVisible": true,
+            "order": 4
+        }
+    ]
+}

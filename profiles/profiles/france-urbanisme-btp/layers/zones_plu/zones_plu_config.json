@@ -1,0 +1,46 @@
+{
+    "id": "zones_plu",
+    "label": "Zones PLU (GPU)",
+    "tooltipMode": "hover",
+    "zIndex": 5,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=GPU:ZONE_URBA&outputFormat=application/json&count=5000&bbox=48.8,2.25,48.9,2.45,EPSG:4326",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Géoportail de l'Urbanisme (geoportail-urbanisme.gouv.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Par zonage",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.libelle", "label": "Zone" },
+            { "field": "properties.typezone", "label": "Type" },
+            { "field": "properties.destdomi", "label": "Destination dominante" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.libelle", "label": "Zone", "sortable": true, "width": "25%" },
+            { "field": "properties.typezone", "label": "Type", "sortable": true, "width": "15%" },
+            { "field": "properties.destdomi", "label": "Destination", "sortable": true, "width": "30%" },
+            { "field": "properties.nomfic", "label": "Règlement", "sortable": true, "width": "30%" }
+        ],
+        "searchFields": ["properties.libelle", "properties.typezone"],
+        "defaultSort": { "field": "properties.libelle", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

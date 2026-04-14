@@ -1,0 +1,22 @@
+{
+    "id": "defaut",
+    "label": "Défaut",
+    "description": "Routes maritimes mondiales",
+    "zoomConfig": {
+        "minZoom": null,
+        "maxZoom": null
+    },
+    "labelScale": {
+        "minScale": null,
+        "maxScale": null
+    },
+    "style": {
+        "color": "#0077b6",
+        "opacity": 0.5,
+        "weight": 1.2,
+        "dashArray": null
+    },
+    "legend": {
+        "label": "Routes maritimes"
+    }
+}

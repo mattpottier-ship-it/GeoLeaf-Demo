@@ -1,0 +1,32 @@
+{
+    "id": "defaut",
+    "label": "défaut",
+    "description": "",
+    "zoomConfig": { "minZoom": 5, "maxZoom": 18 },
+    "style": {
+        "shape": "circle",
+        "radius": 5,
+        "fillColor": "#2a9d8f",
+        "fillOpacity": 0.85,
+        "color": "#264653",
+        "weight": 1,
+        "opacity": 1
+    },
+    "styleRules": [
+        {
+            "when": { "field": "properties.segment_drg", "operator": "==", "value": "a" },
+            "style": { "shape": "circle", "radius": 7, "fillColor": "#e76f51", "fillOpacity": 0.9, "color": "#264653", "weight": 1.5, "opacity": 1 },
+            "legend": { "label": "Gare TGV (cat. A)" }
+        },
+        {
+            "when": { "field": "properties.segment_drg", "operator": "==", "value": "b" },
+            "style": { "shape": "circle", "radius": 6, "fillColor": "#f4a261", "fillOpacity": 0.85, "color": "#264653", "weight": 1, "opacity": 1 },
+            "legend": { "label": "Gare régionale (cat. B)" }
+        },
+        {
+            "when": { "field": "properties.segment_drg", "operator": "==", "value": "c" },
+            "style": { "shape": "circle", "radius": 4, "fillColor": "#2a9d8f", "fillOpacity": 0.8, "color": "#264653", "weight": 1, "opacity": 1 },
+            "legend": { "label": "Gare TER (cat. C)" }
+        }
+    ]
+}

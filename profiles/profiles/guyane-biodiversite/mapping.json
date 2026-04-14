@@ -1,0 +1,37 @@
+{
+    "gbif": {
+        "description": "Normalisation des données GBIF Occurrence API vers le format GeoLeaf POI",
+        "source": "https://api.gbif.org/v1/occurrence/search",
+        "mapping": {
+            "geometry": {
+                "type": "Point",
+                "coordinates": ["decimalLongitude", "decimalLatitude"]
+            },
+            "properties": {
+                "name": "species",
+                "title": "vernacularName",
+                "description": "scientificName",
+                "category": "kingdom",
+                "subcategory": "class",
+                "date": "eventDate",
+                "source": "institutionCode",
+                "attributes": {
+                    "species": "species",
+                    "vernacularName": "vernacularName",
+                    "scientificName": "scientificName",
+                    "kingdom": "kingdom",
+                    "phylum": "phylum",
+                    "class": "class",
+                    "order": "order",
+                    "family": "family",
+                    "genus": "genus",
+                    "basisOfRecord": "basisOfRecord",
+                    "country": "country",
+                    "eventDate": "eventDate",
+                    "institutionCode": "institutionCode",
+                    "datasetName": "datasetName"
+                }
+            }
+        }
+    }
+}

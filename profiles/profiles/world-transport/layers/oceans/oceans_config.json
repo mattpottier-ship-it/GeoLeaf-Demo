@@ -1,0 +1,36 @@
+{
+    "id": "oceans",
+    "label": "Océans & mers",
+    "tooltipMode": "hover",
+    "zIndex": 5,
+    "interactiveShape": false,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_ocean.geojson",
+        "directory": "data",
+        "licence": "Domaine public — Natural Earth (naturalearthdata.com)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.name", "label": "Nom" }
+        ]
+    },
+    "table": {
+        "enabled": false
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "icons": {
+        "spriteUrl": "../profiles/france-rail/icons/sprite_rail.svg",
+        "symbolPrefix": "rail-poi-cat-",
+        "defaultIcon": "rail-generic"
+    },
+    "defaults": {
+        "icon": "rail-generic"
+    },
+    "categories": {
+        "ferroviaire": {
+            "label": "Réseau ferroviaire",
+            "icon": "gare",
+            "subcategories": {
+                "gare_tgv": {
+                    "label": "Gare TGV",
+                    "icon": "gare"
+                },
+                "gare_ter": {
+                    "label": "Gare TER",
+                    "icon": "gare"
+                },
+                "gare_regionale": {
+                    "label": "Gare régionale",
+                    "icon": "gare"
+                },
+                "ligne": {
+                    "label": "Ligne ferroviaire",
+                    "icon": "voie-ferree"
+                }
+            }
+        },
+        "routier": {
+            "label": "Infrastructure routière",
+            "icon": "route",
+            "subcategories": {
+                "route_nationale": {
+                    "label": "Route nationale",
+                    "icon": "route"
+                },
+                "autoroute": {
+                    "label": "Autoroute",
+                    "icon": "route"
+                }
+            }
+        },
+        "desserte": {
+            "label": "Zones de desserte",
+            "icon": "desserte",
+            "subcategories": {
+                "zone_desserte": {
+                    "label": "Zone de desserte gare",
+                    "icon": "desserte"
+                }
+            }
+        }
+    }
+}

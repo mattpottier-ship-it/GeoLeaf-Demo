@@ -1,0 +1,49 @@
+{
+    "id": "routes_aeriennes",
+    "label": "Routes aériennes principales",
+    "tooltipMode": "hover",
+    "zIndex": 29,
+    "geometry": "line",
+    "data": {
+        "dataUrl": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.geojson",
+        "directory": "data",
+        "licence": "ODbL — OpenFlights (openflights.org/data)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.airline", "label": "Compagnie" },
+            { "field": "properties.src_aprt", "label": "Départ" },
+            { "field": "properties.dst_aprt", "label": "Arrivée" }
+        ]
+    },
+    "table": {
+        "enabled": false
+    },
+    "clustering": {
+        "enabled": false
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT prévu : avions en vol via polling OpenSky OAuth2 toutes les 10s — @geoleaf-plugins/realtime-layer. Les avions sont affichés en surcouche sur les routes statiques.",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "dataUrl": "https://opensky-network.org/api/states/all",
+        "refreshInterval": 10000,
+        "auth": {
+            "type": "oauth2",
+            "connector": "@geoleaf/connector",
+            "tokenKey": "opensky_token"
+        }
+    }
+}

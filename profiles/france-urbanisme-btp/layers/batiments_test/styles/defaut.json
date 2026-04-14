@@ -1,0 +1,11 @@
+{
+    "id": "defaut",
+    "label": "Vue 2D (plat)",
+    "zoomConfig": { "minZoom": null, "maxZoom": null },
+    "style": {
+        "fillExtrusionColor": "#4a90d9",
+        "fillExtrusionOpacity": 0.8,
+        "fillExtrusionHeight": 0,
+        "fillExtrusionBase": 0
+    }
+}

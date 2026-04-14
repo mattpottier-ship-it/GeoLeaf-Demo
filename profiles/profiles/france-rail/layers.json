@@ -1,0 +1,14 @@
+{
+    "layers": [
+        {
+            "id": "gares_voyageurs",
+            "configFile": "layers/gares_voyageurs/gares_voyageurs_config.json",
+            "layerManagerId": "data-ferroviaire"
+        },
+        {
+            "id": "lignes_ferroviaires",
+            "configFile": "layers/lignes_ferroviaires/lignes_ferroviaires_config.json",
+            "layerManagerId": "data-ferroviaire"
+        }
+    ]
+}

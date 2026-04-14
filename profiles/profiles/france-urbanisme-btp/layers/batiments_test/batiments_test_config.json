@@ -1,0 +1,43 @@
+{
+    "id": "batiments_test",
+    "label": "Bâtiments Test (GeoJSON local)",
+    "tooltipMode": "hover",
+    "zIndex": 30,
+    "interactiveShape": true,
+    "geometry": "fill-extrusion",
+    "data": {
+        "directory": "data",
+        "file": "batiments_test.geojson",
+        "licence": "Test interne GeoLeaf-JS"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Vue 2D (plat)",
+                "file": "defaut.json"
+            },
+            {
+                "id": "extrusion",
+                "label": "Vue 3D (extrusion)",
+                "file": "extrusion.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.nom", "label": "Bâtiment" },
+            { "field": "properties.usage", "label": "Usage" },
+            { "field": "properties.hauteur", "label": "Hauteur (m)" }
+        ]
+    },
+    "table": {
+        "enabled": false
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

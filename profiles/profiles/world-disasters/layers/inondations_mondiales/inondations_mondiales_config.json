@@ -1,0 +1,52 @@
+{
+    "id": "inondations_mondiales",
+    "label": "Zones inondation active mondiale",
+    "tooltipMode": "hover",
+    "zIndex": 15,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=FL&alertlevel=Green;Orange;Red&limit=50",
+        "directory": "data",
+        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.name", "label": "Événement" },
+            { "field": "properties.alertlevel", "label": "Niveau d'alerte" },
+            { "field": "properties.country", "label": "Pays" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.name", "label": "Événement", "sortable": true, "width": "35%" },
+            { "field": "properties.country", "label": "Pays", "sortable": true, "width": "25%" },
+            { "field": "properties.alertlevel", "label": "Alerte", "sortable": true, "width": "20%" },
+            { "field": "properties.fromdate", "label": "Depuis", "sortable": true, "width": "20%" }
+        ],
+        "searchFields": ["properties.name", "properties.country"],
+        "defaultSort": { "field": "properties.alertlevel", "order": "desc" }
+    },
+    "clustering": {
+        "enabled": false
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT polling 15 min — zones d'inondation active mondiale via GDACS API.",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "refreshInterval": 900000
+    }
+}

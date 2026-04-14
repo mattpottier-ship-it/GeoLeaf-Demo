@@ -1,0 +1,29 @@
+{
+    "id": "defaut",
+    "label": "défaut",
+    "description": "",
+    "zoomConfig": { "minZoom": 5, "maxZoom": 18 },
+    "style": {
+        "color": "#264653",
+        "weight": 2,
+        "opacity": 0.8,
+        "casing": {
+            "enabled": true,
+            "color": "#333333",
+            "opacity": 0.5,
+            "widthPx": 0.5
+        }
+    },
+    "styleRules": [
+        {
+            "when": { "field": "properties.statut", "operator": "==", "value": "Exploitée" },
+            "style": { "color": "#2a9d8f", "weight": 2.5, "opacity": 0.85 },
+            "legend": { "label": "Ligne exploitée" }
+        },
+        {
+            "when": { "field": "properties.statut", "operator": "==", "value": "Fermée" },
+            "style": { "color": "#e76f51", "weight": 1.5, "opacity": 0.6, "dashArray": "4 3" },
+            "legend": { "label": "Ligne fermée" }
+        }
+    ]
+}

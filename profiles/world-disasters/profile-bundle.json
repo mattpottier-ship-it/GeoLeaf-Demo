@@ -1,0 +1,948 @@
+{
+  "_bundleVersion": "1.0",
+  "_profileId": "world-disasters",
+  "_generatedAt": 1776191696495,
+  "taxonomy": {
+    "icons": {
+      "spriteUrl": "profiles/world-disasters/icons/sprite_disasters.svg",
+      "symbolPrefix": "disasters-poi-cat-",
+      "defaultIcon": "disasters-generic"
+    },
+    "defaults": {
+      "icon": "disasters-generic"
+    },
+    "categories": {
+      "seismes": {
+        "label": "Séismes",
+        "icon": "seisme",
+        "subcategories": {
+          "epicentre": {
+            "label": "Épicentre",
+            "icon": "seisme"
+          },
+          "shakemap": {
+            "label": "Zone d'impact (ShakeMap)",
+            "icon": "shakemap"
+          }
+        }
+      },
+      "cyclones": {
+        "label": "Cyclones",
+        "icon": "cyclone",
+        "subcategories": {
+          "position": {
+            "label": "Position cyclone",
+            "icon": "cyclone"
+          },
+          "trajectoire": {
+            "label": "Trajectoire & cône",
+            "icon": "cyclone"
+          }
+        }
+      },
+      "inondations": {
+        "label": "Inondations",
+        "icon": "inondation",
+        "subcategories": {
+          "zone_inondee": {
+            "label": "Zone inondée",
+            "icon": "inondation"
+          }
+        }
+      },
+      "volcans": {
+        "label": "Volcans & Tectonique",
+        "icon": "volcan",
+        "subcategories": {
+          "volcan_actif": {
+            "label": "Volcan actif",
+            "icon": "volcan"
+          },
+          "plaque": {
+            "label": "Plaque tectonique",
+            "icon": "tectonique"
+          }
+        }
+      }
+    }
+  },
+  "themes": {
+    "defaultTheme": "seismes",
+    "config": {
+      "primaryThemes": {
+        "enabled": true,
+        "position": "top-map"
+      },
+      "secondaryThemes": {
+        "enabled": false
+      }
+    },
+    "themes": [
+      {
+        "id": "seismes",
+        "label": "Séismes",
+        "type": "primary",
+        "description": "Séismes récents (7 jours) et zones d'impact ShakeMap — données USGS en temps réel",
+        "icon": "🌍",
+        "layers": [
+          {
+            "id": "epicentres_seismes",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "shakemap_mmi",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "plaques_tectoniques",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "volcans_actifs",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "cyclones_actifs",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "trajectoire_cyclone",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "inondations_mondiales",
+            "visible": false,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "cyclones",
+        "label": "Cyclones",
+        "type": "primary",
+        "description": "Cyclones actifs, trajectoires et cônes d'incertitude — données NOAA NHC",
+        "icon": "🌀",
+        "layers": [
+          {
+            "id": "epicentres_seismes",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "shakemap_mmi",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "plaques_tectoniques",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "volcans_actifs",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "cyclones_actifs",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "trajectoire_cyclone",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "inondations_mondiales",
+            "visible": false,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "tectonique",
+        "label": "Tectonique & Volcans",
+        "type": "primary",
+        "description": "Plaques tectoniques et volcans actifs historiques — Smithsonian GVP",
+        "icon": "🌋",
+        "layers": [
+          {
+            "id": "epicentres_seismes",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "shakemap_mmi",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "plaques_tectoniques",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "volcans_actifs",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "cyclones_actifs",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "trajectoire_cyclone",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "inondations_mondiales",
+            "visible": false,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "vue_globale",
+        "label": "Vue globale",
+        "type": "primary",
+        "description": "Toutes les alertes actives — séismes, cyclones, inondations",
+        "icon": "⚠️",
+        "layers": [
+          {
+            "id": "epicentres_seismes",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "shakemap_mmi",
+            "visible": false,
+            "style": "defaut"
+          },
+          {
+            "id": "plaques_tectoniques",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "volcans_actifs",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "cyclones_actifs",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "trajectoire_cyclone",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "inondations_mondiales",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      }
+    ]
+  },
+  "basemaps": {
+    "basemaps": {
+      "positron": {
+        "id": "positron",
+        "label": "Clair",
+        "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "attribution": "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        "minZoom": 2,
+        "maxZoom": 19,
+        "defaultBasemap": true,
+        "offline": false
+      },
+      "dark-matter": {
+        "id": "dark-matter",
+        "label": "Sombre",
+        "url": "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "attribution": "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        "minZoom": 2,
+        "maxZoom": 19,
+        "offline": false
+      },
+      "satellite": {
+        "id": "satellite",
+        "label": "Satellite",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        "minZoom": 2,
+        "maxZoom": 18,
+        "offline": false
+      }
+    }
+  },
+  "ui": {
+    "ui": {
+      "theme": "light",
+      "language": "fr",
+      "showBaseLayerControls": true,
+      "showThemeSelector": true,
+      "showFilterPanel": true,
+      "showLayerManager": true,
+      "showLegend": true,
+      "showTable": true,
+      "showGeolocation": true,
+      "showCoordinates": true,
+      "showScale": true,
+      "showCacheButton": true,
+      "showAddPoi": true,
+      "permalink": {
+        "enabled": true,
+        "mode": "hash"
+      }
+    },
+    "searchConfig": {
+      "title": "Filtrer",
+      "radiusMin": 1,
+      "radiusMax": 200,
+      "radiusStep": 1,
+      "radiusDefault": 10,
+      "searchPlaceholder": "Rechercher…",
+      "filters": [
+        {
+          "id": "searchText",
+          "type": "search",
+          "label": "Recherche textuelle",
+          "placeholder": "Rechercher...",
+          "searchFields": [
+            "title",
+            "properties.title",
+            "properties.place",
+            "properties.name",
+            "description"
+          ]
+        },
+        {
+          "id": "proximity",
+          "type": "proximity",
+          "label": "Recherche par proximité",
+          "buttonLabel": "Activer",
+          "instructionText": "Cliquez sur la carte pour définir le point central"
+        },
+        {
+          "id": "categories",
+          "type": "tree",
+          "label": "Catégories"
+        },
+        {
+          "id": "tags",
+          "type": "multiselect-tags",
+          "label": "Tags",
+          "field": "attributes.tags"
+        }
+      ],
+      "actions": {
+        "applyLabel": "Appliquer",
+        "resetLabel": "Réinitialiser"
+      }
+    },
+    "layerManagerConfig": {
+      "title": "Couches",
+      "collapsedByDefault": true,
+      "sections": [
+        {
+          "id": "data-seismes",
+          "label": "Séismes & Alertes",
+          "order": 1,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-cyclones",
+          "label": "Cyclones",
+          "order": 2,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-inondations",
+          "label": "Inondations",
+          "order": 3,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-volcans",
+          "label": "Volcans & Tectonique",
+          "order": 4,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "basemap",
+          "label": "Fonds de carte",
+          "order": 5,
+          "collapsedByDefault": true
+        }
+      ]
+    },
+    "legendConfig": {
+      "title": "Légende",
+      "collapsedByDefault": true,
+      "position": "bottomleft"
+    },
+    "tableConfig": {
+      "title": "Tableau",
+      "enabled": true,
+      "defaultVisible": false,
+      "pageSize": 50,
+      "maxRowsPerLayer": 10000,
+      "enableExportButton": true,
+      "virtualScrolling": true,
+      "defaultHeight": "40%",
+      "minHeight": "20%",
+      "maxHeight": "60%",
+      "resizable": true
+    },
+    "scaleConfig": {
+      "scaleGraphic": true,
+      "scaleNumeric": true,
+      "scaleNumericEditable": true,
+      "scaleNivel": true,
+      "position": "bottomleft"
+    }
+  },
+  "layersFile": {
+    "layers": [
+      {
+        "id": "epicentres_seismes",
+        "configFile": "layers/epicentres_seismes/epicentres_seismes_config.json",
+        "layerManagerId": "data-seismes"
+      },
+      {
+        "id": "shakemap_mmi",
+        "configFile": "layers/shakemap_mmi/shakemap_mmi_config.json",
+        "layerManagerId": "data-seismes"
+      },
+      {
+        "id": "cyclones_actifs",
+        "configFile": "layers/cyclones_actifs/cyclones_actifs_config.json",
+        "layerManagerId": "data-cyclones"
+      },
+      {
+        "id": "trajectoire_cyclone",
+        "configFile": "layers/trajectoire_cyclone/trajectoire_cyclone_config.json",
+        "layerManagerId": "data-cyclones"
+      },
+      {
+        "id": "inondations_mondiales",
+        "configFile": "layers/inondations_mondiales/inondations_mondiales_config.json",
+        "layerManagerId": "data-inondations"
+      },
+      {
+        "id": "plaques_tectoniques",
+        "configFile": "layers/plaques_tectoniques/plaques_tectoniques_config.json",
+        "layerManagerId": "data-volcans"
+      },
+      {
+        "id": "volcans_actifs",
+        "configFile": "layers/volcans_actifs/volcans_actifs_config.json",
+        "layerManagerId": "data-volcans"
+      }
+    ]
+  },
+  "layerConfigs": {
+    "epicentres_seismes": {
+      "id": "epicentres_seismes",
+      "label": "Épicentres séismes (7 jours)",
+      "tooltipMode": "hover",
+      "zIndex": 80,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+        "directory": "data",
+        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Par magnitude",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.place",
+            "label": "Lieu"
+          },
+          {
+            "field": "properties.mag",
+            "label": "Magnitude"
+          },
+          {
+            "field": "properties.time",
+            "label": "Date"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.place",
+            "label": "Lieu",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.mag",
+            "label": "Magnitude",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.depth",
+            "label": "Profondeur (km)",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.time",
+            "label": "Date",
+            "sortable": true,
+            "width": "30%"
+          }
+        ],
+        "searchFields": [
+          "properties.place"
+        ],
+        "defaultSort": {
+          "field": "properties.mag",
+          "order": "desc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 6
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT natif via dataUrl polling — les données USGS se mettent à jour toutes les minutes. Configurer refreshInterval dans le profil pour activer le polling automatique.",
+        "refreshInterval": 60000
+      }
+    },
+    "shakemap_mmi": {
+      "id": "shakemap_mmi",
+      "label": "Zones impact ShakeMap (MMI)",
+      "tooltipMode": "hover",
+      "zIndex": 20,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
+        "directory": "data",
+        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.place",
+            "label": "Lieu"
+          },
+          {
+            "field": "properties.mag",
+            "label": "Magnitude"
+          },
+          {
+            "field": "properties.mmi",
+            "label": "Intensité MMI"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT réactif — ShakeMap zones concentriques par séisme significatif. Nécessite 2 appels chaînés via @geoleaf-plugins/realtime-layer (liste séismes → détail shakemap par ID).",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "refreshInterval": 60000
+      }
+    },
+    "cyclones_actifs": {
+      "id": "cyclones_actifs",
+      "label": "Cyclones actifs",
+      "tooltipMode": "hover",
+      "zIndex": 75,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=TC&alertlevel=Green;Orange;Red&limit=50",
+        "directory": "data",
+        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.name",
+            "label": "Nom"
+          },
+          {
+            "field": "properties.alertlevel",
+            "label": "Niveau d'alerte"
+          },
+          {
+            "field": "properties.country",
+            "label": "Zone"
+          },
+          {
+            "field": "properties.severitydata.severity",
+            "label": "Vent max (km/h)"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.name",
+            "label": "Nom",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.alertlevel",
+            "label": "Alerte",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.country",
+            "label": "Zone",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.severitydata.severity",
+            "label": "Vent (km/h)",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.name",
+          "properties.country"
+        ],
+        "defaultSort": {
+          "field": "properties.alertlevel",
+          "order": "desc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT polling 6h — positions cyclones actifs via GDACS API. Données vides hors saison cyclonique.",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "refreshInterval": 21600000
+      }
+    },
+    "trajectoire_cyclone": {
+      "id": "trajectoire_cyclone",
+      "label": "Trajectoire + cône cyclone",
+      "tooltipMode": "hover",
+      "zIndex": 25,
+      "geometry": "line",
+      "data": {
+        "dataUrl": "https://mapservices.weather.noaa.gov/tropical/rest/services/tropical/NHC_tropical_weather/MapServer/0/query?where=1%3D1&outFields=*&f=geojson",
+        "directory": "data",
+        "licence": "Domaine public — NOAA NHC Tropical Weather MapServer"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.STORMNAME",
+            "label": "Nom"
+          },
+          {
+            "field": "properties.STORMTYPE",
+            "label": "Type"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT polling 6h — trajectoire et cône d'incertitude cyclonique via NOAA NHC MapServer.",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "refreshInterval": 21600000
+      }
+    },
+    "inondations_mondiales": {
+      "id": "inondations_mondiales",
+      "label": "Zones inondation active mondiale",
+      "tooltipMode": "hover",
+      "zIndex": 15,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=FL&alertlevel=Green;Orange;Red&limit=50",
+        "directory": "data",
+        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.name",
+            "label": "Événement"
+          },
+          {
+            "field": "properties.alertlevel",
+            "label": "Niveau d'alerte"
+          },
+          {
+            "field": "properties.country",
+            "label": "Pays"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.name",
+            "label": "Événement",
+            "sortable": true,
+            "width": "35%"
+          },
+          {
+            "field": "properties.country",
+            "label": "Pays",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.alertlevel",
+            "label": "Alerte",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.fromdate",
+            "label": "Depuis",
+            "sortable": true,
+            "width": "20%"
+          }
+        ],
+        "searchFields": [
+          "properties.name",
+          "properties.country"
+        ],
+        "defaultSort": {
+          "field": "properties.alertlevel",
+          "order": "desc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT polling 15 min — zones d'inondation active mondiale via GDACS API.",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "refreshInterval": 900000
+      }
+    },
+    "plaques_tectoniques": {
+      "id": "plaques_tectoniques",
+      "label": "Plaques tectoniques",
+      "tooltipMode": "hover",
+      "zIndex": 10,
+      "interactiveShape": true,
+      "geometry": "line",
+      "data": {
+        "dataUrl": "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json",
+        "directory": "data",
+        "licence": "CC BY 4.0 — Hugo Ahlenius / Nordpil (github.com/fraxen/tectonicplates)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.Name",
+            "label": "Frontière"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "volcans_actifs": {
+      "id": "volcans_actifs",
+      "label": "Éruptions volcaniques actives",
+      "tooltipMode": "hover",
+      "zIndex": 70,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=VO&alertlevel=Green;Orange;Red&limit=50",
+        "directory": "data",
+        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.name",
+            "label": "Événement"
+          },
+          {
+            "field": "properties.alertlevel",
+            "label": "Niveau d'alerte"
+          },
+          {
+            "field": "properties.country",
+            "label": "Pays"
+          },
+          {
+            "field": "properties.fromdate",
+            "label": "Depuis"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.name",
+            "label": "Événement",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.country",
+            "label": "Pays",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.alertlevel",
+            "label": "Alerte",
+            "sortable": true,
+            "width": "20%"
+          },
+          {
+            "field": "properties.fromdate",
+            "label": "Depuis",
+            "sortable": true,
+            "width": "15%"
+          }
+        ],
+        "searchFields": [
+          "properties.name",
+          "properties.country"
+        ],
+        "defaultSort": {
+          "field": "properties.alertlevel",
+          "order": "desc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    }
+  }
+}

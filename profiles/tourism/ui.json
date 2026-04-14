@@ -6,7 +6,7 @@
         "showThemeSelector": true,
         "showFilterPanel": true,
         "showLayerManager": true,
-        "showLegend": false,
+        "showLegend": true,
         "showTable": true,
         "showGeolocation": true,
         "showCoordinates": true,

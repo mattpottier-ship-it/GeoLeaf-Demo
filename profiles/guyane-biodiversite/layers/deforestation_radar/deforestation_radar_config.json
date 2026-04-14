@@ -1,0 +1,46 @@
+{
+    "id": "deforestation_radar",
+    "label": "Déforestation radar (ONF)",
+    "tooltipMode": "hover",
+    "zIndex": 15,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://datacarto.geoguyane.fr/wfs?service=WFS&version=2.0.0&request=GetFeature&typeName=foret:deforestation_radar&outputFormat=application/json&srsName=EPSG:4326",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — GéoGuyane / ONF (datacarto.geoguyane.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.date_detection", "label": "Date détection" },
+            { "field": "properties.surface_ha", "label": "Surface (ha)" },
+            { "field": "properties.commune", "label": "Commune" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.date_detection", "label": "Date", "sortable": true, "width": "25%" },
+            { "field": "properties.surface_ha", "label": "Surface (ha)", "sortable": true, "width": "20%" },
+            { "field": "properties.commune", "label": "Commune", "sortable": true, "width": "25%" },
+            { "field": "properties.type_deforestation", "label": "Type", "sortable": true, "width": "30%" }
+        ],
+        "searchFields": ["properties.commune"],
+        "defaultSort": { "field": "properties.date_detection", "order": "desc" }
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

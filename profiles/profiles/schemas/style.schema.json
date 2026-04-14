@@ -221,6 +221,24 @@
                     "type": "object",
                     "description": "Native MapLibre GL paint properties passed through as-is. Keys are MapLibre property names (e.g. \"fill-color\"), values can be scalars or MapLibre expression arrays.",
                     "additionalProperties": true
+                },
+                "fillExtrusionColor": {
+                    "type": "string",
+                    "description": "Fill-extrusion face color (hex/CSS). Required for fill-extrusion layers."
+                },
+                "fillExtrusionOpacity": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "description": "Fill-extrusion global opacity (0–1). Default: 1.0."
+                },
+                "fillExtrusionHeight": {
+                    "oneOf": [{ "type": "number", "minimum": 0 }, { "type": "string" }],
+                    "description": "Fill-extrusion height in metres. Number = fixed value, string = feature field name. Required for fill-extrusion layers."
+                },
+                "fillExtrusionBase": {
+                    "oneOf": [{ "type": "number", "minimum": 0 }, { "type": "string" }],
+                    "description": "Fill-extrusion base height in metres. Default: 0."
                 }
             }
         },

@@ -1,0 +1,69 @@
+{
+    "id": "chantiers_paris",
+    "label": "Chantiers à Paris",
+    "tooltipMode": "hover",
+    "zIndex": 60,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/chantiers-a-paris/exports/geojson",
+        "directory": "data",
+        "licence": "ODbL — Ville de Paris (opendata.paris.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.denomination", "label": "Chantier" },
+            { "field": "properties.adresse", "label": "Adresse" },
+            { "field": "properties.date_debut", "label": "Début" },
+            { "field": "properties.date_fin", "label": "Fin prévue" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            {
+                "field": "properties.denomination",
+                "label": "Chantier",
+                "sortable": true,
+                "width": "30%"
+            },
+            { "field": "properties.adresse", "label": "Adresse", "sortable": true, "width": "25%" },
+            {
+                "field": "properties.date_debut",
+                "label": "Début",
+                "sortable": true,
+                "width": "15%"
+            },
+            {
+                "field": "properties.date_fin",
+                "label": "Fin prévue",
+                "sortable": true,
+                "width": "15%"
+            },
+            {
+                "field": "properties.arrondissement",
+                "label": "Arrdt",
+                "sortable": true,
+                "width": "15%"
+            }
+        ],
+        "searchFields": ["properties.denomination", "properties.adresse"],
+        "defaultSort": { "field": "properties.date_debut", "order": "desc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 40,
+        "disableClusteringAtZoom": 15
+    }
+}

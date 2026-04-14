@@ -1,0 +1,11 @@
+{
+    "id": "extrusion",
+    "label": "Vue 3D (extrusion)",
+    "zoomConfig": { "minZoom": null, "maxZoom": null },
+    "style": {
+        "fillExtrusionColor": "#f4a261",
+        "fillExtrusionOpacity": 0.85,
+        "fillExtrusionHeight": "hauteur",
+        "fillExtrusionBase": 0
+    }
+}

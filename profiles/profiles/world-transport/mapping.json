@@ -1,0 +1,47 @@
+{
+    "source": "ourairports",
+    "description": "Mapping CSV OurAirports (airports.csv) vers champs GeoLeaf standard. Source : https://ourairports.com/data/airports.csv — Licence : domaine public.",
+    "coordinateFields": {
+        "longitude": "longitude_deg",
+        "latitude": "latitude_deg"
+    },
+    "mapping": {
+        "title": "name",
+        "description": "municipality",
+        "category": "type",
+        "subcategory": "iso_country",
+        "attributes": {
+            "iata_code": "iata_code",
+            "icao_code": "ident",
+            "type": "type",
+            "elevation_ft": "elevation_ft",
+            "country": "iso_country",
+            "region": "iso_region",
+            "municipality": "municipality",
+            "scheduled_service": "scheduled_service",
+            "wikipedia_link": "wikipedia_link",
+            "home_link": "home_link"
+        }
+    },
+    "categoryMapping": {
+        "large_airport": "aerien",
+        "medium_airport": "aerien",
+        "small_airport": "aerien",
+        "heliport": "aerien",
+        "seaplane_base": "maritime",
+        "closed": "aerien"
+    },
+    "subcategoryMapping": {
+        "large_airport": "aeroport",
+        "medium_airport": "aeroport",
+        "small_airport": "aeroport",
+        "heliport": "aeroport",
+        "seaplane_base": "aeroport",
+        "closed": "aeroport"
+    },
+    "filter": {
+        "field": "type",
+        "values": ["large_airport", "medium_airport"],
+        "description": "Limit to large and medium airports only for demo performance"
+    }
+}

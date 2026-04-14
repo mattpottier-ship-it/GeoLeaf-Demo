@@ -1,0 +1,54 @@
+{
+    "icons": {
+        "spriteUrl": "profiles/world-transport/icons/sprite_transport.svg",
+        "symbolPrefix": "transport-poi-cat-",
+        "defaultIcon": "transport-generic"
+    },
+    "defaults": {
+        "icon": "transport-generic"
+    },
+    "categories": {
+        "maritime": {
+            "label": "Maritime",
+            "icon": "transport-ship",
+            "subcategories": {
+                "port": {
+                    "label": "Port",
+                    "icon": "transport-ship"
+                },
+                "navire": {
+                    "label": "Navire",
+                    "icon": "transport-ship"
+                }
+            }
+        },
+        "aerien": {
+            "label": "Aérien",
+            "icon": "transport-plane",
+            "subcategories": {
+                "aeroport": {
+                    "label": "Aéroport",
+                    "icon": "transport-plane"
+                },
+                "avion": {
+                    "label": "Avion",
+                    "icon": "transport-plane"
+                }
+            }
+        },
+        "ville": {
+            "label": "Ville",
+            "icon": "transport-city",
+            "subcategories": {
+                "capitale": {
+                    "label": "Capitale",
+                    "icon": "transport-city"
+                },
+                "grande_ville": {
+                    "label": "Grande ville",
+                    "icon": "transport-city"
+                }
+            }
+        }
+    }
+}

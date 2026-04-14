@@ -1,0 +1,838 @@
+{
+  "_bundleVersion": "1.0",
+  "_profileId": "world-transport",
+  "_generatedAt": 1776191696501,
+  "taxonomy": {
+    "icons": {
+      "spriteUrl": "profiles/world-transport/icons/sprite_transport.svg",
+      "symbolPrefix": "transport-poi-cat-",
+      "defaultIcon": "transport-generic"
+    },
+    "defaults": {
+      "icon": "transport-generic"
+    },
+    "categories": {
+      "maritime": {
+        "label": "Maritime",
+        "icon": "transport-ship",
+        "subcategories": {
+          "port": {
+            "label": "Port",
+            "icon": "transport-ship"
+          },
+          "navire": {
+            "label": "Navire",
+            "icon": "transport-ship"
+          }
+        }
+      },
+      "aerien": {
+        "label": "Aérien",
+        "icon": "transport-plane",
+        "subcategories": {
+          "aeroport": {
+            "label": "Aéroport",
+            "icon": "transport-plane"
+          },
+          "avion": {
+            "label": "Avion",
+            "icon": "transport-plane"
+          }
+        }
+      },
+      "ville": {
+        "label": "Ville",
+        "icon": "transport-city",
+        "subcategories": {
+          "capitale": {
+            "label": "Capitale",
+            "icon": "transport-city"
+          },
+          "grande_ville": {
+            "label": "Grande ville",
+            "icon": "transport-city"
+          }
+        }
+      }
+    }
+  },
+  "themes": {
+    "defaultTheme": "voie_maritime",
+    "config": {
+      "primaryThemes": {
+        "enabled": true,
+        "position": "top-map"
+      },
+      "secondaryThemes": {
+        "enabled": false
+      }
+    },
+    "themes": [
+      {
+        "id": "voie_maritime",
+        "label": "Voies maritimes",
+        "type": "primary",
+        "description": "Flux maritimes mondiaux — ports, routes maritimes, navires AIS",
+        "icon": "🚢",
+        "layers": [
+          {
+            "id": "oceans",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "pays",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "capitales",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "routes_maritimes",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "ports",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      },
+      {
+        "id": "voie_aerienne",
+        "label": "Voies aériennes",
+        "type": "primary",
+        "description": "Flux aériens mondiaux — aéroports, routes aériennes, avions OpenSky",
+        "icon": "✈️",
+        "layers": [
+          {
+            "id": "oceans",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "pays",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "capitales",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "routes_aeriennes",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "aeroports",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      }
+    ]
+  },
+  "basemaps": {
+    "basemaps": {
+      "positron": {
+        "id": "positron",
+        "label": "Clair",
+        "url": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "attribution": "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        "minZoom": 2,
+        "maxZoom": 19,
+        "defaultBasemap": true,
+        "offline": false
+      },
+      "dark-matter": {
+        "id": "dark-matter",
+        "label": "Sombre",
+        "url": "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+        "subdomains": "abcd",
+        "attribution": "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>",
+        "minZoom": 2,
+        "maxZoom": 19,
+        "offline": false
+      },
+      "satellite": {
+        "id": "satellite",
+        "label": "Satellite",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        "minZoom": 2,
+        "maxZoom": 18,
+        "offline": false
+      }
+    }
+  },
+  "ui": {
+    "ui": {
+      "theme": "light",
+      "language": "fr",
+      "showBaseLayerControls": true,
+      "showThemeSelector": true,
+      "showFilterPanel": true,
+      "showLayerManager": true,
+      "showLegend": true,
+      "showTable": true,
+      "showGeolocation": true,
+      "showCoordinates": true,
+      "showScale": true,
+      "showCacheButton": true,
+      "showAddPoi": true,
+      "permalink": {
+        "enabled": true,
+        "mode": "hash"
+      }
+    },
+    "searchConfig": {
+      "title": "Filtrer",
+      "radiusMin": 1,
+      "radiusMax": 200,
+      "radiusStep": 1,
+      "radiusDefault": 10,
+      "searchPlaceholder": "Rechercher…",
+      "filters": [
+        {
+          "id": "searchText",
+          "type": "search",
+          "label": "Recherche textuelle",
+          "placeholder": "Rechercher...",
+          "searchFields": [
+            "title",
+            "properties.name",
+            "properties.NAME",
+            "description",
+            "attributes.description_long",
+            "properties.description_long"
+          ]
+        },
+        {
+          "id": "proximity",
+          "type": "proximity",
+          "label": "Recherche par proximité",
+          "buttonLabel": "Activer",
+          "instructionText": "Cliquez sur la carte pour définir le point central"
+        },
+        {
+          "id": "categories",
+          "type": "tree",
+          "label": "Catégories"
+        },
+        {
+          "id": "tags",
+          "type": "multiselect-tags",
+          "label": "Tags",
+          "field": "attributes.tags"
+        }
+      ],
+      "actions": {
+        "applyLabel": "Appliquer",
+        "resetLabel": "Réinitialiser"
+      }
+    },
+    "layerManagerConfig": {
+      "title": "Couches",
+      "collapsedByDefault": true,
+      "sections": [
+        {
+          "id": "data-maritime",
+          "label": "Maritime",
+          "order": 1,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-aerien",
+          "label": "Aérien",
+          "order": 2,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-reference",
+          "label": "Référence",
+          "order": 3,
+          "collapsedByDefault": true
+        },
+        {
+          "id": "basemap",
+          "label": "Fonds de carte",
+          "order": 4,
+          "collapsedByDefault": true
+        }
+      ]
+    },
+    "legendConfig": {
+      "title": "Légende",
+      "collapsedByDefault": true,
+      "position": "bottomleft"
+    },
+    "tableConfig": {
+      "title": "Tableau",
+      "enabled": true,
+      "defaultVisible": false,
+      "pageSize": 50,
+      "maxRowsPerLayer": 10000,
+      "enableExportButton": true,
+      "virtualScrolling": true,
+      "defaultHeight": "40%",
+      "minHeight": "20%",
+      "maxHeight": "60%",
+      "resizable": true
+    },
+    "scaleConfig": {
+      "scaleGraphic": true,
+      "scaleNumeric": true,
+      "scaleNumericEditable": true,
+      "scaleNivel": true,
+      "position": "bottomleft"
+    }
+  },
+  "layersFile": {
+    "layers": [
+      {
+        "id": "capitales",
+        "configFile": "layers/capitales/capitales_config.json",
+        "layerManagerId": "data-reference"
+      },
+      {
+        "id": "ports",
+        "configFile": "layers/ports/ports_config.json",
+        "layerManagerId": "data-maritime"
+      },
+      {
+        "id": "aeroports",
+        "configFile": "layers/aeroports/aeroports_config.json",
+        "layerManagerId": "data-aerien"
+      },
+      {
+        "id": "routes_maritimes",
+        "configFile": "layers/routes_maritimes/routes_maritimes_config.json",
+        "layerManagerId": "data-maritime"
+      },
+      {
+        "id": "routes_aeriennes",
+        "configFile": "layers/routes_aeriennes/routes_aeriennes_config.json",
+        "layerManagerId": "data-aerien"
+      },
+      {
+        "id": "pays",
+        "configFile": "layers/pays/pays_config.json",
+        "layerManagerId": "data-reference"
+      },
+      {
+        "id": "oceans",
+        "configFile": "layers/oceans/oceans_config.json",
+        "layerManagerId": "data-reference"
+      }
+    ]
+  },
+  "layerConfigs": {
+    "capitales": {
+      "id": "capitales",
+      "label": "Capitales & grandes villes",
+      "tooltipMode": "hover",
+      "zIndex": 80,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_populated_places_simple.geojson",
+        "directory": "data",
+        "licence": "Domaine public — Natural Earth (naturalearthdata.com)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.name",
+            "label": "Nom"
+          },
+          {
+            "field": "properties.adm0name",
+            "label": "Pays"
+          },
+          {
+            "field": "properties.pop_max",
+            "label": "Population"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.name",
+            "label": "Nom",
+            "sortable": true,
+            "width": "35%"
+          },
+          {
+            "field": "properties.adm0name",
+            "label": "Pays",
+            "sortable": true,
+            "width": "35%"
+          },
+          {
+            "field": "properties.pop_max",
+            "label": "Population",
+            "sortable": true,
+            "width": "30%"
+          }
+        ],
+        "searchFields": [
+          "properties.name",
+          "properties.adm0name"
+        ],
+        "defaultSort": {
+          "field": "properties.pop_max",
+          "order": "desc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 40,
+        "disableClusteringAtZoom": 4
+      }
+    },
+    "ports": {
+      "id": "ports",
+      "label": "Ports maritimes majeurs",
+      "tooltipMode": "hover",
+      "zIndex": 75,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://data.humdata.org/dataset/world-port-index/resource/3b5c8c73-e473-4e5e-b785-74c5b8a9b1c0",
+        "directory": "data",
+        "licence": "Domaine public — NGA World Port Index via HDX (data.humdata.org)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.PORT_NAME",
+            "label": "Port"
+          },
+          {
+            "field": "properties.COUNTRY",
+            "label": "Pays"
+          },
+          {
+            "field": "properties.HARBORSIZE",
+            "label": "Taille"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.PORT_NAME",
+            "label": "Port",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.COUNTRY",
+            "label": "Pays",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.HARBORSIZE",
+            "label": "Taille",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.HARBORTYPE",
+            "label": "Type",
+            "sortable": true,
+            "width": "15%"
+          }
+        ],
+        "searchFields": [
+          "properties.PORT_NAME",
+          "properties.COUNTRY"
+        ],
+        "defaultSort": {
+          "field": "properties.PORT_NAME",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 4
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT prévu : positions navires AIS via WebSocket AISHub — @geoleaf-plugins/websocket",
+        "plugin": "@geoleaf-plugins/websocket",
+        "wsUrl": "wss://data.aishub.net/ws",
+        "refreshOnConnect": true,
+        "fieldMapping": {
+          "title": "SHIPNAME",
+          "description": "DESTINATION",
+          "lat": "LAT",
+          "lng": "LON"
+        }
+      }
+    },
+    "aeroports": {
+      "id": "aeroports",
+      "label": "Aéroports internationaux",
+      "tooltipMode": "hover",
+      "zIndex": 74,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+        "format": "csv",
+        "mappingFile": "mapping.json",
+        "directory": "data",
+        "licence": "Domaine public — OurAirports (ourairports.com)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "title",
+            "label": "Aéroport"
+          },
+          {
+            "field": "attributes.iata_code",
+            "label": "IATA"
+          },
+          {
+            "field": "attributes.country",
+            "label": "Pays"
+          },
+          {
+            "field": "attributes.type",
+            "label": "Type"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "title",
+            "label": "Nom",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "attributes.iata_code",
+            "label": "IATA",
+            "sortable": true,
+            "width": "10%"
+          },
+          {
+            "field": "attributes.country",
+            "label": "Pays",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "attributes.type",
+            "label": "Type",
+            "sortable": true,
+            "width": "25%"
+          }
+        ],
+        "searchFields": [
+          "title",
+          "attributes.iata_code",
+          "attributes.country"
+        ],
+        "defaultSort": {
+          "field": "title",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 60,
+        "disableClusteringAtZoom": 5
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT prévu : positions avions en vol via polling OpenSky OAuth2 toutes les 10s — @geoleaf-plugins/realtime-layer",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "dataUrl": "https://opensky-network.org/api/states/all",
+        "refreshInterval": 10000,
+        "auth": {
+          "type": "oauth2",
+          "connector": "@geoleaf/connector",
+          "tokenKey": "opensky_token"
+        },
+        "fieldMapping": {
+          "title": "callsign",
+          "lat": "latitude",
+          "lng": "longitude",
+          "attributes": {
+            "altitude": "baro_altitude",
+            "velocity": "velocity",
+            "origin_country": "origin_country"
+          }
+        }
+      }
+    },
+    "routes_maritimes": {
+      "id": "routes_maritimes",
+      "label": "Routes maritimes",
+      "tooltipMode": "hover",
+      "zIndex": 30,
+      "geometry": "line",
+      "data": {
+        "dataUrl": "https://zenodo.org/record/6361763/files/global_shipping_routes.geojson",
+        "directory": "data",
+        "licence": "CC BY 4.0 — Zenodo (doi.org/10.5281/zenodo.6361763)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.name",
+            "label": "Route"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT prévu : positions navires AIS en temps réel via WebSocket AISHub — @geoleaf-plugins/websocket. Les navires sont affichés en surcouche sur les routes statiques.",
+        "plugin": "@geoleaf-plugins/websocket",
+        "wsUrl": "wss://data.aishub.net/ws",
+        "overlayLayerId": "ports",
+        "refreshOnConnect": true
+      }
+    },
+    "routes_aeriennes": {
+      "id": "routes_aeriennes",
+      "label": "Routes aériennes principales",
+      "tooltipMode": "hover",
+      "zIndex": 29,
+      "geometry": "line",
+      "data": {
+        "dataUrl": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.geojson",
+        "directory": "data",
+        "licence": "ODbL — OpenFlights (openflights.org/data)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.airline",
+            "label": "Compagnie"
+          },
+          {
+            "field": "properties.src_aprt",
+            "label": "Départ"
+          },
+          {
+            "field": "properties.dst_aprt",
+            "label": "Arrivée"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      },
+      "realtimeLayer": {
+        "enabled": false,
+        "description": "RT prévu : avions en vol via polling OpenSky OAuth2 toutes les 10s — @geoleaf-plugins/realtime-layer. Les avions sont affichés en surcouche sur les routes statiques.",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "dataUrl": "https://opensky-network.org/api/states/all",
+        "refreshInterval": 10000,
+        "auth": {
+          "type": "oauth2",
+          "connector": "@geoleaf/connector",
+          "tokenKey": "opensky_token"
+        }
+      }
+    },
+    "pays": {
+      "id": "pays",
+      "label": "Pays / frontières",
+      "tooltipMode": "hover",
+      "zIndex": 10,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
+        "directory": "data",
+        "licence": "Domaine public — Natural Earth (naturalearthdata.com)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.NAME",
+            "label": "Pays"
+          },
+          {
+            "field": "properties.CONTINENT",
+            "label": "Continent"
+          },
+          {
+            "field": "properties.POP_EST",
+            "label": "Population estimée"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.NAME",
+            "label": "Pays",
+            "sortable": true,
+            "width": "40%"
+          },
+          {
+            "field": "properties.CONTINENT",
+            "label": "Continent",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.POP_EST",
+            "label": "Population",
+            "sortable": true,
+            "width": "30%"
+          }
+        ],
+        "searchFields": [
+          "properties.NAME",
+          "properties.CONTINENT"
+        ],
+        "defaultSort": {
+          "field": "properties.NAME",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "oceans": {
+      "id": "oceans",
+      "label": "Océans & mers",
+      "tooltipMode": "hover",
+      "zIndex": 5,
+      "interactiveShape": false,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_ocean.geojson",
+        "directory": "data",
+        "licence": "Domaine public — Natural Earth (naturalearthdata.com)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.name",
+            "label": "Nom"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      }
+    }
+  }
+}

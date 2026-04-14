@@ -1,0 +1,42 @@
+{
+    "id": "trajectoire_cyclone",
+    "label": "Trajectoire + cône cyclone",
+    "tooltipMode": "hover",
+    "zIndex": 25,
+    "geometry": "line",
+    "data": {
+        "dataUrl": "https://mapservices.weather.noaa.gov/tropical/rest/services/tropical/NHC_tropical_weather/MapServer/0/query?where=1%3D1&outFields=*&f=geojson",
+        "directory": "data",
+        "licence": "Domaine public — NOAA NHC Tropical Weather MapServer"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.STORMNAME", "label": "Nom" },
+            { "field": "properties.STORMTYPE", "label": "Type" }
+        ]
+    },
+    "table": {
+        "enabled": false
+    },
+    "clustering": {
+        "enabled": false
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT polling 6h — trajectoire et cône d'incertitude cyclonique via NOAA NHC MapServer.",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "refreshInterval": 21600000
+    }
+}

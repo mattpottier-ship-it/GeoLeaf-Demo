@@ -1,0 +1,37 @@
+{
+    "icons": {
+        "spriteUrl": "profiles/france-risques-inondation/icons/sprite_risques.svg",
+        "symbolPrefix": "risques-poi-cat-",
+        "defaultIcon": "risques-poi-cat-station"
+    },
+    "defaults": {
+        "icon": "risques-poi-cat-station"
+    },
+    "categories": {
+        "hydrometrie": {
+            "label": "Hydrométrie",
+            "icon": "risques-poi-cat-station",
+            "subcategories": {
+                "station_active": { "label": "Station active", "icon": "risques-poi-cat-station" },
+                "station_fermee": { "label": "Station fermée", "icon": "risques-poi-cat-station" }
+            }
+        },
+        "hydrographie": {
+            "label": "Hydrographie",
+            "icon": "risques-poi-cat-cours-eau",
+            "subcategories": {
+                "cours_eau": { "label": "Cours d'eau", "icon": "risques-poi-cat-cours-eau" },
+                "bassin": { "label": "Bassin versant", "icon": "risques-poi-cat-bassin" }
+            }
+        },
+        "zones_inondables": {
+            "label": "Zones inondables TRI",
+            "icon": "risques-poi-cat-inondation",
+            "subcategories": {
+                "tri_frequent": { "label": "Scénario fréquent", "icon": "risques-poi-cat-tri-frequent" },
+                "tri_centennal": { "label": "Scénario centennal", "icon": "risques-poi-cat-tri-centennal" },
+                "tri_extreme": { "label": "Scénario extrême", "icon": "risques-poi-cat-tri-extreme" }
+            }
+        }
+    }
+}

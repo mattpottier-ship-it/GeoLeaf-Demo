@@ -1,0 +1,572 @@
+{
+  "_bundleVersion": "1.0",
+  "_profileId": "france-urbanisme-btp",
+  "_generatedAt": 1776191696485,
+  "taxonomy": {
+    "icons": {
+      "spriteUrl": "profiles/france-urbanisme-btp/icons/sprite_urbanisme.svg",
+      "symbolPrefix": "urbanisme-poi-cat-"
+    },
+    "categories": [
+      {
+        "id": "permis",
+        "label": "Permis de construire",
+        "icon": "urbanisme-poi-cat-permis",
+        "subcategories": [
+          {
+            "id": "permis_neuf",
+            "label": "Construction neuve",
+            "icon": "urbanisme-poi-cat-permis"
+          },
+          {
+            "id": "permis_renovation",
+            "label": "Rénovation",
+            "icon": "urbanisme-poi-cat-renovation"
+          }
+        ]
+      },
+      {
+        "id": "infrastructure",
+        "label": "Infrastructure",
+        "icon": "urbanisme-poi-cat-voirie",
+        "subcategories": [
+          {
+            "id": "voirie",
+            "label": "Voirie",
+            "icon": "urbanisme-poi-cat-voirie"
+          },
+          {
+            "id": "chantier",
+            "label": "Chantier",
+            "icon": "urbanisme-poi-cat-chantier"
+          }
+        ]
+      },
+      {
+        "id": "batiments",
+        "label": "Bâtiments",
+        "icon": "urbanisme-poi-cat-batiment",
+        "subcategories": [
+          {
+            "id": "batiment_residentiel",
+            "label": "Résidentiel",
+            "icon": "urbanisme-poi-cat-batiment"
+          },
+          {
+            "id": "batiment_commercial",
+            "label": "Commercial",
+            "icon": "urbanisme-poi-cat-batiment"
+          }
+        ]
+      },
+      {
+        "id": "reglementation",
+        "label": "Réglementation",
+        "icon": "urbanisme-poi-cat-plu",
+        "subcategories": [
+          {
+            "id": "zone_u",
+            "label": "Zone urbaine (U)",
+            "icon": "urbanisme-poi-cat-plu"
+          },
+          {
+            "id": "zone_au",
+            "label": "Zone à urbaniser (AU)",
+            "icon": "urbanisme-poi-cat-plu"
+          },
+          {
+            "id": "zone_a",
+            "label": "Zone agricole (A)",
+            "icon": "urbanisme-poi-cat-plu"
+          },
+          {
+            "id": "zone_n",
+            "label": "Zone naturelle (N)",
+            "icon": "urbanisme-poi-cat-plu"
+          }
+        ]
+      },
+      {
+        "id": "energie",
+        "label": "Énergie & DPE",
+        "icon": "urbanisme-poi-cat-dpe",
+        "subcategories": [
+          {
+            "id": "dpe_a",
+            "label": "DPE A",
+            "icon": "urbanisme-poi-cat-dpe"
+          },
+          {
+            "id": "dpe_b",
+            "label": "DPE B",
+            "icon": "urbanisme-poi-cat-dpe"
+          },
+          {
+            "id": "dpe_c",
+            "label": "DPE C",
+            "icon": "urbanisme-poi-cat-dpe"
+          },
+          {
+            "id": "dpe_d",
+            "label": "DPE D",
+            "icon": "urbanisme-poi-cat-dpe"
+          },
+          {
+            "id": "dpe_e",
+            "label": "DPE E",
+            "icon": "urbanisme-poi-cat-dpe"
+          },
+          {
+            "id": "dpe_f",
+            "label": "DPE F",
+            "icon": "urbanisme-poi-cat-dpe"
+          },
+          {
+            "id": "dpe_g",
+            "label": "DPE G",
+            "icon": "urbanisme-poi-cat-dpe"
+          }
+        ]
+      }
+    ]
+  },
+  "themes": {
+    "defaultTheme": "btp_3d",
+    "themes": [
+      {
+        "id": "btp_3d",
+        "type": "primary",
+        "label": "BTP Île-de-France",
+        "description": "Bâtiments 3D BD TOPO, voirie et chantiers actifs",
+        "layers": [
+          {
+            "id": "batiments_bdtopo",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "voirie_bdtopo",
+            "visible": true,
+            "style": "defaut"
+          },
+          {
+            "id": "chantiers_paris",
+            "visible": true,
+            "style": "defaut"
+          }
+        ]
+      }
+    ]
+  },
+  "basemaps": {
+    "basemaps": {
+      "ign-plan": {
+        "id": "ign-plan",
+        "label": "IGN Plan",
+        "type": "maplibre",
+        "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
+        "fallbackUrl": "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
+        "attribution": "© IGN France — Geoportail",
+        "defaultBasemap": true
+      },
+      "positron": {
+        "id": "positron",
+        "label": "Clair (CartoDB)",
+        "type": "tile",
+        "url": "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
+        "attribution": "© OpenStreetMap contributors, © CARTO",
+        "minZoom": 2,
+        "maxZoom": 19,
+        "offline": true
+      },
+      "satellite": {
+        "id": "satellite",
+        "label": "Satellite",
+        "type": "tile",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles © Esri — Source: Esri, Maxar, GeoEye, Earthstar Geographics",
+        "minZoom": 5,
+        "maxZoom": 19,
+        "offline": false
+      }
+    }
+  },
+  "ui": {
+    "ui": {
+      "theme": "light",
+      "language": "fr",
+      "showBaseLayerControls": false,
+      "showThemeSelector": true,
+      "showFilterPanel": true,
+      "showLayerManager": true,
+      "showLegend": true,
+      "showTable": true,
+      "showGeolocation": true,
+      "showCoordinates": true,
+      "showScale": true,
+      "showCacheButton": true,
+      "showAddPoi": true,
+      "permalink": {
+        "enabled": true,
+        "mode": "hash"
+      }
+    },
+    "searchConfig": {
+      "title": "Filtrer",
+      "radiusMin": 1,
+      "radiusMax": 200,
+      "radiusStep": 1,
+      "radiusDefault": 5,
+      "searchPlaceholder": "Rechercher un bâtiment, chantier…",
+      "filters": [
+        {
+          "id": "searchText",
+          "type": "search",
+          "label": "Recherche textuelle",
+          "placeholder": "Rechercher...",
+          "searchFields": [
+            "title",
+            "properties.name",
+            "properties.adresse",
+            "properties.denomination"
+          ]
+        },
+        {
+          "id": "proximity",
+          "type": "proximity",
+          "label": "Recherche par proximité",
+          "buttonLabel": "Activer",
+          "instructionText": "Cliquez sur la carte pour définir le point central"
+        },
+        {
+          "id": "categories",
+          "type": "tree",
+          "label": "Catégories"
+        },
+        {
+          "id": "tags",
+          "type": "multiselect-tags",
+          "label": "Tags",
+          "field": "attributes.tags"
+        }
+      ],
+      "actions": {
+        "applyLabel": "Appliquer",
+        "resetLabel": "Réinitialiser"
+      }
+    },
+    "layerManagerConfig": {
+      "title": "Couches",
+      "collapsedByDefault": true,
+      "sections": [
+        {
+          "id": "data-batiments",
+          "label": "Bâtiments & Infrastructure",
+          "order": 1,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "data-chantiers",
+          "label": "Chantiers",
+          "order": 2,
+          "collapsedByDefault": false
+        },
+        {
+          "id": "basemap",
+          "label": "Fonds de carte",
+          "order": 3,
+          "collapsedByDefault": true
+        }
+      ]
+    },
+    "legendConfig": {
+      "title": "Légende",
+      "collapsedByDefault": true,
+      "position": "bottomleft"
+    },
+    "tableConfig": {
+      "title": "Tableau",
+      "enabled": true,
+      "defaultVisible": false,
+      "pageSize": 50,
+      "maxRowsPerLayer": 10000,
+      "enableExportButton": true,
+      "virtualScrolling": true,
+      "defaultHeight": "40%",
+      "minHeight": "20%",
+      "maxHeight": "60%",
+      "resizable": true
+    },
+    "scaleConfig": {
+      "scaleGraphic": true,
+      "scaleNumeric": true,
+      "scaleNumericEditable": true,
+      "scaleNivel": true,
+      "position": "bottomleft"
+    }
+  },
+  "layersFile": {
+    "layers": [
+      {
+        "id": "voirie_bdtopo",
+        "label": "Voirie BD TOPO",
+        "configFile": "layers/voirie_bdtopo/voirie_bdtopo_config.json",
+        "layerManagerId": "data-batiments",
+        "defaultVisible": true,
+        "order": 1
+      },
+      {
+        "id": "batiments_bdtopo",
+        "label": "Bâtiments BD TOPO",
+        "configFile": "layers/batiments_bdtopo/batiments_bdtopo_config.json",
+        "layerManagerId": "data-batiments",
+        "defaultVisible": true,
+        "order": 2
+      },
+      {
+        "id": "chantiers_paris",
+        "label": "Chantiers à Paris",
+        "configFile": "layers/chantiers_paris/chantiers_paris_config.json",
+        "layerManagerId": "data-chantiers",
+        "defaultVisible": true,
+        "order": 3
+      },
+      {
+        "id": "batiments_test",
+        "label": "Bâtiments Test GeoJSON",
+        "configFile": "layers/batiments_test/batiments_test_config.json",
+        "layerManagerId": "data-batiments",
+        "defaultVisible": true,
+        "order": 4
+      }
+    ]
+  },
+  "layerConfigs": {
+    "voirie_bdtopo": {
+      "id": "voirie_bdtopo",
+      "label": "Voirie BD TOPO",
+      "zIndex": 15,
+      "interactiveShape": true,
+      "geometry": "line",
+      "data": {
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=BDTOPO_V3:troncon_de_route&outputFormat=application/json&count=5000&bbox=2.330,48.849,2.368,48.865,EPSG:4326",
+        "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.symbo",
+            "label": "Type"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "batiments_bdtopo": {
+      "id": "batiments_bdtopo",
+      "label": "Bâtiments BD TOPO",
+      "zIndex": 20,
+      "interactiveShape": true,
+      "geometry": "fill-extrusion",
+      "data": {
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=BDTOPO_V3:batiment&outputFormat=application/json&count=2000&bbox=2.330,48.849,2.368,48.865,EPSG:4326",
+        "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Extrusion 3D",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.nature",
+            "label": "Nature"
+          },
+          {
+            "field": "properties.usage_1",
+            "label": "Usage"
+          },
+          {
+            "field": "properties.hauteur",
+            "label": "Hauteur (m)"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "chantiers_paris": {
+      "id": "chantiers_paris",
+      "label": "Chantiers à Paris",
+      "tooltipMode": "hover",
+      "zIndex": 60,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/chantiers-a-paris/exports/geojson",
+        "directory": "data",
+        "licence": "ODbL — Ville de Paris (opendata.paris.fr)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.denomination",
+            "label": "Chantier"
+          },
+          {
+            "field": "properties.adresse",
+            "label": "Adresse"
+          },
+          {
+            "field": "properties.date_debut",
+            "label": "Début"
+          },
+          {
+            "field": "properties.date_fin",
+            "label": "Fin prévue"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.denomination",
+            "label": "Chantier",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.adresse",
+            "label": "Adresse",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.date_debut",
+            "label": "Début",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.date_fin",
+            "label": "Fin prévue",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.arrondissement",
+            "label": "Arrdt",
+            "sortable": true,
+            "width": "15%"
+          }
+        ],
+        "searchFields": [
+          "properties.denomination",
+          "properties.adresse"
+        ],
+        "defaultSort": {
+          "field": "properties.date_debut",
+          "order": "desc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 40,
+        "disableClusteringAtZoom": 15
+      }
+    },
+    "batiments_test": {
+      "id": "batiments_test",
+      "label": "Bâtiments Test (GeoJSON local)",
+      "tooltipMode": "hover",
+      "zIndex": 30,
+      "interactiveShape": true,
+      "geometry": "fill-extrusion",
+      "data": {
+        "directory": "data",
+        "file": "batiments_test.geojson",
+        "licence": "Test interne GeoLeaf-JS"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Vue 2D (plat)",
+            "file": "defaut.json"
+          },
+          {
+            "id": "extrusion",
+            "label": "Vue 3D (extrusion)",
+            "file": "extrusion.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.nom",
+            "label": "Bâtiment"
+          },
+          {
+            "field": "properties.usage",
+            "label": "Usage"
+          },
+          {
+            "field": "properties.hauteur",
+            "label": "Hauteur (m)"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false
+      }
+    }
+  }
+}

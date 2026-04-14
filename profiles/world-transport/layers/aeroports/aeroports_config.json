@@ -1,0 +1,72 @@
+{
+    "id": "aeroports",
+    "label": "Aéroports internationaux",
+    "tooltipMode": "hover",
+    "zIndex": 74,
+    "geometry": "point",
+    "data": {
+        "dataUrl": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+        "format": "csv",
+        "mappingFile": "mapping.json",
+        "directory": "data",
+        "licence": "Domaine public — OurAirports (ourairports.com)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "title", "label": "Aéroport" },
+            { "field": "attributes.iata_code", "label": "IATA" },
+            { "field": "attributes.country", "label": "Pays" },
+            { "field": "attributes.type", "label": "Type" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "title", "label": "Nom", "sortable": true, "width": "40%" },
+            { "field": "attributes.iata_code", "label": "IATA", "sortable": true, "width": "10%" },
+            { "field": "attributes.country", "label": "Pays", "sortable": true, "width": "25%" },
+            { "field": "attributes.type", "label": "Type", "sortable": true, "width": "25%" }
+        ],
+        "searchFields": ["title", "attributes.iata_code", "attributes.country"],
+        "defaultSort": { "field": "title", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 60,
+        "disableClusteringAtZoom": 5
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT prévu : positions avions en vol via polling OpenSky OAuth2 toutes les 10s — @geoleaf-plugins/realtime-layer",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "dataUrl": "https://opensky-network.org/api/states/all",
+        "refreshInterval": 10000,
+        "auth": {
+            "type": "oauth2",
+            "connector": "@geoleaf/connector",
+            "tokenKey": "opensky_token"
+        },
+        "fieldMapping": {
+            "title": "callsign",
+            "lat": "latitude",
+            "lng": "longitude",
+            "attributes": {
+                "altitude": "baro_altitude",
+                "velocity": "velocity",
+                "origin_country": "origin_country"
+            }
+        }
+    }
+}

@@ -101,7 +101,18 @@
         ></script>
 
         <!-- GeoLeaf JS - ESM Bundle core -->
-        <script type="module" src="dist/geoleaf.esm.js?v=1775077042312"></script>
+        <script type="module" src="dist/geoleaf.esm.js?v=1776191696512"></script>
+
+        <!-- Standard MIT plugins (ESM — load BEFORE GeoLeaf.boot()) -->
+        <script type="module" src="dist/geoleaf-connector.plugin.js"></script>
+        <script type="module" src="dist/geoleaf-websocket.plugin.js"></script>
+        <script type="module" src="dist/geoleaf-realtime-layer.plugin.js"></script>
+        <script type="module" src="dist/geoleaf-file-import.plugin.js"></script>
+        <script type="module" src="dist/geoleaf-flatgeobuf.plugin.js"></script>
+
+        <!-- Optional premium plugins — DEMO ONLY: remove if unused -->
+
+        <script type="module" src="dist/geoleaf-cog.plugin.js"></script>
 
         <!-- DEMO ONLY — Remove this script for production projects -->
         <script type="module" src="demo/demo.extensions.js"></script>

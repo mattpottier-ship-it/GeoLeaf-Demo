@@ -1,0 +1,52 @@
+{
+    "id": "communes_guyane",
+    "label": "Communes de Guyane",
+    "tooltipMode": "hover",
+    "zIndex": 5,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "ogcApi": {
+            "url": "https://data.geopf.fr/ogcapi/collections/ADMINEXPRESS-COG-CARTO.LATEST:commune/items",
+            "bbox": [-54.6, 2.1, -51.6, 5.8],
+            "limit": 50,
+            "maxFeatures": 100,
+            "autoRefresh": false
+        },
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — IGN ADMIN EXPRESS (data.geopf.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.nom", "label": "Commune" },
+            { "field": "properties.code_postal", "label": "Code postal" },
+            { "field": "properties.population", "label": "Population" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.nom", "label": "Commune", "sortable": true, "width": "35%" },
+            { "field": "properties.code_postal", "label": "Code postal", "sortable": true, "width": "20%" },
+            { "field": "properties.population", "label": "Population", "sortable": true, "width": "20%" },
+            { "field": "properties.superficie", "label": "Superficie (km²)", "sortable": true, "width": "25%" }
+        ],
+        "searchFields": ["properties.nom"],
+        "defaultSort": { "field": "properties.nom", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

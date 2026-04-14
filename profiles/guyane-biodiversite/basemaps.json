@@ -1,0 +1,32 @@
+{
+    "basemaps": {
+        "satellite": {
+            "id": "satellite",
+            "label": "Satellite",
+            "type": "tile",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            "attribution": "Tiles © Esri — Source: Esri, Maxar, GeoEye, Earthstar Geographics",
+            "minZoom": 5,
+            "maxZoom": 18,
+            "defaultBasemap": true,
+            "offline": false
+        },
+        "positron": {
+            "id": "positron",
+            "label": "Clair (CartoDB)",
+            "type": "tile",
+            "url": "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
+            "attribution": "© OpenStreetMap contributors, © CARTO",
+            "minZoom": 2,
+            "maxZoom": 19,
+            "offline": true
+        },
+        "ign-plan": {
+            "id": "ign-plan",
+            "label": "IGN Plan",
+            "type": "maplibre",
+            "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
+            "attribution": "© IGN France — Geoportail"
+        }
+    }
+}

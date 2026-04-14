@@ -1,0 +1,56 @@
+{
+    "id": "defaut",
+    "label": "Par zonage",
+    "legend": {
+        "label": "Zones PLU"
+    },
+    "zoomConfig": { "minZoom": null, "maxZoom": null },
+    "style": {
+        "fillColor": "#dee2e6",
+        "fillOpacity": 0.3,
+        "color": "#6c757d",
+        "weight": 1
+    },
+    "styleRules": [
+        {
+            "when": { "field": "typezone", "operator": "==", "value": "U" },
+            "style": {
+                "fillColor": "#e9c46a",
+                "fillOpacity": 0.3,
+                "color": "#e76f51",
+                "weight": 1
+            },
+            "legend": { "label": "Zone Urbaine (U)", "order": 1 }
+        },
+        {
+            "when": { "field": "typezone", "operator": "==", "value": "AU" },
+            "style": {
+                "fillColor": "#f4a261",
+                "fillOpacity": 0.3,
+                "color": "#e76f51",
+                "weight": 1
+            },
+            "legend": { "label": "Zone \u00e0 Urbaniser (AU)", "order": 2 }
+        },
+        {
+            "when": { "field": "typezone", "operator": "==", "value": "A" },
+            "style": {
+                "fillColor": "#57cc99",
+                "fillOpacity": 0.25,
+                "color": "#2a9d8f",
+                "weight": 1
+            },
+            "legend": { "label": "Zone Agricole (A)", "order": 3 }
+        },
+        {
+            "when": { "field": "typezone", "operator": "==", "value": "N" },
+            "style": {
+                "fillColor": "#2a9d8f",
+                "fillOpacity": 0.25,
+                "color": "#264653",
+                "weight": 1
+            },
+            "legend": { "label": "Zone Naturelle (N)", "order": 4 }
+        }
+    ]
+}

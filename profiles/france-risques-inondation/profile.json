@@ -1,0 +1,58 @@
+{
+  "id": "france-risques-inondation",
+  "label": "Risques Inondation France",
+  "version": "1.0.0",
+  "description": "Profil de démonstration GeoLeaf-JS — Risques d'inondation en France : stations hydrométriques Hub'Eau, cours d'eau BD TOPO, zones inondables TRI (fréquent/centennal/extrême). Terrain 3D activé.",
+  "map": {
+    "center": [
+      2.5,
+      46.5
+    ],
+    "zoom": 6,
+    "minZoom": 5,
+    "maxZoom": 18,
+    "bounds": [
+      [
+        41.3,
+        -5.5
+      ],
+      [
+        51.1,
+        10
+      ]
+    ]
+  },
+  "Files": {
+    "taxonomyFile": "taxonomy.json",
+    "themesFile": "themes.json",
+    "layersFile": "layers.json",
+    "basemapsFile": "basemaps.json",
+    "uiFile": "ui.json"
+  },
+  "performance": {
+    "maxConcurrentLayers": 10,
+    "layerLoadDelay": 200,
+    "fitBoundsOnThemeChange": false
+  },
+  "clusteringConfig": {
+    "enabled": true,
+    "strategy": "by-layer",
+    "maxClusterRadius": 60,
+    "disableClusteringAtZoom": 9
+  },
+  "poiConfig": {
+    "enabled": false
+  },
+  "storage": {
+    "enableOfflineDetector": false,
+    "enableServiceWorker": false,
+    "cache": {
+      "enableProfileCache": true,
+      "enableTileCache": true
+    }
+  },
+  "poiAddConfig": {
+    "enabled": false
+  },
+  "bundleFile": "profile-bundle.json"
+}

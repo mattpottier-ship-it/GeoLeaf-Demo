@@ -1,0 +1,54 @@
+{
+    "id": "stations_hydrometriques",
+    "label": "Stations hydrométriques",
+    "tooltipMode": "hover",
+    "zIndex": 80,
+    "geometry": "point",
+    "data": {
+        "dataUrl": "https://hubeau.eaufrance.fr/api/v1/hydrometrie/referentiel/stations?format=geojson&size=10000",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Hub'Eau / EauFrance (hubeau.eaufrance.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Par statut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.libelle_station", "label": "Station" },
+            { "field": "properties.libelle_cours_eau", "label": "Cours d'eau" },
+            { "field": "properties.libelle_commune", "label": "Commune" },
+            { "field": "properties.code_station", "label": "Code station" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.libelle_station", "label": "Station", "sortable": true, "width": "25%" },
+            { "field": "properties.libelle_cours_eau", "label": "Cours d'eau", "sortable": true, "width": "25%" },
+            { "field": "properties.libelle_commune", "label": "Commune", "sortable": true, "width": "20%" },
+            { "field": "properties.code_station", "label": "Code", "sortable": true, "width": "15%" },
+            { "field": "properties.en_service", "label": "En service", "sortable": true, "width": "15%" }
+        ],
+        "searchFields": ["properties.libelle_station", "properties.libelle_cours_eau", "properties.libelle_commune"],
+        "defaultSort": { "field": "properties.libelle_station", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 60,
+        "disableClusteringAtZoom": 9
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT Vigicrues — polling 15 min pour les observations temps réel des stations hydrométriques via Hub'Eau API /observations_tr.",
+        "refreshInterval": 900000
+    }
+}

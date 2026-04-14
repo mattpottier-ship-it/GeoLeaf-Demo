@@ -1,0 +1,46 @@
+{
+    "id": "zones_protegees_pag",
+    "label": "Zones protégées (PAG)",
+    "tooltipMode": "hover",
+    "zIndex": 10,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://datacarto.geoguyane.fr/wfs?service=WFS&version=2.0.0&request=GetFeature&typeName=environnement:zones_protegees&outputFormat=application/json&srsName=EPSG:4326",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — GéoGuyane / PAG-DEAL (datacarto.geoguyane.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.nom", "label": "Zone" },
+            { "field": "properties.type_protection", "label": "Type" },
+            { "field": "properties.surface_ha", "label": "Surface (ha)" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.nom", "label": "Zone", "sortable": true, "width": "35%" },
+            { "field": "properties.type_protection", "label": "Type", "sortable": true, "width": "25%" },
+            { "field": "properties.surface_ha", "label": "Surface (ha)", "sortable": true, "width": "20%" },
+            { "field": "properties.gestionnaire", "label": "Gestionnaire", "sortable": true, "width": "20%" }
+        ],
+        "searchFields": ["properties.nom", "properties.type_protection"],
+        "defaultSort": { "field": "properties.nom", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "id": "defaut",
+    "label": "Défaut",
+    "description": "Aéroports internationaux",
+    "zoomConfig": {
+        "minZoom": null,
+        "maxZoom": null
+    },
+    "labelScale": {
+        "minScale": null,
+        "maxScale": null
+    },
+    "style": {
+        "radius": 5,
+        "fillColor": "#f77f00",
+        "fillOpacity": 0.85,
+        "color": "#ffffff",
+        "opacity": 1,
+        "weight": 1
+    },
+    "legend": {
+        "label": "Aéroports internationaux"
+    }
+}

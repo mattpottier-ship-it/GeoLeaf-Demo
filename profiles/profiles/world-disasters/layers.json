@@ -1,0 +1,39 @@
+{
+    "layers": [
+        {
+            "id": "epicentres_seismes",
+            "configFile": "layers/epicentres_seismes/epicentres_seismes_config.json",
+            "layerManagerId": "data-seismes"
+        },
+        {
+            "id": "shakemap_mmi",
+            "configFile": "layers/shakemap_mmi/shakemap_mmi_config.json",
+            "layerManagerId": "data-seismes"
+        },
+        {
+            "id": "cyclones_actifs",
+            "configFile": "layers/cyclones_actifs/cyclones_actifs_config.json",
+            "layerManagerId": "data-cyclones"
+        },
+        {
+            "id": "trajectoire_cyclone",
+            "configFile": "layers/trajectoire_cyclone/trajectoire_cyclone_config.json",
+            "layerManagerId": "data-cyclones"
+        },
+        {
+            "id": "inondations_mondiales",
+            "configFile": "layers/inondations_mondiales/inondations_mondiales_config.json",
+            "layerManagerId": "data-inondations"
+        },
+        {
+            "id": "plaques_tectoniques",
+            "configFile": "layers/plaques_tectoniques/plaques_tectoniques_config.json",
+            "layerManagerId": "data-volcans"
+        },
+        {
+            "id": "volcans_actifs",
+            "configFile": "layers/volcans_actifs/volcans_actifs_config.json",
+            "layerManagerId": "data-volcans"
+        }
+    ]
+}

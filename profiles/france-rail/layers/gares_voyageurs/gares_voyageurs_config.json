@@ -1,0 +1,65 @@
+{
+    "id": "gares_voyageurs",
+    "label": "Gares voyageurs",
+    "tooltipMode": "hover",
+    "zIndex": 80,
+    "geometry": "point",
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Par catégorie de gare",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.libelle", "label": "Gare" },
+            { "field": "properties.commune", "label": "Commune" },
+            { "field": "properties.departement", "label": "Département" },
+            { "field": "properties.voyageurs", "label": "Fréquentation" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.libelle", "label": "Gare", "sortable": true, "width": "30%" },
+            { "field": "properties.commune", "label": "Commune", "sortable": true, "width": "20%" },
+            { "field": "properties.departement", "label": "Département", "sortable": true, "width": "20%" },
+            { "field": "properties.voyageurs", "label": "Fréquentation", "sortable": true, "width": "15%" },
+            { "field": "properties.segment_drg", "label": "Catégorie", "sortable": true, "width": "15%" }
+        ],
+        "searchFields": ["properties.libelle", "properties.commune"],
+        "defaultSort": { "field": "properties.libelle", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 10
+    },
+    "data": {
+        "dataUrl": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/liste-des-gares/exports/geojson",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — SNCF Réseau (ressources.data.sncf.com)",
+        "realtime": {
+            "enabled": false,
+            "source": "polling",
+            "url": "https://proxy.transport.data.gouv.fr/resource/sncf-gtfs-rt-trip-updates",
+            "intervalMs": 120000,
+            "decoder": "gtfs-rt",
+            "updateMode": "merge",
+            "idField": "code_uic",
+            "mapping": {
+                "idField": "stop_id",
+                "delayField": "delay",
+                "targetLayerId": "gares_voyageurs"
+            },
+            "staleTimeoutMs": 300000,
+            "staleAction": "dim"
+        }
+    }
+}

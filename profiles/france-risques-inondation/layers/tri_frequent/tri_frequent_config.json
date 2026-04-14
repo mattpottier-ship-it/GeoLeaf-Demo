@@ -1,0 +1,46 @@
+{
+    "id": "tri_frequent",
+    "label": "TRI — Scénario fréquent",
+    "tooltipMode": "hover",
+    "zIndex": 10,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://georisques.gouv.fr/api/v1/gaspar/tri?rayon=0&page=1&page_size=100",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Géorisques / MTES-DGPR (georisques.gouv.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.nom_tri", "label": "TRI" },
+            { "field": "properties.scenario", "label": "Scénario" },
+            { "field": "properties.surface_km2", "label": "Surface (km²)" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.nom_tri", "label": "TRI", "sortable": true, "width": "40%" },
+            { "field": "properties.scenario", "label": "Scénario", "sortable": true, "width": "20%" },
+            { "field": "properties.surface_km2", "label": "Surface (km²)", "sortable": true, "width": "20%" },
+            { "field": "properties.departement", "label": "Département", "sortable": true, "width": "20%" }
+        ],
+        "searchFields": ["properties.nom_tri", "properties.departement"],
+        "defaultSort": { "field": "properties.nom_tri", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

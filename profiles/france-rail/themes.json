@@ -1,0 +1,24 @@
+{
+    "defaultTheme": "reseau_ferroviaire",
+    "config": {
+        "primaryThemes": {
+            "enabled": false
+        },
+        "secondaryThemes": {
+            "enabled": false
+        }
+    },
+    "themes": [
+        {
+            "id": "reseau_ferroviaire",
+            "label": "Réseau ferroviaire",
+            "type": "primary",
+            "description": "Gares voyageurs et lignes ferroviaires — données SNCF (transport.data.gouv.fr)",
+            "icon": "🚆",
+            "layers": [
+                { "id": "gares_voyageurs", "visible": true, "style": "defaut" },
+                { "id": "lignes_ferroviaires", "visible": true, "style": "defaut" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "icons": {
+        "spriteUrl": "../profiles/guyane-biodiversite/icons/sprite_guyane.svg",
+        "symbolPrefix": "guyane-poi-cat-",
+        "defaultIcon": "guyane-poi-cat-tourisme"
+    },
+    "defaults": {
+        "icon": "guyane-poi-cat-tourisme"
+    },
+    "categories": {
+        "tourisme": {
+            "label": "Tourisme",
+            "icon": "guyane-poi-cat-tourisme",
+            "subcategories": {
+                "site_naturel": { "label": "Site naturel", "icon": "guyane-poi-cat-site-naturel" },
+                "randonnee": { "label": "Randonnée", "icon": "guyane-poi-cat-randonnee" },
+                "heritage": { "label": "Patrimoine", "icon": "guyane-poi-cat-heritage" }
+            }
+        },
+        "biodiversite": {
+            "label": "Biodiversité",
+            "icon": "guyane-poi-cat-biodiversite",
+            "subcategories": {
+                "faune": { "label": "Faune", "icon": "guyane-poi-cat-faune" },
+                "flore": { "label": "Flore", "icon": "guyane-poi-cat-flore" },
+                "zone_protegee": { "label": "Zone protégée", "icon": "guyane-poi-cat-zone-protegee" }
+            }
+        },
+        "territoire": {
+            "label": "Territoire",
+            "icon": "guyane-poi-cat-commune",
+            "subcategories": {
+                "commune": { "label": "Commune", "icon": "guyane-poi-cat-commune" },
+                "deforestation": { "label": "Déforestation", "icon": "guyane-poi-cat-deforestation" },
+                "hydrographie": { "label": "Hydrographie", "icon": "guyane-poi-cat-cours-eau" }
+            }
+        }
+    }
+}

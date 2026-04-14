@@ -1,0 +1,62 @@
+{
+    "defaultTheme": "biodiversite",
+    "config": {
+        "primaryThemes": {
+            "enabled": true,
+            "position": "top-map"
+        },
+        "secondaryThemes": {
+            "enabled": false
+        }
+    },
+    "themes": [
+        {
+            "id": "biodiversite",
+            "label": "Biodiversité",
+            "type": "primary",
+            "icon": "🌿",
+            "description": "Observations GBIF et zones protégées du Parc Amazonien de Guyane",
+            "layers": [
+                { "id": "sites_touristiques", "visible": false, "style": "defaut" },
+                { "id": "itineraires_randonnee", "visible": false, "style": "defaut" },
+                { "id": "observations_gbif", "visible": true, "style": "defaut" },
+                { "id": "zones_protegees_pag", "visible": true, "style": "defaut" },
+                { "id": "cours_eau", "visible": true, "style": "defaut" },
+                { "id": "communes_guyane", "visible": false, "style": "defaut" },
+                { "id": "deforestation_radar", "visible": false, "style": "defaut" }
+            ]
+        },
+        {
+            "id": "tourisme",
+            "label": "Tourisme & Randonnée",
+            "type": "primary",
+            "icon": "🏕️",
+            "description": "Sites touristiques et itinéraires de randonnée en Guyane",
+            "layers": [
+                { "id": "sites_touristiques", "visible": true, "style": "defaut" },
+                { "id": "itineraires_randonnee", "visible": true, "style": "defaut" },
+                { "id": "observations_gbif", "visible": false, "style": "defaut" },
+                { "id": "zones_protegees_pag", "visible": true, "style": "defaut" },
+                { "id": "cours_eau", "visible": true, "style": "defaut" },
+                { "id": "communes_guyane", "visible": false, "style": "defaut" },
+                { "id": "deforestation_radar", "visible": false, "style": "defaut" }
+            ]
+        },
+        {
+            "id": "territoire",
+            "label": "Territoire",
+            "type": "primary",
+            "icon": "🗺️",
+            "description": "Communes, déforestation radar et découpage administratif",
+            "layers": [
+                { "id": "sites_touristiques", "visible": false, "style": "defaut" },
+                { "id": "itineraires_randonnee", "visible": false, "style": "defaut" },
+                { "id": "observations_gbif", "visible": false, "style": "defaut" },
+                { "id": "zones_protegees_pag", "visible": true, "style": "defaut" },
+                { "id": "cours_eau", "visible": true, "style": "defaut" },
+                { "id": "communes_guyane", "visible": true, "style": "defaut" },
+                { "id": "deforestation_radar", "visible": true, "style": "defaut" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "defaultTheme": "btp_3d",
+    "themes": [
+        {
+            "id": "btp_3d",
+            "type": "primary",
+            "label": "BTP Île-de-France",
+            "description": "Bâtiments 3D BD TOPO, voirie et chantiers actifs",
+            "layers": [
+                {
+                    "id": "batiments_bdtopo",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "voirie_bdtopo",
+                    "visible": true,
+                    "style": "defaut"
+                },
+                {
+                    "id": "chantiers_paris",
+                    "visible": true,
+                    "style": "defaut"
+                }
+            ]
+        }
+    ]
+}

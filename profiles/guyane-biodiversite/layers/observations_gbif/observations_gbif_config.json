@@ -1,0 +1,51 @@
+{
+    "id": "observations_gbif",
+    "label": "Observations GBIF",
+    "tooltipMode": "hover",
+    "zIndex": 75,
+    "geometry": "point",
+    "data": {
+        "dataUrl": "https://api.gbif.org/v1/occurrence/search?country=GF&hasCoordinate=true&limit=300",
+        "directory": "data",
+        "licence": "CC BY 4.0 / CC0 — GBIF (api.gbif.org)",
+        "mapping": "gbif"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Par règne",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.species", "label": "Espèce" },
+            { "field": "properties.vernacularName", "label": "Nom vernaculaire" },
+            { "field": "properties.kingdom", "label": "Règne" },
+            { "field": "properties.eventDate", "label": "Date" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.species", "label": "Espèce", "sortable": true, "width": "25%" },
+            { "field": "properties.vernacularName", "label": "Nom", "sortable": true, "width": "20%" },
+            { "field": "properties.kingdom", "label": "Règne", "sortable": true, "width": "10%" },
+            { "field": "properties.class", "label": "Classe", "sortable": true, "width": "15%" },
+            { "field": "properties.family", "label": "Famille", "sortable": true, "width": "15%" },
+            { "field": "properties.eventDate", "label": "Date", "sortable": true, "width": "15%" }
+        ],
+        "searchFields": ["properties.species", "properties.vernacularName", "properties.family"],
+        "defaultSort": { "field": "properties.species", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 50,
+        "disableClusteringAtZoom": 10
+    }
+}

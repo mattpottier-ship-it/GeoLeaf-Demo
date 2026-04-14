@@ -1,0 +1,58 @@
+{
+    "zoomConfig": {
+        "minZoom": 5,
+        "maxZoom": 18,
+        "defaultZoom": 7
+    },
+    "style": {
+        "type": "circle",
+        "paint": {
+            "circle-radius": 5,
+            "circle-color": "#57cc99",
+            "circle-stroke-color": "#264653",
+            "circle-stroke-width": 1,
+            "circle-opacity": 0.85
+        }
+    },
+    "styleRules": [
+        {
+            "condition": { "field": "properties.kingdom", "operator": "eq", "value": "Animalia" },
+            "label": "Faune",
+            "style": {
+                "paint": {
+                    "circle-radius": 5,
+                    "circle-color": "#e76f51",
+                    "circle-stroke-color": "#264653",
+                    "circle-stroke-width": 1,
+                    "circle-opacity": 0.85
+                }
+            }
+        },
+        {
+            "condition": { "field": "properties.kingdom", "operator": "eq", "value": "Plantae" },
+            "label": "Flore",
+            "style": {
+                "paint": {
+                    "circle-radius": 5,
+                    "circle-color": "#2a9d8f",
+                    "circle-stroke-color": "#264653",
+                    "circle-stroke-width": 1,
+                    "circle-opacity": 0.85
+                }
+            }
+        },
+        {
+            "condition": { "field": "properties.kingdom", "operator": "eq", "value": "Fungi" },
+            "label": "Champignons",
+            "style": {
+                "paint": {
+                    "circle-radius": 5,
+                    "circle-color": "#e9c46a",
+                    "circle-stroke-color": "#264653",
+                    "circle-stroke-width": 1,
+                    "circle-opacity": 0.85
+                }
+            }
+        }
+    ]
+}

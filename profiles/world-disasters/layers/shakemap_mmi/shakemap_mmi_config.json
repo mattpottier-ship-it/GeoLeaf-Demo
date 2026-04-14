@@ -1,0 +1,44 @@
+{
+    "id": "shakemap_mmi",
+    "label": "Zones impact ShakeMap (MMI)",
+    "tooltipMode": "hover",
+    "zIndex": 20,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
+        "directory": "data",
+        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.place", "label": "Lieu" },
+            { "field": "properties.mag", "label": "Magnitude" },
+            { "field": "properties.mmi", "label": "Intensité MMI" }
+        ]
+    },
+    "table": {
+        "enabled": false
+    },
+    "clustering": {
+        "enabled": false
+    },
+    "realtimeLayer": {
+        "enabled": false,
+        "description": "RT réactif — ShakeMap zones concentriques par séisme significatif. Nécessite 2 appels chaînés via @geoleaf-plugins/realtime-layer (liste séismes → détail shakemap par ID).",
+        "plugin": "@geoleaf-plugins/realtime-layer",
+        "refreshInterval": 60000
+    }
+}

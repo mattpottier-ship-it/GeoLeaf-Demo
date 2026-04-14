@@ -1,0 +1,15 @@
+{
+    "zoomConfig": {
+        "minZoom": 5,
+        "maxZoom": 18,
+        "defaultZoom": 7
+    },
+    "style": {
+        "type": "fill",
+        "paint": {
+            "fill-color": "#2a9d8f",
+            "fill-opacity": 0.2,
+            "fill-outline-color": "#264653"
+        }
+    }
+}

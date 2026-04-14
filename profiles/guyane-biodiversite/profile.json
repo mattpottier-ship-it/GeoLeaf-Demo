@@ -1,0 +1,58 @@
+{
+  "id": "guyane-biodiversite",
+  "label": "Guyane — Biodiversité & Territoire",
+  "version": "1.0.0",
+  "description": "Profil de démonstration GeoLeaf-JS — Biodiversité guyanaise : observations GBIF, zones protégées PAG, cours d'eau, itinéraires randonnée, sites touristiques, communes, déforestation radar.",
+  "map": {
+    "center": [
+      -53,
+      4
+    ],
+    "zoom": 7,
+    "minZoom": 5,
+    "maxZoom": 18,
+    "bounds": [
+      [
+        2.1,
+        -54.6
+      ],
+      [
+        5.8,
+        -51.6
+      ]
+    ]
+  },
+  "Files": {
+    "taxonomyFile": "taxonomy.json",
+    "themesFile": "themes.json",
+    "layersFile": "layers.json",
+    "basemapsFile": "basemaps.json",
+    "uiFile": "ui.json"
+  },
+  "performance": {
+    "maxConcurrentLayers": 10,
+    "layerLoadDelay": 200,
+    "fitBoundsOnThemeChange": false
+  },
+  "clusteringConfig": {
+    "enabled": true,
+    "strategy": "by-layer",
+    "maxClusterRadius": 50,
+    "disableClusteringAtZoom": 10
+  },
+  "poiConfig": {
+    "enabled": false
+  },
+  "storage": {
+    "enableOfflineDetector": false,
+    "enableServiceWorker": false,
+    "cache": {
+      "enableProfileCache": true,
+      "enableTileCache": true
+    }
+  },
+  "poiAddConfig": {
+    "enabled": false
+  },
+  "bundleFile": "profile-bundle.json"
+}

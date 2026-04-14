@@ -1,0 +1,52 @@
+{
+    "id": "cours_eau_risque",
+    "label": "Cours d'eau à risque",
+    "tooltipMode": "hover",
+    "zIndex": 20,
+    "interactiveShape": true,
+    "geometry": "line",
+    "data": {
+        "ogcApi": {
+            "url": "https://data.geopf.fr/ogcapi/collections/BDTOPO_V3:cours_d_eau/items",
+            "limit": 500,
+            "maxFeatures": 5000,
+            "autoRefresh": true,
+            "autoRefreshDebounce": 500
+        },
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+            {
+                "id": "defaut",
+                "label": "Défaut",
+                "file": "defaut.json"
+            }
+        ]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.toponyme", "label": "Nom" },
+            { "field": "properties.classe_de_largeur", "label": "Largeur" },
+            { "field": "properties.regime", "label": "Régime" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.toponyme", "label": "Nom", "sortable": true, "width": "40%" },
+            { "field": "properties.classe_de_largeur", "label": "Largeur", "sortable": true, "width": "20%" },
+            { "field": "properties.regime", "label": "Régime", "sortable": true, "width": "20%" },
+            { "field": "properties.etat_de_l_objet", "label": "État", "sortable": true, "width": "20%" }
+        ],
+        "searchFields": ["properties.toponyme"],
+        "defaultSort": { "field": "properties.toponyme", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

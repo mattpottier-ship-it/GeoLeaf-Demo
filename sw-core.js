@@ -21,7 +21,7 @@
  * For full offline support (tiles, sync, IndexedDB),
  * use the Storage plugin which provides sw.js (full version).
  *
- * @version 2.0.0
+ * @version 2.1.5
  * @see sw.js (full version in the Storage plugin)
  */
 
@@ -32,7 +32,7 @@
 // In production, all SW console.log calls are removed at build time via terser
 const _SW_DEBUG = typeof true !== "undefined" ? true : false;
 
-const CACHE_VERSION = "geoleaf-v2.0.0";
+const CACHE_VERSION = "geoleaf-v2.1.5";
 const CACHE_STATIC = `${CACHE_VERSION}-static`;
 const CACHE_PROFILE_PREFIX = `${CACHE_VERSION}-profile-`;
 const CACHE_TILES = `${CACHE_VERSION}-tiles`;
@@ -301,7 +301,11 @@ function isStaticAsset(url) {
 }
 
 function isConfigFile(url) {
-    return url.pathname.includes("config.json") || url.pathname.includes("profile.json");
+    return (
+        url.pathname.includes("config.json") ||
+        url.pathname.includes("profile.json") ||
+        url.pathname.includes("profile-bundle.json")
+    );
 }
 
 function getCacheNameForProfile(url) {

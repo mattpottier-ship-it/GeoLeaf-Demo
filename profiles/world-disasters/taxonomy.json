@@ -1,0 +1,64 @@
+{
+    "icons": {
+        "spriteUrl": "profiles/world-disasters/icons/sprite_disasters.svg",
+        "symbolPrefix": "disasters-poi-cat-",
+        "defaultIcon": "disasters-generic"
+    },
+    "defaults": {
+        "icon": "disasters-generic"
+    },
+    "categories": {
+        "seismes": {
+            "label": "Séismes",
+            "icon": "seisme",
+            "subcategories": {
+                "epicentre": {
+                    "label": "Épicentre",
+                    "icon": "seisme"
+                },
+                "shakemap": {
+                    "label": "Zone d'impact (ShakeMap)",
+                    "icon": "shakemap"
+                }
+            }
+        },
+        "cyclones": {
+            "label": "Cyclones",
+            "icon": "cyclone",
+            "subcategories": {
+                "position": {
+                    "label": "Position cyclone",
+                    "icon": "cyclone"
+                },
+                "trajectoire": {
+                    "label": "Trajectoire & cône",
+                    "icon": "cyclone"
+                }
+            }
+        },
+        "inondations": {
+            "label": "Inondations",
+            "icon": "inondation",
+            "subcategories": {
+                "zone_inondee": {
+                    "label": "Zone inondée",
+                    "icon": "inondation"
+                }
+            }
+        },
+        "volcans": {
+            "label": "Volcans & Tectonique",
+            "icon": "volcan",
+            "subcategories": {
+                "volcan_actif": {
+                    "label": "Volcan actif",
+                    "icon": "volcan"
+                },
+                "plaque": {
+                    "label": "Plaque tectonique",
+                    "icon": "tectonique"
+                }
+            }
+        }
+    }
+}

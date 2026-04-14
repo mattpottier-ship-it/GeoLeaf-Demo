@@ -1,0 +1,22 @@
+{
+    "id": "defaut",
+    "label": "Défaut",
+    "description": "Routes aériennes principales",
+    "zoomConfig": {
+        "minZoom": null,
+        "maxZoom": null
+    },
+    "labelScale": {
+        "minScale": null,
+        "maxScale": null
+    },
+    "style": {
+        "color": "#f77f00",
+        "opacity": 0.35,
+        "weight": 0.8,
+        "dashArray": null
+    },
+    "legend": {
+        "label": "Routes aériennes"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "id": "defaut",
+    "label": "Extrusion 3D",
+    "zoomConfig": { "minZoom": null, "maxZoom": null },
+    "style": {
+        "fillExtrusionColor": "#a8dadc",
+        "fillExtrusionOpacity": 0.7,
+        "fillExtrusionHeight": "hauteur",
+        "fillExtrusionBase": 0
+    },
+    "legend": {
+        "label": "Bâtiments BD TOPO",
+        "items": [{ "label": "Bâtiment", "color": "#a8dadc" }]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "id": "defaut",
+    "label": "Defaut",
+    "zoomConfig": { "minZoom": null, "maxZoom": null },
+    "style": {
+        "lineColor": "#adb5bd",
+        "lineWidth": 1.5,
+        "lineOpacity": 0.7
+    }
+}

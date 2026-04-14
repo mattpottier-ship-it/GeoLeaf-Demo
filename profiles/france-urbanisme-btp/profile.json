@@ -1,0 +1,42 @@
+{
+  "id": "france-urbanisme-btp",
+  "label": "Urbanisme & BTP — Paris / Île-de-France",
+  "version": "1.2.0",
+  "description": "Profil GeoLeaf-JS — Bâtiments BD TOPO 3D (fill-extrusion), voirie et chantiers Paris. Centre Paris, zoom arrondissement.",
+  "map": {
+    "bounds": [
+      [
+        48.851,
+        2.332
+      ],
+      [
+        48.863,
+        2.366
+      ]
+    ],
+    "initialMaxZoom": 16,
+    "padding": {
+      "top": 40,
+      "bottom": 120,
+      "left": 40,
+      "right": 40
+    },
+    "positionFixed": true,
+    "boundsMargin": 0.7
+  },
+  "Files": {
+    "taxonomyFile": "taxonomy.json",
+    "themesFile": "themes.json",
+    "layersFile": "layers.json",
+    "basemapsFile": "basemaps.json",
+    "uiFile": "ui.json"
+  },
+  "clustering": {
+    "enabled": false
+  },
+  "storage": {
+    "enableOfflineDetector": false,
+    "enableServiceWorker": false
+  },
+  "bundleFile": "profile-bundle.json"
+}

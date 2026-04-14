@@ -1,0 +1,80 @@
+{
+    "icons": {
+        "spriteUrl": "profiles/france-urbanisme-btp/icons/sprite_urbanisme.svg",
+        "symbolPrefix": "urbanisme-poi-cat-"
+    },
+    "categories": [
+        {
+            "id": "permis",
+            "label": "Permis de construire",
+            "icon": "urbanisme-poi-cat-permis",
+            "subcategories": [
+                {
+                    "id": "permis_neuf",
+                    "label": "Construction neuve",
+                    "icon": "urbanisme-poi-cat-permis"
+                },
+                {
+                    "id": "permis_renovation",
+                    "label": "Rénovation",
+                    "icon": "urbanisme-poi-cat-renovation"
+                }
+            ]
+        },
+        {
+            "id": "infrastructure",
+            "label": "Infrastructure",
+            "icon": "urbanisme-poi-cat-voirie",
+            "subcategories": [
+                { "id": "voirie", "label": "Voirie", "icon": "urbanisme-poi-cat-voirie" },
+                { "id": "chantier", "label": "Chantier", "icon": "urbanisme-poi-cat-chantier" }
+            ]
+        },
+        {
+            "id": "batiments",
+            "label": "Bâtiments",
+            "icon": "urbanisme-poi-cat-batiment",
+            "subcategories": [
+                {
+                    "id": "batiment_residentiel",
+                    "label": "Résidentiel",
+                    "icon": "urbanisme-poi-cat-batiment"
+                },
+                {
+                    "id": "batiment_commercial",
+                    "label": "Commercial",
+                    "icon": "urbanisme-poi-cat-batiment"
+                }
+            ]
+        },
+        {
+            "id": "reglementation",
+            "label": "Réglementation",
+            "icon": "urbanisme-poi-cat-plu",
+            "subcategories": [
+                { "id": "zone_u", "label": "Zone urbaine (U)", "icon": "urbanisme-poi-cat-plu" },
+                {
+                    "id": "zone_au",
+                    "label": "Zone à urbaniser (AU)",
+                    "icon": "urbanisme-poi-cat-plu"
+                },
+                { "id": "zone_a", "label": "Zone agricole (A)", "icon": "urbanisme-poi-cat-plu" },
+                { "id": "zone_n", "label": "Zone naturelle (N)", "icon": "urbanisme-poi-cat-plu" }
+            ]
+        },
+        {
+            "id": "energie",
+            "label": "Énergie & DPE",
+            "icon": "urbanisme-poi-cat-dpe",
+            "subcategories": [
+                { "id": "dpe_a", "label": "DPE A", "icon": "urbanisme-poi-cat-dpe" },
+                { "id": "dpe_b", "label": "DPE B", "icon": "urbanisme-poi-cat-dpe" },
+                { "id": "dpe_c", "label": "DPE C", "icon": "urbanisme-poi-cat-dpe" },
+                { "id": "dpe_d", "label": "DPE D", "icon": "urbanisme-poi-cat-dpe" },
+                { "id": "dpe_e", "label": "DPE E", "icon": "urbanisme-poi-cat-dpe" },
+                { "id": "dpe_f", "label": "DPE F", "icon": "urbanisme-poi-cat-dpe" },
+                { "id": "dpe_g", "label": "DPE G", "icon": "urbanisme-poi-cat-dpe" }
+            ]
+        }
+    ]
+}
