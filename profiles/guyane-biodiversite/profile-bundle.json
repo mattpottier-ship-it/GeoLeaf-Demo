@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "guyane-biodiversite",
-  "_generatedAt": 1776191696512,
+  "_generatedAt": 1776869501028,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/guyane-biodiversite/icons/sprite_guyane.svg",
@@ -503,10 +503,10 @@
       "interactiveShape": true,
       "geometry": "line",
       "data": {
-        "dataUrl": "https://randoamazonie.guyane-parcnational.fr/api/v2/trek.kml",
+        "dataUrl": "data/itineraires_randonnee_snapshot.kml",
         "format": "kml",
         "directory": "data",
-        "licence": "Libre — Parc Amazonien de Guyane (randoamazonie.guyane-parcnational.fr)"
+        "licence": "Snapshot démonstratif local — 4 tracés indicatifs (Parc amazonien de Guyane, randoamazonie.guyane-parcnational.fr DNS ERR au 2026-04-15)"
       },
       "styles": {
         "directory": "styles",
@@ -749,18 +749,7 @@
       "interactiveShape": true,
       "geometry": "line",
       "data": {
-        "ogcApi": {
-          "url": "https://data.geopf.fr/ogcapi/collections/BDTOPO_V3:cours_d_eau/items",
-          "bbox": [
-            -54.6,
-            2.1,
-            -51.6,
-            5.8
-          ],
-          "limit": 500,
-          "maxFeatures": 5000,
-          "autoRefresh": false
-        },
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=BDTOPO_V3:cours_d_eau&outputFormat=application/json&count=5000&srsName=EPSG:4326&bbox=-54.6,2.1,-51.6,5.8,EPSG:4326",
         "directory": "data",
         "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
       },
@@ -830,18 +819,7 @@
       "interactiveShape": true,
       "geometry": "polygon",
       "data": {
-        "ogcApi": {
-          "url": "https://data.geopf.fr/ogcapi/collections/ADMINEXPRESS-COG-CARTO.LATEST:commune/items",
-          "bbox": [
-            -54.6,
-            2.1,
-            -51.6,
-            5.8
-          ],
-          "limit": 50,
-          "maxFeatures": 100,
-          "autoRefresh": false
-        },
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=ADMINEXPRESS-COG.LATEST:commune&outputFormat=application/json&count=50&srsName=EPSG:4326&bbox=-54.6,2.1,-51.6,5.8,EPSG:4326",
         "directory": "data",
         "licence": "Licence Ouverte v2.0 — IGN ADMIN EXPRESS (data.geopf.fr)"
       },
@@ -860,12 +838,12 @@
         "mode": "hover",
         "fields": [
           {
-            "field": "properties.nom",
+            "field": "properties.nom_officiel",
             "label": "Commune"
           },
           {
-            "field": "properties.code_postal",
-            "label": "Code postal"
+            "field": "properties.code_insee",
+            "label": "Code INSEE"
           },
           {
             "field": "properties.population",
@@ -877,14 +855,14 @@
         "enabled": true,
         "columns": [
           {
-            "field": "properties.nom",
+            "field": "properties.nom_officiel",
             "label": "Commune",
             "sortable": true,
-            "width": "35%"
+            "width": "45%"
           },
           {
-            "field": "properties.code_postal",
-            "label": "Code postal",
+            "field": "properties.code_insee",
+            "label": "Code INSEE",
             "sortable": true,
             "width": "20%"
           },
@@ -895,17 +873,17 @@
             "width": "20%"
           },
           {
-            "field": "properties.superficie",
-            "label": "Superficie (km²)",
+            "field": "properties.statut",
+            "label": "Statut",
             "sortable": true,
-            "width": "25%"
+            "width": "15%"
           }
         ],
         "searchFields": [
-          "properties.nom"
+          "properties.nom_officiel"
         ],
         "defaultSort": {
-          "field": "properties.nom",
+          "field": "properties.nom_officiel",
           "order": "asc"
         }
       },

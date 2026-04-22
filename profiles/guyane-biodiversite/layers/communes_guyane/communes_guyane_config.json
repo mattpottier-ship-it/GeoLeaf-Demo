@@ -6,13 +6,7 @@
     "interactiveShape": true,
     "geometry": "polygon",
     "data": {
-        "ogcApi": {
-            "url": "https://data.geopf.fr/ogcapi/collections/ADMINEXPRESS-COG-CARTO.LATEST:commune/items",
-            "bbox": [-54.6, 2.1, -51.6, 5.8],
-            "limit": 50,
-            "maxFeatures": 100,
-            "autoRefresh": false
-        },
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=ADMINEXPRESS-COG.LATEST:commune&outputFormat=application/json&count=50&srsName=EPSG:4326&bbox=-54.6,2.1,-51.6,5.8,EPSG:4326",
         "directory": "data",
         "licence": "Licence Ouverte v2.0 — IGN ADMIN EXPRESS (data.geopf.fr)"
     },
@@ -30,21 +24,36 @@
     "tooltip": {
         "mode": "hover",
         "fields": [
-            { "field": "properties.nom", "label": "Commune" },
-            { "field": "properties.code_postal", "label": "Code postal" },
+            { "field": "properties.nom_officiel", "label": "Commune" },
+            { "field": "properties.code_insee", "label": "Code INSEE" },
             { "field": "properties.population", "label": "Population" }
         ]
     },
     "table": {
         "enabled": true,
         "columns": [
-            { "field": "properties.nom", "label": "Commune", "sortable": true, "width": "35%" },
-            { "field": "properties.code_postal", "label": "Code postal", "sortable": true, "width": "20%" },
-            { "field": "properties.population", "label": "Population", "sortable": true, "width": "20%" },
-            { "field": "properties.superficie", "label": "Superficie (km²)", "sortable": true, "width": "25%" }
+            {
+                "field": "properties.nom_officiel",
+                "label": "Commune",
+                "sortable": true,
+                "width": "45%"
+            },
+            {
+                "field": "properties.code_insee",
+                "label": "Code INSEE",
+                "sortable": true,
+                "width": "20%"
+            },
+            {
+                "field": "properties.population",
+                "label": "Population",
+                "sortable": true,
+                "width": "20%"
+            },
+            { "field": "properties.statut", "label": "Statut", "sortable": true, "width": "15%" }
         ],
-        "searchFields": ["properties.nom"],
-        "defaultSort": { "field": "properties.nom", "order": "asc" }
+        "searchFields": ["properties.nom_officiel"],
+        "defaultSort": { "field": "properties.nom_officiel", "order": "asc" }
     },
     "clustering": {
         "enabled": false

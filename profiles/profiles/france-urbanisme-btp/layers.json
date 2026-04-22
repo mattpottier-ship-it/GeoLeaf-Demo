@@ -31,6 +31,30 @@
             "layerManagerId": "data-batiments",
             "defaultVisible": true,
             "order": 4
+        },
+        {
+            "id": "zones_plu",
+            "label": "Zones PLU (GPU)",
+            "configFile": "layers/zones_plu/zones_plu_config.json",
+            "layerManagerId": "data-urbanisme",
+            "defaultVisible": true,
+            "order": 5
+        },
+        {
+            "id": "bdnb_dpe",
+            "label": "DPE Logements (ADEME)",
+            "configFile": "layers/bdnb_dpe/bdnb_dpe_config.json",
+            "layerManagerId": "data-urbanisme",
+            "defaultVisible": true,
+            "order": 6
+        },
+        {
+            "id": "permis_construire",
+            "label": "Permis de construire (Paris)",
+            "configFile": "layers/permis_construire/permis_construire_config.json",
+            "layerManagerId": "data-urbanisme",
+            "defaultVisible": true,
+            "order": 7
         }
     ]
 }

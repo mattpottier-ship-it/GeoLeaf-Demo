@@ -13,6 +13,7 @@
         "showScale": true,
         "showCacheButton": true,
         "showAddPoi": true,
+        "showCredentialButton": true,
         "permalink": {
             "enabled": true,
             "mode": "hash"

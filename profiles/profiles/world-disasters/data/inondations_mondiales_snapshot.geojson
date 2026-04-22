@@ -1,0 +1,71 @@
+{
+    "type": "FeatureCollection",
+    "_comment": "Snapshot CDN fallback Sprint 2 roadmap catalogue-demos v1.0.0. Source : conversion manuelle GDACS eventtype=FL (JSON propriétaire → GeoJSON). Capture 2026-04-21 00:00 UTC. Échantillon 4 zones d'inondation actives (Asie du Sud-Est, Afrique de l'Ouest, Amérique du Sud, Europe de l'Est). Decoder 'gdacs' natif plugin prévu v1.1.",
+    "metadata": {
+        "generated": "2026-04-21T00:00:00Z",
+        "title": "GDACS Active Floods (demo snapshot)",
+        "count": 4
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "id": "gdacs-fl-2000001",
+            "properties": {
+                "eventid": 2000001,
+                "name": "Monsoon floods - Bangladesh & NE India",
+                "alertlevel": "Orange",
+                "country": "Bangladesh, India",
+                "fromdate": "2026-04-15T00:00:00Z"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[88.50, 23.80], [92.80, 23.80], [92.80, 26.20], [88.50, 26.20], [88.50, 23.80]]]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "gdacs-fl-2000002",
+            "properties": {
+                "eventid": 2000002,
+                "name": "River overflow - Niger delta",
+                "alertlevel": "Green",
+                "country": "Nigeria",
+                "fromdate": "2026-04-17T00:00:00Z"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[6.00, 4.80], [7.80, 4.80], [7.80, 6.20], [6.00, 6.20], [6.00, 4.80]]]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "gdacs-fl-2000003",
+            "properties": {
+                "eventid": 2000003,
+                "name": "Flash floods - Paraná basin",
+                "alertlevel": "Green",
+                "country": "Argentina, Uruguay",
+                "fromdate": "2026-04-18T00:00:00Z"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[-58.50, -34.50], [-56.80, -34.50], [-56.80, -32.80], [-58.50, -32.80], [-58.50, -34.50]]]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "gdacs-fl-2000004",
+            "properties": {
+                "eventid": 2000004,
+                "name": "Spring snowmelt floods - Carpathians",
+                "alertlevel": "Green",
+                "country": "Romania, Ukraine",
+                "fromdate": "2026-04-12T00:00:00Z"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[23.80, 46.40], [26.20, 46.40], [26.20, 48.10], [23.80, 48.10], [23.80, 46.40]]]
+            }
+        }
+    ]
+}

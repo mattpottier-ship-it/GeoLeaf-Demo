@@ -1,14 +1,14 @@
 {
     "id": "bdnb_dpe",
-    "label": "DPE Bâtiments (BDNB)",
+    "label": "DPE Logements (ADEME)",
     "tooltipMode": "hover",
     "zIndex": 25,
     "interactiveShape": true,
-    "geometry": "polygon",
+    "geometry": "point",
     "data": {
-        "dataUrl": "https://www.data.gouv.fr/fr/datasets/r/5f7bf7f6-2e41-4e83-b483-6b97b9a3d654",
+        "dataUrl": "https://data.ademe.fr/data-fair/api/v1/datasets/dpe03existant/lines?size=500&format=geojson&geo_shape=bbox(2.25,48.8,2.45,48.9)",
         "directory": "data",
-        "licence": "Licence Ouverte v2.0 — BDNB / CSTB-ADEME (data.gouv.fr)"
+        "licence": "Licence Ouverte v2.0 — ADEME DPE logements existants (data.ademe.fr) — bbox Paris démonstrative (14M+ logements France entière)"
     },
     "styles": {
         "directory": "styles",
@@ -24,23 +24,53 @@
     "tooltip": {
         "mode": "hover",
         "fields": [
-            { "field": "properties.classe_dpe", "label": "Classe DPE" },
-            { "field": "properties.adresse", "label": "Adresse" },
-            { "field": "properties.conso_energie", "label": "Consommation (kWh/m²)" }
+            { "field": "properties.etiquette_dpe", "label": "Classe DPE" },
+            { "field": "properties.adresse_ban", "label": "Adresse" },
+            { "field": "properties.conso_5_usages_par_m2_ep", "label": "Conso (kWh/m²/an)" }
         ]
     },
     "table": {
         "enabled": true,
         "columns": [
-            { "field": "properties.adresse", "label": "Adresse", "sortable": true, "width": "35%" },
-            { "field": "properties.classe_dpe", "label": "DPE", "sortable": true, "width": "10%" },
-            { "field": "properties.conso_energie", "label": "kWh/m²", "sortable": true, "width": "15%" },
-            { "field": "properties.annee_construction", "label": "Année", "sortable": true, "width": "15%" },
-            { "field": "properties.surface_habitable", "label": "Surface (m²)", "sortable": true, "width": "15%" },
-            { "field": "properties.ges", "label": "GES", "sortable": true, "width": "10%" }
+            {
+                "field": "properties.adresse_ban",
+                "label": "Adresse",
+                "sortable": true,
+                "width": "35%"
+            },
+            {
+                "field": "properties.etiquette_dpe",
+                "label": "DPE",
+                "sortable": true,
+                "width": "10%"
+            },
+            {
+                "field": "properties.conso_5_usages_par_m2_ep",
+                "label": "kWh/m²",
+                "sortable": true,
+                "width": "15%"
+            },
+            {
+                "field": "properties.periode_construction",
+                "label": "Période",
+                "sortable": true,
+                "width": "15%"
+            },
+            {
+                "field": "properties.type_batiment",
+                "label": "Type",
+                "sortable": true,
+                "width": "15%"
+            },
+            {
+                "field": "properties.etiquette_ges",
+                "label": "GES",
+                "sortable": true,
+                "width": "10%"
+            }
         ],
-        "searchFields": ["properties.adresse", "properties.classe_dpe"],
-        "defaultSort": { "field": "properties.classe_dpe", "order": "asc" }
+        "searchFields": ["properties.adresse_ban", "properties.etiquette_dpe"],
+        "defaultSort": { "field": "properties.etiquette_dpe", "order": "asc" }
     },
     "clustering": {
         "enabled": false

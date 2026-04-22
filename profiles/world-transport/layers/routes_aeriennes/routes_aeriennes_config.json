@@ -5,9 +5,9 @@
     "zIndex": 29,
     "geometry": "line",
     "data": {
-        "dataUrl": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.geojson",
+        "dataUrl": "data/routes_aeriennes_snapshot.geojson",
         "directory": "data",
-        "licence": "ODbL — OpenFlights (openflights.org/data)"
+        "licence": "Snapshot démonstratif local — 8 routes aériennes indicatives (OpenFlights routes.geojson 404, routes.dat CSV non géolocalisé)"
     },
     "styles": {
         "directory": "styles",

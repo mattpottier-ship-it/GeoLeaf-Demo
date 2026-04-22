@@ -6,6 +6,11 @@
             "layerManagerId": "data-conservation"
         },
         {
+            "id": "eco_regions_fgb",
+            "configFile": "layers/eco_regions_fgb/eco_regions_fgb_config.json",
+            "layerManagerId": "data-conservation"
+        },
+        {
             "id": "aires_protegees_nationales_sib",
             "configFile": "layers/aires_protegees_nationales_sib/aires_protegees_nationales_sib_config.json",
             "layerManagerId": "data-conservation"

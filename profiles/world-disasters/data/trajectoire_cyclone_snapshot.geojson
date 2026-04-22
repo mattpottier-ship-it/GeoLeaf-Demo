@@ -1,0 +1,27 @@
+{
+    "type": "FeatureCollection",
+    "_comment": "Snapshot CDN fallback Sprint 2 roadmap catalogue-demos v1.0.0. Source : NOAA NHC Tropical Weather MapServer (f=geojson natif). Capture 2026-04-21 00:00 UTC. Hors saison Atlantique ; échantillon 1 trajectoire démonstrative (cyclone LIONROCK-26 Pacifique Ouest, cohérent avec cyclones_actifs_snapshot).",
+    "metadata": {
+        "generated": "2026-04-21T00:00:00Z",
+        "title": "NOAA NHC Tropical Cyclone Tracks (demo snapshot)",
+        "count": 1
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "id": "lionrock26-track",
+            "properties": { "STORMNAME": "LIONROCK", "STORMTYPE": "TY", "STORMID": "WP012026", "ADVISDATE": "2026-04-19T00:00:00Z" },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [125.40, 12.20],
+                    [126.80, 13.50],
+                    [128.50, 14.75],
+                    [130.40, 16.20],
+                    [132.60, 17.80],
+                    [135.10, 19.40]
+                ]
+            }
+        }
+    ]
+}

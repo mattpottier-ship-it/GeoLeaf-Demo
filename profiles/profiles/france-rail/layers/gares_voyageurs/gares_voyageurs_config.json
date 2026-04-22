@@ -29,9 +29,24 @@
         "columns": [
             { "field": "properties.libelle", "label": "Gare", "sortable": true, "width": "30%" },
             { "field": "properties.commune", "label": "Commune", "sortable": true, "width": "20%" },
-            { "field": "properties.departement", "label": "Département", "sortable": true, "width": "20%" },
-            { "field": "properties.voyageurs", "label": "Fréquentation", "sortable": true, "width": "15%" },
-            { "field": "properties.segment_drg", "label": "Catégorie", "sortable": true, "width": "15%" }
+            {
+                "field": "properties.departement",
+                "label": "Département",
+                "sortable": true,
+                "width": "20%"
+            },
+            {
+                "field": "properties.voyageurs",
+                "label": "Fréquentation",
+                "sortable": true,
+                "width": "15%"
+            },
+            {
+                "field": "properties.segment_drg",
+                "label": "Catégorie",
+                "sortable": true,
+                "width": "15%"
+            }
         ],
         "searchFields": ["properties.libelle", "properties.commune"],
         "defaultSort": { "field": "properties.libelle", "order": "asc" }
@@ -46,7 +61,8 @@
         "directory": "data",
         "licence": "Licence Ouverte v2.0 — SNCF Réseau (ressources.data.sncf.com)",
         "realtime": {
-            "enabled": false,
+            "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. GTFS-RT SNCF trip-updates via proxy transport.data.gouv.fr, polling 120 s. Fallback snapshot protobuf (.pb) servi si proxy indisponible (décodage via GtfsRtDecoder côté plugin).",
+            "enabled": true,
             "source": "polling",
             "url": "https://proxy.transport.data.gouv.fr/resource/sncf-gtfs-rt-trip-updates",
             "intervalMs": 120000,
@@ -59,7 +75,8 @@
                 "targetLayerId": "gares_voyageurs"
             },
             "staleTimeoutMs": 300000,
-            "staleAction": "dim"
+            "staleAction": "dim",
+            "fallbackUrl": "data/gares_voyageurs_gtfsrt_snapshot.pb"
         }
     }
 }

@@ -79,9 +79,15 @@
                 "collapsedByDefault": false
             },
             {
+                "id": "data-urbanisme",
+                "label": "Urbanisme & Permis",
+                "order": 3,
+                "collapsedByDefault": false
+            },
+            {
                 "id": "basemap",
                 "label": "Fonds de carte",
-                "order": 3,
+                "order": 4,
                 "collapsedByDefault": true
             }
         ]

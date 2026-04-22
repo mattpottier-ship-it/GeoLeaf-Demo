@@ -8,7 +8,17 @@
     "data": {
         "dataUrl": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=FL&alertlevel=Green;Orange;Red&limit=50",
         "directory": "data",
-        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)"
+        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)",
+        "realtime": {
+            "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. enabled: false — GDACS retourne un JSON propriétaire (non-GeoJSON natif). Decoder 'gdacs' prévu v1.1. Fallback snapshot démonstratif en attendant.",
+            "enabled": false,
+            "source": "polling",
+            "url": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=FL&alertlevel=Green;Orange;Red&limit=50",
+            "intervalMs": 900000,
+            "decoder": "json",
+            "updateMode": "replace",
+            "fallbackUrl": "data/inondations_mondiales_snapshot.geojson"
+        }
     },
     "styles": {
         "directory": "styles",
@@ -34,7 +44,12 @@
         "columns": [
             { "field": "properties.name", "label": "Événement", "sortable": true, "width": "35%" },
             { "field": "properties.country", "label": "Pays", "sortable": true, "width": "25%" },
-            { "field": "properties.alertlevel", "label": "Alerte", "sortable": true, "width": "20%" },
+            {
+                "field": "properties.alertlevel",
+                "label": "Alerte",
+                "sortable": true,
+                "width": "20%"
+            },
             { "field": "properties.fromdate", "label": "Depuis", "sortable": true, "width": "20%" }
         ],
         "searchFields": ["properties.name", "properties.country"],
@@ -42,11 +57,5 @@
     },
     "clustering": {
         "enabled": false
-    },
-    "realtimeLayer": {
-        "enabled": false,
-        "description": "RT polling 15 min — zones d'inondation active mondiale via GDACS API.",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "refreshInterval": 900000
     }
 }

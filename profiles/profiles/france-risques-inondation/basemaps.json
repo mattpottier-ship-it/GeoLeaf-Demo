@@ -45,6 +45,24 @@
                 "bearing": 0
             }
         },
+        "terrain-terrarium": {
+            "id": "terrain-terrarium",
+            "label": "Relief 3D (AWS)",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            "attribution": "Tiles &copy; Esri &mdash; Source: Esri, Maxar, GeoEye, Earthstar Geographics",
+            "minZoom": 5,
+            "maxZoom": 18,
+            "offline": false,
+            "terrain": {
+                "enabled": true,
+                "demUrl": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png",
+                "demEncoding": "terrarium",
+                "exaggeration": 1.5,
+                "default3D": true,
+                "pitch": 45,
+                "bearing": 0
+            }
+        },
         "hillshade-ign": {
             "id": "hillshade-ign",
             "label": "Relief ombré (IGN)",
@@ -92,7 +110,12 @@
             "attribution": "© IGN France — HR.ORTHOIMAGERY",
             "imageSource": {
                 "url": "https://data.geopf.fr/wms-r?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=HR.ORTHOIMAGERY.ORTHOPHOTOS&STYLES=&CRS=EPSG:4326&BBOX=45.0,5.5,45.5,6.2&WIDTH=512&HEIGHT=512&FORMAT=image/jpeg",
-                "coordinates": [[5.5, 45.5], [6.2, 45.5], [6.2, 45.0], [5.5, 45.0]],
+                "coordinates": [
+                    [5.5, 45.5],
+                    [6.2, 45.5],
+                    [6.2, 45.0],
+                    [5.5, 45.0]
+                ],
                 "opacity": 0.9
             }
         }

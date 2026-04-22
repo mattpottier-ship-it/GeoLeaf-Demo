@@ -8,7 +8,18 @@
     "data": {
         "dataUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
         "directory": "data",
-        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)"
+        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)",
+        "realtime": {
+            "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. Polling 60 s sur le flux significant_week (GeoJSON natif). Les zones MMI détaillées par séisme ne sont pas chargées ici — logique chaînée (liste séismes → détail shakemap par ID) prévue v1.1.",
+            "enabled": true,
+            "source": "polling",
+            "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
+            "intervalMs": 60000,
+            "decoder": "json",
+            "updateMode": "upsert",
+            "idField": "id",
+            "fallbackUrl": "data/shakemap_mmi_snapshot.geojson"
+        }
     },
     "styles": {
         "directory": "styles",
@@ -34,11 +45,5 @@
     },
     "clustering": {
         "enabled": false
-    },
-    "realtimeLayer": {
-        "enabled": false,
-        "description": "RT réactif — ShakeMap zones concentriques par séisme significatif. Nécessite 2 appels chaînés via @geoleaf-plugins/realtime-layer (liste séismes → détail shakemap par ID).",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "refreshInterval": 60000
     }
 }

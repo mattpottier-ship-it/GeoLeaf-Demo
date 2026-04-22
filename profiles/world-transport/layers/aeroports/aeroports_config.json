@@ -9,7 +9,17 @@
         "format": "csv",
         "mappingFile": "mapping.json",
         "directory": "data",
-        "licence": "Domaine public — OurAirports (ourairports.com)"
+        "licence": "Domaine public — OurAirports (ourairports.com)",
+        "realtime": {
+            "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. enabled: false — OpenSky /states/all polling 10 s requiert OAuth2 (Bearer token) non supporté par le plugin. Extension 'auth' prévue v1.1. Fallback snapshot 50 vols servi pour la démo statique.",
+            "enabled": false,
+            "source": "polling",
+            "url": "https://opensky-network.org/api/states/all",
+            "intervalMs": 10000,
+            "decoder": "json",
+            "updateMode": "replace",
+            "fallbackUrl": "data/opensky_states_snapshot.geojson"
+        }
     },
     "styles": {
         "directory": "styles",
@@ -46,27 +56,5 @@
         "enabled": true,
         "maxClusterRadius": 60,
         "disableClusteringAtZoom": 5
-    },
-    "realtimeLayer": {
-        "enabled": false,
-        "description": "RT prévu : positions avions en vol via polling OpenSky OAuth2 toutes les 10s — @geoleaf-plugins/realtime-layer",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "dataUrl": "https://opensky-network.org/api/states/all",
-        "refreshInterval": 10000,
-        "auth": {
-            "type": "oauth2",
-            "connector": "@geoleaf/connector",
-            "tokenKey": "opensky_token"
-        },
-        "fieldMapping": {
-            "title": "callsign",
-            "lat": "latitude",
-            "lng": "longitude",
-            "attributes": {
-                "altitude": "baro_altitude",
-                "velocity": "velocity",
-                "origin_country": "origin_country"
-            }
-        }
     }
 }

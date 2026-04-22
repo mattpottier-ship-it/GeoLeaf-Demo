@@ -5,9 +5,9 @@
     "zIndex": 30,
     "geometry": "line",
     "data": {
-        "dataUrl": "https://zenodo.org/record/6361763/files/global_shipping_routes.geojson",
+        "dataUrl": "data/routes_maritimes_snapshot.geojson",
         "directory": "data",
-        "licence": "CC BY 4.0 — Zenodo (doi.org/10.5281/zenodo.6361763)"
+        "licence": "Snapshot démonstratif local — 6 routes maritimes indicatives (Zenodo 6361763 403 cross-origin au 2026-04-15)"
     },
     "styles": {
         "directory": "styles",
@@ -22,9 +22,7 @@
     },
     "tooltip": {
         "mode": "hover",
-        "fields": [
-            { "field": "properties.name", "label": "Route" }
-        ]
+        "fields": [{ "field": "properties.name", "label": "Route" }]
     },
     "table": {
         "enabled": false

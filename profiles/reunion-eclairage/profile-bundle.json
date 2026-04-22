@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "reunion-eclairage",
-  "_generatedAt": 1776191696480,
+  "_generatedAt": 1776869500987,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/reunion-eclairage/icons/sprite_reunion.svg",
@@ -488,7 +488,7 @@
       "geometry": "polygon",
       "interactiveShape": true,
       "data": {
-        "url": "https://data.geopf.fr/ogcapi/collections/ADMINEXPRESS-COG-CARTO.LATEST:commune/items?crs=CRS84&f=json&limit=500&filter=CODE_REG='04'",
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=ADMINEXPRESS-COG.LATEST:commune&outputFormat=application/json&count=50&srsName=EPSG:4326&bbox=55.2,-21.5,55.9,-20.8,EPSG:4326",
         "format": "geojson"
       },
       "styles": {
@@ -507,7 +507,7 @@
         "fields": [
           {
             "type": "text",
-            "field": "properties.NOM"
+            "field": "properties.nom_officiel"
           }
         ]
       }

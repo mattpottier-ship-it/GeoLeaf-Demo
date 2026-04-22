@@ -9,6 +9,11 @@
             "id": "lignes_ferroviaires",
             "configFile": "layers/lignes_ferroviaires/lignes_ferroviaires_config.json",
             "layerManagerId": "data-ferroviaire"
+        },
+        {
+            "id": "zones_desserte",
+            "configFile": "layers/zones_desserte/zones_desserte_config.json",
+            "layerManagerId": "data-ferroviaire"
         }
     ]
 }

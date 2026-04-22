@@ -6,13 +6,7 @@
     "interactiveShape": true,
     "geometry": "line",
     "data": {
-        "ogcApi": {
-            "url": "https://data.geopf.fr/ogcapi/collections/BDTOPO_V3:cours_d_eau/items",
-            "bbox": [-54.6, 2.1, -51.6, 5.8],
-            "limit": 500,
-            "maxFeatures": 5000,
-            "autoRefresh": false
-        },
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=BDTOPO_V3:cours_d_eau&outputFormat=application/json&count=5000&srsName=EPSG:4326&bbox=-54.6,2.1,-51.6,5.8,EPSG:4326",
         "directory": "data",
         "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
     },
@@ -38,7 +32,12 @@
         "enabled": true,
         "columns": [
             { "field": "properties.toponyme", "label": "Nom", "sortable": true, "width": "50%" },
-            { "field": "properties.classe_de_largeur", "label": "Largeur", "sortable": true, "width": "25%" },
+            {
+                "field": "properties.classe_de_largeur",
+                "label": "Largeur",
+                "sortable": true,
+                "width": "25%"
+            },
             { "field": "properties.regime", "label": "Régime", "sortable": true, "width": "25%" }
         ],
         "searchFields": ["properties.toponyme"],

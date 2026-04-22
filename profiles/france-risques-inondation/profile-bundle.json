@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "france-risques-inondation",
-  "_generatedAt": 1776191696506,
+  "_generatedAt": 1776869501023,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/france-risques-inondation/icons/sprite_risques.svg",
@@ -216,6 +216,24 @@
         "terrain": {
           "enabled": true,
           "demUrl": "https://tiles.mapterhorn.com/{z}/{x}/{y}.webp",
+          "demEncoding": "terrarium",
+          "exaggeration": 1.5,
+          "default3D": true,
+          "pitch": 45,
+          "bearing": 0
+        }
+      },
+      "terrain-terrarium": {
+        "id": "terrain-terrarium",
+        "label": "Relief 3D (AWS)",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles &copy; Esri &mdash; Source: Esri, Maxar, GeoEye, Earthstar Geographics",
+        "minZoom": 5,
+        "maxZoom": 18,
+        "offline": false,
+        "terrain": {
+          "enabled": true,
+          "demUrl": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png",
           "demEncoding": "terrarium",
           "exaggeration": 1.5,
           "default3D": true,
@@ -452,7 +470,18 @@
       "data": {
         "dataUrl": "https://hubeau.eaufrance.fr/api/v1/hydrometrie/referentiel/stations?format=geojson&size=10000",
         "directory": "data",
-        "licence": "Licence Ouverte v2.0 — Hub'Eau / EauFrance (hubeau.eaufrance.fr)"
+        "licence": "Licence Ouverte v2.0 — Hub'Eau / EauFrance (hubeau.eaufrance.fr) — ⚠️ 403 Forbidden cross-origin (blocage backend confirmé nav. Chrome 2026-04-15) — proxy CF Worker prévu Sprint 2",
+        "realtime": {
+          "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. Polling 15 min sur Hub'Eau /observations_tr (GeoJSON natif — observations Vigicrues temps réel). URL distincte du référentiel statique (data.dataUrl). Si Hub'Eau renvoie 403 cross-origin runtime, fallbackUrl sert immédiatement un snapshot.",
+          "enabled": true,
+          "source": "polling",
+          "url": "https://hubeau.eaufrance.fr/api/v1/hydrometrie/observations_tr?format=geojson&size=10000",
+          "intervalMs": 900000,
+          "decoder": "json",
+          "updateMode": "merge",
+          "idField": "code_station",
+          "fallbackUrl": "data/stations_hydrometriques_snapshot.geojson"
+        }
       },
       "styles": {
         "directory": "styles",
@@ -534,11 +563,6 @@
         "enabled": true,
         "maxClusterRadius": 60,
         "disableClusteringAtZoom": 9
-      },
-      "realtimeLayer": {
-        "enabled": false,
-        "description": "RT Vigicrues — polling 15 min pour les observations temps réel des stations hydrométriques via Hub'Eau API /observations_tr.",
-        "refreshInterval": 900000
       }
     },
     "cours_eau_risque": {
@@ -549,13 +573,7 @@
       "interactiveShape": true,
       "geometry": "line",
       "data": {
-        "ogcApi": {
-          "url": "https://data.geopf.fr/ogcapi/collections/BDTOPO_V3:cours_d_eau/items",
-          "limit": 500,
-          "maxFeatures": 5000,
-          "autoRefresh": true,
-          "autoRefreshDebounce": 500
-        },
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=BDTOPO_V3:cours_d_eau&outputFormat=application/json&count=5000&srsName=EPSG:4326&bbox=-5.5,41.0,9.8,51.5,EPSG:4326",
         "directory": "data",
         "licence": "Licence Ouverte v2.0 — IGN BD TOPO® v3 (data.geopf.fr)"
       },
@@ -635,9 +653,9 @@
       "interactiveShape": true,
       "geometry": "polygon",
       "data": {
-        "dataUrl": "https://georisques.gouv.fr/api/v1/gaspar/tri?rayon=0&page=1&page_size=100",
+        "dataUrl": "https://catalogue.sigloire.fr/api/data/4056c24b-e01e-4508-aff9-ec21ef478fd0?srs=EPSG:4326",
         "directory": "data",
-        "licence": "Licence Ouverte v2.0 — Géorisques / MTES-DGPR (georisques.gouv.fr)"
+        "licence": "Licence Ouverte v2.0 — SIGLoire / DREAL Pays de la Loire (sigloire.fr) — données régionales démonstratives en attendant endpoint national TRI"
       },
       "styles": {
         "directory": "styles",
@@ -658,12 +676,8 @@
             "label": "TRI"
           },
           {
-            "field": "properties.scenario",
-            "label": "Scénario"
-          },
-          {
-            "field": "properties.surface_km2",
-            "label": "Surface (km²)"
+            "field": "properties.gid",
+            "label": "ID"
           }
         ]
       },
@@ -674,30 +688,17 @@
             "field": "properties.nom_tri",
             "label": "TRI",
             "sortable": true,
-            "width": "40%"
+            "width": "70%"
           },
           {
-            "field": "properties.scenario",
-            "label": "Scénario",
+            "field": "properties.gid",
+            "label": "ID",
             "sortable": true,
-            "width": "20%"
-          },
-          {
-            "field": "properties.surface_km2",
-            "label": "Surface (km²)",
-            "sortable": true,
-            "width": "20%"
-          },
-          {
-            "field": "properties.departement",
-            "label": "Département",
-            "sortable": true,
-            "width": "20%"
+            "width": "30%"
           }
         ],
         "searchFields": [
-          "properties.nom_tri",
-          "properties.departement"
+          "properties.nom_tri"
         ],
         "defaultSort": {
           "field": "properties.nom_tri",
@@ -716,9 +717,9 @@
       "interactiveShape": true,
       "geometry": "polygon",
       "data": {
-        "dataUrl": "https://georisques.gouv.fr/api/v1/gaspar/tri?rayon=0&page=1&page_size=100",
+        "dataUrl": "https://catalogue.sigloire.fr/api/data/4056c24b-e01e-4508-aff9-ec21ef478fd0?srs=EPSG:4326",
         "directory": "data",
-        "licence": "Licence Ouverte v2.0 — Géorisques / MTES-DGPR (georisques.gouv.fr)"
+        "licence": "Licence Ouverte v2.0 — SIGLoire / DREAL Pays de la Loire (sigloire.fr) — données régionales démonstratives en attendant endpoint national TRI"
       },
       "styles": {
         "directory": "styles",
@@ -739,12 +740,8 @@
             "label": "TRI"
           },
           {
-            "field": "properties.scenario",
-            "label": "Scénario"
-          },
-          {
-            "field": "properties.surface_km2",
-            "label": "Surface (km²)"
+            "field": "properties.gid",
+            "label": "ID"
           }
         ]
       },
@@ -755,30 +752,17 @@
             "field": "properties.nom_tri",
             "label": "TRI",
             "sortable": true,
-            "width": "40%"
+            "width": "70%"
           },
           {
-            "field": "properties.scenario",
-            "label": "Scénario",
+            "field": "properties.gid",
+            "label": "ID",
             "sortable": true,
-            "width": "20%"
-          },
-          {
-            "field": "properties.surface_km2",
-            "label": "Surface (km²)",
-            "sortable": true,
-            "width": "20%"
-          },
-          {
-            "field": "properties.departement",
-            "label": "Département",
-            "sortable": true,
-            "width": "20%"
+            "width": "30%"
           }
         ],
         "searchFields": [
-          "properties.nom_tri",
-          "properties.departement"
+          "properties.nom_tri"
         ],
         "defaultSort": {
           "field": "properties.nom_tri",
@@ -797,9 +781,9 @@
       "interactiveShape": true,
       "geometry": "polygon",
       "data": {
-        "dataUrl": "https://georisques.gouv.fr/api/v1/gaspar/tri?rayon=0&page=1&page_size=100",
+        "dataUrl": "https://catalogue.sigloire.fr/api/data/4056c24b-e01e-4508-aff9-ec21ef478fd0?srs=EPSG:4326",
         "directory": "data",
-        "licence": "Licence Ouverte v2.0 — Géorisques / MTES-DGPR (georisques.gouv.fr)"
+        "licence": "Licence Ouverte v2.0 — SIGLoire / DREAL Pays de la Loire (sigloire.fr) — données régionales démonstratives en attendant endpoint national TRI"
       },
       "styles": {
         "directory": "styles",
@@ -820,12 +804,8 @@
             "label": "TRI"
           },
           {
-            "field": "properties.scenario",
-            "label": "Scénario"
-          },
-          {
-            "field": "properties.surface_km2",
-            "label": "Surface (km²)"
+            "field": "properties.gid",
+            "label": "ID"
           }
         ]
       },
@@ -836,30 +816,17 @@
             "field": "properties.nom_tri",
             "label": "TRI",
             "sortable": true,
-            "width": "40%"
+            "width": "70%"
           },
           {
-            "field": "properties.scenario",
-            "label": "Scénario",
+            "field": "properties.gid",
+            "label": "ID",
             "sortable": true,
-            "width": "20%"
-          },
-          {
-            "field": "properties.surface_km2",
-            "label": "Surface (km²)",
-            "sortable": true,
-            "width": "20%"
-          },
-          {
-            "field": "properties.departement",
-            "label": "Département",
-            "sortable": true,
-            "width": "20%"
+            "width": "30%"
           }
         ],
         "searchFields": [
-          "properties.nom_tri",
-          "properties.departement"
+          "properties.nom_tri"
         ],
         "defaultSort": {
           "field": "properties.nom_tri",

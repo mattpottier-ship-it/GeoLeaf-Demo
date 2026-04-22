@@ -5,9 +5,9 @@
     "zIndex": 70,
     "geometry": "point",
     "data": {
-        "dataUrl": "https://www.data.gouv.fr/fr/datasets/r/a6a83798-15c5-4b82-830e-94e45ba12b91",
+        "dataUrl": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/dossiers-recents-durbanisme/exports/geojson",
         "directory": "data",
-        "licence": "Licence Ouverte v2.0 — SITADEL / SDES (data.gouv.fr)"
+        "licence": "Licence Ouverte v2.0 — Ville de Paris / Autorisations d'urbanisme 6 derniers mois (opendata.paris.fr) — source départementale démonstrative"
     },
     "styles": {
         "directory": "styles",
@@ -23,23 +23,33 @@
     "tooltip": {
         "mode": "hover",
         "fields": [
-            { "field": "properties.denomination", "label": "Projet" },
+            { "field": "properties.objet", "label": "Projet" },
             { "field": "properties.adresse", "label": "Adresse" },
             { "field": "properties.commune", "label": "Commune" },
-            { "field": "properties.date_autorisation", "label": "Date autorisation" }
+            { "field": "properties.date_decision", "label": "Date décision" }
         ]
     },
     "table": {
         "enabled": true,
         "columns": [
-            { "field": "properties.denomination", "label": "Projet", "sortable": true, "width": "30%" },
+            { "field": "properties.objet", "label": "Projet", "sortable": true, "width": "30%" },
             { "field": "properties.adresse", "label": "Adresse", "sortable": true, "width": "25%" },
             { "field": "properties.commune", "label": "Commune", "sortable": true, "width": "15%" },
-            { "field": "properties.date_autorisation", "label": "Date", "sortable": true, "width": "15%" },
-            { "field": "properties.type_permis", "label": "Type", "sortable": true, "width": "15%" }
+            {
+                "field": "properties.date_decision",
+                "label": "Date",
+                "sortable": true,
+                "width": "15%"
+            },
+            {
+                "field": "properties.type_dossier",
+                "label": "Type",
+                "sortable": true,
+                "width": "15%"
+            }
         ],
-        "searchFields": ["properties.denomination", "properties.adresse", "properties.commune"],
-        "defaultSort": { "field": "properties.date_autorisation", "order": "desc" }
+        "searchFields": ["properties.objet", "properties.adresse", "properties.commune"],
+        "defaultSort": { "field": "properties.date_decision", "order": "desc" }
     },
     "clustering": {
         "enabled": true,

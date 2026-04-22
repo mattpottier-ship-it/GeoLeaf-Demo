@@ -7,7 +7,18 @@
     "data": {
         "dataUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
         "directory": "data",
-        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)"
+        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)",
+        "realtime": {
+            "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. Polling 60 s sur le flux USGS 2.5+ magnitude past 7 days (GeoJSON natif). idField = id natif des Features USGS. Fallback snapshot figé si panne.",
+            "enabled": true,
+            "source": "polling",
+            "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+            "intervalMs": 60000,
+            "decoder": "json",
+            "updateMode": "upsert",
+            "idField": "id",
+            "fallbackUrl": "data/epicentres_seismes_snapshot.geojson"
+        }
     },
     "styles": {
         "directory": "styles",
@@ -33,7 +44,12 @@
         "columns": [
             { "field": "properties.place", "label": "Lieu", "sortable": true, "width": "40%" },
             { "field": "properties.mag", "label": "Magnitude", "sortable": true, "width": "15%" },
-            { "field": "properties.depth", "label": "Profondeur (km)", "sortable": true, "width": "15%" },
+            {
+                "field": "properties.depth",
+                "label": "Profondeur (km)",
+                "sortable": true,
+                "width": "15%"
+            },
             { "field": "properties.time", "label": "Date", "sortable": true, "width": "30%" }
         ],
         "searchFields": ["properties.place"],
@@ -43,10 +59,5 @@
         "enabled": true,
         "maxClusterRadius": 50,
         "disableClusteringAtZoom": 6
-    },
-    "realtimeLayer": {
-        "enabled": false,
-        "description": "RT natif via dataUrl polling — les données USGS se mettent à jour toutes les minutes. Configurer refreshInterval dans le profil pour activer le polling automatique.",
-        "refreshInterval": 60000
     }
 }

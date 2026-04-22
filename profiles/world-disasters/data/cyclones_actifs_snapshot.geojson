@@ -1,0 +1,37 @@
+{
+    "type": "FeatureCollection",
+    "_comment": "Snapshot CDN fallback Sprint 2 roadmap catalogue-demos v1.0.0. Source : conversion manuelle GDACS eventtype=TC (JSON propriétaire → GeoJSON). Capture 2026-04-21 00:00 UTC. Hors saison cyclonique hémisphère sud ; échantillon 2 cyclones Pacifique Nord-Ouest (alerte Green/Orange). Decoder 'gdacs' natif plugin prévu v1.1 — ce snapshot sert de fallback démonstratif statique.",
+    "metadata": {
+        "generated": "2026-04-21T00:00:00Z",
+        "title": "GDACS Active Tropical Cyclones (demo snapshot)",
+        "count": 2
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "id": "gdacs-tc-1000001",
+            "properties": {
+                "eventid": 1000001,
+                "name": "LIONROCK-26",
+                "alertlevel": "Orange",
+                "country": "Philippines",
+                "fromdate": "2026-04-18T00:00:00Z",
+                "severitydata": { "severity": 130, "severityunit": "km/h" }
+            },
+            "geometry": { "type": "Point", "coordinates": [128.50, 14.75] }
+        },
+        {
+            "type": "Feature",
+            "id": "gdacs-tc-1000002",
+            "properties": {
+                "eventid": 1000002,
+                "name": "KOMPASU-26",
+                "alertlevel": "Green",
+                "country": "Pacific Ocean",
+                "fromdate": "2026-04-19T12:00:00Z",
+                "severitydata": { "severity": 85, "severityunit": "km/h" }
+            },
+            "geometry": { "type": "Point", "coordinates": [142.30, 18.20] }
+        }
+    ]
+}

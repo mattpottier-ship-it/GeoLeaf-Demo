@@ -1,14 +1,14 @@
-import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, V as AnimationHelper, W as getAnimationHelper, I as createElement, G as DOMSecurity, X as ErrorLogger, Y as EventHelpers, Z as EventListenerManager, M as events, _ as globalEventManager, $ as bus, a0 as createEventBus, O as FetchHelper, a1 as FetchError, a2 as FileValidator, a3 as MapHelpers, a4 as PerformanceProfiler, a5 as getPerformanceProfiler, a6 as LazyLoader, a7 as getLazyLoader, T as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, o as domCreate, K as blockMapPropagation, ab as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ac as resolvePoiColors, ad as StyleValidator, ae as StyleValidatorRules, H as AbstractRenderer, af as SimpleTextRenderer, ag as DataNormalizer, N as StyleLoader, x as Config$3, ah as DataConverter, ai as ProfileLoader, aj as ConfigNormalizer, ak as ProfileLoader$1, al as ProfileManager, am as StorageHelper, an as TaxonomyManager, p as getLabel, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ao as getDistance, A as getActiveProfile, ap as ensureMap, aq as validateCoordinates, ar as validateNumber, C as Core, as as Helpers$1, at as Validators, au as initI18n, av as padBounds, aw as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-u0egMUiC.js';
-import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-BLYAjSTx.js';
-import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-cM2De5hm.js';
-import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-DezXeuck.js';
-import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-wy104b_O.js';
-import { _ as _UINotifications, B as BasemapSelector, C as CacheSection, c as LMControl, d as LMRenderer, e as LMShared, b as StyleSelector, N as NotificationSystem, f as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-BfECONFx.js';
-import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-D2pTtb1Q.js';
-export { c as Themes } from './chunks/geoleaf-chunk-themes-D2pTtb1Q.js';
-import { b as POIAddFormContract, c as POI, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-8TwVSOIX.js';
-import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-hFFWOW-j.js';
-export { S as Search } from './chunks/geoleaf-search-BMHg_T8Q.js';
+import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, o as domCreate, K as blockMapPropagation, ab as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ac as resolvePoiColors, ad as StyleValidator, ae as StyleValidatorRules, H as AbstractRenderer, af as SimpleTextRenderer, ag as DataNormalizer, M as StyleLoader, x as Config$3, ah as DataConverter, ai as ProfileLoader, aj as ConfigNormalizer, ak as ProfileLoader$1, al as ProfileManager, am as StorageHelper, an as TaxonomyManager, p as getLabel, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ao as getDistance, A as getActiveProfile, ap as ensureMap, aq as validateCoordinates, ar as validateNumber, C as Core, as as Helpers$1, at as Validators, au as initI18n, av as padBounds, aw as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-DQS_tOJV.js';
+import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-DomSlUlk.js';
+import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-CYSX4YcA.js';
+import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-CjkCFO3V.js';
+import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-BCfKrx-T.js';
+import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-CIFiKKyY.js';
+import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-lhdEA_0J.js';
+export { c as Themes } from './chunks/geoleaf-chunk-themes-lhdEA_0J.js';
+import { b as POIAddFormContract, c as POI, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-DkZGpkLP.js';
+import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-CFWTzo12.js';
+export { S as Search } from './chunks/geoleaf-search-4xgVPjmk.js';
 
 /**
  * @module globals.core
@@ -970,6 +970,556 @@ function initFullscreenControl(map, mapContainer) {
         Log.info("[UI.Controls] Fullscreen control added to map");
     return fullDestroy;
 }
+
+/*!
+ * GeoLeaf Core
+ * © 2026 Mattieu Pottier
+ * Released under the MIT License
+ * https://geoleaf.dev
+ */
+/**
+ * GeoLeaf Notification System
+ * Gestion des notifications toast et overlays
+ * @module ui/notifications
+ * @version 1.2.0
+ * @updated 2026-01-23 - Standardisation API, queue prioritaire, integration Telemetry
+ */
+// Constantes for thes prioritys de la queue
+const PRIORITY = {
+    ERROR: 3,
+    WARNING: 2,
+    SUCCESS: 1,
+    INFO: 1,
+};
+class NotificationSystem {
+    container;
+    maxVisible;
+    maxPersistent;
+    durations;
+    config;
+    _eventManager;
+    _timerManager;
+    _activeToasts;
+    _queue;
+    _maxQueueSize;
+    constructor() {
+        this.container = null;
+        this.maxVisible = 3; // Max toasts temporaires visibles
+        this.maxPersistent = 2; // Max toasts persistants visibles
+        this.durations = {
+            success: 3000,
+            error: 5000,
+            warning: 4000,
+            info: 3000,
+        };
+        this.config = {
+            enabled: true,
+            position: "bottom-center",
+            animations: true,
+        };
+        // Managers pour cleanup
+        this._eventManager = null;
+        this._timerManager = null;
+        this._activeToasts = new Map();
+        // Queue avec prioritys (limite: 15 max en attente)
+        this._queue = [];
+        this._maxQueueSize = 15;
+    }
+    /**
+     * Initializes the system de notifications
+     * @param {Object} config - Configuration
+     * @param {string} config.container - Selector du container
+     * @param {number} config.maxVisible - Nombre max de toasts visibles
+     * @param {Object} config.durations - Durations par type
+     * @param {string} config.position - Position ('bottom-center', 'top-right', etc.)
+     * @param {boolean} config.animations - Activer les animations
+     */
+    init(config = {}) {
+        // Fusionner la config
+        this.config = { ...this.config, ...config };
+        this.maxVisible = config.maxVisible ?? 3;
+        this.durations = { ...this.durations, ...config.durations };
+        // Retrieve le container
+        this.container = document.querySelector(config.container || "#gl-notifications");
+        if (!this.container) {
+            if (Log)
+                Log.warn("[GeoLeaf Notifications] Container introuvable:", config.container);
+            return false;
+        }
+        // Appliesr la class de position
+        if (config.position) {
+            this.container.className = `gl-notifications gl-notifications--${config.position}`;
+        }
+        if (Log)
+            Log.debug("[GeoLeaf Notifications] System initialized");
+        // Initializesr les managers for the cleanup
+        this._eventManager = events ? events.createManager("notifications") : null;
+        this._timerManager = new TimerManager("notifications");
+        return true;
+    }
+    /**
+     * Displays a generic notification (standardized public method)
+     * Support double signature:
+     * - show(message, type, duration) : Appel positionnel classique
+     * - show(message, options) : Appel avec object options
+     *
+     * @param {string} message - Message to display
+     * @param {string|Object} typeOrOptions - Type ('success', 'error', 'warning', 'info') OU object options
+     * @param {number} [duration] - Custom duration (ms) - ignored if typeOrOptions is an object
+     *
+     * @example
+     * // Appel positionnel
+     * show("Message", "success", 3000);
+     *
+     * @example
+     * // Appel avec options
+     * show("Message", {
+     *   type: "success",
+     *   duration: 3000,
+     *   persistent: false,      // Toast persistant (ne s'auto-dismiss pas)
+     *   dismissible: true,      // Button de fermeture
+     *   icon: "✓",             // Icon custome (futur)
+     *   action: {               // Action button (futur)
+     *     label: "Annuler",
+     *     callback: () => {}
+     *   }
+     * });
+     */
+    show(message, typeOrOptions = "info", duration) {
+        // Parser les arguments based on the signature
+        let options = {};
+        if (typeof typeOrOptions === "string") {
+            // Signature positionnelle: show(message, type, duration)
+            options = {
+                type: typeOrOptions,
+                duration: duration,
+            };
+        }
+        else if (typeof typeOrOptions === "object" && typeOrOptions !== null) {
+            // Signature object: show(message, options)
+            options = typeOrOptions;
+        }
+        else {
+            // Fallback by default
+            options = { type: "info" };
+        }
+        // Addsr to the queue avec priority
+        return this._enqueue(message, options);
+    }
+    /**
+     * Displays une notification de success
+     * Support double signature:
+     * - success(message, duration)
+     * - success(message, options)
+     *
+     * @param {string} message - Message to display
+     * @param {number|Object} [durationOrOptions] - Duration (ms) OU object options
+     *
+     * @example
+     * success("Save successful", 3000);
+     * success("Save successful", { duration: 3000, persistent: false });
+     */
+    success(message, durationOrOptions) {
+        if (typeof durationOrOptions === "number") {
+            return this.show(message, "success", durationOrOptions);
+        }
+        else if (typeof durationOrOptions === "object") {
+            return this.show(message, { ...durationOrOptions, type: "success" });
+        }
+        else {
+            return this.show(message, "success");
+        }
+    }
+    /**
+     * Displays une notification d'error
+     * Support double signature:
+     * - error(message, duration)
+     * - error(message, options)
+     *
+     * @param {string} message - Message to display
+     * @param {number|Object} [durationOrOptions] - Duration (ms) OU object options
+     *
+     * @example
+     * error("Error network", 5000);
+     * error("Error network", { duration: 5000, persistent: true });
+     */
+    error(message, durationOrOptions) {
+        if (typeof durationOrOptions === "number") {
+            return this.show(message, "error", durationOrOptions);
+        }
+        else if (typeof durationOrOptions === "object") {
+            return this.show(message, { ...durationOrOptions, type: "error" });
+        }
+        else {
+            return this.show(message, "error");
+        }
+    }
+    /**
+     * Displays une notification d'warning
+     * Support double signature:
+     * - warning(message, duration)
+     * - warning(message, options)
+     *
+     * @param {string} message - Message to display
+     * @param {number|Object} [durationOrOptions] - Duration (ms) OU object options
+     *
+     * @example
+     * warning("Connexion instable", 4000);
+     * warning("Connexion instable", { duration: 4000 });
+     */
+    warning(message, durationOrOptions) {
+        if (typeof durationOrOptions === "number") {
+            return this.show(message, "warning", durationOrOptions);
+        }
+        else if (typeof durationOrOptions === "object") {
+            return this.show(message, { ...durationOrOptions, type: "warning" });
+        }
+        else {
+            return this.show(message, "warning");
+        }
+    }
+    /**
+     * Displays une notification d'information
+     * Support double signature:
+     * - info(message, duration)
+     * - info(message, options)
+     *
+     * @param {string} message - Message to display
+     * @param {number|Object} [durationOrOptions] - Duration (ms) OU object options
+     *
+     * @example
+     * info("Synchronization en cours", 3000);
+     * info("Synchronization en cours", { persistent: true, dismissible: false });
+     */
+    info(message, durationOrOptions) {
+        if (typeof durationOrOptions === "number") {
+            return this.show(message, "info", durationOrOptions);
+        }
+        else if (typeof durationOrOptions === "object") {
+            return this.show(message, { ...durationOrOptions, type: "info" });
+        }
+        else {
+            return this.show(message, "info");
+        }
+    }
+    /**
+     * Adds ae notification to the queue avec priority
+     * @private
+     * @param {string} message - Message
+     * @param {Object} options - Options de la notification
+     */
+    _enqueue(message, options) {
+        const type = (options.type ?? "info");
+        const priority = PRIORITY[type.toUpperCase()] ?? PRIORITY.INFO;
+        const item = {
+            message,
+            options: {
+                type,
+                duration: options.duration,
+                persistent: options.persistent ?? false,
+                dismissible: options.dismissible !== false, // true by default
+                icon: options.icon,
+                action: options.action,
+            },
+            priority,
+            timestamp: Date.now(),
+        };
+        // Check la limite de la queue
+        if (this._queue.length >= this._maxQueueSize) {
+            // Find the lowest priority element (and oldest if tie)
+            const lowestPriorityIndex = this._queue.reduce((minIdx, qItem, idx, arr) => {
+                const minItem = arr[minIdx];
+                if (qItem.priority < minItem.priority ||
+                    (qItem.priority === minItem.priority && qItem.timestamp < minItem.timestamp)) {
+                    return idx;
+                }
+                return minIdx;
+            }, 0);
+            // If the nouvel item est plus prioritaire que le moins prioritaire in the queue
+            if (item.priority > this._queue[lowestPriorityIndex].priority) {
+                // Removesr le moins prioritaire
+                this._queue.splice(lowestPriorityIndex, 1);
+                if (Log)
+                    Log.warn("[GeoLeaf Notifications] Queue full, notification dropped");
+            }
+            else {
+                // Dropper le nouveau item
+                if (Log)
+                    Log.warn("[GeoLeaf Notifications] Queue full, notification rejected");
+                return null;
+            }
+        }
+        // Addsr to the queue
+        this._queue.push(item);
+        // Trier la queue par priority (desc) puis timestamp (asc)
+        this._queue.sort((a, b) => {
+            if (b.priority !== a.priority) {
+                return b.priority - a.priority; // Descending priority
+            }
+            return a.timestamp - b.timestamp; // Timestamp croissant (FIFO pour same priority)
+        });
+        // Processesr la queue
+        return this._processQueue();
+    }
+    _makeSpaceForPriority(nextItem, temporaryToasts) {
+        if (nextItem.priority === PRIORITY.ERROR && temporaryToasts.length > 0) {
+            const toastToRemove = temporaryToasts.find((t) => t.classList.contains("gl-toast--info") ||
+                t.classList.contains("gl-toast--success")) || temporaryToasts[0];
+            this._remove(toastToRemove, true);
+            return true; // space was made, continue
+        }
+        return false; // no space could be made
+    }
+    /**
+     * Processes the queue and displays notifications based on availability
+     * @private
+     */
+    _processQueue() {
+        if (!this.container || !this.config.enabled || this._queue.length === 0) {
+            return null;
+        }
+        // Compter les toasts currentlement visibles
+        const visibleToasts = this.container.querySelectorAll(".gl-toast:not(.gl-toast--removing)");
+        const temporaryToasts = Array.from(visibleToasts).filter((t) => !t.dataset.persistent);
+        const persistentToasts = Array.from(visibleToasts).filter((t) => t.dataset.persistent);
+        // Tant qu'il y a de la place et des items in the queue
+        let lastToast = null;
+        while (this._queue.length > 0) {
+            const nextItem = this._queue[0];
+            const isPersistent = nextItem.options.persistent;
+            // Check si on peut display ce toast
+            const canShow = isPersistent
+                ? persistentToasts.length < this.maxPersistent
+                : temporaryToasts.length < this.maxVisible;
+            if (!canShow) {
+                // If priority toast, try to make room; otherwise stop processing
+                if (!this._makeSpaceForPriority(nextItem, temporaryToasts)) {
+                    break;
+                }
+            }
+            // Retirer de la queue et display
+            const item = this._queue.shift();
+            lastToast = this._showImmediate(item.message, item.options);
+            // Mettre up to date les compteurs
+            if (isPersistent) {
+                persistentToasts.push(lastToast);
+            }
+            else {
+                temporaryToasts.push(lastToast);
+            }
+        }
+        return lastToast;
+    }
+    /**
+     * Displays une notification immediately (used par la queue)
+     * @private
+     * @param {string} message - Message to display
+     * @param {Object} options - Options de la notification
+     */
+    _showImmediate(message, options) {
+        const type = options.type;
+        const duration = options.duration ?? this.durations[type];
+        const persistent = !!options.persistent;
+        const dismissible = options.dismissible !== false;
+        // Createsr le toast
+        const toast = createElement("div", {
+            className: `gl-toast gl-toast--${type}`,
+            attributes: {
+                role: "alert",
+                // Utiliser assertive pour errors
+                "aria-live": type === "error" ? "assertive" : "polite",
+            },
+        });
+        // Marquer si persistant
+        if (persistent) {
+            toast.dataset.persistent = "true";
+        }
+        // Creates the message (textContent = secure)
+        const messageSpan = createElement("span", {
+            className: "gl-toast__message",
+            textContent: message,
+        });
+        toast.appendChild(messageSpan);
+        if (dismissible)
+            this._appendCloseButton(toast);
+        // Addsr au DOM
+        this.container.appendChild(toast);
+        // Animation d'input
+        if (this.config.animations) {
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    toast.classList.add("gl-toast--visible");
+                });
+            });
+        }
+        else {
+            toast.classList.add("gl-toast--visible");
+        }
+        // Planifier l'auto-removal (only si non persistant)
+        // Perf 6.2.6: Un seul timer — timerManager si available, sinon setTimeout nu
+        if (!persistent) {
+            if (this._timerManager) {
+                toast.dataset.timerId = String(this._timerManager.setTimeout(() => {
+                    this._remove(toast, false);
+                }, duration));
+            }
+            else {
+                const autoRemove = setTimeout(() => {
+                    this._remove(toast, false);
+                }, duration);
+                toast.dataset.timeoutId = String(autoRemove);
+            }
+        }
+        return toast;
+    }
+    _appendCloseButton(toast) {
+        const closeBtn = createElement("button", {
+            className: "gl-toast__close",
+            attributes: {
+                "aria-label": getLabel("aria.notification.close_label"),
+                title: getLabel("aria.notification.close_title"),
+            },
+            textContent: getLabel("ui.notification.close_char"),
+            onClick: () => {
+                this._remove(toast, false);
+            },
+        });
+        toast.appendChild(closeBtn);
+    }
+    /**
+     * Retire une notification
+     * @private
+     * @param {HTMLElement} toast - Element toast to retirer
+     * @param {boolean} isReorganization - If true, this is a reorganization (different animation)
+     */
+    _remove(toast, isReorganization = false) {
+        if (!toast || toast.classList.contains("gl-toast--removing")) {
+            return;
+        }
+        // Annuler le timeout auto si fermeture manuelle
+        if (toast.dataset.timeoutId) {
+            clearTimeout(Number.parseInt(toast.dataset.timeoutId, 10));
+            delete toast.dataset.timeoutId;
+        }
+        if (toast.dataset.timerId && this._timerManager) {
+            this._timerManager.clearTimeout(Number.parseInt(toast.dataset.timerId, 10));
+            delete toast.dataset.timerId;
+        }
+        // Animation de output
+        toast.classList.add("gl-toast--removing");
+        toast.classList.remove("gl-toast--visible");
+        // Applies specific animation for reorganization
+        if (isReorganization && this.config.animations) {
+            toast.classList.add("gl-toast--sliding-up");
+        }
+        const removeDelay = this.config.animations ? 200 : 0;
+        // Perf 6.2.6: Un seul timer — timerManager si available, sinon setTimeout nu
+        const _doRemove = () => {
+            if (toast.parentNode) {
+                toast.remove();
+            }
+            this._processQueue();
+        };
+        if (this._timerManager) {
+            this._timerManager.setTimeout(_doRemove, removeDelay);
+        }
+        else {
+            setTimeout(_doRemove, removeDelay);
+        }
+    }
+    /**
+     * Efface toutes les notifications
+     */
+    clearAll() {
+        if (!this.container)
+            return;
+        const toasts = this.container.querySelectorAll(".gl-toast");
+        toasts.forEach((toast) => this._remove(toast, false));
+        // Emptyr aussi la queue
+        this._queue = [];
+    }
+    /**
+     * Ferme une notification specific par sa reference DOM
+     * @param {HTMLElement} toastEl - Toast element returned by show/info/success/etc.
+     */
+    dismiss(toastEl) {
+        if (!toastEl)
+            return;
+        this._remove(toastEl, false);
+    }
+    /**
+     * Temporarily disables notifications
+     */
+    disable() {
+        this.config.enabled = false;
+        if (Log)
+            Log.debug("[GeoLeaf Notifications] System disabled");
+    }
+    /**
+     * Re-enables notifications
+     */
+    enable() {
+        this.config.enabled = true;
+        if (Log)
+            Log.debug("[GeoLeaf Notifications] System enabled");
+        // Processes the queue in case items are waiting
+        this._processQueue();
+    }
+    /**
+     * Destroyed the system de notifications et nettoie toutes les ressources
+     * Retire tous les event listners et timers actives
+     */
+    destroy() {
+        // Clear tous les timers actives
+        if (this._timerManager) {
+            this._timerManager.destroy();
+            this._timerManager = null;
+        }
+        // Retire tous les event listners
+        if (this._eventManager) {
+            this._eventManager.destroy();
+            this._eventManager = null;
+        }
+        // Retire tous les toasts actives
+        if (this.container) {
+            const toasts = this.container.querySelectorAll(".gl-toast");
+            toasts.forEach((toast) => toast.remove());
+        }
+        // Clear la queue
+        this._queue = [];
+        // Clear la map
+        this._activeToasts.clear();
+        // Reset les properties
+        this.container = null;
+        this.config.enabled = false;
+        if (Log)
+            Log.info("[GeoLeaf Notifications] System destroyed and cleaned up");
+    }
+    /**
+     * Get current status of notification system
+     * @returns {Object} Status information
+     */
+    getStatus() {
+        const visibleToasts = this.container
+            ? Array.from(this.container.querySelectorAll(".gl-toast:not(.gl-toast--removing)"))
+            : [];
+        const temporaryToasts = visibleToasts.filter((t) => !t.dataset.persistent);
+        const persistentToasts = visibleToasts.filter((t) => t.dataset.persistent);
+        return {
+            enabled: this.config.enabled,
+            initialized: !!this.container,
+            activeToasts: visibleToasts.length,
+            temporaryToasts: temporaryToasts.length,
+            persistentToasts: persistentToasts.length,
+            queued: this._queue.length,
+            maxVisible: this.maxVisible,
+            maxPersistent: this.maxPersistent,
+            position: this.config.position,
+        };
+    }
+}
+// Createsr an instance singleton et l'exposer
+const _UINotifications = new NotificationSystem();
 
 /**
  * @module ui/geolocation-state
@@ -8702,6 +9252,56 @@ function initMobileToolbar(options) {
 }
 
 /**
+ * desktop-panel-theme.ts
+ *
+ * Theme toggle button helpers for the desktop side panel.
+ * Extracted from desktop-panel.ts to keep it within the 700-line limit.
+ */
+// SVG paths for sun/moon icons (same as control-theme-toggle.ts)
+const _SVG_SUN = "M12 3v1m0 16v1M4.22 4.22l.7.7m12.16 12.16.7.7M3 12h1m16 0h1M4.92 19.07l.7-.7M18.36 5.64l.7-.7M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7z";
+const _SVG_MOON = "M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z";
+function buildThemeToggleBtn(variant) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "gl-rp-theme-toggle";
+    btn.dataset.variant = variant;
+    const opts = { stroke: "currentColor", strokeWidth: "2", fill: "none" };
+    const svgSun = DOMSecurity.createSVGIcon(18, 18, _SVG_SUN, opts);
+    svgSun.classList.add("gl-rp-theme-icon--sun");
+    const svgMoon = DOMSecurity.createSVGIcon(18, 18, _SVG_MOON, opts);
+    svgMoon.classList.add("gl-rp-theme-icon--moon");
+    btn.appendChild(svgSun);
+    btn.appendChild(svgMoon);
+    const _syncBtn = () => {
+        const isDark = _UITheme.getCurrentTheme() === _UITheme.THEME_DARK;
+        svgSun.style.display = isDark ? "block" : "none";
+        svgMoon.style.display = isDark ? "none" : "block";
+        const label = isDark
+            ? getLabel("aria.theme.toggle_to_light")
+            : getLabel("aria.theme.toggle_to_dark");
+        btn.setAttribute("aria-label", label);
+        btn.title = label;
+    };
+    _syncBtn();
+    btn.addEventListener("click", () => {
+        _UITheme.toggleTheme();
+    });
+    if (typeof globalThis !== "undefined" && globalThis.addEventListener) {
+        globalThis.addEventListener("geoleaf:ui-theme-changed", _syncBtn);
+    }
+    return btn;
+}
+function appendThemeToggleToTabs(tabs) {
+    if (tabs.querySelector(".gl-rp-theme-toggle"))
+        return;
+    const separator = document.createElement("div");
+    separator.className = "gl-rp-theme-separator";
+    const btn = buildThemeToggleBtn("desktop");
+    tabs.appendChild(separator);
+    tabs.appendChild(btn);
+}
+
+/**
 
  * desktop-panel.ts
 
@@ -8724,6 +9324,29 @@ let _mql = null;
 let _isActive = false;
 let _legendObserver = null;
 let _getFilterActiveState = null;
+let _mobileThemeToggle = null;
+let _themeObserver = null;
+function _injectMobileThemeToggle() {
+    const scroll = document.querySelector(".gl-map-toolbar__scroll") ??
+        document.querySelector(".gl-map-toolbar");
+    if (!scroll)
+        return;
+    if (scroll.querySelector("[data-variant='mobile-theme']"))
+        return;
+    const btn = buildThemeToggleBtn("mobile");
+    btn.classList.add("gl-map-toolbar__btn");
+    scroll.appendChild(btn);
+    _mobileThemeToggle = btn;
+}
+function _tryInjectMobile() {
+    if (_mobileThemeToggle)
+        return;
+    _injectMobileThemeToggle();
+    if (_mobileThemeToggle) {
+        _themeObserver?.disconnect();
+        _themeObserver = null;
+    }
+}
 // DOM Builders
 function buildTabsDom(panel, titles, show) {
     const tabs = document.createElement("div");
@@ -8781,6 +9404,8 @@ function buildTabsDom(panel, titles, show) {
         btns[next].focus();
     });
     panel.appendChild(tabs);
+    // Inject theme toggle at bottom of tab strip (above credential button if present)
+    appendThemeToggleToTabs(tabs);
 }
 function buildContentDom(panel) {
     const content = document.createElement("div");
@@ -8980,6 +9605,14 @@ function activatePanel() {
         });
         _legendObserver.observe(document.body, { childList: true, subtree: true });
     }
+    // Inject theme toggle into mobile toolbar
+    _tryInjectMobile();
+    if (!_mobileThemeToggle) {
+        _themeObserver = new MutationObserver(() => {
+            _tryInjectMobile();
+        });
+        _themeObserver.observe(document.body, { childList: true, subtree: true });
+    }
     document.body.classList.add("gl-right-panel-open");
 }
 function deactivatePanel() {
@@ -9018,6 +9651,10 @@ function deactivatePanel() {
         filterTab?.classList.remove("has-filters");
     }
     document.removeEventListener("geoleaf:filters:applied", _refreshFilterTabIndicator);
+    if (_themeObserver) {
+        _themeObserver.disconnect();
+        _themeObserver = null;
+    }
     document.body.classList.remove("gl-right-panel-open");
 }
 // MediaQuery Listner
@@ -9118,6 +9755,7 @@ function destroyDesktopPanel() {
     _panel = null;
     _isActive = false;
     _restoreEntries = [];
+    _mobileThemeToggle = null;
 }
 
 /**
@@ -9132,7 +9770,7 @@ function destroyDesktopPanel() {
  * Registers:
  *   - **B6** — Labels (`LabelButtonManager`, `LabelRenderer`, `Labels`),
  *     Legend (`LegendControl`, `LegendGenerator`, `LegendRenderer`),
- *     Layer Manager (`BasemapSelector`, `CacheSection`, `LMControl`, `LMRenderer`,
+ *     Layer Manager (`BasemapSelector`, `LMControl`, `LMRenderer`,
  *     `LMShared`, `StyleSelector`)
  *   - **B7** — Themes (`ThemeCache`, `ThemeLoader`, `ThemeSelector`, `ThemeApplier*`)
  *   - **B9** — UI components (`Branding`, `CoordinatesDisplay`, `NotificationSystem`,
@@ -9153,7 +9791,6 @@ _g$c.GeoLeaf._LegendControl = LegendControl;
 _g$c.GeoLeaf._LegendGenerator = LegendGenerator;
 _g$c.GeoLeaf._LegendRenderer = LegendRenderer;
 _g$c.GeoLeaf._LayerManagerBasemapSelector = BasemapSelector;
-_g$c.GeoLeaf._LayerManagerCacheSection = CacheSection;
 _g$c.GeoLeaf._LayerManagerControl = LMControl;
 _g$c.GeoLeaf._LayerManagerRenderer = LMRenderer;
 _g$c.GeoLeaf._LayerManagerShared = LMShared;
@@ -14193,6 +14830,25 @@ _app$1.initApp = async function (cfg) {
     }
     AppLog.log("Initializing with config:", cfg);
     initI18n();
+    // ── beforeBoot hook (A.5.1): auth gate before map creation ──────────────
+    // Allows integrators without the connector plugin (SSO Keycloak, Azure AD,
+    // Laravel/Symfony session) to condition map startup on an external auth check.
+    // Throwing aborts boot and emits 'geoleaf:boot:aborted'.
+    if (typeof GeoLeaf$1._beforeBootCallback === "function") {
+        try {
+            await GeoLeaf$1._beforeBootCallback({ config: cfg });
+        }
+        catch (err) {
+            AppLog.warn("[beforeBoot] Auth hook rejected — boot aborted:", err);
+            document.dispatchEvent(new CustomEvent("geoleaf:boot:aborted", {
+                detail: { reason: err },
+                bubbles: false,
+                cancelable: false,
+            }));
+            return;
+        }
+    }
+    // ─────────────────────────────────────────────────────────────────────────
     // ── Permalink hook 1 (§1.3.2): read URL state before map creation ──────
     // Must run before GeoLeaf.init() so the stored state is ready for hook 2.
     const _permalinkCfg = (cfg.ui && cfg.ui.permalink) || {};
@@ -14492,7 +15148,6 @@ _app$1.initApp = async function (cfg) {
         try {
             const mapContainer = document.querySelector(".gl-main") || document.getElementById(mapTarget);
             GeoLeaf$1.UI.init({
-                buttonSelector: '[data-gl-role="theme-toggle"]',
                 map: map,
                 mapContainer: mapContainer,
                 config: cfg,
@@ -14890,6 +15545,9 @@ class ModuleRegistry {
     }
     has(id) {
         return this._modules.has(id);
+    }
+    isInitialized() {
+        return this._initialized;
     }
     getAll() {
         return Array.from(this._modules.values());
@@ -15544,6 +16202,8 @@ _registry.register(new APIModule());
 GeoLeaf._registry = _registry;
 GeoLeaf.registry = _registry;
 // ─────────────────────────────────────────────────────────────────────────────
+/** Prevents startApp from running more than once (double-boot guard). */
+_app._appStarted = false;
 // ============================================================
 // Fonction startApp : loading config + lancement initApp
 // ============================================================
@@ -15561,6 +16221,12 @@ _app.startApp = async function () {
         return;
     }
     AppLog.info("Starting application...");
+    // Double-boot guard: if the app has already started, ignore subsequent calls.
+    if (_app._appStarted) {
+        AppLog.warn("[GeoLeaf.boot] Application already started — second boot call ignored.");
+        return;
+    }
+    _app._appStarted = true;
     // Listen for app ready event to show boot toast
     // (after UI is ready — GeoLeaf.UI.notify may not be available yet)
     document.addEventListener("geoleaf:app:ready", function _onAppReady() {
@@ -15641,22 +16307,25 @@ _app.startApp = async function () {
         },
     };
     // ── Sprint 4 — Register optional modules based on profile config ────────
+    // Guard: skip registration if registry already initialised (double-boot).
     // Cast to unknown: the inline _cfgAdapter.get() literal default causes TS
     // to narrow the return type to `true`, making `!== false` trivially true.
-    if (_cfgAdapter.get("route.enabled") !== false) {
-        _registry.register(new RouteModule());
-    }
-    if (_cfgAdapter.get("labels.enabled") !== false) {
-        _registry.register(new LabelsModule());
-    }
-    if (_cfgAdapter.get("ui.showLegend") !== false) {
-        _registry.register(new LegendModule());
-    }
-    if (_cfgAdapter.get("ui.showTable") !== false) {
-        _registry.register(new TableModule());
-    }
-    if (_cfgAdapter.get("ui.showSearch") !== false) {
-        _registry.register(new SearchModule());
+    if (!_registry.isInitialized()) {
+        if (_cfgAdapter.get("route.enabled") !== false) {
+            _registry.register(new RouteModule());
+        }
+        if (_cfgAdapter.get("labels.enabled") !== false) {
+            _registry.register(new LabelsModule());
+        }
+        if (_cfgAdapter.get("ui.showLegend") !== false) {
+            _registry.register(new LegendModule());
+        }
+        if (_cfgAdapter.get("ui.showTable") !== false) {
+            _registry.register(new TableModule());
+        }
+        if (_cfgAdapter.get("ui.showSearch") !== false) {
+            _registry.register(new SearchModule());
+        }
     }
     // ─────────────────────────────────────────────────────────────────────────
     try {
@@ -15697,13 +16366,27 @@ _app.startApp = async function () {
  * Loads the configuration, initializes the map and all modules.
  * Optional plugins (Storage, AddPOI) must be loaded before this call.
  *
- * @param options - Optional. { onPerformanceMetrics: (metrics) => void } to receive runtime metrics after geoleaf:app:ready.
+ * @param options - Optional boot options.
+ * @param options.beforeBoot - Async hook called after config load, before map creation.
+ *   Return void to proceed, throw to abort boot (emits `geoleaf:boot:aborted`).
+ *   Use case: SSO / external auth gate (Keycloak, Azure AD, Laravel/Symfony) without the connector plugin.
+ * @param options.onPerformanceMetrics - Callback to receive runtime metrics after geoleaf:app:ready.
  * @example
  * GeoLeaf.boot();
- * // or with metrics callback (prod / analytics)
+ * // Auth gate (SSO without connector)
+ * GeoLeaf.boot({
+ *   beforeBoot: async ({ config }) => {
+ *     const ok = await checkSession();
+ *     if (!ok) throw new Error('Not authenticated');
+ *   }
+ * });
+ * // Performance metrics
  * GeoLeaf.boot({ onPerformanceMetrics: (m) => console.log(m.timeToMapReadyMs) });
  */
 GeoLeaf.boot = function (options) {
+    if (options?.beforeBoot) {
+        GeoLeaf._beforeBootCallback = options.beforeBoot;
+    }
     if (options?.onPerformanceMetrics) {
         GeoLeaf._perfCallback = options.onPerformanceMetrics;
     }
@@ -15750,45 +16433,45 @@ async function loadModule(moduleName) {
     switch (moduleName) {
         // POI convenience: core first, then renderers + extras in parallel
         case "poi":
-            await import('./chunks/geoleaf-poi-core-C3OKeItx.js');
+            await import('./chunks/geoleaf-poi-core-C-Obu-3i.js');
             await Promise.all([
-                import('./chunks/geoleaf-poi-renderers-bmxS1Z4k.js'),
-                import('./chunks/geoleaf-poi-extras-C3OKeItx.js'),
+                import('./chunks/geoleaf-poi-renderers-GA7ScLXL.js'),
+                import('./chunks/geoleaf-poi-extras-C-Obu-3i.js'),
             ]);
             break;
         // Granular POI sub-chunks
         case "poiCore":
-            await import('./chunks/geoleaf-poi-core-C3OKeItx.js');
+            await import('./chunks/geoleaf-poi-core-C-Obu-3i.js');
             break;
         case "poiRenderers":
-            await import('./chunks/geoleaf-poi-renderers-bmxS1Z4k.js');
+            await import('./chunks/geoleaf-poi-renderers-GA7ScLXL.js');
             break;
         case "poiExtras":
-            await import('./chunks/geoleaf-poi-extras-C3OKeItx.js');
+            await import('./chunks/geoleaf-poi-extras-C-Obu-3i.js');
             break;
         case "basemapSelector":
-            await import('./chunks/geoleaf-basemap-selector-bmxS1Z4k.js');
+            await import('./chunks/geoleaf-basemap-selector-GA7ScLXL.js');
             break;
         case "route":
-            await import('./chunks/geoleaf-route-bmxS1Z4k.js');
+            await import('./chunks/geoleaf-route-GA7ScLXL.js');
             break;
         case "layerManager":
-            await import('./chunks/geoleaf-layer-manager-D7LfF6HG.js');
+            await import('./chunks/geoleaf-layer-manager-Dj9bxNID.js');
             break;
         case "legend":
-            await import('./chunks/geoleaf-legend-CvgRA6HW.js');
+            await import('./chunks/geoleaf-legend-B5B1_6_w.js');
             break;
         case "labels":
-            await import('./chunks/geoleaf-labels-D8YldCe0.js');
+            await import('./chunks/geoleaf-labels-nQO1-Dxn.js');
             break;
         case "themes":
-            await import('./chunks/geoleaf-themes-CD8Bu1Ao.js');
+            await import('./chunks/geoleaf-themes-D-gp9aO0.js');
             break;
         case "table":
-            await import('./chunks/geoleaf-table-Cwb-14yx.js');
+            await import('./chunks/geoleaf-table-B31ObUEv.js');
             break;
         case "search":
-            await import('./chunks/geoleaf-search-BMHg_T8Q.js').then(function (n) { return n.s; });
+            await import('./chunks/geoleaf-search-4xgVPjmk.js').then(function (n) { return n.s; });
             break;
         default: {
             // TypeScript exhaustiveness guard — `moduleName` is `never` here for
@@ -15813,16 +16496,16 @@ async function loadModule(moduleName) {
  */
 async function loadAllSecondaryModules() {
     // poi-core must be ready before poi-renderers and poi-extras
-    await import('./chunks/geoleaf-poi-core-C3OKeItx.js');
+    await import('./chunks/geoleaf-poi-core-C-Obu-3i.js');
     await Promise.all([
-        import('./chunks/geoleaf-poi-renderers-bmxS1Z4k.js'),
-        import('./chunks/geoleaf-poi-extras-C3OKeItx.js'),
-        import('./chunks/geoleaf-route-bmxS1Z4k.js'),
-        import('./chunks/geoleaf-layer-manager-D7LfF6HG.js'),
-        import('./chunks/geoleaf-legend-CvgRA6HW.js'),
-        import('./chunks/geoleaf-labels-D8YldCe0.js'),
-        import('./chunks/geoleaf-themes-CD8Bu1Ao.js'),
-        import('./chunks/geoleaf-table-Cwb-14yx.js'),
+        import('./chunks/geoleaf-poi-renderers-GA7ScLXL.js'),
+        import('./chunks/geoleaf-poi-extras-C-Obu-3i.js'),
+        import('./chunks/geoleaf-route-GA7ScLXL.js'),
+        import('./chunks/geoleaf-layer-manager-Dj9bxNID.js'),
+        import('./chunks/geoleaf-legend-B5B1_6_w.js'),
+        import('./chunks/geoleaf-labels-nQO1-Dxn.js'),
+        import('./chunks/geoleaf-themes-D-gp9aO0.js'),
+        import('./chunks/geoleaf-table-B31ObUEv.js'),
     ]);
 }
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Snapshot démonstratif — itinéraires de randonnée Guyane (Parc amazonien)
+  Généré le : 2026-04-15
+  Raison : randoamazonie.guyane-parcnational.fr inaccessible (DNS ERR)
+  Contenu : 4 tracés indicatifs inspirés de sentiers connus. Coordonnées approximatives,
+  non-officielles. À remplacer par le flux officiel dès rétablissement du fournisseur.
+  Tracé Sprint 1 (roadmap catalogue-demos v1.0.0, étape 1.4.1).
+-->
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <name>Itinéraires de randonnée — Parc amazonien de Guyane</name>
+        <description>Snapshot démonstratif — en attendant rétablissement randoamazonie.guyane-parcnational.fr</description>
+        <Style id="trekStyle">
+            <LineStyle>
+                <color>ff1478c8</color>
+                <width>3</width>
+            </LineStyle>
+        </Style>
+        <Placemark>
+            <name>Sentier Saül - Bélizon</name>
+            <description>Itinéraire forestier au cœur de la Guyane, traversée nord-sud d'environ 40 km.</description>
+            <styleUrl>#trekStyle</styleUrl>
+            <LineString>
+                <tessellate>1</tessellate>
+                <coordinates>
+                    -53.200,3.620,0 -53.180,3.580,0 -53.140,3.540,0 -53.100,3.510,0 -53.060,3.480,0 -53.010,3.450,0
+                </coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark>
+            <name>Sentier Émerillon - Camopi</name>
+            <description>Boucle pédestre au sud-est, le long du fleuve Oyapock.</description>
+            <styleUrl>#trekStyle</styleUrl>
+            <LineString>
+                <tessellate>1</tessellate>
+                <coordinates>
+                    -52.330,3.170,0 -52.310,3.140,0 -52.280,3.120,0 -52.250,3.100,0 -52.230,3.080,0
+                </coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark>
+            <name>Randonnée Maripasoula - Haut Maroni</name>
+            <description>Itinéraire longeant le fleuve Maroni au sud-ouest.</description>
+            <styleUrl>#trekStyle</styleUrl>
+            <LineString>
+                <tessellate>1</tessellate>
+                <coordinates>
+                    -54.030,3.740,0 -54.010,3.710,0 -53.980,3.680,0 -53.960,3.650,0 -53.940,3.620,0
+                </coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark>
+            <name>Montagnes de l'Inini</name>
+            <description>Traversée des reliefs du centre-ouest, altitude variable 200-400m.</description>
+            <styleUrl>#trekStyle</styleUrl>
+            <LineString>
+                <tessellate>1</tessellate>
+                <coordinates>
+                    -52.900,4.120,0 -52.880,4.100,0 -52.860,4.080,0 -52.830,4.060,0 -52.810,4.040,0
+                </coordinates>
+            </LineString>
+        </Placemark>
+    </Document>
+</kml>

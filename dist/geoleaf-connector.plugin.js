@@ -43,6 +43,36 @@ function validateConfig(config) {
     if (hasAuth && !config.auth?.endpoint?.trim()) {
         throw new ConfigError("[GeoLeaf Connector] auth.endpoint must be a non-empty string when auth is configured.");
     }
+    // Sprint 2 — validate external URLs (HTTPS in production, http allowed on localhost)
+    _validateExternalUrl(config.auth?.signupUrl, "auth.signupUrl");
+    _validateExternalUrl(config.auth?.forgotPasswordUrl, "auth.forgotPasswordUrl");
+    // Sprint 2 — iconVariant silent fallback (no throw, no warn)
+    if (config.auth?.credentialButton?.iconVariant &&
+        config.auth.credentialButton.iconVariant !== "lock" &&
+        config.auth.credentialButton.iconVariant !== "user") {
+        config.auth.credentialButton.iconVariant = "lock";
+    }
+}
+/**
+ * Validates an optional external URL field.
+ * Must start with https:// in production. http:// allowed on localhost/127.0.0.1.
+ */
+function _validateExternalUrl(url, fieldName) {
+    if (url === undefined || url === null)
+        return;
+    if (typeof url !== "string" || !url.trim()) {
+        throw new ConfigError(`[GeoLeaf Connector] ${fieldName} must be a non-empty string when provided.`);
+    }
+    if (!url.startsWith("https://")) {
+        const isDev = typeof location !== "undefined" &&
+            (location.hostname === "localhost" || location.hostname === "127.0.0.1");
+        if (isDev) {
+            console.warn(`[GeoLeaf Connector] ${fieldName} should use HTTPS in production. Current value: ${url}`);
+        }
+        else {
+            throw new ConfigError(`[GeoLeaf Connector] ${fieldName} must use HTTPS in production. Received: ${url}`);
+        }
+    }
 }
 
 /*!
@@ -646,8 +676,10 @@ const AuthClient = {
 };
 
 /*!
- * GeoLeaf Connector — Login UI
- * Minimal accessible login modal. No dependency on GeoLeaf theme system.
+ * GeoLeaf Connector — Login UI (v1.2.3)
+ * Accessible login modal with close button, overlay dismiss, and optional
+ * signup / forgot-password links. Colors follow the active GeoLeaf theme
+ * (light / dark / green / alt) through --gl-color-* custom properties.
  * CSS is inlined as a constant — no external stylesheet required.
  */
 // ─── CSS ──────────────────────────────────────────────────────────────────────
@@ -663,7 +695,10 @@ const _CSS = `
   font-family: system-ui, -apple-system, sans-serif;
 }
 .gc-modal {
-  background: #fff;
+  position: relative;
+  background: var(--gl-color-bg-surface, #ffffff);
+  color: var(--gl-color-text-main, #0f172a);
+  border: 1px solid var(--gl-color-border-soft, rgba(15,23,42,0.08));
   border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.24);
   padding: 2rem;
@@ -675,36 +710,42 @@ const _CSS = `
   margin: 0 0 1.25rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #111;
+  color: var(--gl-color-text-main, #0f172a);
 }
 .gc-modal label {
   display: block;
   margin-bottom: 0.25rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: var(--gl-color-text-muted, #374151);
 }
 .gc-modal input {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid #d1d5db;
+  background: var(--gl-color-bg-surface-muted, #f9fafb);
+  color: var(--gl-color-text-main, #0f172a);
+  border: 1px solid var(--gl-color-border-strong, rgba(15,23,42,0.22));
   border-radius: 6px;
   font-size: 1rem;
   box-sizing: border-box;
   outline: none;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.gc-modal input::placeholder {
+  color: var(--gl-color-text-muted, #9ca3af);
+  opacity: 0.7;
 }
 .gc-modal input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 2px rgba(59,130,246,0.25);
+  border-color: var(--gl-color-accent, #3b82f6);
+  box-shadow: 0 0 0 2px var(--gl-color-accent-soft, rgba(59,130,246,0.25));
 }
 .gc-modal button[type="submit"] {
   width: 100%;
   padding: 0.625rem 1rem;
-  background: #3b82f6;
-  color: #fff;
+  background: var(--gl-color-accent, #3b82f6);
+  color: var(--gl-color-accent-contrast, #ffffff);
   border: none;
   border-radius: 6px;
   font-size: 1rem;
@@ -713,10 +754,11 @@ const _CSS = `
   transition: background 0.15s;
 }
 .gc-modal button[type="submit"]:hover:not(:disabled) {
-  background: #2563eb;
+  background: var(--gl-color-accent-hover, #2563eb);
 }
 .gc-modal button[type="submit"]:disabled {
-  background: #93c5fd;
+  background: var(--gl-color-accent-soft, #93c5fd);
+  color: var(--gl-color-text-muted, #ffffff);
   cursor: not-allowed;
 }
 .gc-error {
@@ -725,9 +767,54 @@ const _CSS = `
   margin: 0 0 0.75rem;
   min-height: 1.25em;
 }
+.gc-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--gl-color-text-muted, #6b7280);
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0;
+  transition: background 0.15s, color 0.15s;
+}
+.gc-close:hover {
+  background: var(--gl-color-bg-surface-muted, #f3f4f6);
+  color: var(--gl-color-text-main, #111);
+}
+.gc-close:focus-visible {
+  outline: 2px solid var(--gl-color-focus-ring, #2684FF);
+  outline-offset: 1px;
+}
+.gc-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gl-color-border-soft, rgba(15,23,42,0.08));
+  font-size: 0.875rem;
+  color: var(--gl-color-text-muted, #6b7280);
+}
+.gc-links a {
+  color: var(--gl-color-accent, #3b82f6);
+  text-decoration: none;
+}
+.gc-links a:hover { text-decoration: underline; }
+.gc-links a:focus-visible {
+  outline: 2px solid var(--gl-color-focus-ring, #2684FF);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 `;
 // ─── Focus trap helpers ───────────────────────────────────────────────────────
-const FOCUSABLE = "input:not([disabled]), button:not([disabled])";
+const FOCUSABLE = "input:not([disabled]), button:not([disabled]), a[href]:not([hidden])";
 function _trapFocus(overlay) {
     return (e) => {
         if (e.key !== "Tab")
@@ -749,7 +836,24 @@ function _trapFocus(overlay) {
         }
     };
 }
-// ─── Modal builder ────────────────────────────────────────────────────────────
+// ─── Close button SVG builder ─────────────────────────────────────────────────
+function _buildCloseSvg() {
+    const ns = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(ns, "svg");
+    svg.setAttribute("width", "16");
+    svg.setAttribute("height", "16");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    svg.setAttribute("aria-hidden", "true");
+    const path = document.createElementNS(ns, "path");
+    path.setAttribute("d", "M18 6L6 18M6 6l12 12");
+    svg.appendChild(path);
+    return svg;
+}
 function _buildModal() {
     // Inject styles once
     if (!document.getElementById("gc-style")) {
@@ -766,6 +870,12 @@ function _buildModal() {
     overlay.setAttribute("aria-labelledby", "gc-modal-title");
     const modal = document.createElement("div");
     modal.className = "gc-modal";
+    // Close button (top-right)
+    const closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.className = "gc-close";
+    closeBtn.setAttribute("aria-label", "Fermer");
+    closeBtn.appendChild(_buildCloseSvg());
     const title = document.createElement("h2");
     title.id = "gc-modal-title";
     title.textContent = "Connexion";
@@ -803,23 +913,91 @@ function _buildModal() {
     form.appendChild(passwordInput);
     form.appendChild(errorEl);
     form.appendChild(submitBtn);
+    // External links container (hidden by default)
+    const linksDiv = document.createElement("div");
+    linksDiv.className = "gc-links";
+    linksDiv.hidden = true;
+    const signupLink = document.createElement("a");
+    signupLink.id = "gc-link-signup";
+    signupLink.textContent = "Créer un compte";
+    signupLink.target = "_blank";
+    signupLink.rel = "noopener noreferrer";
+    signupLink.hidden = true;
+    const forgotLink = document.createElement("a");
+    forgotLink.id = "gc-link-forgot";
+    forgotLink.textContent = "Mot de passe oublié";
+    forgotLink.target = "_blank";
+    forgotLink.rel = "noopener noreferrer";
+    forgotLink.hidden = true;
+    linksDiv.appendChild(signupLink);
+    linksDiv.appendChild(forgotLink);
+    modal.appendChild(closeBtn);
     modal.appendChild(title);
     modal.appendChild(form);
+    modal.appendChild(linksDiv);
     overlay.appendChild(modal);
-    return { overlay, loginInput, passwordInput, submitBtn, errorEl, form };
+    return {
+        overlay,
+        closeBtn,
+        loginInput,
+        passwordInput,
+        submitBtn,
+        errorEl,
+        form,
+        linksDiv,
+        signupLink,
+        forgotLink,
+    };
 }
 // ─── Public API ───────────────────────────────────────────────────────────────
 /**
  * Displays the login modal and resolves when the user authenticates successfully.
- * Rejects if the user closes the modal without authenticating (Escape key).
- *
- * Only rendered when config.auth.ui === true and no valid token found at startup.
+ * Rejects with `Error("Modal closed by user")` if the user dismisses the modal
+ * via close button, Escape key, or overlay click.
  */
 function showLoginModal(config) {
     return new Promise((resolve, reject) => {
-        const { overlay, loginInput, passwordInput, submitBtn, errorEl, form } = _buildModal();
+        const { overlay, closeBtn, loginInput, passwordInput, submitBtn, errorEl, form, linksDiv, signupLink, forgotLink, } = _buildModal();
+        // ── Configure external links (Sprint 2) ──────────────────────
+        if (config.auth?.signupUrl) {
+            signupLink.href = config.auth.signupUrl;
+            signupLink.hidden = false;
+            linksDiv.hidden = false;
+        }
+        if (config.auth?.forgotPasswordUrl) {
+            forgotLink.href = config.auth.forgotPasswordUrl;
+            forgotLink.hidden = false;
+            linksDiv.hidden = false;
+        }
+        // Cancelable event dispatch on link clicks
+        signupLink.addEventListener("click", (e) => {
+            const evt = new CustomEvent("connector:signup-requested", {
+                detail: { url: config.auth.signupUrl },
+                cancelable: true,
+            });
+            const notPrevented = document.dispatchEvent(evt);
+            if (!notPrevented)
+                e.preventDefault();
+        });
+        forgotLink.addEventListener("click", (e) => {
+            const evt = new CustomEvent("connector:forgot-password-requested", {
+                detail: { url: config.auth.forgotPasswordUrl },
+                cancelable: true,
+            });
+            const notPrevented = document.dispatchEvent(evt);
+            if (!notPrevented)
+                e.preventDefault();
+        });
+        // ── Focus trap ───────────────────────────────────────────────
         const trapHandler = _trapFocus(overlay);
         document.addEventListener("keydown", trapHandler);
+        // ── Shared cleanup ───────────────────────────────────────────
+        function _cleanup() {
+            document.removeEventListener("keydown", trapHandler);
+            document.removeEventListener("keydown", _escapeHandler);
+            overlay.remove();
+        }
+        // ── Error helpers ────────────────────────────────────────────
         function _showError(msg) {
             errorEl.textContent = msg;
             errorEl.hidden = false;
@@ -834,16 +1012,27 @@ function showLoginModal(config) {
             passwordInput.disabled = loading;
             submitBtn.textContent = loading ? "Connexion…" : "Se connecter";
         }
-        // Escape key — closes modal if login is optional (not forced by config)
+        // ── Close: Escape key ────────────────────────────────────────
         const _escapeHandler = (e) => {
             if (e.key === "Escape") {
-                document.removeEventListener("keydown", trapHandler);
-                document.removeEventListener("keydown", _escapeHandler);
-                overlay.remove();
+                _cleanup();
                 reject(new Error("Modal closed by user"));
             }
         };
         document.addEventListener("keydown", _escapeHandler);
+        // ── Close: close button (Sprint 2) ───────────────────────────
+        closeBtn.addEventListener("click", () => {
+            _cleanup();
+            reject(new Error("Modal closed by user"));
+        });
+        // ── Close: overlay click (Sprint 2) ──────────────────────────
+        overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) {
+                _cleanup();
+                reject(new Error("Modal closed by user"));
+            }
+        });
+        // ── Submit handler ───────────────────────────────────────────
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
             _clearError();
@@ -864,10 +1053,7 @@ function showLoginModal(config) {
                 const result = await AuthClient.login(auth.endpoint, loginValue, passwordValue);
                 const expiresAt = Date.now() + result.expiresIn * 1000;
                 await TokenStore.save(config.baseUrl, result.token, expiresAt);
-                // Clean up DOM and listeners
-                document.removeEventListener("keydown", trapHandler);
-                document.removeEventListener("keydown", _escapeHandler);
-                overlay.remove();
+                _cleanup();
                 document.dispatchEvent(new CustomEvent("connector:authenticated", {
                     detail: { baseUrl: config.baseUrl },
                 }));
@@ -897,6 +1083,242 @@ function showLoginModal(config) {
         // Focus on first input after mount
         requestAnimationFrame(() => loginInput.focus());
     });
+}
+
+/*!
+ * GeoLeaf Connector — Credential Button (Sprint 2 / v1.1.0)
+ * Auto-injects a credential/login icon button into the desktop panel
+ * (.gl-rp-tabs) and mobile toolbar (.gl-map-toolbar).
+ * Uses MutationObserver to handle deferred DOM creation by the core.
+ * SVG built via createElementNS — no innerHTML.
+ */
+// ─── CSS ──────────────────────────────────────────────────────────────────────
+const _BTN_CSS = `
+.gc-credential-separator {
+  height: 1px;
+  background: var(--gl-color-border-soft, rgba(15,23,42,0.08));
+  margin: 8px 4px 8px;
+  width: calc(100% - 8px);
+  flex-shrink: 0;
+}
+.gc-credential-btn[data-variant="desktop"] {
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+/* Hide the mobile-variant button on desktop (≥ 1440px) — core breakpoint
+   where .gl-rp-tabs becomes the primary surface and the mobile pill still
+   exists but several of its buttons are already hidden by the core. */
+@media (min-width: 1440px) {
+  .gc-credential-btn[data-variant="mobile"] {
+    display: none !important;
+  }
+}
+.gc-credential-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 4px auto;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--gl-color-text-muted, #6b7280);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.gc-credential-btn:hover {
+  background: color-mix(in srgb, var(--gl-color-accent, #f97316) 15%, transparent);
+  color: var(--gl-color-accent, #f97316);
+}
+.gc-credential-btn:focus-visible {
+  outline: 2px solid var(--gl-color-focus-ring, #2684FF);
+  outline-offset: 2px;
+}
+`;
+// ─── Module state ─────────────────────────────────────────────────────────────
+let _observer = null;
+let _desktopBtn = null;
+let _mobileBtn = null;
+let _styleInjected = false;
+// ─── Activation check ─────────────────────────────────────────────────────────
+function _shouldEnable(config) {
+    // Source 1: explicit config
+    if (config.auth?.credentialButton?.enabled === true)
+        return true;
+    // Source 2: profile ui.json — read via GeoLeaf.Config.getActiveProfile().
+    // The core merges ui.json into the active profile (spread at root), so
+    // showCredentialButton sits at profile.ui.showCredentialButton.
+    const g = globalThis;
+    const gl = g["GeoLeaf"];
+    const Config = gl?.["Config"];
+    const profile = Config?.getActiveProfile?.();
+    const ui = (profile?.["ui"] ?? undefined);
+    if (ui?.["showCredentialButton"] === true)
+        return true;
+    return false;
+}
+// ─── CSS injection ────────────────────────────────────────────────────────────
+function _injectStyles() {
+    if (_styleInjected)
+        return;
+    if (!document.getElementById("gc-btn-style")) {
+        const style = document.createElement("style");
+        style.id = "gc-btn-style";
+        style.textContent = _BTN_CSS;
+        document.head.appendChild(style);
+    }
+    _styleInjected = true;
+}
+// ─── SVG icon builder ─────────────────────────────────────────────────────────
+function _buildSvgIcon(variant) {
+    const ns = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(ns, "svg");
+    svg.setAttribute("width", "18");
+    svg.setAttribute("height", "18");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    svg.setAttribute("aria-hidden", "true");
+    if (variant === "user") {
+        // User silhouette — two paths: head circle + body arc
+        const circle = document.createElementNS(ns, "circle");
+        circle.setAttribute("cx", "12");
+        circle.setAttribute("cy", "8");
+        circle.setAttribute("r", "4");
+        svg.appendChild(circle);
+        const path = document.createElementNS(ns, "path");
+        path.setAttribute("d", "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2");
+        svg.appendChild(path);
+    }
+    else {
+        // Lock — rect body + path for shackle
+        const rect = document.createElementNS(ns, "rect");
+        rect.setAttribute("x", "5");
+        rect.setAttribute("y", "11");
+        rect.setAttribute("width", "14");
+        rect.setAttribute("height", "10");
+        rect.setAttribute("rx", "2");
+        svg.appendChild(rect);
+        const path = document.createElementNS(ns, "path");
+        path.setAttribute("d", "M8 11V7a4 4 0 0 1 8 0v4");
+        svg.appendChild(path);
+    }
+    return svg;
+}
+// ─── Button builder ───────────────────────────────────────────────────────────
+function _buildButton(config, variant) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "gc-credential-btn";
+    btn.dataset.variant = variant;
+    const iconVariant = config.auth?.credentialButton?.iconVariant ?? "lock";
+    const svg = _buildSvgIcon(iconVariant === "user" ? "user" : "lock");
+    btn.appendChild(svg);
+    btn.addEventListener("click", () => {
+        void _onCredentialClick(config);
+    });
+    return btn;
+}
+// ─── Click handler ────────────────────────────────────────────────────────────
+async function _onCredentialClick(config) {
+    // Only hit the token store when an auth endpoint is wired — otherwise
+    // there is no backend to authenticate against and we go straight to the
+    // modal. The ui.showCredentialButton flag is the sole display safeguard.
+    const hasEndpoint = !!config.auth?.endpoint?.trim();
+    const token = hasEndpoint ? await TokenStore.getTokenAsync(config.baseUrl) : null;
+    const authenticated = !!token;
+    document.dispatchEvent(new CustomEvent("connector:credential-button-clicked", {
+        detail: { baseUrl: config.baseUrl, authenticated },
+    }));
+    if (authenticated)
+        return;
+    try {
+        await showLoginModal(config);
+    }
+    catch {
+        // User closed modal without authenticating — no-op
+    }
+}
+// ─── Desktop injection ────────────────────────────────────────────────────────
+function _injectDesktop(config) {
+    const tabs = document.querySelector(".gl-rp-tabs");
+    if (!tabs)
+        return;
+    // Idempotence guard
+    if (tabs.querySelector(".gc-credential-btn"))
+        return;
+    const separator = document.createElement("div");
+    separator.className = "gc-credential-separator";
+    const btn = _buildButton(config, "desktop");
+    btn.setAttribute("aria-label", "Connexion");
+    btn.title = "Connexion";
+    tabs.appendChild(separator);
+    tabs.appendChild(btn);
+    _desktopBtn = btn;
+}
+// ─── Mobile injection ─────────────────────────────────────────────────────────
+function _injectMobile(config) {
+    // Prefer the scroll container; fallback to the toolbar itself
+    const scroll = document.querySelector(".gl-map-toolbar__scroll") ??
+        document.querySelector(".gl-map-toolbar");
+    if (!scroll)
+        return;
+    // Idempotence guard
+    if (scroll.querySelector(".gc-credential-btn"))
+        return;
+    const btn = _buildButton(config, "mobile");
+    btn.classList.add("gl-map-toolbar__btn");
+    btn.setAttribute("aria-label", "Connexion");
+    scroll.appendChild(btn);
+    _mobileBtn = btn;
+}
+// ─── Injection orchestrator ───────────────────────────────────────────────────
+function _tryInjectAll(config) {
+    if (!_desktopBtn)
+        _injectDesktop(config);
+    if (!_mobileBtn)
+        _injectMobile(config);
+    if (_desktopBtn && _mobileBtn) {
+        _observer?.disconnect();
+    }
+}
+// ─── Public API ───────────────────────────────────────────────────────────────
+/**
+ * Auto-injects the credential button into the desktop panel tabs and mobile
+ * toolbar. No-op if activation conditions are not met.
+ * Uses MutationObserver to handle deferred DOM creation.
+ */
+function installCredentialButton(config) {
+    if (!_shouldEnable(config))
+        return;
+    _injectStyles();
+    // Immediate attempt (DOM may already be ready)
+    _tryInjectAll(config);
+    // Fallback: observe for late DOM creation
+    if (!_desktopBtn || !_mobileBtn) {
+        _observer = new MutationObserver(() => _tryInjectAll(config));
+        _observer.observe(document.body, { childList: true, subtree: true });
+        // Safety timeout — disconnect after 10s to prevent memory leak
+        setTimeout(() => _observer?.disconnect(), 10_000);
+    }
+}
+/**
+ * Removes injected credential buttons and disconnects the MutationObserver.
+ * Called by entry.ts destroy().
+ */
+function uninstallCredentialButton() {
+    _observer?.disconnect();
+    _observer = null;
+    _desktopBtn?.remove();
+    _mobileBtn?.remove();
+    _desktopBtn = null;
+    _mobileBtn = null;
+    _styleInjected = false;
 }
 
 /*!
@@ -971,6 +1393,7 @@ async function _configure(config) {
     validateConfig(config);
     // Destroy the existing instance if any
     if (_currentInstance) {
+        uninstallCredentialButton();
         _currentInstance.destroy();
         uninstall();
         _currentInstance = null;
@@ -1026,17 +1449,84 @@ async function _configure(config) {
                 "Configure auth.ui: true to show the login modal, or provide a valid token.");
         }
     }
+    // Install credential button (Sprint 2 — idempotent, no-op if not enabled)
+    installCredentialButton(config);
     _currentInstance = createConnector(config);
 }
 const _g = globalThis;
 if (_g.GeoLeaf) {
     _g.GeoLeaf.Connector = {
         configure: _configure,
+        /**
+         * Opens the login modal on demand.
+         * Resolves when authenticated, rejects if the user closes the modal.
+         * Requires a prior configure() call with auth configured.
+         */
+        async openLoginModal() {
+            if (!_currentConfig?.auth) {
+                throw new ConfigError("[GeoLeaf Connector] openLoginModal() requires auth to be configured. " +
+                    "Call GeoLeaf.Connector.configure() with auth first.");
+            }
+            return showLoginModal(_currentConfig);
+        },
     };
+}
+// ─── Auto-bootstrap UI-only from profile ui.showCredentialButton ─────────────
+// Mounts the credential button without requiring GeoLeaf.Connector.configure().
+// Triggered by geoleaf:config:loaded / geoleaf:map:ready. Idempotent.
+// If configure() runs later, uninstallCredentialButton() inside _configure
+// removes this standalone button and _configure re-installs it with real auth.
+let _uiOnlyBooted = false;
+function _readUiShowCredentialButtonFlag() {
+    // Read through GeoLeaf.Config.getActiveProfile() — the only runtime-exposed
+    // path to the profile's ui section (merged from ui.json). GeoLeaf.config
+    // does not exist at runtime.
+    const g = globalThis;
+    const gl = g["GeoLeaf"];
+    const Config = gl?.["Config"];
+    const profile = Config?.getActiveProfile?.();
+    const ui = (profile?.["ui"] ?? undefined);
+    return ui?.["showCredentialButton"] === true;
+}
+function _autoBootstrapUiOnly() {
+    if (_uiOnlyBooted)
+        return;
+    if (_currentInstance)
+        return; // explicit configure() already ran
+    if (_readUiShowCredentialButtonFlag()) {
+        _uiOnlyBooted = true;
+        // Minimal standalone config — not passed through validateConfig.
+        // credential-button._shouldEnable() reads ui.showCredentialButton directly.
+        // Empty auth.endpoint signals UI-only click mode (event dispatch only).
+        const uiOnlyCfg = {
+            baseUrl: typeof location === "undefined" ? "" : location.origin,
+            auth: {
+                endpoint: "",
+                credentialButton: { enabled: true, iconVariant: "lock" },
+            },
+        };
+        installCredentialButton(uiOnlyCfg);
+    }
+}
+/** @internal — exposed for tests only, resets the auto-bootstrap latch. */
+function _resetAutoBootstrapForTests() {
+    _uiOnlyBooted = false;
+}
+if (typeof document !== "undefined") {
+    // geoleaf:profile:loaded — fired after the active profile (including ui.json)
+    //   is loaded and merged; getActiveProfile() is then populated.
+    // geoleaf:map:ready — safety net, fires later during boot.
+    // geoleaf:config:loaded fires BEFORE profile load so the flag is not yet
+    //   readable via getActiveProfile() — not used.
+    document.addEventListener("geoleaf:profile:loaded", _autoBootstrapUiOnly, { once: true });
+    document.addEventListener("geoleaf:map:ready", _autoBootstrapUiOnly, { once: true });
+    // Fallback: plugin script loaded after events already fired
+    if (_readUiShowCredentialButtonFlag())
+        _autoBootstrapUiOnly();
 }
 if (_g.GeoLeaf?.plugins?.register) {
     _g.GeoLeaf.plugins.register("connector", {
-        version: "1.0.0",
+        version: "1.2.4",
         type: "standard",
         optional: ["storage", "addpoi"],
         label: "Connector (Auth + Fetch intercept)",
@@ -1044,5 +1534,5 @@ if (_g.GeoLeaf?.plugins?.register) {
     });
 }
 
-export { createConnector };
+export { _resetAutoBootstrapForTests, createConnector };
 //# sourceMappingURL=geoleaf-connector.plugin.js.map

@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "tourism",
-  "_generatedAt": 1776191696474,
+  "_generatedAt": 1776869500981,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/tourism/icons/sprite_tourism.svg",
@@ -536,7 +536,6 @@
         "attribution": "Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, TomTom",
         "minZoom": 3,
         "maxZoom": 16,
-        "defaultBasemap": true,
         "offline": false
       },
       "satellite": {
@@ -586,6 +585,43 @@
         "minZoom": 3,
         "maxZoom": 19,
         "offline": false
+      },
+      "terrain-terrarium": {
+        "id": "terrain-terrarium",
+        "label": "Relief 3D",
+        "url": "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+        "attribution": "Map data: &copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors, <a href='http://viewfinderpanoramas.org'>SRTM</a> | Map style: &copy; <a href='https://opentopomap.org'>OpenTopoMap</a> (<a href='https://creativecommons.org/licenses/by-sa/3.0/'>CC-BY-SA</a>)",
+        "minZoom": 5,
+        "maxZoom": 17,
+        "defaultBasemap": true,
+        "offline": false,
+        "terrain": {
+          "enabled": true,
+          "demUrl": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png",
+          "demEncoding": "terrarium",
+          "exaggeration": 1.5,
+          "default3D": true,
+          "pitch": 60,
+          "bearing": 0
+        }
+      },
+      "satellite-3d": {
+        "id": "satellite-3d",
+        "label": "Satellite 3D",
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "Tiles &copy; Esri &mdash; Source: Esri, Maxar, GeoEye, Earthstar Geographics",
+        "minZoom": 5,
+        "maxZoom": 18,
+        "offline": false,
+        "terrain": {
+          "enabled": true,
+          "demUrl": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png",
+          "demEncoding": "terrarium",
+          "exaggeration": 1.5,
+          "default3D": true,
+          "pitch": 60,
+          "bearing": 0
+        }
       }
     }
   },
@@ -604,6 +640,7 @@
       "showScale": true,
       "showCacheButton": true,
       "showAddPoi": true,
+      "showCredentialButton": true,
       "permalink": {
         "enabled": true,
         "mode": "hash"
@@ -721,6 +758,11 @@
       {
         "id": "eco_regions",
         "configFile": "layers/eco_regions/eco_regions_config.json",
+        "layerManagerId": "data-conservation"
+      },
+      {
+        "id": "eco_regions_fgb",
+        "configFile": "layers/eco_regions_fgb/eco_regions_fgb_config.json",
         "layerManagerId": "data-conservation"
       },
       {
@@ -1003,6 +1045,46 @@
             "id": "defaut",
             "label": "défaut",
             "file": "defaut.json"
+          }
+        ]
+      },
+      "table": {
+        "enabled": false
+      },
+      "clustering": {
+        "enabled": false,
+        "maxClusterRadius": 80,
+        "disableClusteringAtZoom": 12
+      }
+    },
+    "eco_regions_fgb": {
+      "id": "eco_regions_fgb",
+      "label": "Éco-régions (FlatGeobuf)",
+      "plugin": "flatgeobuf",
+      "zIndex": 51,
+      "geometry": "polygon",
+      "data": {
+        "url": "layers/eco_regions_fgb/data/eco_regions.fgb",
+        "limit": 50000,
+        "autoRefresh": false
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.ecorregion"
           }
         ]
       },

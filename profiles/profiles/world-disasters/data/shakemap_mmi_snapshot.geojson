@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "_comment": "Snapshot CDN fallback Sprint 2 roadmap catalogue-demos v1.0.0. Source : USGS earthquake.usgs.gov feed significant_week. Échantillon démonstratif 3 séismes significatifs (mag ≥ 5.0 avec ShakeMap MMI) capturés 2026-04-21 00:00 UTC. La chaîne détail ShakeMap par ID (polygones d'intensité MMI) est prévue v1.1 — ce snapshot liste uniquement les épicentres significatifs.",
+    "metadata": {
+        "generated": "2026-04-21T00:00:00Z",
+        "title": "USGS Significant Earthquakes, Past Week (demo snapshot)",
+        "count": 3
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "id": "us7000mxs1",
+            "properties": { "mag": 6.8, "place": "160 km SW of Iwo Jima, Japan", "time": 1713657600000, "depth": 10.0, "mmi": 6.2, "tsunami": 1, "alert": "yellow", "sig": 716 },
+            "geometry": { "type": "Point", "coordinates": [141.15, 23.90, 10.0] }
+        },
+        {
+            "type": "Feature",
+            "id": "us7000mxs2",
+            "properties": { "mag": 5.4, "place": "Central Chile", "time": 1713654000000, "depth": 58.3, "mmi": 4.1, "tsunami": 0, "alert": "green", "sig": 449 },
+            "geometry": { "type": "Point", "coordinates": [-70.85, -32.12, 58.3] }
+        },
+        {
+            "type": "Feature",
+            "id": "us7000mxs3",
+            "properties": { "mag": 5.1, "place": "Northern Sumatra, Indonesia", "time": 1713609000000, "depth": 22.5, "mmi": 3.8, "tsunami": 0, "alert": "green", "sig": 400 },
+            "geometry": { "type": "Point", "coordinates": [97.30, 4.50, 22.5] }
+        }
+    ]
+}

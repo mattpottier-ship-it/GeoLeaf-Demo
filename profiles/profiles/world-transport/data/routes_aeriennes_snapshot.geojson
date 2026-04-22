@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "_comment": "Snapshot démonstratif — 8 grandes routes aériennes internationales. Généré 2026-04-15 (Sprint 1, roadmap catalogue-demos v1.0.0 étape 1.5.5). OpenFlights routes.geojson 404, routes.dat CSV sans lat/lng (nécessite jointure airports.dat). Tracés indicatifs grand cercle approximatif.",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "airline": "BA", "src_aprt": "LHR London-Heathrow", "dst_aprt": "JFK New York", "distance_km": 5540 },
+            "geometry": { "type": "LineString", "coordinates": [[-0.4614, 51.4706], [-20.0, 56.0], [-40.0, 55.0], [-60.0, 48.0], [-73.7781, 40.6413]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "airline": "EK", "src_aprt": "DXB Dubai", "dst_aprt": "SIN Singapore", "distance_km": 5850 },
+            "geometry": { "type": "LineString", "coordinates": [[55.3644, 25.2532], [70.0, 15.0], [85.0, 10.0], [100.0, 4.0], [103.9915, 1.3644]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "airline": "JAL", "src_aprt": "HND Tokyo-Haneda", "dst_aprt": "LAX Los Angeles", "distance_km": 8820 },
+            "geometry": { "type": "LineString", "coordinates": [[139.7798, 35.5494], [160.0, 45.0], [-170.0, 50.0], [-140.0, 45.0], [-118.4085, 33.9425]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "airline": "QF", "src_aprt": "SYD Sydney", "dst_aprt": "LAX Los Angeles", "distance_km": 12050 },
+            "geometry": { "type": "LineString", "coordinates": [[151.1772, -33.9461], [175.0, -25.0], [-160.0, 0.0], [-140.0, 15.0], [-118.4085, 33.9425]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "airline": "AF", "src_aprt": "CDG Paris-CDG", "dst_aprt": "ATL Atlanta", "distance_km": 7090 },
+            "geometry": { "type": "LineString", "coordinates": [[2.5479, 49.0097], [-10.0, 52.0], [-35.0, 52.0], [-60.0, 48.0], [-84.4277, 33.6407]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "airline": "CX", "src_aprt": "HKG Hong Kong", "dst_aprt": "LHR London-Heathrow", "distance_km": 9640 },
+            "geometry": { "type": "LineString", "coordinates": [[113.9185, 22.308], [100.0, 35.0], [80.0, 50.0], [40.0, 60.0], [0.0, 55.0], [-0.4614, 51.4706]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "airline": "SQ", "src_aprt": "SIN Singapore", "dst_aprt": "EWR Newark", "distance_km": 15300 },
+            "geometry": { "type": "LineString", "coordinates": [[103.9915, 1.3644], [105.0, 30.0], [120.0, 55.0], [160.0, 70.0], [-160.0, 75.0], [-100.0, 68.0], [-74.1687, 40.6895]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "airline": "QR", "src_aprt": "DOH Doha", "dst_aprt": "GRU São Paulo", "distance_km": 12140 },
+            "geometry": { "type": "LineString", "coordinates": [[51.6080, 25.2731], [40.0, 15.0], [10.0, 0.0], [-20.0, -15.0], [-46.4731, -23.4356]] }
+        }
+    ]
+}

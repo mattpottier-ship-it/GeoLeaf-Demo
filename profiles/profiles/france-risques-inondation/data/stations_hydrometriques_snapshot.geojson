@@ -1,0 +1,62 @@
+{
+    "type": "FeatureCollection",
+    "_comment": "Snapshot CDN fallback Sprint 2 roadmap catalogue-demos v1.0.0. Source : Hub'Eau API /hydrometrie/observations_tr (schéma GeoJSON natif, Licence Ouverte v2.0). Capture 2026-04-21 00:00 UTC. Échantillon 10 stations Vigicrues représentatives (Loire, Rhône, Seine, Garonne, Dordogne) avec hauteurs eau (mm). Servi automatiquement si Hub'Eau renvoie 403 cross-origin en runtime (blocage backend confirmé Chrome) — proxy CF Worker restera à câbler côté infra.",
+    "metadata": {
+        "generated": "2026-04-21T00:00:00Z",
+        "title": "Hub'Eau hydrometric stations — realtime observations (demo snapshot)",
+        "count": 10,
+        "api": "hubeau.eaufrance.fr/api/v1/hydrometrie/observations_tr"
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "code_station": "K055001010", "libelle_station": "Loire à Orléans", "code_departement": "45", "libelle_commune": "Orléans", "grandeur_hydro": "H", "resultat_obs": 1250, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [1.9085, 47.9020] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "V100000101", "libelle_station": "Rhône à Lyon (Perrache)", "code_departement": "69", "libelle_commune": "Lyon", "grandeur_hydro": "H", "resultat_obs": 1840, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [4.8265, 45.7485] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "H580000101", "libelle_station": "Seine à Paris (Austerlitz)", "code_departement": "75", "libelle_commune": "Paris", "grandeur_hydro": "H", "resultat_obs": 2100, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [2.3650, 48.8440] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "O972001001", "libelle_station": "Garonne à Marmande", "code_departement": "47", "libelle_commune": "Marmande", "grandeur_hydro": "H", "resultat_obs": 2480, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [0.1640, 44.4980] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "P030001010", "libelle_station": "Dordogne à Bergerac", "code_departement": "24", "libelle_commune": "Bergerac", "grandeur_hydro": "H", "resultat_obs": 1620, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [0.4830, 44.8510] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "A105203001", "libelle_station": "Meuse à Chooz", "code_departement": "08", "libelle_commune": "Chooz", "grandeur_hydro": "H", "resultat_obs": 1380, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [4.7985, 50.0890] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "A420061001", "libelle_station": "Moselle à Metz (St-Georges)", "code_departement": "57", "libelle_commune": "Metz", "grandeur_hydro": "H", "resultat_obs": 1720, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [6.1720, 49.1260] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "Y120201001", "libelle_station": "Rhône à Arles", "code_departement": "13", "libelle_commune": "Arles", "grandeur_hydro": "H", "resultat_obs": 2080, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [4.6280, 43.6740] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "V330000101", "libelle_station": "Durance à Mallemort", "code_departement": "13", "libelle_commune": "Mallemort", "grandeur_hydro": "H", "resultat_obs": 860, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [5.1910, 43.7260] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "code_station": "I951201010", "libelle_station": "Vilaine à Rennes (Cesson)", "code_departement": "35", "libelle_commune": "Cesson-Sévigné", "grandeur_hydro": "H", "resultat_obs": 980, "date_obs": "2026-04-21T00:00:00Z", "code_qualification": 16 },
+            "geometry": { "type": "Point", "coordinates": [-1.6010, 48.1180] }
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "id": "zones_desserte",
+    "label": "Zones de desserte SNCF",
+    "plugin": "flatgeobuf",
+    "zIndex": 30,
+    "geometry": "polygon",
+    "data": {
+        "url": "data/zones_desserte_sncf.fgb",
+        "bbox": [2.225, 41.362, 8.227, 51.089],
+        "limit": 1000,
+        "autoRefresh": true,
+        "debounceMs": 500,
+        "licence": "Données synthétiques démo — à remplacer par le jeu de données SNCF réel",
+        "_comment": "Sprint 3 roadmap catalogue-demos v1.0.0. Dataset synthétique (18 zones rectangulaires) pour valider le plugin FlatGeobuf avec bbox HTTP Range. Remplacer par le jeu de données SNCF officiel quand disponible."
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [{ "id": "defaut", "label": "défaut", "file": "defaut.json" }]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.nom", "label": "Zone de desserte" },
+            { "field": "properties.code_ligne", "label": "Ligne" }
+        ]
+    },
+    "table": { "enabled": false },
+    "clustering": { "enabled": false }
+}

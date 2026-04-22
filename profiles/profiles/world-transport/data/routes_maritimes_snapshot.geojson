@@ -1,0 +1,36 @@
+{
+    "type": "FeatureCollection",
+    "_comment": "Snapshot démonstratif — 6 grandes routes maritimes mondiales. Généré 2026-04-15 (Sprint 1, roadmap catalogue-demos v1.0.0 étape 1.5.3). Zenodo 6361763 inaccessible (403 cross-origin). Tracés indicatifs non-officiels.",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": { "name": "Rotterdam → New York", "distance_km": 6200, "type": "transatlantique" },
+            "geometry": { "type": "LineString", "coordinates": [[4.47, 51.92], [-5.0, 50.0], [-30.0, 45.0], [-50.0, 42.0], [-74.0, 40.7]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "Shanghai → Los Angeles", "distance_km": 10400, "type": "transpacifique" },
+            "geometry": { "type": "LineString", "coordinates": [[121.47, 31.23], [140.0, 35.0], [170.0, 40.0], [-170.0, 40.0], [-140.0, 38.0], [-118.25, 34.05]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "Singapore → Suez", "distance_km": 8500, "type": "route-suez" },
+            "geometry": { "type": "LineString", "coordinates": [[103.85, 1.29], [80.0, 6.0], [60.0, 14.0], [43.0, 12.5], [33.0, 27.0], [32.55, 29.97]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "Panama → Rotterdam", "distance_km": 8800, "type": "transatlantique" },
+            "geometry": { "type": "LineString", "coordinates": [[-79.55, 8.95], [-70.0, 18.0], [-50.0, 28.0], [-20.0, 40.0], [-5.0, 50.0], [4.47, 51.92]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "Cape Town → Dubai", "distance_km": 7900, "type": "océan-indien" },
+            "geometry": { "type": "LineString", "coordinates": [[18.42, -33.92], [40.0, -20.0], [55.0, 0.0], [60.0, 15.0], [55.3, 25.3]] }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "Yokohama → Long Beach", "distance_km": 9000, "type": "transpacifique" },
+            "geometry": { "type": "LineString", "coordinates": [[139.65, 35.44], [160.0, 40.0], [-170.0, 42.0], [-140.0, 38.0], [-118.19, 33.77]] }
+        }
+    ]
+}

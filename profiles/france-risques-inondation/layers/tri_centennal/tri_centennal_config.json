@@ -6,9 +6,9 @@
     "interactiveShape": true,
     "geometry": "polygon",
     "data": {
-        "dataUrl": "https://georisques.gouv.fr/api/v1/gaspar/tri?rayon=0&page=1&page_size=100",
+        "dataUrl": "https://catalogue.sigloire.fr/api/data/4056c24b-e01e-4508-aff9-ec21ef478fd0?srs=EPSG:4326",
         "directory": "data",
-        "licence": "Licence Ouverte v2.0 — Géorisques / MTES-DGPR (georisques.gouv.fr)"
+        "licence": "Licence Ouverte v2.0 — SIGLoire / DREAL Pays de la Loire (sigloire.fr) — données régionales démonstratives en attendant endpoint national TRI"
     },
     "styles": {
         "directory": "styles",
@@ -25,19 +25,16 @@
         "mode": "hover",
         "fields": [
             { "field": "properties.nom_tri", "label": "TRI" },
-            { "field": "properties.scenario", "label": "Scénario" },
-            { "field": "properties.surface_km2", "label": "Surface (km²)" }
+            { "field": "properties.gid", "label": "ID" }
         ]
     },
     "table": {
         "enabled": true,
         "columns": [
-            { "field": "properties.nom_tri", "label": "TRI", "sortable": true, "width": "40%" },
-            { "field": "properties.scenario", "label": "Scénario", "sortable": true, "width": "20%" },
-            { "field": "properties.surface_km2", "label": "Surface (km²)", "sortable": true, "width": "20%" },
-            { "field": "properties.departement", "label": "Département", "sortable": true, "width": "20%" }
+            { "field": "properties.nom_tri", "label": "TRI", "sortable": true, "width": "70%" },
+            { "field": "properties.gid", "label": "ID", "sortable": true, "width": "30%" }
         ],
-        "searchFields": ["properties.nom_tri", "properties.departement"],
+        "searchFields": ["properties.nom_tri"],
         "defaultSort": { "field": "properties.nom_tri", "order": "asc" }
     },
     "clustering": {

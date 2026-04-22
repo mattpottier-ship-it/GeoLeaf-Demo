@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "france-urbanisme-btp",
-  "_generatedAt": 1776191696485,
+  "_generatedAt": 1776869500991,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/france-urbanisme-btp/icons/sprite_urbanisme.svg",
@@ -272,9 +272,15 @@
           "collapsedByDefault": false
         },
         {
+          "id": "data-urbanisme",
+          "label": "Urbanisme & Permis",
+          "order": 3,
+          "collapsedByDefault": false
+        },
+        {
           "id": "basemap",
           "label": "Fonds de carte",
-          "order": 3,
+          "order": 4,
           "collapsedByDefault": true
         }
       ]
@@ -338,6 +344,30 @@
         "layerManagerId": "data-batiments",
         "defaultVisible": true,
         "order": 4
+      },
+      {
+        "id": "zones_plu",
+        "label": "Zones PLU (GPU)",
+        "configFile": "layers/zones_plu/zones_plu_config.json",
+        "layerManagerId": "data-urbanisme",
+        "defaultVisible": true,
+        "order": 5
+      },
+      {
+        "id": "bdnb_dpe",
+        "label": "DPE Logements (ADEME)",
+        "configFile": "layers/bdnb_dpe/bdnb_dpe_config.json",
+        "layerManagerId": "data-urbanisme",
+        "defaultVisible": true,
+        "order": 6
+      },
+      {
+        "id": "permis_construire",
+        "label": "Permis de construire (Paris)",
+        "configFile": "layers/permis_construire/permis_construire_config.json",
+        "layerManagerId": "data-urbanisme",
+        "defaultVisible": true,
+        "order": 7
       }
     ]
   },
@@ -566,6 +596,273 @@
       },
       "clustering": {
         "enabled": false
+      }
+    },
+    "zones_plu": {
+      "id": "zones_plu",
+      "label": "Zones PLU (GPU)",
+      "tooltipMode": "hover",
+      "zIndex": 5,
+      "interactiveShape": true,
+      "geometry": "polygon",
+      "data": {
+        "dataUrl": "https://apicarto.ign.fr/api/gpu/zone-urba?partition=DU_75056",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Géoportail de l'Urbanisme / IGN apicarto (apicarto.ign.fr) — partition Paris (75056) démonstrative"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Par zonage",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.libelle",
+            "label": "Zone"
+          },
+          {
+            "field": "properties.typezone",
+            "label": "Type"
+          },
+          {
+            "field": "properties.destdomi",
+            "label": "Destination dominante"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.libelle",
+            "label": "Zone",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.typezone",
+            "label": "Type",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.destdomi",
+            "label": "Destination",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.nomfic",
+            "label": "Règlement",
+            "sortable": true,
+            "width": "30%"
+          }
+        ],
+        "searchFields": [
+          "properties.libelle",
+          "properties.typezone"
+        ],
+        "defaultSort": {
+          "field": "properties.libelle",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "bdnb_dpe": {
+      "id": "bdnb_dpe",
+      "label": "DPE Logements (ADEME)",
+      "tooltipMode": "hover",
+      "zIndex": 25,
+      "interactiveShape": true,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://data.ademe.fr/data-fair/api/v1/datasets/dpe03existant/lines?size=500&format=geojson&geo_shape=bbox(2.25,48.8,2.45,48.9)",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — ADEME DPE logements existants (data.ademe.fr) — bbox Paris démonstrative (14M+ logements France entière)"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Par classe DPE",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.etiquette_dpe",
+            "label": "Classe DPE"
+          },
+          {
+            "field": "properties.adresse_ban",
+            "label": "Adresse"
+          },
+          {
+            "field": "properties.conso_5_usages_par_m2_ep",
+            "label": "Conso (kWh/m²/an)"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.adresse_ban",
+            "label": "Adresse",
+            "sortable": true,
+            "width": "35%"
+          },
+          {
+            "field": "properties.etiquette_dpe",
+            "label": "DPE",
+            "sortable": true,
+            "width": "10%"
+          },
+          {
+            "field": "properties.conso_5_usages_par_m2_ep",
+            "label": "kWh/m²",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.periode_construction",
+            "label": "Période",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.type_batiment",
+            "label": "Type",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.etiquette_ges",
+            "label": "GES",
+            "sortable": true,
+            "width": "10%"
+          }
+        ],
+        "searchFields": [
+          "properties.adresse_ban",
+          "properties.etiquette_dpe"
+        ],
+        "defaultSort": {
+          "field": "properties.etiquette_dpe",
+          "order": "asc"
+        }
+      },
+      "clustering": {
+        "enabled": false
+      }
+    },
+    "permis_construire": {
+      "id": "permis_construire",
+      "label": "Permis de construire (SITADEL)",
+      "tooltipMode": "hover",
+      "zIndex": 70,
+      "geometry": "point",
+      "data": {
+        "dataUrl": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/dossiers-recents-durbanisme/exports/geojson",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — Ville de Paris / Autorisations d'urbanisme 6 derniers mois (opendata.paris.fr) — source départementale démonstrative"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "Défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "field": "properties.objet",
+            "label": "Projet"
+          },
+          {
+            "field": "properties.adresse",
+            "label": "Adresse"
+          },
+          {
+            "field": "properties.commune",
+            "label": "Commune"
+          },
+          {
+            "field": "properties.date_decision",
+            "label": "Date décision"
+          }
+        ]
+      },
+      "table": {
+        "enabled": true,
+        "columns": [
+          {
+            "field": "properties.objet",
+            "label": "Projet",
+            "sortable": true,
+            "width": "30%"
+          },
+          {
+            "field": "properties.adresse",
+            "label": "Adresse",
+            "sortable": true,
+            "width": "25%"
+          },
+          {
+            "field": "properties.commune",
+            "label": "Commune",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.date_decision",
+            "label": "Date",
+            "sortable": true,
+            "width": "15%"
+          },
+          {
+            "field": "properties.type_dossier",
+            "label": "Type",
+            "sortable": true,
+            "width": "15%"
+          }
+        ],
+        "searchFields": [
+          "properties.objet",
+          "properties.adresse",
+          "properties.commune"
+        ],
+        "defaultSort": {
+          "field": "properties.date_decision",
+          "order": "desc"
+        }
+      },
+      "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 40,
+        "disableClusteringAtZoom": 14
       }
     }
   }

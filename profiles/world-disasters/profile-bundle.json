@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "world-disasters",
-  "_generatedAt": 1776191696495,
+  "_generatedAt": 1776869501014,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/world-disasters/icons/sprite_disasters.svg",
@@ -466,7 +466,18 @@
       "data": {
         "dataUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
         "directory": "data",
-        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)"
+        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)",
+        "realtime": {
+          "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. Polling 60 s sur le flux USGS 2.5+ magnitude past 7 days (GeoJSON natif). idField = id natif des Features USGS. Fallback snapshot figé si panne.",
+          "enabled": true,
+          "source": "polling",
+          "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson",
+          "intervalMs": 60000,
+          "decoder": "json",
+          "updateMode": "upsert",
+          "idField": "id",
+          "fallbackUrl": "data/epicentres_seismes_snapshot.geojson"
+        }
       },
       "styles": {
         "directory": "styles",
@@ -536,11 +547,6 @@
         "enabled": true,
         "maxClusterRadius": 50,
         "disableClusteringAtZoom": 6
-      },
-      "realtimeLayer": {
-        "enabled": false,
-        "description": "RT natif via dataUrl polling — les données USGS se mettent à jour toutes les minutes. Configurer refreshInterval dans le profil pour activer le polling automatique.",
-        "refreshInterval": 60000
       }
     },
     "shakemap_mmi": {
@@ -553,7 +559,18 @@
       "data": {
         "dataUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
         "directory": "data",
-        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)"
+        "licence": "Domaine public — USGS Earthquake Hazards Program (earthquake.usgs.gov)",
+        "realtime": {
+          "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. Polling 60 s sur le flux significant_week (GeoJSON natif). Les zones MMI détaillées par séisme ne sont pas chargées ici — logique chaînée (liste séismes → détail shakemap par ID) prévue v1.1.",
+          "enabled": true,
+          "source": "polling",
+          "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
+          "intervalMs": 60000,
+          "decoder": "json",
+          "updateMode": "upsert",
+          "idField": "id",
+          "fallbackUrl": "data/shakemap_mmi_snapshot.geojson"
+        }
       },
       "styles": {
         "directory": "styles",
@@ -588,12 +605,6 @@
       },
       "clustering": {
         "enabled": false
-      },
-      "realtimeLayer": {
-        "enabled": false,
-        "description": "RT réactif — ShakeMap zones concentriques par séisme significatif. Nécessite 2 appels chaînés via @geoleaf-plugins/realtime-layer (liste séismes → détail shakemap par ID).",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "refreshInterval": 60000
       }
     },
     "cyclones_actifs": {
@@ -605,7 +616,17 @@
       "data": {
         "dataUrl": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=TC&alertlevel=Green;Orange;Red&limit=50",
         "directory": "data",
-        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)"
+        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)",
+        "realtime": {
+          "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. enabled: false — GDACS retourne un JSON propriétaire (non-GeoJSON natif). Decoder 'gdacs' prévu v1.1. En attendant, fallbackUrl fournit un snapshot démonstratif pour la démo statique.",
+          "enabled": false,
+          "source": "polling",
+          "url": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=TC&alertlevel=Green;Orange;Red&limit=50",
+          "intervalMs": 21600000,
+          "decoder": "json",
+          "updateMode": "replace",
+          "fallbackUrl": "data/cyclones_actifs_snapshot.geojson"
+        }
       },
       "styles": {
         "directory": "styles",
@@ -678,12 +699,6 @@
       },
       "clustering": {
         "enabled": false
-      },
-      "realtimeLayer": {
-        "enabled": false,
-        "description": "RT polling 6h — positions cyclones actifs via GDACS API. Données vides hors saison cyclonique.",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "refreshInterval": 21600000
       }
     },
     "trajectoire_cyclone": {
@@ -695,7 +710,17 @@
       "data": {
         "dataUrl": "https://mapservices.weather.noaa.gov/tropical/rest/services/tropical/NHC_tropical_weather/MapServer/0/query?where=1%3D1&outFields=*&f=geojson",
         "directory": "data",
-        "licence": "Domaine public — NOAA NHC Tropical Weather MapServer"
+        "licence": "Domaine public — NOAA NHC Tropical Weather MapServer",
+        "realtime": {
+          "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. Polling 6 h sur NOAA NHC MapServer (f=geojson natif). Les trajectoires sont remplacées intégralement à chaque tick (updateMode replace, pas d'idField stable inter-runs).",
+          "enabled": true,
+          "source": "polling",
+          "url": "https://mapservices.weather.noaa.gov/tropical/rest/services/tropical/NHC_tropical_weather/MapServer/0/query?where=1%3D1&outFields=*&f=geojson",
+          "intervalMs": 21600000,
+          "decoder": "json",
+          "updateMode": "replace",
+          "fallbackUrl": "data/trajectoire_cyclone_snapshot.geojson"
+        }
       },
       "styles": {
         "directory": "styles",
@@ -726,12 +751,6 @@
       },
       "clustering": {
         "enabled": false
-      },
-      "realtimeLayer": {
-        "enabled": false,
-        "description": "RT polling 6h — trajectoire et cône d'incertitude cyclonique via NOAA NHC MapServer.",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "refreshInterval": 21600000
       }
     },
     "inondations_mondiales": {
@@ -744,7 +763,17 @@
       "data": {
         "dataUrl": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=FL&alertlevel=Green;Orange;Red&limit=50",
         "directory": "data",
-        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)"
+        "licence": "Libre — GDACS (Global Disaster Alerting Coordination System, JRC/EC)",
+        "realtime": {
+          "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. enabled: false — GDACS retourne un JSON propriétaire (non-GeoJSON natif). Decoder 'gdacs' prévu v1.1. Fallback snapshot démonstratif en attendant.",
+          "enabled": false,
+          "source": "polling",
+          "url": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?eventtype=FL&alertlevel=Green;Orange;Red&limit=50",
+          "intervalMs": 900000,
+          "decoder": "json",
+          "updateMode": "replace",
+          "fallbackUrl": "data/inondations_mondiales_snapshot.geojson"
+        }
       },
       "styles": {
         "directory": "styles",
@@ -813,12 +842,6 @@
       },
       "clustering": {
         "enabled": false
-      },
-      "realtimeLayer": {
-        "enabled": false,
-        "description": "RT polling 15 min — zones d'inondation active mondiale via GDACS API.",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "refreshInterval": 900000
       }
     },
     "plaques_tectoniques": {

@@ -7,7 +7,17 @@
     "data": {
         "dataUrl": "https://mapservices.weather.noaa.gov/tropical/rest/services/tropical/NHC_tropical_weather/MapServer/0/query?where=1%3D1&outFields=*&f=geojson",
         "directory": "data",
-        "licence": "Domaine public — NOAA NHC Tropical Weather MapServer"
+        "licence": "Domaine public — NOAA NHC Tropical Weather MapServer",
+        "realtime": {
+            "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. Polling 6 h sur NOAA NHC MapServer (f=geojson natif). Les trajectoires sont remplacées intégralement à chaque tick (updateMode replace, pas d'idField stable inter-runs).",
+            "enabled": true,
+            "source": "polling",
+            "url": "https://mapservices.weather.noaa.gov/tropical/rest/services/tropical/NHC_tropical_weather/MapServer/0/query?where=1%3D1&outFields=*&f=geojson",
+            "intervalMs": 21600000,
+            "decoder": "json",
+            "updateMode": "replace",
+            "fallbackUrl": "data/trajectoire_cyclone_snapshot.geojson"
+        }
     },
     "styles": {
         "directory": "styles",
@@ -32,11 +42,5 @@
     },
     "clustering": {
         "enabled": false
-    },
-    "realtimeLayer": {
-        "enabled": false,
-        "description": "RT polling 6h — trajectoire et cône d'incertitude cyclonique via NOAA NHC MapServer.",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "refreshInterval": 21600000
     }
 }

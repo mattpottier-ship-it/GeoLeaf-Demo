@@ -1,4 +1,5 @@
 {
+    "id": "defaut",
     "zoomConfig": {
         "minZoom": 5,
         "maxZoom": 18,

@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "world-transport",
-  "_generatedAt": 1776191696501,
+  "_generatedAt": 1776869501019,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/world-transport/icons/sprite_transport.svg",
@@ -417,9 +417,17 @@
       "zIndex": 75,
       "geometry": "point",
       "data": {
-        "dataUrl": "https://data.humdata.org/dataset/world-port-index/resource/3b5c8c73-e473-4e5e-b785-74c5b8a9b1c0",
+        "dataUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_ports.geojson",
         "directory": "data",
-        "licence": "Domaine public — NGA World Port Index via HDX (data.humdata.org)"
+        "licence": "Domaine public — Natural Earth ne_10m_ports (naturalearthdata.com) — HDX WPI non exposé en GeoJSON direct (ZIP only)",
+        "realtime": {
+          "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. enabled: false — positions AIS via WebSocket AISHub (wss://data.aishub.net/ws) non gérées par le plugin (GeoLeaf.Ws attend un canal broker interne). Bridge WS externe prévu Sprint 6 (PostGIS Réunion). En attendant, la couche reste servie par Natural Earth statique (data.dataUrl).",
+          "enabled": false,
+          "source": "websocket",
+          "channel": "ais.aishub.global",
+          "decoder": "json",
+          "fallbackUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_ports.geojson"
+        }
       },
       "styles": {
         "directory": "styles",
@@ -436,16 +444,16 @@
         "mode": "hover",
         "fields": [
           {
-            "field": "properties.PORT_NAME",
+            "field": "properties.name",
             "label": "Port"
           },
           {
-            "field": "properties.COUNTRY",
-            "label": "Pays"
+            "field": "properties.featurecla",
+            "label": "Classe"
           },
           {
-            "field": "properties.HARBORSIZE",
-            "label": "Taille"
+            "field": "properties.scalerank",
+            "label": "Rang"
           }
         ]
       },
@@ -453,36 +461,35 @@
         "enabled": true,
         "columns": [
           {
-            "field": "properties.PORT_NAME",
+            "field": "properties.name",
             "label": "Port",
             "sortable": true,
-            "width": "40%"
+            "width": "50%"
           },
           {
-            "field": "properties.COUNTRY",
-            "label": "Pays",
+            "field": "properties.featurecla",
+            "label": "Classe",
             "sortable": true,
-            "width": "30%"
+            "width": "20%"
           },
           {
-            "field": "properties.HARBORSIZE",
-            "label": "Taille",
+            "field": "properties.scalerank",
+            "label": "Rang",
             "sortable": true,
             "width": "15%"
           },
           {
-            "field": "properties.HARBORTYPE",
-            "label": "Type",
+            "field": "properties.natlscale",
+            "label": "Échelle",
             "sortable": true,
             "width": "15%"
           }
         ],
         "searchFields": [
-          "properties.PORT_NAME",
-          "properties.COUNTRY"
+          "properties.name"
         ],
         "defaultSort": {
-          "field": "properties.PORT_NAME",
+          "field": "properties.scalerank",
           "order": "asc"
         }
       },
@@ -490,19 +497,6 @@
         "enabled": true,
         "maxClusterRadius": 50,
         "disableClusteringAtZoom": 4
-      },
-      "realtimeLayer": {
-        "enabled": false,
-        "description": "RT prévu : positions navires AIS via WebSocket AISHub — @geoleaf-plugins/websocket",
-        "plugin": "@geoleaf-plugins/websocket",
-        "wsUrl": "wss://data.aishub.net/ws",
-        "refreshOnConnect": true,
-        "fieldMapping": {
-          "title": "SHIPNAME",
-          "description": "DESTINATION",
-          "lat": "LAT",
-          "lng": "LON"
-        }
       }
     },
     "aeroports": {
@@ -516,7 +510,17 @@
         "format": "csv",
         "mappingFile": "mapping.json",
         "directory": "data",
-        "licence": "Domaine public — OurAirports (ourairports.com)"
+        "licence": "Domaine public — OurAirports (ourairports.com)",
+        "realtime": {
+          "_comment": "Sprint 2 roadmap catalogue-demos v1.0.0. enabled: false — OpenSky /states/all polling 10 s requiert OAuth2 (Bearer token) non supporté par le plugin. Extension 'auth' prévue v1.1. Fallback snapshot 50 vols servi pour la démo statique.",
+          "enabled": false,
+          "source": "polling",
+          "url": "https://opensky-network.org/api/states/all",
+          "intervalMs": 10000,
+          "decoder": "json",
+          "updateMode": "replace",
+          "fallbackUrl": "data/opensky_states_snapshot.geojson"
+        }
       },
       "styles": {
         "directory": "styles",
@@ -592,28 +596,6 @@
         "enabled": true,
         "maxClusterRadius": 60,
         "disableClusteringAtZoom": 5
-      },
-      "realtimeLayer": {
-        "enabled": false,
-        "description": "RT prévu : positions avions en vol via polling OpenSky OAuth2 toutes les 10s — @geoleaf-plugins/realtime-layer",
-        "plugin": "@geoleaf-plugins/realtime-layer",
-        "dataUrl": "https://opensky-network.org/api/states/all",
-        "refreshInterval": 10000,
-        "auth": {
-          "type": "oauth2",
-          "connector": "@geoleaf/connector",
-          "tokenKey": "opensky_token"
-        },
-        "fieldMapping": {
-          "title": "callsign",
-          "lat": "latitude",
-          "lng": "longitude",
-          "attributes": {
-            "altitude": "baro_altitude",
-            "velocity": "velocity",
-            "origin_country": "origin_country"
-          }
-        }
       }
     },
     "routes_maritimes": {
@@ -623,9 +605,9 @@
       "zIndex": 30,
       "geometry": "line",
       "data": {
-        "dataUrl": "https://zenodo.org/record/6361763/files/global_shipping_routes.geojson",
+        "dataUrl": "data/routes_maritimes_snapshot.geojson",
         "directory": "data",
-        "licence": "CC BY 4.0 — Zenodo (doi.org/10.5281/zenodo.6361763)"
+        "licence": "Snapshot démonstratif local — 6 routes maritimes indicatives (Zenodo 6361763 403 cross-origin au 2026-04-15)"
       },
       "styles": {
         "directory": "styles",
@@ -669,9 +651,9 @@
       "zIndex": 29,
       "geometry": "line",
       "data": {
-        "dataUrl": "https://raw.githubusercontent.com/jpatokal/openflights/master/data/routes.geojson",
+        "dataUrl": "data/routes_aeriennes_snapshot.geojson",
         "directory": "data",
-        "licence": "ODbL — OpenFlights (openflights.org/data)"
+        "licence": "Snapshot démonstratif local — 8 routes aériennes indicatives (OpenFlights routes.geojson 404, routes.dat CSV non géolocalisé)"
       },
       "styles": {
         "directory": "styles",

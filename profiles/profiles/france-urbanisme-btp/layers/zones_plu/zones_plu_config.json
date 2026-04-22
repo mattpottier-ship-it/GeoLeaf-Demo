@@ -6,9 +6,9 @@
     "interactiveShape": true,
     "geometry": "polygon",
     "data": {
-        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=GPU:ZONE_URBA&outputFormat=application/json&count=5000&bbox=48.8,2.25,48.9,2.45,EPSG:4326",
+        "dataUrl": "https://apicarto.ign.fr/api/gpu/zone-urba?partition=DU_75056",
         "directory": "data",
-        "licence": "Licence Ouverte v2.0 — Géoportail de l'Urbanisme (geoportail-urbanisme.gouv.fr)"
+        "licence": "Licence Ouverte v2.0 — Géoportail de l'Urbanisme / IGN apicarto (apicarto.ign.fr) — partition Paris (75056) démonstrative"
     },
     "styles": {
         "directory": "styles",
@@ -34,7 +34,12 @@
         "columns": [
             { "field": "properties.libelle", "label": "Zone", "sortable": true, "width": "25%" },
             { "field": "properties.typezone", "label": "Type", "sortable": true, "width": "15%" },
-            { "field": "properties.destdomi", "label": "Destination", "sortable": true, "width": "30%" },
+            {
+                "field": "properties.destdomi",
+                "label": "Destination",
+                "sortable": true,
+                "width": "30%"
+            },
             { "field": "properties.nomfic", "label": "Règlement", "sortable": true, "width": "30%" }
         ],
         "searchFields": ["properties.libelle", "properties.typezone"],

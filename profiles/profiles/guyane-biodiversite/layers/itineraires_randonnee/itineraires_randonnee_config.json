@@ -6,10 +6,10 @@
     "interactiveShape": true,
     "geometry": "line",
     "data": {
-        "dataUrl": "https://randoamazonie.guyane-parcnational.fr/api/v2/trek.kml",
+        "dataUrl": "data/itineraires_randonnee_snapshot.kml",
         "format": "kml",
         "directory": "data",
-        "licence": "Libre — Parc Amazonien de Guyane (randoamazonie.guyane-parcnational.fr)"
+        "licence": "Snapshot démonstratif local — 4 tracés indicatifs (Parc amazonien de Guyane, randoamazonie.guyane-parcnational.fr DNS ERR au 2026-04-15)"
     },
     "styles": {
         "directory": "styles",
@@ -33,7 +33,12 @@
         "enabled": true,
         "columns": [
             { "field": "properties.name", "label": "Itinéraire", "sortable": true, "width": "40%" },
-            { "field": "properties.description", "label": "Description", "sortable": false, "width": "60%" }
+            {
+                "field": "properties.description",
+                "label": "Description",
+                "sortable": false,
+                "width": "60%"
+            }
         ],
         "searchFields": ["properties.name"],
         "defaultSort": { "field": "properties.name", "order": "asc" }
