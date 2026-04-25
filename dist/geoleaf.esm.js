@@ -1,14 +1,14 @@
-import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, o as domCreate, K as blockMapPropagation, ab as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ac as resolvePoiColors, ad as StyleValidator, ae as StyleValidatorRules, H as AbstractRenderer, af as SimpleTextRenderer, ag as DataNormalizer, M as StyleLoader, x as Config$3, ah as DataConverter, ai as ProfileLoader, aj as ConfigNormalizer, ak as ProfileLoader$1, al as ProfileManager, am as StorageHelper, an as TaxonomyManager, p as getLabel, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ao as getDistance, A as getActiveProfile, ap as ensureMap, aq as validateCoordinates, ar as validateNumber, C as Core, as as Helpers$1, at as Validators, au as initI18n, av as padBounds, aw as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-DQS_tOJV.js';
-import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-DomSlUlk.js';
-import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-CYSX4YcA.js';
-import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-CjkCFO3V.js';
-import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-BCfKrx-T.js';
-import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-CIFiKKyY.js';
-import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-lhdEA_0J.js';
-export { c as Themes } from './chunks/geoleaf-chunk-themes-lhdEA_0J.js';
-import { b as POIAddFormContract, c as POI, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-DkZGpkLP.js';
-import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-CFWTzo12.js';
-export { S as Search } from './chunks/geoleaf-search-4xgVPjmk.js';
+import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, o as domCreate, K as blockMapPropagation, ab as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ac as resolvePoiColors, ad as StyleValidator, ae as StyleValidatorRules, H as AbstractRenderer, af as SimpleTextRenderer, ag as DataNormalizer, M as StyleLoader, x as Config$3, ah as DataConverter, ai as ProfileLoader, aj as ConfigNormalizer, ak as ProfileLoader$1, al as ProfileManager, am as StorageHelper, an as TaxonomyManager, p as getLabel, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ao as getDistance, A as getActiveProfile, ap as ensureMap, aq as validateCoordinates, ar as validateNumber, C as Core, as as Helpers$1, at as Validators, au as initI18n, av as padBounds, aw as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-6omwf8Zx.js';
+import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-2vZurGZt.js';
+import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-Cm1OgBxE.js';
+import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-CJC9uEeo.js';
+import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-C5N1LGm6.js';
+import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-Dj5Od-yL.js';
+import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-CjYsRUl7.js';
+export { c as Themes } from './chunks/geoleaf-chunk-themes-CjYsRUl7.js';
+import { b as POIAddFormContract, c as POI, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-DkHyWk11.js';
+import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-BmfPuCil.js';
+export { S as Search } from './chunks/geoleaf-search-KhW_4Mlm.js';
 
 /**
  * @module globals.core
@@ -2385,8 +2385,8 @@ function _destroyThemeToggleControl() {
  */
 /**
  * GeoLeaf UI - Controls
- * Barl index des controles UI Leaflet.
- * Chaque controle est defini dans son propre module.
+ * Barrel index des contrôles UI.
+ * Chaque contrôle est défini dans son propre module.
  *
  * @module ui/controls
  */
@@ -4168,6 +4168,27 @@ const PanelBuilder = {
  * @version 2.0.0
  */
 const Config$2 = Config$3;
+function _detachScaleListeners(ctx) {
+    if (ctx._map) {
+        if (ctx._boundUpdateNumericScale) {
+            ctx._map.off("zoomend", ctx._boundUpdateNumericScale);
+            ctx._map.off("moveend", ctx._boundUpdateNumericScale);
+            ctx._boundUpdateNumericScale = null;
+        }
+        if (ctx._boundUpdateGraphicScale) {
+            ctx._map.off("zoomend", ctx._boundUpdateGraphicScale);
+            ctx._map.off("moveend", ctx._boundUpdateGraphicScale);
+            ctx._boundUpdateGraphicScale = null;
+        }
+    }
+    ctx._controlHandle?.remove();
+    ctx._controlHandle = null;
+    if (ctx._cleanups) {
+        for (const fn of ctx._cleanups)
+            fn();
+        ctx._cleanups = [];
+    }
+}
 /**
  * Scale control module
  * Displays the map scale in graphic or numeric (1:25000) mode
@@ -4383,28 +4404,7 @@ const ScaleControl = {
     destroy() {
         const context = "[GeoLeaf.UI.ScaleControl]";
         try {
-            // Remove event listeners
-            if (this._map) {
-                if (this._boundUpdateNumericScale) {
-                    this._map.off("zoomend", this._boundUpdateNumericScale);
-                    this._map.off("moveend", this._boundUpdateNumericScale);
-                    this._boundUpdateNumericScale = null;
-                }
-                if (this._boundUpdateGraphicScale) {
-                    this._map.off("zoomend", this._boundUpdateGraphicScale);
-                    this._map.off("moveend", this._boundUpdateGraphicScale);
-                    this._boundUpdateGraphicScale = null;
-                }
-            }
-            // Remove control via adapter handle
-            this._controlHandle?.remove();
-            this._controlHandle = null;
-            // Run propagation-blocker cleanups
-            if (this._cleanups) {
-                for (const fn of this._cleanups)
-                    fn();
-                this._cleanups = [];
-            }
+            _detachScaleListeners(this);
             this._scaleElement = null;
             this._zoomElement = null;
             this._scaleLineMetric = null;
@@ -4434,28 +4434,7 @@ const ScaleControl = {
     hide() {
         const context = "[GeoLeaf.UI.ScaleControl]";
         try {
-            // Remove event listeners
-            if (this._map) {
-                if (this._boundUpdateNumericScale) {
-                    this._map.off("zoomend", this._boundUpdateNumericScale);
-                    this._map.off("moveend", this._boundUpdateNumericScale);
-                    this._boundUpdateNumericScale = null;
-                }
-                if (this._boundUpdateGraphicScale) {
-                    this._map.off("zoomend", this._boundUpdateGraphicScale);
-                    this._map.off("moveend", this._boundUpdateGraphicScale);
-                    this._boundUpdateGraphicScale = null;
-                }
-            }
-            // Remove control via adapter handle
-            this._controlHandle?.remove();
-            this._controlHandle = null;
-            // Run propagation-blocker cleanups
-            if (this._cleanups) {
-                for (const fn of this._cleanups)
-                    fn();
-                this._cleanups = [];
-            }
+            _detachScaleListeners(this);
             this._scaleElement = null;
             this._zoomElement = null;
             this._scaleLineMetric = null;
@@ -4985,11 +4964,11 @@ FilterPanelShared.collectAllTags = function (items) {
 const ProximityState = {
     /** Mode proximity active ou non */
     mode: false,
-    /** Circle Leaflet current */
+    /** Current proximity circle */
     circle: null,
-    /** Marqueur Leaflet current */
+    /** Current proximity marker */
     marker: null,
-    /** Reference to the Leaflet map */
+    /** Reference to the map */
     map: null,
     /** Handler de click manuel sur the map */
     clickHandler: null,
@@ -5002,6 +4981,35 @@ const ProximityState = {
 /** Unique layer/marker IDs used by the proximity module. */
 const CIRCLE_LAYER_ID = "__gl_proximity_circle";
 const MARKER_ID = "__gl_proximity_marker";
+function _resolveNativeMarker(map) {
+    const nativeMap = map.getNativeMap?.() ?? null;
+    return nativeMap
+        ? (map._markers?.get(MARKER_ID) ?? null)
+        : null;
+}
+function _attachDragendSync(nativeMarker, wrapper) {
+    nativeMarker.on("dragend", () => {
+        const ll = nativeMarker.getLngLat();
+        const pos = { lat: ll.lat, lng: ll.lng };
+        if (ProximityState.circle && ProximityState.circle.setLatLng) {
+            ProximityState.circle.setLatLng(pos);
+        }
+        wrapper.setAttribute("data-proximity-lat", String(pos.lat));
+        wrapper.setAttribute("data-proximity-lng", String(pos.lng));
+    });
+}
+function _buildMarkerHandle(nativeMarker, latlng) {
+    return {
+        _id: MARKER_ID,
+        getLatLng() {
+            if (nativeMarker) {
+                const ll = nativeMarker.getLngLat();
+                return { lat: ll.lat, lng: ll.lng };
+            }
+            return latlng;
+        },
+    };
+}
 /**
  * Generates a GeoJSON Polygon approximating a circle.
  * @param center - { lat, lng } center of the circle
@@ -5104,33 +5112,11 @@ function createGPSMarker(latlng, map, wrapper) {
         iconSize: [20, 20],
         iconAnchor: [10, 10],
     });
-    // For dragend, we need to listen on the native marker if available
-    const nativeMap = map.getNativeMap?.() ?? null;
-    const nativeMarker = nativeMap
-        ? (map._markers?.get(MARKER_ID) ?? null)
-        : null;
+    const nativeMarker = _resolveNativeMarker(map);
     if (nativeMarker && typeof nativeMarker.on === "function") {
-        nativeMarker.on("dragend", () => {
-            const ll = nativeMarker.getLngLat();
-            const pos = { lat: ll.lat, lng: ll.lng };
-            if (ProximityState.circle && ProximityState.circle.setLatLng) {
-                ProximityState.circle.setLatLng(pos);
-            }
-            wrapper.setAttribute("data-proximity-lat", String(pos.lat));
-            wrapper.setAttribute("data-proximity-lng", String(pos.lng));
-        });
+        _attachDragendSync(nativeMarker, wrapper);
     }
-    // Store a handle for detection
-    ProximityState.marker = {
-        _id: MARKER_ID,
-        getLatLng() {
-            if (nativeMarker) {
-                const ll = nativeMarker.getLngLat();
-                return { lat: ll.lat, lng: ll.lng };
-            }
-            return latlng;
-        },
-    };
+    ProximityState.marker = _buildMarkerHandle(nativeMarker, latlng);
 }
 /**
  * Creates the manual marker (default style, draggable) and stores it in ProximityState.marker.
@@ -5147,31 +5133,11 @@ function createManualMarker(latlng, map, wrapper) {
         }
     }
     map.createMarker(MARKER_ID, latlng, { draggable: true });
-    const nativeMap = map.getNativeMap?.() ?? null;
-    const nativeMarker = nativeMap
-        ? (map._markers?.get(MARKER_ID) ?? null)
-        : null;
+    const nativeMarker = _resolveNativeMarker(map);
     if (nativeMarker && typeof nativeMarker.on === "function") {
-        nativeMarker.on("dragend", () => {
-            const ll = nativeMarker.getLngLat();
-            const pos = { lat: ll.lat, lng: ll.lng };
-            if (ProximityState.circle && ProximityState.circle.setLatLng) {
-                ProximityState.circle.setLatLng(pos);
-            }
-            wrapper.setAttribute("data-proximity-lat", String(pos.lat));
-            wrapper.setAttribute("data-proximity-lng", String(pos.lng));
-        });
+        _attachDragendSync(nativeMarker, wrapper);
     }
-    ProximityState.marker = {
-        _id: MARKER_ID,
-        getLatLng() {
-            if (nativeMarker) {
-                const ll = nativeMarker.getLngLat();
-                return { lat: ll.lat, lng: ll.lng };
-            }
-            return latlng;
-        },
-    };
+    ProximityState.marker = _buildMarkerHandle(nativeMarker, latlng);
 }
 /**
  * Removes the circle overlay and marker from the map, resets ProximityState references.
@@ -5214,7 +5180,7 @@ function removeCircleAndMarker(map) {
  * Utilisable from the panel (wrapper via container.closest) comme from the toolbar
  * (wrapper virtuel via getElementById).
  *
- * @param map        - Instance de carte Leaflet
+ * @param map        - Instance de carte MapLibre
  * @param wrapper    - Element [data-gl-filter-id="proximity"] recevant les attributes data-proximity-*
  * @param radiusKm   - Radius in kilometers
  * @param options    - Callbacks optionals (onPointPlaced)
@@ -5281,7 +5247,7 @@ function hasRecentGPS() {
  * Activates manual mode on a given DOM wrapper.
  * Utilisable from the panel comme from the toolbar.
  *
- * @param map          - Instance de carte Leaflet
+ * @param map          - Instance de carte MapLibre
  * @param wrapper      - Element [data-gl-filter-id="proximity"] recevant les attributes data-proximity-*
  * @param getRadiusKm  - Callback called au click pour lire le radius current en km
  * @param options      - Callbacks optionals (onPointPlaced)
@@ -5628,6 +5594,33 @@ Object.defineProperty(FilterPanelProximity$1, "_eventCleanups", {
 const FilterPanelProximity = FilterPanelProximity$1;
 // _g.GeoLeaf.UI.* proximity globals removed — using FilterPanelProximity.resetProximity() (module-local state)
 const FilterPanelStateReader = {};
+function _resetCategoryTagRatingControls(panelEl) {
+    panelEl.querySelectorAll(".gl-filter-tree__checkbox").forEach(function (input) {
+        input.checked = false;
+    });
+    panelEl.querySelectorAll(".gl-filter-panel__tag-badge.gl-is-selected").forEach(function (badge) {
+        badge.classList.remove("gl-is-selected");
+    });
+    panelEl.querySelectorAll("select.gl-filter-panel__control--select").forEach(function (sel) {
+        if (sel.multiple) {
+            Array.from(sel.options).forEach(function (opt) {
+                opt.selected = false;
+            });
+        }
+        else {
+            sel.value = "";
+        }
+    });
+    const ratingInput = panelEl.querySelector("[data-gl-filter-id='minRating'] input[type='range']");
+    const ratingLabel = panelEl.querySelector("[data-gl-filter-id='minRating'] .gl-filter-panel__range-value");
+    if (ratingInput) {
+        const min = ratingInput.min !== "" ? ratingInput.min : "0";
+        ratingInput.value = min;
+        if (ratingLabel) {
+            ratingLabel.textContent = String(min).replace(".", ",");
+        }
+    }
+}
 /**
  * Structure by default de the state des filtres
  * @returns {Object}
@@ -5778,36 +5771,7 @@ FilterPanelStateReader.resetControls = function (panelEl) {
     const proximityWrapper = panelEl.querySelector("[data-gl-filter-id='proximity']");
     if (proximityWrapper)
         _resetProximityControls(proximityWrapper);
-    // Checkboxes du tree-view (categories & sous-categories)
-    panelEl.querySelectorAll(".gl-filter-tree__checkbox").forEach(function (input) {
-        input.checked = false;
-    });
-    // Tags - deselect all badges
-    const tagBadges = panelEl.querySelectorAll(".gl-filter-panel__tag-badge.gl-is-selected");
-    tagBadges.forEach(function (badge) {
-        badge.classList.remove("gl-is-selected");
-    });
-    // Select classiques
-    panelEl.querySelectorAll("select.gl-filter-panel__control--select").forEach(function (sel) {
-        if (sel.multiple) {
-            Array.from(sel.options).forEach(function (opt) {
-                opt.selected = false;
-            });
-        }
-        else {
-            sel.value = "";
-        }
-    });
-    // Slider note
-    const ratingInput = panelEl.querySelector("[data-gl-filter-id='minRating'] input[type='range']");
-    const ratingLabel = panelEl.querySelector("[data-gl-filter-id='minRating'] .gl-filter-panel__range-value");
-    if (ratingInput) {
-        const min = ratingInput.min !== "" ? ratingInput.min : "0";
-        ratingInput.value = min;
-        if (ratingLabel) {
-            ratingLabel.textContent = String(min).replace(".", ",");
-        }
-    }
+    _resetCategoryTagRatingControls(panelEl);
 };
 /**
  * Reinitializes only les categories, sous-categories, tags et note.
@@ -5817,35 +5781,7 @@ FilterPanelStateReader.resetControls = function (panelEl) {
 FilterPanelStateReader.resetCategoryTagControls = function (panelEl) {
     if (!panelEl)
         return;
-    // Checkboxes tree-view categories & sous-categories
-    panelEl.querySelectorAll(".gl-filter-tree__checkbox").forEach(function (input) {
-        input.checked = false;
-    });
-    // Tags
-    panelEl.querySelectorAll(".gl-filter-panel__tag-badge.gl-is-selected").forEach(function (badge) {
-        badge.classList.remove("gl-is-selected");
-    });
-    // Select classiques
-    panelEl.querySelectorAll("select.gl-filter-panel__control--select").forEach(function (sel) {
-        if (sel.multiple) {
-            Array.from(sel.options).forEach(function (opt) {
-                opt.selected = false;
-            });
-        }
-        else {
-            sel.value = "";
-        }
-    });
-    // Slider note
-    const ratingInput = panelEl.querySelector("[data-gl-filter-id='minRating'] input[type='range']");
-    const ratingLabel = panelEl.querySelector("[data-gl-filter-id='minRating'] .gl-filter-panel__range-value");
-    if (ratingInput) {
-        const min = ratingInput.min !== "" ? ratingInput.min : "0";
-        ratingInput.value = min;
-        if (ratingLabel) {
-            ratingLabel.textContent = String(min).replace(".", ",");
-        }
-    }
+    _resetCategoryTagRatingControls(panelEl);
 };
 
 /*!
@@ -6905,6 +6841,18 @@ function setToggleIconClosed(icon) {
  *
  * @module ui/filter-panel/lazy-loader
  */
+function _resolveCheckboxKey(cb) {
+    const categoryId = cb.dataset.glFilterCategoryId;
+    const subcategoryId = cb.dataset.glFilterSubcategoryId;
+    const value = cb.value;
+    if (subcategoryId)
+        return `${categoryId}:${subcategoryId}`;
+    if (categoryId)
+        return categoryId;
+    if (value)
+        return value;
+    return undefined;
+}
 const FilterPanelLazyLoader = {
     _cache: {},
     _openAccordions: new Set(),
@@ -7194,19 +7142,7 @@ const FilterPanelLazyLoader = {
         const states = {};
         const checkboxes = element.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach((cb) => {
-            const categoryId = cb.dataset.glFilterCategoryId;
-            const subcategoryId = cb.dataset.glFilterSubcategoryId;
-            const value = cb.value;
-            let key;
-            if (subcategoryId) {
-                key = `${categoryId}:${subcategoryId}`;
-            }
-            else if (categoryId) {
-                key = categoryId;
-            }
-            else if (value) {
-                key = value;
-            }
+            const key = _resolveCheckboxKey(cb);
             if (key) {
                 states[key] = cb.checked;
             }
@@ -7223,19 +7159,7 @@ const FilterPanelLazyLoader = {
         const checkboxes = element.querySelectorAll('input[type="checkbox"]');
         let restoredCount = 0;
         checkboxes.forEach((cb) => {
-            const categoryId = cb.dataset.glFilterCategoryId;
-            const subcategoryId = cb.dataset.glFilterSubcategoryId;
-            const value = cb.value;
-            let key;
-            if (subcategoryId) {
-                key = `${categoryId}:${subcategoryId}`;
-            }
-            else if (categoryId) {
-                key = categoryId;
-            }
-            else if (value) {
-                key = value;
-            }
+            const key = _resolveCheckboxKey(cb);
             if (key && savedStates[key] !== undefined) {
                 cb.checked = savedStates[key];
                 restoredCount++;
@@ -11372,7 +11296,7 @@ if (_g$5.GeoLeaf._UITheme) {
 //   API DELEGATION - CONTROLS
 // ========================================
 if (_g$5.GeoLeaf._UIControls) {
-    // Délégation des contrôles Leaflet
+    // Délégation des contrôles UI
     _g$5.GeoLeaf.UI.initFullscreenControl = _g$5.GeoLeaf._UIControls.initFullscreenControl;
     _g$5.GeoLeaf.UI.initGeolocationControl = _g$5.GeoLeaf._UIControls.initGeolocationControl;
     _g$5.GeoLeaf.UI.initPoiAddControl = _g$5.GeoLeaf._UIControls.initPoiAddControl;
@@ -11618,7 +11542,7 @@ function _initMapControls(options) {
     _tryControl(_g$5.GeoLeaf.UI.initGeolocationControl, "[UI.Orchestrator] Erreur geolocation control:", options.map, options.config);
     _tryControl(_g$5.GeoLeaf.UI.initPoiAddControl, "[UI.Orchestrator] Erreur POI add control:", options.map, options.config);
     _tryControl(_g$5.GeoLeaf.UI.initScaleControl, "[UI.Orchestrator] Erreur scale control:", options.map);
-    // Theme toggle Leaflet control (opt-in via ui.showThemeToggle)
+    // Theme toggle control (opt-in via ui.showThemeToggle)
     const uiCfg = _g$5.GeoLeaf.Config?.get?.("ui") ?? {};
     if (uiCfg.showThemeToggle) {
         _tryControl(_g$5.GeoLeaf.UI.initThemeToggleControl, "[UI.Orchestrator] Erreur theme toggle control:", options.map);
@@ -11651,7 +11575,7 @@ function _initFilterState() {
 /**
  * Point d'entrée main pour l'initialization UI
  * @param {Object} options - Options d'initialization
- * @param {HTMLElement} options.map - Instance carte Leaflet
+ * @param {HTMLElement} options.map - Instance de carte MapLibre
  * @param {HTMLElement} options.mapContainer - Conteneur DOM de the map
  * @param {HTMLElement} options.filterContainer - Conteneur des filtres
  * @param {string} options.buttonSelector - Sélecteur du button thème
@@ -12803,7 +12727,7 @@ function _debounce(fn, delay) {
 /**
  * Capture the current map state (centre, zoom, hidden layers, active filter).
  *
- * @param map - Leaflet map instance.
+ * @param map - Map instance.
  * @param config - Active permalink configuration.
  * @returns Current serializable state.
  */
@@ -12977,7 +12901,7 @@ function _captureState(map, config) {
  * Without a theme change, layers and filter are deferred to the first `geoleaf:theme:applied`.
  *
  * @param state - State to restore.
- * @param map - Leaflet map instance.
+ * @param map - Map instance.
  */
 function applyState(state, map) {
     // Immediate: restore map view
@@ -13325,7 +13249,7 @@ function applyState(state, map) {
  * Uses `history.replaceState()` only — no browser history entry is created.
  * The write is debounced by {@link SYNC_DEBOUNCE_MS} ms.
  *
- * @param map - Leaflet map instance.
+ * @param map - Map instance.
  * @param config - Active permalink configuration.
  */
 function startSync(map, config) {
@@ -16433,45 +16357,45 @@ async function loadModule(moduleName) {
     switch (moduleName) {
         // POI convenience: core first, then renderers + extras in parallel
         case "poi":
-            await import('./chunks/geoleaf-poi-core-C-Obu-3i.js');
+            await import('./chunks/geoleaf-poi-core-ZHWDSsUv.js');
             await Promise.all([
-                import('./chunks/geoleaf-poi-renderers-GA7ScLXL.js'),
-                import('./chunks/geoleaf-poi-extras-C-Obu-3i.js'),
+                import('./chunks/geoleaf-poi-renderers-CvGryUdq.js'),
+                import('./chunks/geoleaf-poi-extras-ZHWDSsUv.js'),
             ]);
             break;
         // Granular POI sub-chunks
         case "poiCore":
-            await import('./chunks/geoleaf-poi-core-C-Obu-3i.js');
+            await import('./chunks/geoleaf-poi-core-ZHWDSsUv.js');
             break;
         case "poiRenderers":
-            await import('./chunks/geoleaf-poi-renderers-GA7ScLXL.js');
+            await import('./chunks/geoleaf-poi-renderers-CvGryUdq.js');
             break;
         case "poiExtras":
-            await import('./chunks/geoleaf-poi-extras-C-Obu-3i.js');
+            await import('./chunks/geoleaf-poi-extras-ZHWDSsUv.js');
             break;
         case "basemapSelector":
-            await import('./chunks/geoleaf-basemap-selector-GA7ScLXL.js');
+            await import('./chunks/geoleaf-basemap-selector-CvGryUdq.js');
             break;
         case "route":
-            await import('./chunks/geoleaf-route-GA7ScLXL.js');
+            await import('./chunks/geoleaf-route-CvGryUdq.js');
             break;
         case "layerManager":
-            await import('./chunks/geoleaf-layer-manager-Dj9bxNID.js');
+            await import('./chunks/geoleaf-layer-manager-D2dVcuDV.js');
             break;
         case "legend":
-            await import('./chunks/geoleaf-legend-B5B1_6_w.js');
+            await import('./chunks/geoleaf-legend-GEMuw-Yb.js');
             break;
         case "labels":
-            await import('./chunks/geoleaf-labels-nQO1-Dxn.js');
+            await import('./chunks/geoleaf-labels-CSfRgbN-.js');
             break;
         case "themes":
-            await import('./chunks/geoleaf-themes-D-gp9aO0.js');
+            await import('./chunks/geoleaf-themes-C90ViION.js');
             break;
         case "table":
-            await import('./chunks/geoleaf-table-B31ObUEv.js');
+            await import('./chunks/geoleaf-table-BaoQYXFS.js');
             break;
         case "search":
-            await import('./chunks/geoleaf-search-4xgVPjmk.js').then(function (n) { return n.s; });
+            await import('./chunks/geoleaf-search-KhW_4Mlm.js').then(function (n) { return n.s; });
             break;
         default: {
             // TypeScript exhaustiveness guard — `moduleName` is `never` here for
@@ -16496,16 +16420,16 @@ async function loadModule(moduleName) {
  */
 async function loadAllSecondaryModules() {
     // poi-core must be ready before poi-renderers and poi-extras
-    await import('./chunks/geoleaf-poi-core-C-Obu-3i.js');
+    await import('./chunks/geoleaf-poi-core-ZHWDSsUv.js');
     await Promise.all([
-        import('./chunks/geoleaf-poi-renderers-GA7ScLXL.js'),
-        import('./chunks/geoleaf-poi-extras-C-Obu-3i.js'),
-        import('./chunks/geoleaf-route-GA7ScLXL.js'),
-        import('./chunks/geoleaf-layer-manager-Dj9bxNID.js'),
-        import('./chunks/geoleaf-legend-B5B1_6_w.js'),
-        import('./chunks/geoleaf-labels-nQO1-Dxn.js'),
-        import('./chunks/geoleaf-themes-D-gp9aO0.js'),
-        import('./chunks/geoleaf-table-B31ObUEv.js'),
+        import('./chunks/geoleaf-poi-renderers-CvGryUdq.js'),
+        import('./chunks/geoleaf-poi-extras-ZHWDSsUv.js'),
+        import('./chunks/geoleaf-route-CvGryUdq.js'),
+        import('./chunks/geoleaf-layer-manager-D2dVcuDV.js'),
+        import('./chunks/geoleaf-legend-GEMuw-Yb.js'),
+        import('./chunks/geoleaf-labels-CSfRgbN-.js'),
+        import('./chunks/geoleaf-themes-C90ViION.js'),
+        import('./chunks/geoleaf-table-BaoQYXFS.js'),
     ]);
 }
 
