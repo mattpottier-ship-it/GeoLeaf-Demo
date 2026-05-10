@@ -38,7 +38,8 @@
     "disableClusteringAtZoom": 13
   },
   "poiAddConfig": {
-    "enabled": false
+    "enabled": true,
+    "defaultPosition": "geolocation"
   },
   "bundleFile": "profile-bundle.json"
 }

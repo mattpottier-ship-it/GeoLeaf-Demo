@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "france-urbanisme-btp",
-  "_generatedAt": 1777147580555,
+  "_generatedAt": 1778422793971,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/france-urbanisme-btp/icons/sprite_urbanisme.svg",
@@ -137,6 +137,7 @@
         "id": "btp_3d",
         "type": "primary",
         "label": "BTP Île-de-France",
+        "icon": "🏗️",
         "description": "Bâtiments 3D BD TOPO, voirie et chantiers actifs",
         "layers": [
           {

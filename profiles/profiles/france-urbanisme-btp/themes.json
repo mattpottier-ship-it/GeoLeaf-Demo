@@ -5,6 +5,7 @@
             "id": "btp_3d",
             "type": "primary",
             "label": "BTP Île-de-France",
+            "icon": "🏗️",
             "description": "Bâtiments 3D BD TOPO, voirie et chantiers actifs",
             "layers": [
                 {

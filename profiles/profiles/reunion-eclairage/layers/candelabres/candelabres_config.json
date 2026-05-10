@@ -3,6 +3,9 @@
     "label": "Candélabres",
     "zIndex": 95,
     "geometry": "point",
+    "geometryType": "point",
+    "enableEdition": true,
+    "enableEditionFull": true,
     "interactiveShape": true,
     "showIconsOnMap": true,
     "data": {
@@ -38,7 +41,103 @@
             { "type": "text", "label": "Secteur", "field": "properties.secteur" },
             { "type": "text", "label": "Altitude (m)", "field": "properties.altitude" },
             { "type": "text", "label": "Puissance (W)", "field": "properties.puissance_w" },
-            { "type": "text", "label": "Statut", "field": "properties.statut" }
+            { "type": "text", "label": "Statut", "field": "properties.statut" },
+            { "type": "text", "label": "Description", "field": "attributes.short_desc" }
         ]
+    },
+    "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+            {
+                "type": "image",
+                "label": "Photo",
+                "field": "attributes.photo",
+                "variant": "hero",
+                "accordion": false,
+                "defaultOpen": false
+            },
+            {
+                "type": "badge",
+                "label": "Statut",
+                "field": "properties.statut",
+                "style": "category",
+                "accordion": false,
+                "defaultOpen": false
+            },
+            {
+                "type": "text",
+                "label": "Identifiant",
+                "field": "properties.id",
+                "style": "title",
+                "accordion": false,
+                "defaultOpen": false
+            },
+            {
+                "type": "text",
+                "label": "Description",
+                "field": "attributes.short_desc",
+                "variant": "multiline",
+                "accordion": true,
+                "defaultOpen": true
+            },
+            {
+                "type": "list",
+                "label": "Caractéristiques techniques",
+                "field": "attributes.informations",
+                "listStyle": "bullet",
+                "accordion": true,
+                "defaultOpen": false
+            },
+            {
+                "type": "list",
+                "label": "Observations",
+                "field": "attributes.highlights",
+                "listStyle": "bullet",
+                "accordion": true,
+                "defaultOpen": false
+            },
+            {
+                "type": "link",
+                "label": "Documentation SPL Énergie Réunion",
+                "field": "attributes.link_official",
+                "iconId": "link_external",
+                "accordion": false,
+                "defaultOpen": false
+            },
+            {
+                "type": "tags",
+                "label": "Tags",
+                "field": "attributes.tags",
+                "accordion": false,
+                "defaultOpen": false
+            }
+        ]
+    },
+    "search": {
+        "enabled": true,
+        "indexingFields": [
+            "properties.id",
+            "properties.secteur",
+            "properties.commune",
+            "properties.statut",
+            "attributes.tags"
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.id",          "label": "ID",        "sortable": true, "width": "15%" },
+            { "field": "properties.commune",     "label": "Commune",   "sortable": true, "width": "25%" },
+            { "field": "properties.secteur",     "label": "Secteur",   "sortable": true, "width": "15%" },
+            { "field": "properties.type_lampe",  "label": "Type",      "sortable": true, "width": "15%" },
+            { "field": "properties.statut",      "label": "Statut",    "sortable": true, "width": "15%" },
+            { "field": "properties.puissance_w", "label": "Puissance", "sortable": true, "width": "15%" }
+        ],
+        "defaultSort": { "field": "properties.id", "order": "asc" }
+    },
+    "clustering": {
+        "enabled": true,
+        "maxClusterRadius": 60,
+        "disableClusteringAtZoom": 13
     }
 }

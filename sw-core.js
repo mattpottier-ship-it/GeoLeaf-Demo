@@ -21,7 +21,7 @@
  * For full offline support (tiles, sync, IndexedDB),
  * use the Storage plugin which provides sw.js (full version).
  *
- * @version 2.1.5
+ * @version 2.1.7
  * @see sw.js (full version in the Storage plugin)
  */
 
@@ -32,7 +32,7 @@
 // In production, all SW console.log calls are removed at build time via terser
 const _SW_DEBUG = typeof true !== "undefined" ? true : false;
 
-const CACHE_VERSION = "geoleaf-v2.1.5";
+const CACHE_VERSION = "geoleaf-v2.1.7";
 const CACHE_STATIC = `${CACHE_VERSION}-static`;
 const CACHE_PROFILE_PREFIX = `${CACHE_VERSION}-profile-`;
 const CACHE_TILES = `${CACHE_VERSION}-tiles`;
@@ -179,7 +179,7 @@ async function cacheFirstStrategy(request, cacheName) {
         fetch(request)
             .then((networkResponse) => {
                 if (networkResponse && networkResponse.status === 200) {
-                    cache.put(request, networkResponse.clone());
+                    cache.put(request, networkResponse.clone()).catch(() => {});
                 }
             })
             .catch(() => {});
@@ -189,7 +189,7 @@ async function cacheFirstStrategy(request, cacheName) {
 
     const networkResponse = await fetch(request);
     if (networkResponse && networkResponse.status === 200) {
-        cache.put(request, networkResponse.clone());
+        cache.put(request, networkResponse.clone()).catch(() => {});
     }
     return networkResponse;
 }
@@ -204,7 +204,7 @@ async function networkFirstStrategy(request, cacheName) {
     try {
         const networkResponse = await fetch(request);
         if (networkResponse && networkResponse.status === 200) {
-            cache.put(request, networkResponse.clone());
+            cache.put(request, networkResponse.clone()).catch(() => {});
         }
         return networkResponse;
     } catch (error) {
@@ -230,7 +230,7 @@ async function tileSimpleStrategy(request) {
     try {
         const networkResponse = await fetch(request);
         if (networkResponse && networkResponse.status === 200) {
-            cache.put(request, networkResponse.clone());
+            cache.put(request, networkResponse.clone()).catch(() => {});
         }
         return networkResponse;
     } catch (_error) {

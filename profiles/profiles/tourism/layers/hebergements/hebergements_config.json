@@ -3,6 +3,9 @@
     "label": "Hébergements",
     "zIndex": 96,
     "geometry": "point",
+    "geometryType": "point",
+    "enableEdition": true,
+    "enableEditionFull": true,
     "interactiveShape": true,
     "showIconsOnMap": true,
     "data": {
