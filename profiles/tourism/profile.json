@@ -3,6 +3,9 @@
   "label": "Profil tourisme",
   "description": "Profil optimisé pour les POI touristiques (hébergements, activités, nature…). Version 1.3.0 avec structure modulaire complète.",
   "version": "1.3.0",
+  "mapOptions": {
+    "preserveDrawingBuffer": true
+  },
   "map": {
     "bounds": [
       [
