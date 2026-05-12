@@ -1,14 +1,14 @@
-import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, p as getLabel, ab as registerDict, o as domCreate, K as blockMapPropagation, ac as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ad as resolvePoiColors, ae as StyleValidator, af as StyleValidatorRules, H as AbstractRenderer, ag as SimpleTextRenderer, ah as DataNormalizer, M as StyleLoader, x as Config$3, ai as DataConverter, aj as ProfileLoader, ak as ConfigNormalizer, al as ProfileLoader$1, am as ProfileManager, an as StorageHelper, ao as TaxonomyManager, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ap as getDistance, A as getActiveProfile, aq as ensureMap, ar as validateCoordinates, as as validateNumber, C as Core, at as Helpers$1, au as Validators, av as initI18n, aw as padBounds, ax as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-CrTxiE0o.js';
-import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-RFtchQr2.js';
-import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-CjIPmU1R.js';
-import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-SF6JUIVF.js';
-import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-CP85U24h.js';
-import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-Bl8pZzO-.js';
-import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-CogamjC4.js';
-export { c as Themes } from './chunks/geoleaf-chunk-themes-CogamjC4.js';
-import { b as POI, c as POIAddFormContract, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-C7l6cKn-.js';
-import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-qzqmtbw7.js';
-export { S as Search } from './chunks/geoleaf-search-DW_76Z72.js';
+import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, p as getLabel, ab as registerDict, o as domCreate, K as blockMapPropagation, ac as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ad as resolvePoiColors, ae as StyleValidator, af as StyleValidatorRules, H as AbstractRenderer, ag as SimpleTextRenderer, ah as DataNormalizer, M as StyleLoader, x as Config$3, ai as DataConverter, aj as ProfileLoader, ak as ConfigNormalizer, al as ProfileLoader$1, am as ProfileManager, an as StorageHelper, ao as TaxonomyManager, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ap as getDistance, A as getActiveProfile, aq as ensureMap, ar as validateCoordinates, as as validateNumber, C as Core, at as Helpers$1, au as Validators, av as initI18n, aw as padBounds, ax as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-B0_WoP8o.js';
+import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-D2hDk-23.js';
+import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-CTMFX9Ro.js';
+import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-NB-nOyq3.js';
+import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-BaNK15Zi.js';
+import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-B7IiaczI.js';
+import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-uAINdndZ.js';
+export { c as Themes } from './chunks/geoleaf-chunk-themes-uAINdndZ.js';
+import { b as POI, c as POIAddFormContract, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-FqfrA0V3.js';
+import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-5yxJ1ZuM.js';
+export { S as Search } from './chunks/geoleaf-search-DEAo6acR.js';
 
 /**
  * @module globals.core
@@ -8196,6 +8196,9 @@ function _appendRegistryIcons(scroll) {
         btn.setAttribute("aria-expanded", "false");
         if (icon.action)
             btn.setAttribute("data-gl-toolbar-action", icon.action);
+        // Hide in pill on desktop when the module also exposes a desktopTabButton
+        if (mod.ui.desktopTabButton)
+            btn.setAttribute("data-gl-desktop-slot", "");
         // @security Route module-provided SVG through sanitizer to strip scripts/handlers
         DOMSecurity.setSafeHTML(btn, icon.icon, [
             "svg",
@@ -9135,7 +9138,7 @@ const _SVG_MOON = "M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z";
 function buildThemeToggleBtn(variant) {
     const btn = document.createElement("button");
     btn.type = "button";
-    btn.className = "gl-rp-theme-toggle";
+    btn.className = "gl-rp-tab-btn gl-rp-theme-toggle";
     btn.dataset.variant = variant;
     const opts = { stroke: "currentColor", strokeWidth: "2", fill: "none" };
     const svgSun = DOMSecurity.createSVGIcon(18, 18, _SVG_SUN, opts);
@@ -9171,6 +9174,138 @@ function appendThemeToggleToTabs(tabs) {
     const btn = buildThemeToggleBtn("desktop");
     tabs.appendChild(separator);
     tabs.appendChild(btn);
+}
+
+/*!
+ * GeoLeaf Core — Share / Desktop button helper
+ * © 2026 Mattieu Pottier — MIT License
+ * https://geoleaf.dev
+ */
+/**
+ * @module share/share-button-desktop
+ *
+ * @description
+ * Builds and inserts the "Share" icon button at the bottom of the desktop
+ * tab strip, immediately above the theme toggle. Mirrors the pattern used by
+ * {@link desktop-panel-theme.appendThemeToggleToTabs}.
+ *
+ * Visibility is controlled by `ui.showShareButton` (default `true`). The
+ * button dispatches `geoleaf:toolbar:action` with `action: "share"` so the
+ * same handler used by the mobile pill ({@link share-api.attachShareListener})
+ * reacts.
+ */
+const _SVG_SHARE = "M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v14";
+/**
+ * Builds the desktop share button. Same dimensions / classes as the theme
+ * toggle (`.gl-rp-theme-toggle` → reused via `.gl-rp-share-btn` mirror).
+ */
+function buildShareButton() {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "gl-rp-tab-btn gl-rp-share-btn";
+    btn.setAttribute("data-gl-toolbar-action", "share");
+    const opts = { stroke: "currentColor", strokeWidth: "2", fill: "none" };
+    const svg = DOMSecurity.createSVGIcon(18, 18, _SVG_SHARE, opts);
+    btn.appendChild(svg);
+    const label = getLabel("share.toolbar.button");
+    btn.setAttribute("aria-label", label);
+    btn.title = label;
+    btn.addEventListener("click", () => {
+        document.dispatchEvent(new CustomEvent("geoleaf:toolbar:action", {
+            detail: { action: "share", element: btn },
+            bubbles: false,
+        }));
+    });
+    return btn;
+}
+/**
+ * Inserts the share button at the bottom of the tab strip, above the
+ * existing theme toggle. Idempotent.
+ *
+ * Suppressed when `ui.showShareButton === false` in the active profile.
+ */
+function appendShareButtonToTabs(tabs) {
+    if (tabs.querySelector(".gl-rp-share-btn"))
+        return;
+    // Resolve ui.showShareButton — default true when absent / not boolean.
+    const uiCfg = Config$3?.get?.("ui");
+    if (uiCfg && uiCfg.showShareButton === false)
+        return;
+    const btn = buildShareButton();
+    // Insert just before the theme toggle so the bottom stack reads:
+    //   …tabs… │ separator │ share │ theme-toggle
+    const themeToggle = tabs.querySelector(".gl-rp-theme-toggle");
+    if (themeToggle) {
+        tabs.insertBefore(btn, themeToggle);
+    }
+    else {
+        tabs.appendChild(btn);
+    }
+}
+
+/**
+ * desktop-panel-registry.ts
+ *
+ * Injects registry-declared `desktopTabButton` slots into the desktop tab
+ * strip. Extracted from desktop-panel.ts to keep it within the 700-line limit.
+ */
+const _SVG_ALLOWED = ["svg", "path", "circle", "rect", "line", "polyline", "polygon", "g", "defs", "use"];
+/**
+ * Iterates `registry.getAll()`, applies profileKey + requiresPlugin guards,
+ * and inserts a `.gl-rp-registry-tab-btn` for each module that declares
+ * `desktopTabButton`. Buttons are inserted before `.gl-rp-theme-toggle` so
+ * the bottom stack reads: separator → [registry buttons] → share → theme.
+ * Idempotent — skips modules already injected.
+ */
+function appendRegistryTabButtons(tabs) {
+    const registry = globalThis.GeoLeaf?.registry;
+    if (!registry)
+        return;
+    const themeToggle = tabs.querySelector(".gl-rp-theme-toggle");
+    for (const mod of registry.getAll()) {
+        const btnDef = mod.ui?.desktopTabButton;
+        if (!btnDef)
+            continue;
+        // Idempotent
+        if (tabs.querySelector(`[data-gl-desktop-tab="${mod.id}"]`))
+            continue;
+        // Guard 1 — profileKey
+        if (btnDef.profileKey) {
+            const cfg = globalThis.GeoLeaf?.Config;
+            const visible = cfg?.get?.(btnDef.profileKey, btnDef.defaultVisible ?? true);
+            if (visible === false)
+                continue;
+        }
+        // Guard 2 — requiresPlugin
+        if (btnDef.requiresPlugin) {
+            const pluginReg = globalThis.GeoLeaf?.plugins;
+            if (!pluginReg?.isLoaded?.(btnDef.requiresPlugin))
+                continue;
+        }
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "gl-rp-tab-btn gl-rp-registry-tab-btn";
+        btn.setAttribute("data-gl-desktop-tab", mod.id);
+        const label = getLabel(btnDef.labelKey);
+        btn.setAttribute("aria-label", label);
+        btn.title = label;
+        if (btnDef.action)
+            btn.setAttribute("data-gl-toolbar-action", btnDef.action);
+        btn.addEventListener("click", () => {
+            document.dispatchEvent(new CustomEvent("geoleaf:toolbar:action", {
+                detail: { action: btnDef.action ?? mod.id, element: btn },
+                bubbles: false,
+            }));
+        });
+        // @security Route module-provided SVG through sanitizer
+        DOMSecurity.setSafeHTML(btn, btnDef.icon, _SVG_ALLOWED);
+        if (themeToggle) {
+            tabs.insertBefore(btn, themeToggle);
+        }
+        else {
+            tabs.appendChild(btn);
+        }
+    }
 }
 
 /**
@@ -9278,6 +9413,10 @@ function buildTabsDom(panel, titles, show) {
     panel.appendChild(tabs);
     // Inject theme toggle at bottom of tab strip (above credential button if present)
     appendThemeToggleToTabs(tabs);
+    // Inject registry-declared desktop buttons (e.g. print) — above share
+    appendRegistryTabButtons(tabs);
+    // Inject share button — sits between registry buttons and the theme toggle.
+    appendShareButtonToTabs(tabs);
 }
 function buildContentDom(panel) {
     const content = document.createElement("div");
@@ -9630,6 +9769,345 @@ function destroyDesktopPanel() {
     _mobileThemeToggle = null;
 }
 
+/*!
+ * GeoLeaf Core — Share / Build link
+ * © 2026 Mattieu Pottier — MIT License
+ * https://geoleaf.dev
+ */
+/**
+ * @module share/share-link
+ *
+ * @description
+ * Resolves the current shareable URL.
+ *
+ * The Permalink module keeps `window.location` in sync with the live map state
+ * (centre, zoom, visible/hidden layers, filters, theme) via `history.replaceState`
+ * on every `moveend`, `geoleaf:geojson:visibility-changed`, `geoleaf:filters:applied`
+ * and `geoleaf:theme:applied` event. The current `window.location.href` is therefore
+ * the canonical "share this view" URL — no extra state capture is required.
+ *
+ * @see permalink-manager.startSync
+ */
+/**
+ * Returns the current shareable URL.
+ *
+ * Picks `window.location.href` when available (always populated by the Permalink
+ * sync). Falls back to an empty string in non-browser environments (SSR / tests).
+ *
+ * @returns Absolute URL string, or `""` if `window` is unavailable.
+ */
+function buildShareUrl() {
+    if (typeof window === "undefined" || !window.location)
+        return "";
+    return window.location.href;
+}
+
+/*!
+ * GeoLeaf Core — Share / QR code (lazy)
+ * © 2026 Mattieu Pottier — MIT License
+ * https://geoleaf.dev
+ */
+let _qrcodeFactory = null;
+let _loaderPromise = null;
+async function _loadQrcode() {
+    if (_qrcodeFactory)
+        return _qrcodeFactory;
+    if (!_loaderPromise) {
+        _loaderPromise = import('./chunks/geoleaf-qrcode-BygbOE_f.js').then(function (n) { return n.q; }).then((mod) => {
+            // qrcode-generator is CommonJS — Rollup CJS interop exposes the
+            // factory under `.default`. Fall back to the namespace itself for
+            // bundlers that already strip the CJS wrapper.
+            const factory = (mod.default ?? mod);
+            _qrcodeFactory = factory;
+            return factory;
+        });
+    }
+    return _loaderPromise;
+}
+/**
+ * Generates an inline SVG string encoding the given URL.
+ *
+ * On first call, lazy-loads `qrcode-generator` (~4 KB chunk). The QR uses
+ * type-number 0 (auto) and error-correction level "M" — a balanced choice
+ * for URLs up to ~360 chars while staying scannable at small sizes.
+ *
+ * @param url - URL to encode. Caller is responsible for length checks.
+ * @returns SVG markup, safe to inject via {@link DOMSecurity.setSafeHTML}.
+ */
+async function generateQrSvg(url) {
+    const factory = await _loadQrcode();
+    const qr = factory(0, "M");
+    qr.addData(url);
+    qr.make();
+    return qr.createSvgTag({ scalable: true, margin: 1 });
+}
+
+/*!
+ * GeoLeaf Core — Share / Modal
+ * © 2026 Mattieu Pottier — MIT License
+ * https://geoleaf.dev
+ */
+/**
+ * @module share/share-modal
+ *
+ * @description
+ * Lightweight modal that exposes the current shareable URL and, on demand,
+ * a QR code. The QR generator chunk is only fetched the first time the user
+ * clicks "Afficher le QR" — see {@link share-qr}.
+ *
+ * Accessibility: dialog role + aria-labelledby, focus trap, ESC to close.
+ */
+const MODAL_ID = "gl-share-modal";
+const QR_ALLOWED_TAGS = ["svg", "path", "rect", "g", "defs"];
+let _activeModal = null;
+let _previousFocus = null;
+let _onKeydown = null;
+function _createOverlay() {
+    const overlay = document.createElement("div");
+    overlay.className = "gl-share-modal__overlay";
+    overlay.id = MODAL_ID;
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-labelledby", `${MODAL_ID}-title`);
+    return overlay;
+}
+function _createHeader() {
+    const header = document.createElement("div");
+    header.className = "gl-share-modal__header";
+    const title = document.createElement("h2");
+    title.className = "gl-share-modal__title";
+    title.id = `${MODAL_ID}-title`;
+    title.textContent = getLabel("share.modal.title");
+    const closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.className = "gl-share-modal__close";
+    closeBtn.setAttribute("aria-label", getLabel("share.modal.close"));
+    closeBtn.textContent = "×"; // ×
+    closeBtn.addEventListener("click", closeShareModal);
+    header.appendChild(title);
+    header.appendChild(closeBtn);
+    return header;
+}
+function _createLinkRow(url) {
+    const row = document.createElement("div");
+    row.className = "gl-share-modal__link-row";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "gl-share-modal__link";
+    input.readOnly = true;
+    input.value = url;
+    input.setAttribute("aria-label", getLabel("share.modal.url"));
+    input.addEventListener("focus", () => input.select());
+    const copyBtn = document.createElement("button");
+    copyBtn.type = "button";
+    copyBtn.className = "gl-share-modal__copy";
+    copyBtn.textContent = getLabel("share.modal.copy");
+    copyBtn.addEventListener("click", () => _handleCopy(input, copyBtn));
+    row.appendChild(input);
+    row.appendChild(copyBtn);
+    return { row, input };
+}
+async function _handleCopy(input, btn) {
+    const url = input.value;
+    let ok = false;
+    try {
+        if (navigator.clipboard?.writeText) {
+            await navigator.clipboard.writeText(url);
+            ok = true;
+        }
+    }
+    catch {
+        // Fall through to legacy fallback below
+    }
+    if (!ok) {
+        // Legacy fallback for older browsers / non-secure contexts
+        input.focus();
+        input.select();
+        try {
+            ok = document.execCommand("copy");
+        }
+        catch {
+            ok = false;
+        }
+    }
+    const restoreLabel = btn.textContent;
+    btn.textContent = ok ? getLabel("share.modal.copied") : getLabel("share.modal.copy_failed");
+    btn.classList.toggle("gl-is-success", ok);
+    btn.classList.toggle("gl-is-error", !ok);
+    setTimeout(() => {
+        btn.textContent = restoreLabel;
+        btn.classList.remove("gl-is-success", "gl-is-error");
+    }, 2000);
+}
+function _createQrSection(url) {
+    const section = document.createElement("div");
+    section.className = "gl-share-modal__qr";
+    const showBtn = document.createElement("button");
+    showBtn.type = "button";
+    showBtn.className = "gl-share-modal__qr-btn";
+    showBtn.textContent = getLabel("share.modal.show_qr");
+    const container = document.createElement("div");
+    container.className = "gl-share-modal__qr-container";
+    container.setAttribute("aria-live", "polite");
+    showBtn.addEventListener("click", async () => {
+        showBtn.disabled = true;
+        showBtn.textContent = getLabel("share.modal.qr_loading");
+        try {
+            const svg = await generateQrSvg(url);
+            DOMSecurity.setSafeHTML(container, svg, QR_ALLOWED_TAGS);
+            showBtn.style.display = "none";
+        }
+        catch {
+            showBtn.disabled = false;
+            showBtn.textContent = getLabel("share.modal.qr_failed");
+        }
+    });
+    section.appendChild(showBtn);
+    section.appendChild(container);
+    return section;
+}
+function _attachKeyboard(overlay) {
+    _onKeydown = (e) => {
+        if (e.key === "Escape") {
+            e.preventDefault();
+            closeShareModal();
+            return;
+        }
+        if (e.key !== "Tab")
+            return;
+        // Focus trap — cycle within focusable descendants
+        const focusable = overlay.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (focusable.length === 0)
+            return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        }
+        else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    };
+    document.addEventListener("keydown", _onKeydown);
+}
+/**
+ * Opens the share modal. Idempotent — calling it while the modal is open
+ * is a no-op.
+ */
+function openShareModal() {
+    if (_activeModal || typeof document === "undefined")
+        return;
+    _previousFocus = document.activeElement;
+    const url = buildShareUrl();
+    const overlay = _createOverlay();
+    const panel = document.createElement("div");
+    panel.className = "gl-share-modal__panel";
+    overlay.appendChild(panel);
+    panel.appendChild(_createHeader());
+    const { row, input } = _createLinkRow(url);
+    panel.appendChild(row);
+    panel.appendChild(_createQrSection(url));
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay)
+            closeShareModal();
+    });
+    document.body.appendChild(overlay);
+    _activeModal = overlay;
+    _attachKeyboard(overlay);
+    // Focus the URL input first so power users can copy immediately with Ctrl+C
+    input.focus();
+    input.select();
+}
+/**
+ * Closes the share modal if open. Restores focus to the element that
+ * triggered the open.
+ */
+function closeShareModal() {
+    if (!_activeModal)
+        return;
+    if (_onKeydown) {
+        document.removeEventListener("keydown", _onKeydown);
+        _onKeydown = null;
+    }
+    _activeModal.remove();
+    _activeModal = null;
+    if (_previousFocus && typeof _previousFocus.focus === "function") {
+        _previousFocus.focus();
+    }
+    _previousFocus = null;
+}
+/** Returns whether the share modal is currently open. @internal */
+function isShareModalOpen() {
+    return _activeModal !== null;
+}
+
+/*!
+ * GeoLeaf Core — Share (internal facade)
+ * © 2026 Mattieu Pottier — MIT License
+ * https://geoleaf.dev
+ */
+/**
+ * @module share/share-api
+ *
+ * @description
+ * Internal facade for the Share subsystem. Wires the toolbar-action listener
+ * and exposes the public methods consumed by `GeoLeaf.Share.*`.
+ *
+ *   - `openShareDialog()` — opens the modal (URL + on-demand QR).
+ *   - `closeShareDialog()` — closes the modal if open.
+ *   - `getShareUrl()` — returns the current live URL (no DOM side-effect).
+ *
+ * @see share-modal — modal implementation
+ * @see share-link — URL resolution
+ * @see share-qr — lazy QR generator
+ */
+let _listenerAttached = false;
+function _onToolbarAction(e) {
+    const detail = e.detail;
+    if (detail?.action === "share")
+        openShareModal();
+}
+/**
+ * Attach the global toolbar-action listener (idempotent).
+ * Called by ShareModule.init().
+ */
+function attachShareListener() {
+    if (_listenerAttached || typeof document === "undefined")
+        return;
+    document.addEventListener("geoleaf:toolbar:action", _onToolbarAction);
+    _listenerAttached = true;
+}
+/** Detach the listener — used by ShareModule.destroy(). */
+function detachShareListener() {
+    if (!_listenerAttached || typeof document === "undefined")
+        return;
+    document.removeEventListener("geoleaf:toolbar:action", _onToolbarAction);
+    _listenerAttached = false;
+}
+/**
+ * Public Share facade — bound to `GeoLeaf.Share`.
+ */
+const Share = {
+    /** Open the share modal (URL + on-demand QR). */
+    openShareDialog() {
+        openShareModal();
+    },
+    /** Close the share modal if open. */
+    closeShareDialog() {
+        closeShareModal();
+    },
+    /** Returns whether the share modal is currently open. */
+    isOpen() {
+        return isShareModalOpen();
+    },
+    /** Returns the current shareable URL (no DOM side-effect). */
+    getShareUrl() {
+        return buildShareUrl();
+    },
+};
+
 /**
  * @module globals.ui
  *
@@ -9730,6 +10208,13 @@ _g$c.GeoLeaf.UI.initMobileToolbar = initMobileToolbar;
 _g$c.GeoLeaf.UI.initDesktopPanel = initDesktopPanel;
 _g$c.GeoLeaf.UI.activateDesktopPanel = activateDesktopPanel;
 _g$c.GeoLeaf.UI.destroyDesktopPanel = destroyDesktopPanel;
+// Share — A.7
+_g$c.GeoLeaf.Share = Share;
+// Attach the toolbar-action listener immediately (idempotent). ShareModule.init
+// also calls this via the registry path, but binding it here at module-load
+// time guarantees the "share" action works even if the registry init is
+// skipped or fails — both desktop and mobile buttons dispatch the same event.
+attachShareListener();
 
 /*!
  * GeoLeaf Core
@@ -12256,6 +12741,65 @@ const PWAManager = {
 };
 
 /*!
+ * GeoLeaf Core – Permalink / Layer restoration helpers
+ * © 2026 Mattieu Pottier
+ * Released under the MIT License
+ * https://geoleaf.dev
+ */
+/**
+ * @module permalink/permalink-layers
+ *
+ * @description
+ * Extracted from `permalink-manager.ts` to keep that file under the 700-line
+ * source budget. Restores a single layer requested via `gl_shown=...` when
+ * the URL is applied at boot:
+ *
+ *   1. If the layer is already registered in `GeoJSONShared`, apply the user
+ *      override directly (synchronous).
+ *   2. Otherwise the layer is in the profile catalog but the active theme
+ *      didn't load it. Lazy-load it via the same path as the layer-manager
+ *      "load on demand" toggle (`toggle-handler.ts` L94-L113), then apply
+ *      the user override once the layer is registered.
+ *
+ * Fixes the bug where copy/pasting a URL with `gl_shown=...` for a layer
+ * outside the active theme silently dropped the layer.
+ */
+/**
+ * Restore a single layer requested via `gl_shown=...`. Idempotent and
+ * tolerant — any unexpected throw is silently absorbed.
+ *
+ * @param layerId - The layer id to make visible.
+ */
+function restoreShownLayer(layerId) {
+    try {
+        if (GeoJSONShared.state.layers?.get(layerId)) {
+            VisibilityManager.setVisibility(layerId, true, "user");
+            return;
+        }
+        const load = _ThemeApplier?._loadLayerFromProfile;
+        if (typeof load !== "function")
+            return;
+        Promise.resolve(load.call(_ThemeApplier, layerId))
+            .then((ok) => {
+            if (!ok)
+                return;
+            try {
+                VisibilityManager.setVisibility(layerId, true, "user");
+            }
+            catch {
+                /* visibility apply failed after successful load */
+            }
+        })
+            .catch(() => {
+            /* layer absent from profile catalog */
+        });
+    }
+    catch {
+        /* defensive — guard against unexpected throws */
+    }
+}
+
+/*!
  * GeoLeaf Core – Permalink / URL Parsing and Building
  * © 2026 Mattieu Pottier
  * Released under the MIT License
@@ -12883,14 +13427,8 @@ function applyState(state, map) {
             }
         }
         if (hasShownLayers) {
-            for (const layerId of state.shownLayers) {
-                try {
-                    VisibilityManager.setVisibility(layerId, true, "user");
-                }
-                catch {
-                    // Layer may not exist in this profile
-                }
-            }
+            for (const id of state.shownLayers)
+                restoreShownLayer(id);
         }
         if (hasFilter && !hasCategories && !hasTags && !hasRating) {
             // _pendingFilterRestore protects gl_filter in the URL: writeOnTheme (~50 ms) calls
@@ -16037,6 +16575,52 @@ class SearchModule {
 }
 
 /*!
+ * GeoLeaf Core
+ * © 2026 Mattieu Pottier
+ * Released under the MIT License
+ * https://geoleaf.dev
+ */
+/**
+ * ShareModule — `ICoreModule` wrapper for the Share / view-permalink subsystem.
+ *
+ * Represents: `GeoLeaf.Share` (modal dialog with copy-link + lazy QR code).
+ *
+ * Declares a mobile toolbar icon (share button) driven by `ui.showShareButton`.
+ * The desktop button is injected separately by `desktop-panel.ts` via
+ * {@link share-button-desktop.appendShareButtonToTabs}.
+ *
+ * @module app/modules/share.module
+ */
+const _SHARE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+    '<path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/>' +
+    '<path d="M16 6l-4-4-4 4"/>' +
+    '<path d="M12 2v14"/>' +
+    "</svg>";
+/**
+ * Represents the GeoLeaf Share subsystem (URL copy + lazy QR code).
+ * Has no dependencies — relies only on the permalink-synced `window.location`.
+ */
+class ShareModule {
+    id = "share";
+    dependencies = [];
+    ui = {
+        mobileIcon: {
+            icon: _SHARE_ICON,
+            labelKey: "share.toolbar.button",
+            profileKey: "ui.showShareButton",
+            defaultVisible: true,
+            action: "share",
+        },
+    };
+    init(_adapter, _config) {
+        attachShareListener();
+    }
+    destroy() {
+        detachShareListener();
+    }
+}
+
+/*!
  * GeoLeaf Core – App / Boot
  * © 2026 Mattieu Pottier
  * Released under the MIT License
@@ -16198,6 +16782,9 @@ _app.startApp = async function () {
         if (_cfgAdapter.get("ui.showSearch") !== false) {
             _registry.register(new SearchModule());
         }
+        if (_cfgAdapter.get("ui.showShareButton") !== false) {
+            _registry.register(new ShareModule());
+        }
     }
     // ─────────────────────────────────────────────────────────────────────────
     try {
@@ -16305,45 +16892,45 @@ async function loadModule(moduleName) {
     switch (moduleName) {
         // POI convenience: core first, then renderers + extras in parallel
         case "poi":
-            await import('./chunks/geoleaf-poi-core-DuC7d1J8.js');
+            await import('./chunks/geoleaf-poi-core-DlMc5ShN.js');
             await Promise.all([
-                import('./chunks/geoleaf-poi-renderers-DC4hPufW.js'),
-                import('./chunks/geoleaf-poi-extras-DuC7d1J8.js'),
+                import('./chunks/geoleaf-poi-renderers-BQTr956H.js'),
+                import('./chunks/geoleaf-poi-extras-DlMc5ShN.js'),
             ]);
             break;
         // Granular POI sub-chunks
         case "poiCore":
-            await import('./chunks/geoleaf-poi-core-DuC7d1J8.js');
+            await import('./chunks/geoleaf-poi-core-DlMc5ShN.js');
             break;
         case "poiRenderers":
-            await import('./chunks/geoleaf-poi-renderers-DC4hPufW.js');
+            await import('./chunks/geoleaf-poi-renderers-BQTr956H.js');
             break;
         case "poiExtras":
-            await import('./chunks/geoleaf-poi-extras-DuC7d1J8.js');
+            await import('./chunks/geoleaf-poi-extras-DlMc5ShN.js');
             break;
         case "basemapSelector":
-            await import('./chunks/geoleaf-basemap-selector-DC4hPufW.js');
+            await import('./chunks/geoleaf-basemap-selector-BQTr956H.js');
             break;
         case "route":
-            await import('./chunks/geoleaf-route-DC4hPufW.js');
+            await import('./chunks/geoleaf-route-BQTr956H.js');
             break;
         case "layerManager":
-            await import('./chunks/geoleaf-layer-manager-Cp9pIcWZ.js');
+            await import('./chunks/geoleaf-layer-manager-CnFuVGVb.js');
             break;
         case "legend":
-            await import('./chunks/geoleaf-legend-BsT_bzSV.js');
+            await import('./chunks/geoleaf-legend-CkF1ODXi.js');
             break;
         case "labels":
-            await import('./chunks/geoleaf-labels-CDcPyAy5.js');
+            await import('./chunks/geoleaf-labels-DWD9sBQ6.js');
             break;
         case "themes":
-            await import('./chunks/geoleaf-themes-DJXbe93Q.js');
+            await import('./chunks/geoleaf-themes-R_9c2kMW.js');
             break;
         case "table":
-            await import('./chunks/geoleaf-table-DWJIDi5D.js');
+            await import('./chunks/geoleaf-table-CttTjosz.js');
             break;
         case "search":
-            await import('./chunks/geoleaf-search-DW_76Z72.js').then(function (n) { return n.s; });
+            await import('./chunks/geoleaf-search-DEAo6acR.js').then(function (n) { return n.s; });
             break;
         default: {
             // TypeScript exhaustiveness guard — `moduleName` is `never` here for
@@ -16368,16 +16955,16 @@ async function loadModule(moduleName) {
  */
 async function loadAllSecondaryModules() {
     // poi-core must be ready before poi-renderers and poi-extras
-    await import('./chunks/geoleaf-poi-core-DuC7d1J8.js');
+    await import('./chunks/geoleaf-poi-core-DlMc5ShN.js');
     await Promise.all([
-        import('./chunks/geoleaf-poi-renderers-DC4hPufW.js'),
-        import('./chunks/geoleaf-poi-extras-DuC7d1J8.js'),
-        import('./chunks/geoleaf-route-DC4hPufW.js'),
-        import('./chunks/geoleaf-layer-manager-Cp9pIcWZ.js'),
-        import('./chunks/geoleaf-legend-BsT_bzSV.js'),
-        import('./chunks/geoleaf-labels-CDcPyAy5.js'),
-        import('./chunks/geoleaf-themes-DJXbe93Q.js'),
-        import('./chunks/geoleaf-table-DWJIDi5D.js'),
+        import('./chunks/geoleaf-poi-renderers-BQTr956H.js'),
+        import('./chunks/geoleaf-poi-extras-DlMc5ShN.js'),
+        import('./chunks/geoleaf-route-BQTr956H.js'),
+        import('./chunks/geoleaf-layer-manager-CnFuVGVb.js'),
+        import('./chunks/geoleaf-legend-CkF1ODXi.js'),
+        import('./chunks/geoleaf-labels-DWD9sBQ6.js'),
+        import('./chunks/geoleaf-themes-R_9c2kMW.js'),
+        import('./chunks/geoleaf-table-CttTjosz.js'),
     ]);
 }
 
@@ -16773,5 +17360,5 @@ var bundleEsmEntry = typeof window !== "undefined"
     ? window["GeoLeaf"]
     : {};
 
-export { APIController, APIFactoryManager, APIInitializationManager, APIModuleManager, Baselayers, BootInfo, CONSTANTS, Config$3 as Config, Core, Errors, Events, Filters, GeoLeafAPI, Geocoding, Helpers$1 as Helpers, LayerManager$4 as LayerManager, Legend, Log, Notifications, POI, PWAManager as PWA, Permalink, PluginRegistry, Route, Table, UI, Utils, Validators, bundleEsmEntry as default, showBootInfo };
+export { APIController, APIFactoryManager, APIInitializationManager, APIModuleManager, Baselayers, BootInfo, CONSTANTS, Config$3 as Config, Core, Errors, Events, Filters, GeoLeafAPI, Geocoding, Helpers$1 as Helpers, LayerManager$4 as LayerManager, Legend, Log, Notifications, POI, PWAManager as PWA, Permalink, PluginRegistry, Route, Share, Table, UI, Utils, Validators, bundleEsmEntry as default, showBootInfo };
 //# sourceMappingURL=geoleaf.esm.js.map

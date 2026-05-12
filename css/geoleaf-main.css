@@ -22,6 +22,7 @@
 @import url("./components/_labels.css");
 @import url("./components/_theme-selector.css");
 @import url("./geoleaf-desktop-panel.css");
+@import url("./geoleaf-share.css");
 @import url("./geoleaf-loader.css");
 
 /* Vous pouvez ajouter ici des styles globaux spécifiques au bundle,
