@@ -67,10 +67,25 @@
                     "description": "Alias for maxZoom (legacy)."
                 },
                 "padding": {
-                    "type": "array",
-                    "items": { "type": "number" },
-                    "minItems": 2,
-                    "maxItems": 2
+                    "description": "Map padding — array [vertical, horizontal] or object {top, right, bottom, left}.",
+                    "oneOf": [
+                        {
+                            "type": "array",
+                            "items": { "type": "number" },
+                            "minItems": 2,
+                            "maxItems": 4
+                        },
+                        {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "top":    { "type": "number" },
+                                "right":  { "type": "number" },
+                                "bottom": { "type": "number" },
+                                "left":   { "type": "number" }
+                            }
+                        }
+                    ]
                 },
                 "positionFixed": { "type": "boolean" },
                 "boundsMargin": { "type": "number" }

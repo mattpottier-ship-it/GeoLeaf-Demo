@@ -20,6 +20,11 @@
         "basemapsFile": "basemaps.json",
         "uiFile": "ui.json"
     },
+    "geocodingConfig": {
+        "enabled": true,
+        "provider": "addok",
+        "bbox": [-5.2, 41.3, 9.6, 51.1]
+    },
     "clustering": {
         "enabled": false
     },

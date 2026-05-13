@@ -31,6 +31,17 @@
     "basemapsFile": "basemaps.json",
     "uiFile": "ui.json"
   },
+  "geocodingConfig": {
+    "enabled": true,
+    "provider": "nominatim",
+    "countrycodes": "fr",
+    "bbox": [
+      55.2,
+      -21.4,
+      55.9,
+      -20.8
+    ]
+  },
   "clusteringConfig": {
     "enabled": true,
     "strategy": "by-layer",

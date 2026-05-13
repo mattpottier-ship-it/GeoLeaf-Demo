@@ -34,6 +34,17 @@
     "layerLoadDelay": 200,
     "fitBoundsOnThemeChange": false
   },
+  "geocodingConfig": {
+    "enabled": true,
+    "provider": "nominatim",
+    "countrycodes": "fr",
+    "bbox": [
+      -54.6,
+      2.1,
+      -51.6,
+      5.8
+    ]
+  },
   "clusteringConfig": {
     "enabled": true,
     "strategy": "by-layer",

@@ -1,14 +1,14 @@
-import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, p as getLabel, ab as registerDict, o as domCreate, K as blockMapPropagation, ac as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ad as resolvePoiColors, ae as StyleValidator, af as StyleValidatorRules, H as AbstractRenderer, ag as SimpleTextRenderer, ah as DataNormalizer, M as StyleLoader, x as Config$3, ai as DataConverter, aj as ProfileLoader, ak as ConfigNormalizer, al as ProfileLoader$1, am as ProfileManager, an as StorageHelper, ao as TaxonomyManager, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ap as getDistance, A as getActiveProfile, aq as ensureMap, ar as validateCoordinates, as as validateNumber, C as Core, at as Helpers$1, au as Validators, av as initI18n, aw as padBounds, ax as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-B0_WoP8o.js';
-import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-BSmB7R6w.js';
-import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-CTMFX9Ro.js';
-import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-I8PXg3cg.js';
-import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-BlXcZAcO.js';
-import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-Dq7V3LCX.js';
-import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-DRSeta0A.js';
-export { c as Themes } from './chunks/geoleaf-chunk-themes-DRSeta0A.js';
-import { b as POI, c as POIAddFormContract, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-FqfrA0V3.js';
-import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-BMze4BV3.js';
-export { S as Search } from './chunks/geoleaf-search-DEAo6acR.js';
+import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, p as getLabel, ab as registerDict, o as domCreate, K as blockMapPropagation, ac as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ad as resolvePoiColors, ae as StyleValidator, af as StyleValidatorRules, H as AbstractRenderer, ag as SimpleTextRenderer, ah as DataNormalizer, M as StyleLoader, x as Config$3, ai as DataConverter, aj as ProfileLoader, ak as ConfigNormalizer, al as ProfileLoader$1, am as ProfileManager, an as StorageHelper, ao as TaxonomyManager, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ap as getDistance, A as getActiveProfile, aq as ensureMap, ar as validateCoordinates, as as validateNumber, C as Core, at as Helpers$1, au as Validators, av as initI18n, aw as padBounds, ax as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-DaOLFnYl.js';
+import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-C3dRY-lH.js';
+import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-D0ayPYQo.js';
+import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-CEgk8g7A.js';
+import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-D5XLrEY3.js';
+import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-BDO10P7Z.js';
+import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-olKtJRrg.js';
+export { c as Themes } from './chunks/geoleaf-chunk-themes-olKtJRrg.js';
+import { b as POI, c as POIAddFormContract, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-BGd7qlef.js';
+import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-DkfRKAmr.js';
+export { S as Search } from './chunks/geoleaf-search-DxwtrSb2.js';
 
 /**
  * @module globals.core
@@ -25,7 +25,7 @@ export { S as Search } from './chunks/geoleaf-search-DEAo6acR.js';
  *   - **B2** — `Utils` (animation, DOM, events, fetch, file validation,
  *     lazy loading, map helpers, object utils, performance, scale, timers)
  *
- * Also sets `_g.GeoLeaf._version` from the Rollup-injected `"2.1.7"`
+ * Also sets `_g.GeoLeaf._version` from the Rollup-injected `"2.1.8"`
  * constant, falling back to `'1.1.1-dev'` in development mode.
  *
  * @see globals for the orchestrator and import order
@@ -36,7 +36,7 @@ const _g$j = typeof globalThis !== "undefined" ? globalThis : typeof window !== 
 _g$j.GeoLeaf = _g$j.GeoLeaf || {};
 // Version injectable at build time — fallback for dev without build step
 _g$j.GeoLeaf._version =
-    "2.1.7" ;
+    "2.1.8" ;
 // -- B1 assignations ----------------------------------------------------------
 _g$j.GeoLeaf.Log = Log;
 _g$j.GeoLeaf.Errors = Errors;
@@ -7285,6 +7285,122 @@ function loadAccordionContentIfNeeded(accordionGroup, _filterDef) {
     setTimeout(() => _handleLazyLoad(LazyLoader, Log, lazyType, contentArea, accordionGroup, currentTheme), 10);
 }
 
+/*!
+ * GeoLeaf Core – Shared pill-shaped search input helper
+ * © 2026 Mattieu Pottier — MIT License
+ * https://geoleaf.dev
+ */
+/**
+ * @module ui/pill-search
+ *
+ * Builds a reusable pill-shaped search input used by:
+ *  - the geocoding control (address search, top-left floating pill);
+ *  - the POI search field in the filter panel (textual filter).
+ *
+ * The helper centralises DOM structure, SVG icons (magnifier + close) and
+ * keyboard handling (Enter, Escape) so the two consumers share an identical
+ * look-and-feel and accessibility wiring.
+ *
+ * Security:
+ *  - SVG icons are built via {@link DOMSecurity.createSVGIcon}; no innerHTML.
+ *  - The helper never inserts user-provided strings — callers handle their own
+ *    result rendering with `textContent` only.
+ */
+const MAGNIFIER_PATH = "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z";
+const CLOSE_PATH = "M18 6L6 18M6 6l12 12";
+function _createIcon(pathData, size) {
+    return DOMSecurity.createSVGIcon(size, size, pathData, {
+        stroke: "currentColor",
+        strokeWidth: "2",
+        fill: "none",
+    });
+}
+/**
+ * Builds the shared pill-shaped search input. The wrapper carries the
+ * `.gl-pill-search` class — callers add their own positioning classes
+ * (`.gl-geocoding-ctrl--top-left`, `.gl-filter-panel__search`, …) via
+ * {@link PillSearchOptions.extraClass}.
+ */
+function createPillSearchInput(opts) {
+    const root = document.createElement("div");
+    root.className = opts.extraClass
+        ? `gl-pill-search ${opts.extraClass}`
+        : "gl-pill-search";
+    root.setAttribute("role", "search");
+    root.setAttribute("aria-label", opts.ariaLabel);
+    const input = document.createElement("input");
+    input.type = opts.inputType ?? "text";
+    input.className = "gl-pill-search__input";
+    input.placeholder = opts.placeholder;
+    input.setAttribute("aria-label", opts.inputAriaLabel ?? opts.placeholder);
+    input.setAttribute("autocomplete", "off");
+    input.setAttribute("autocorrect", "off");
+    input.setAttribute("spellcheck", "false");
+    const clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.className = "gl-pill-search__clear";
+    clearBtn.setAttribute("aria-label", opts.clearAriaLabel);
+    clearBtn.style.display = "none";
+    clearBtn.appendChild(_createIcon(CLOSE_PATH, 16));
+    const submitBtn = document.createElement("button");
+    submitBtn.type = "button";
+    submitBtn.className = "gl-pill-search__submit";
+    submitBtn.setAttribute("aria-label", opts.submitAriaLabel);
+    submitBtn.appendChild(_createIcon(MAGNIFIER_PATH, 18));
+    root.appendChild(input);
+    root.appendChild(clearBtn);
+    root.appendChild(submitBtn);
+    // ── Behaviour ─────────────────────────────────────────────────────────────
+    function _toggleClearVisibility() {
+        clearBtn.style.display = input.value.length > 0 ? "flex" : "none";
+    }
+    function _handleInput() {
+        _toggleClearVisibility();
+        opts.onInput?.(input.value);
+    }
+    function _handleSubmit() {
+        _toggleClearVisibility();
+        opts.onSubmit?.(input.value);
+    }
+    function _handleClear() {
+        input.value = "";
+        _toggleClearVisibility();
+        opts.onClear?.();
+        input.focus();
+    }
+    function _handleKeydown(e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            _handleSubmit();
+            return;
+        }
+        if (e.key === "Escape") {
+            if (input.value.length > 0) {
+                _handleClear();
+            }
+            else {
+                input.blur();
+            }
+        }
+    }
+    input.addEventListener("input", _handleInput);
+    input.addEventListener("keydown", _handleKeydown);
+    submitBtn.addEventListener("click", _handleSubmit);
+    clearBtn.addEventListener("click", _handleClear);
+    let _destroyed = false;
+    function destroy() {
+        if (_destroyed)
+            return;
+        _destroyed = true;
+        input.removeEventListener("input", _handleInput);
+        input.removeEventListener("keydown", _handleKeydown);
+        submitBtn.removeEventListener("click", _handleSubmit);
+        clearBtn.removeEventListener("click", _handleClear);
+        root.remove();
+    }
+    return { root, input, clearBtn, submitBtn, destroy };
+}
+
 /**
  * GeoLeaf UI Filter Panel - Renderer Core
  * Building maine du squelette HTML du filter panels
@@ -7331,9 +7447,38 @@ function _buildFilterPanelHeader(container, searchPanel, toggleVisibility) {
     header.appendChild(toggleBtn);
     container.appendChild(header);
 }
-function _buildFilterPanelBody(container, filters, profile, eventCleanups) {
+function _buildSearchSection(filterDef, searchPanel, container) {
+    const section = createElement("section", { className: "gl-filter-panel__search-section" });
+    const sectionLabel = filterDef.label ?? getLabel("aria.search.bar");
+    section.appendChild(createElement("h3", {
+        className: "gl-filter-panel__search-title",
+        textContent: sectionLabel,
+    }));
+    const placeholder = filterDef.placeholder ?? searchPanel.searchPlaceholder ?? sectionLabel;
+    const pill = createPillSearchInput({
+        placeholder,
+        ariaLabel: sectionLabel,
+        inputAriaLabel: placeholder,
+        submitAriaLabel: getLabel("aria.search.submit"),
+        clearAriaLabel: getLabel("aria.search.clear"),
+        extraClass: "gl-filter-panel__search",
+        onInput: () => FilterPanelApplier.applyFiltersNow(container),
+        onSubmit: () => FilterPanelApplier.applyFiltersNow(container),
+        onClear: () => FilterPanelApplier.applyFiltersNow(container),
+    });
+    // state-reader expects `[data-gl-filter-id='searchText'] input[type='text']`
+    pill.root.dataset.glFilterId = filterDef.id ?? "searchText";
+    section.appendChild(pill.root);
+    return section;
+}
+function _buildFilterPanelBody(container, filters, profile, eventCleanups, searchPanel) {
     const body = createElement("div", { className: "gl-filter-panel__body" });
     const bodyFragment = document.createDocumentFragment();
+    // Render the textual-search filter as a dedicated header section
+    const searchFilter = filters.find((f) => f.type === "search");
+    if (searchFilter) {
+        bodyFragment.appendChild(_buildSearchSection(searchFilter, searchPanel, container));
+    }
     filters.forEach(function (filterDef) {
         if (filterDef.type === "search")
             return;
@@ -7461,7 +7606,7 @@ function buildFilterPanelFromActiveProfile(options, eventCleanups, toggleVisibil
         container.removeChild(container.firstChild);
     container.classList.add("gl-filter-panel");
     _buildFilterPanelHeader(container, searchPanel);
-    _buildFilterPanelBody(container, filters, profile, eventCleanups);
+    _buildFilterPanelBody(container, filters, profile, eventCleanups, searchPanel);
     _buildFilterPanelFooter(container, searchPanel);
     _wireFilterPanelEvents(container, eventCleanups, toggleVisibility, Applier, StateReader);
     container.classList.remove("gl-is-open");
@@ -7924,9 +8069,6 @@ const domState = {
     proximityValidateBtn: null,
     proximityInstruction: null,
     proximityRadiusLabel: null,
-    // search bar
-    searchBar: null,
-    searchInput: null,
     // sheet restore
     restoreOnClose: [],
     lastFocusedElement: null,
@@ -8088,7 +8230,6 @@ function _createFilterGroup() {
     filterBtn.type = "button";
     filterBtn.className = "gl-map-toolbar__btn";
     filterBtn.setAttribute("data-gl-sheet", "filters");
-    filterBtn.setAttribute("data-gl-toolbar-action", "filters");
     filterBtn.setAttribute("aria-label", getLabel("aria.toolbar.filters"));
     filterBtn.setAttribute("aria-expanded", "false");
     filterBtn.appendChild(createSvgIcon("M4 4h16v2.5l-6 6v6l-4 2v-8l-6-6V4z"));
@@ -8308,184 +8449,6 @@ function attachTooltipHandlers(wrapper, glMain) {
         btn.addEventListener("focusout", _hideTooltip);
         btn.addEventListener("pointerleave", _hideTooltip);
     });
-}
-
-/**
- * GeoLeaf UI – Mobile toolbar: inline text search bar.
- * @module ui/mobile-toolbar-searchbar
- */
-/** Clears the search input and resets the filter. */
-function clearSearchText() {
-    if (!domState.searchInput)
-        return;
-    domState.searchInput.value = "";
-    const filterPanel = document.querySelector("#gl-filter-panel");
-    if (filterPanel) {
-        const ghostInput = ensureSearchGhostInput(filterPanel);
-        ghostInput.value = "";
-        const applier = _g$d.GeoLeaf?._UIFilterPanelApplier;
-        if (applier && typeof applier.applyFiltersNow === "function") {
-            applier.applyFiltersNow(filterPanel);
-        }
-    }
-    const clearBtn = domState.searchBar?.querySelector(".gl-search-bar__clear");
-    if (clearBtn)
-        clearBtn.style.display = "none";
-    const searchBtn = domState.toolbar?.querySelector('[data-gl-toolbar-action="search"]');
-    if (searchBtn instanceof HTMLElement) {
-        searchBtn.classList.remove("gl-map-toolbar__btn--active", "gl-map-toolbar__btn--active-muted");
-        searchBtn.setAttribute("aria-expanded", "true");
-    }
-}
-/**
- * Ensures a hidden ghost input `[data-gl-filter-id='searchText']` exists in the
- * filter panel. The renderer skips the 'search' type control (commit 87840e6) so
- * this wrapper may not be in the DOM — creating it here lets state-reader.ts
- * detect `hasSearchText` correctly.
- */
-function ensureSearchGhostInput(filterPanel) {
-    let input = filterPanel.querySelector("[data-gl-filter-id='searchText'] input[type='text']");
-    if (!input) {
-        const ghost = document.createElement("div");
-        ghost.setAttribute("data-gl-filter-id", "searchText");
-        ghost.style.cssText = "display:none;position:absolute;visibility:hidden";
-        input = document.createElement("input");
-        input.type = "text";
-        ghost.appendChild(input);
-        filterPanel.appendChild(ghost);
-    }
-    return input;
-}
-/** Submits the text search value into the existing filter panel. */
-function submitSearch() {
-    if (!domState.searchInput)
-        return;
-    const value = domState.searchInput.value.trim();
-    const filterPanel = document.querySelector("#gl-filter-panel");
-    if (filterPanel) {
-        const ghostInput = ensureSearchGhostInput(filterPanel);
-        ghostInput.value = value;
-        const applier = _g$d.GeoLeaf?._UIFilterPanelApplier;
-        if (applier && typeof applier.applyFiltersNow === "function") {
-            applier.applyFiltersNow(filterPanel);
-        }
-        else {
-            const applyBtn = filterPanel.querySelector(".gl-filter-panel__btn-apply");
-            if (applyBtn)
-                applyBtn.click();
-        }
-    }
-    const clearBtnSubmit = domState.searchBar?.querySelector(".gl-search-bar__clear");
-    if (clearBtnSubmit)
-        clearBtnSubmit.style.display = value.length > 0 ? "flex" : "none";
-    const searchBtn = domState.toolbar?.querySelector('[data-gl-toolbar-action="search"]');
-    if (searchBtn instanceof HTMLElement) {
-        const hasValue = value.length > 0;
-        searchBtn.classList.toggle("gl-map-toolbar__btn--active", hasValue);
-        searchBtn.setAttribute("aria-expanded", hasValue ? "true" : "false");
-    }
-}
-/** Opens the inline search bar with animation. */
-function openSearchBar() {
-    if (!domState.searchBar)
-        return;
-    domState.searchBar.style.display = "flex";
-    requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            if (domState.searchBar)
-                domState.searchBar.classList.add("gl-is-visible");
-            domState.searchInput?.focus();
-            const glMain = domState.options?.glMain;
-            if (glMain) {
-                glMain.style.setProperty("--gl-search-bar-height", "46px");
-                glMain.style.setProperty("--gl-search-bar-gap", "0.4rem");
-            }
-        });
-    });
-    const searchBtn = domState.toolbar?.querySelector('[data-gl-toolbar-action="search"]');
-    if (searchBtn instanceof HTMLElement) {
-        searchBtn.setAttribute("aria-expanded", "true");
-        searchBtn.classList.remove("gl-map-toolbar__btn--active-muted");
-        if ((domState.searchInput?.value.trim().length ?? 0) > 0) {
-            searchBtn.classList.add("gl-map-toolbar__btn--active");
-        }
-    }
-    const clearBtn = domState.searchBar?.querySelector(".gl-search-bar__clear");
-    if (clearBtn) {
-        clearBtn.style.display =
-            (domState.searchInput?.value.trim().length ?? 0) > 0 ? "flex" : "none";
-    }
-}
-/** Closes the search bar and resets text filter state if empty. */
-function closeSearchBar() {
-    if (!domState.searchBar)
-        return;
-    domState.searchBar.classList.remove("gl-is-visible");
-    const glMain = domState.options?.glMain;
-    if (glMain) {
-        glMain.style.removeProperty("--gl-search-bar-height");
-        glMain.style.removeProperty("--gl-search-bar-gap");
-    }
-    const searchBtn = domState.toolbar?.querySelector('[data-gl-toolbar-action="search"]');
-    if (searchBtn instanceof HTMLElement) {
-        searchBtn.setAttribute("aria-expanded", "false");
-        const hasValue = (domState.searchInput?.value.trim().length ?? 0) > 0;
-        searchBtn.classList.toggle("gl-map-toolbar__btn--active-muted", hasValue);
-        searchBtn.classList.toggle("gl-map-toolbar__btn--active", false);
-    }
-    domState.searchBar.addEventListener("transitionend", () => {
-        if (domState.searchBar && !domState.searchBar.classList.contains("gl-is-visible")) {
-            domState.searchBar.style.display = "none";
-        }
-    }, { once: true });
-}
-/** Creates the inline search bar pill DOM (top of the map). */
-function createSearchBarDom() {
-    const bar = document.createElement("div");
-    bar.className = "gl-search-bar";
-    bar.style.display = "none";
-    bar.setAttribute("role", "search");
-    bar.setAttribute("aria-label", getLabel("aria.search.bar"));
-    const input = document.createElement("input");
-    input.type = "text";
-    input.className = "gl-search-bar__input";
-    input.placeholder = getLabel("placeholder.search.input");
-    input.setAttribute("aria-label", getLabel("aria.search.input"));
-    domState.searchInput = input;
-    const submitBtn = document.createElement("button");
-    submitBtn.type = "button";
-    submitBtn.className = "gl-search-bar__submit";
-    submitBtn.setAttribute("aria-label", getLabel("aria.search.submit"));
-    submitBtn.appendChild(createSvgIcon("M9 10l-4 4 4 4M5 14h8a4 4 0 000-8H9", 20));
-    const clearBtn = document.createElement("button");
-    clearBtn.type = "button";
-    clearBtn.className = "gl-search-bar__clear";
-    clearBtn.setAttribute("aria-label", getLabel("aria.search.clear"));
-    clearBtn.style.display = "none";
-    clearBtn.appendChild(createSvgIcon("M18 6L6 18M6 6l12 12", 18));
-    clearBtn.addEventListener("click", () => clearSearchText());
-    bar.appendChild(input);
-    bar.appendChild(clearBtn);
-    bar.appendChild(submitBtn);
-    input.addEventListener("input", () => {
-        clearBtn.style.display = input.value.length > 0 ? "flex" : "none";
-    });
-    submitBtn.addEventListener("click", () => submitSearch());
-    input.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-            submitSearch();
-        }
-        else if (e.key === "Escape") {
-            if (input.value.trim().length > 0) {
-                clearSearchText();
-            }
-            else {
-                closeSearchBar();
-            }
-        }
-    });
-    domState.searchBar = bar;
-    return bar;
 }
 
 /**
@@ -8913,14 +8876,24 @@ function _handleFullscreen() {
         });
     }
 }
+/**
+ * Toggles the floating geocoding (address) pill on mobile. The pill is hidden
+ * by default at viewport ≤ 768px (see geoleaf-geocoding.css) and revealed by
+ * adding the `gl-geocoding-ctrl--mobile-visible` class. The POI text filter
+ * is intentionally NOT bound here — it lives in the filter panel sheet.
+ */
 function _handleSearch(target) {
-    const isOpen = domState.searchBar?.classList.contains("gl-is-visible");
-    if (isOpen) {
-        closeSearchBar();
-        target.classList.remove("gl-map-toolbar__btn--active");
-    }
-    else {
-        openSearchBar();
+    const geocodingCtrl = document.querySelector(".gl-geocoding-ctrl");
+    if (!geocodingCtrl)
+        return;
+    const visibleClass = "gl-geocoding-ctrl--mobile-visible";
+    const wasVisible = geocodingCtrl.classList.contains(visibleClass);
+    geocodingCtrl.classList.toggle(visibleClass, !wasVisible);
+    target.classList.toggle("gl-map-toolbar__btn--active", !wasVisible);
+    target.setAttribute("aria-expanded", String(!wasVisible));
+    if (!wasVisible) {
+        // Focus the address input when revealing for fast keyboard use
+        geocodingCtrl.querySelector(".gl-pill-search__input")?.focus();
     }
 }
 function _handleThemes(target) {
@@ -9104,8 +9077,6 @@ function initMobileToolbar(options) {
     const toolbarWrapper = createToolbarDom();
     domState.toolbar.addEventListener("click", onToolbarClick);
     glMain.appendChild(toolbarWrapper);
-    const searchBarEl = createSearchBarDom();
-    glMain.appendChild(searchBarEl);
     const tooltipEl = createTooltipDom();
     tooltipEl.style.display = "none";
     glMain.appendChild(tooltipEl);
@@ -9454,18 +9425,15 @@ function _refreshFilterTabIndicator() {
     if (!filterTab)
         return;
     let active = _getFilterActiveState?.() ?? false;
-    // Fallback: check inline search bar value (search moved out of filter panel)
-    if (!active) {
-        const searchInput = document.querySelector(".gl-search-bar__input");
-        if (searchInput && searchInput.value.trim().length > 0)
-            active = true;
-    }
-    // Fallback: check filter panel DOM (categories, tags)
+    // Fallback: check filter panel DOM (search text, categories, tags)
     if (!active) {
         const panel = document.querySelector("#gl-filter-panel");
         if (panel) {
+            const searchInput = panel.querySelector("[data-gl-filter-id='searchText'] input.gl-pill-search__input");
+            const hasSearchText = !!searchInput && searchInput.value.trim().length > 0;
             active =
-                panel.querySelectorAll(".gl-filter-tree__checkbox--category:checked, .gl-filter-tree__checkbox--subcategory:checked").length > 0 ||
+                hasSearchText ||
+                    panel.querySelectorAll(".gl-filter-tree__checkbox--category:checked, .gl-filter-tree__checkbox--subcategory:checked").length > 0 ||
                     panel.querySelectorAll(".gl-filter-panel__tag-badge.gl-is-selected").length > 0;
         }
     }
@@ -9813,7 +9781,7 @@ async function _loadQrcode() {
     if (_qrcodeFactory)
         return _qrcodeFactory;
     if (!_loaderPromise) {
-        _loaderPromise = import('./chunks/geoleaf-qrcode-BygbOE_f.js').then(function (n) { return n.q; }).then((mod) => {
+        _loaderPromise = import('./chunks/geoleaf-qrcode-DG97zxUK.js').then(function (n) { return n.q; }).then((mod) => {
             // qrcode-generator is CommonJS — Rollup CJS interop exposes the
             // factory under `.default`. Fall back to the namespace itself for
             // bundlers that already strip the CJS wrapper.
@@ -13159,34 +13127,24 @@ function buildUrl(state, config) {
  * @see config-types for PermalinkConfig
  */
 /**
- * Populates and reveals the floating pill search bar (`.gl-search-bar`) with the
- * text restored from a permalink — mirrors what the user sees after typing in the bar.
+ * Restores the POI textual filter into the dedicated search input that now
+ * lives in the filter panel header (`[data-gl-filter-id='searchText']`).
+ * Mirrors what the user would type, so the filter applier picks the value
+ * up via state-reader.
  */
 function _restoreSearchBar(text) {
     if (!text)
         return;
-    const bar = document.querySelector(".gl-search-bar");
-    const input = bar?.querySelector(".gl-search-bar__input");
-    if (!bar || !input)
+    const input = document.querySelector("[data-gl-filter-id='searchText'] input.gl-pill-search__input, " +
+        "[data-gl-filter-id='searchText'] input[type='text']");
+    if (!input)
         return;
     input.value = text;
-    bar.style.display = "flex";
-    requestAnimationFrame(() => {
-        bar.classList.add("gl-is-visible");
-    });
-    const clearBtn = bar.querySelector(".gl-search-bar__clear");
+    // Reveal the trailing × button so the user can clear the restored value
+    const pill = input.closest(".gl-pill-search");
+    const clearBtn = pill?.querySelector(".gl-pill-search__clear");
     if (clearBtn)
         clearBtn.style.display = "flex";
-    const searchBtn = document.querySelector('[data-gl-toolbar-action="search"]');
-    if (searchBtn) {
-        searchBtn.classList.add("gl-map-toolbar__btn--active");
-        searchBtn.setAttribute("aria-expanded", "true");
-    }
-    const glMain = document.querySelector(".gl-main");
-    if (glMain) {
-        glMain.style.setProperty("--gl-search-bar-height", "46px");
-        glMain.style.setProperty("--gl-search-bar-gap", "0.4rem");
-    }
 }
 /** Debounce delay in ms for map move/zoom events. */
 const SYNC_DEBOUNCE_MS = 400;
@@ -13439,11 +13397,11 @@ function applyState(state, map) {
             try {
                 const panel = document.getElementById("gl-filter-panel");
                 if (panel) {
-                    // filter-panel-renderer-core.ts L69 intentionally skips type="search" controls:
-                    //   `if (filterDef.type === "search") return;`
-                    // So [data-gl-filter-id="searchText"] does NOT exist in the panel DOM on a fresh
-                    // page load. Replicate ensureSearchGhostInput() (mobile-toolbar-searchbar.ts):
-                    // inject a hidden wrapper that readFiltersFromPanel() will find via its selector.
+                    // The textual `searchText` filter is rendered as a pill in the panel
+                    // header by filter-panel-renderer-core.ts:_buildSearchSection. On a very
+                    // fresh page load the panel may not yet be built — keep a defensive
+                    // ghost-input fallback so readFiltersFromPanel() still finds a value via
+                    // the [data-gl-filter-id="searchText"] selector.
                     let filterInput = panel.querySelector('[data-gl-filter-id="searchText"] input[type="text"]');
                     if (!filterInput) {
                         const ghost = document.createElement("div");
@@ -13926,26 +13884,51 @@ const Events = {
 /**
  * Addok BAN provider — French national address database.
  * Free, no API key required, no quota for reasonable traffic.
+ * When `config.bbox` is set, the centroid is passed as `lat`/`lon` for
+ * proximity-score boosting (BAN has no strict bbox filter).
  * @see https://adresse.data.gouv.fr/api-doc/adresse
  */
 class AddokProvider {
+    _config;
+    constructor(_config = {}) {
+        this._config = _config;
+    }
     async search(query, limit) {
-        const url = `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(query)}` +
+        let url = `https://api-adresse.data.gouv.fr/search/?q=${encodeURIComponent(query)}` +
             `&limit=${limit}`;
+        if (this._config.bbox) {
+            const [west, south, east, north] = this._config.bbox;
+            const lat = ((south + north) / 2).toFixed(5);
+            const lon = ((west + east) / 2).toFixed(5);
+            url += `&lat=${lat}&lon=${lon}`;
+        }
         return _fetchAndParseGeoJSON(url);
     }
 }
 // ── Nominatim (OpenStreetMap) ─────────────────────────────────────────────────
 /**
  * Nominatim provider — OpenStreetMap geocoder. Worldwide coverage.
+ * Supports `countrycodes` (ISO 3166-1 alpha-2) and `bbox` for geographic filtering.
  * Must comply with OSM Nominatim usage policy: max 1 request/second.
  * @see https://nominatim.org/release-docs/latest/api/Search/
  */
 class NominatimProvider {
+    _config;
+    constructor(_config = {}) {
+        this._config = _config;
+    }
     async search(query, limit) {
         const lang = (typeof navigator !== "undefined" ? navigator.language : "fr") ?? "fr";
-        const url = `https://nominatim.openstreetmap.org/search` +
+        let url = `https://nominatim.openstreetmap.org/search` +
             `?q=${encodeURIComponent(query)}&format=geocodejson&limit=${limit}&addressdetails=1`;
+        if (this._config.countrycodes) {
+            url += `&countrycodes=${encodeURIComponent(this._config.countrycodes)}`;
+        }
+        if (this._config.bbox) {
+            // Nominatim viewbox format: left(west),top(north),right(east),bottom(south)
+            const [west, south, east, north] = this._config.bbox;
+            url += `&viewbox=${west},${north},${east},${south}&bounded=1`;
+        }
         try {
             const res = await fetch(url, {
                 headers: {
@@ -13965,15 +13948,25 @@ class NominatimProvider {
 // ── Photon (Komoot) ───────────────────────────────────────────────────────────
 /**
  * Photon provider — worldwide geocoder by Komoot. No API key required.
+ * Supports `bbox` for geographic filtering (format: west,south,east,north).
  * @see https://photon.komoot.io/
  */
 class PhotonProvider {
+    _config;
+    constructor(_config = {}) {
+        this._config = _config;
+    }
     async search(query, limit) {
         const lang = (typeof navigator !== "undefined" ? navigator.language : "fr")
             ?.slice(0, 2)
             .toLowerCase() ?? "fr";
-        const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}` +
+        let url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}` +
             `&limit=${limit}&lang=${encodeURIComponent(lang)}`;
+        if (this._config.bbox) {
+            // Photon bbox format: minLon,minLat,maxLon,maxLat (west,south,east,north)
+            const [west, south, east, north] = this._config.bbox;
+            url += `&bbox=${west},${south},${east},${north}`;
+        }
         return _fetchAndParseGeoJSON(url);
     }
 }
@@ -14003,18 +13996,18 @@ function createProvider(config) {
     const provider = config.provider ?? "addok";
     switch (provider) {
         case "addok":
-            return new AddokProvider();
+            return new AddokProvider(config);
         case "nominatim":
-            return new NominatimProvider();
+            return new NominatimProvider(config);
         case "photon":
-            return new PhotonProvider();
+            return new PhotonProvider(config);
         default:
             // Custom HTTPS URL — validate scheme before accepting
             if (typeof provider === "string" && provider.startsWith("https://")) {
                 return new CustomProvider(provider);
             }
             // Unknown / unsafe value: fall back to Addok
-            return new AddokProvider();
+            return new AddokProvider(config);
     }
 }
 // ── Shared fetch + parse helpers ──────────────────────────────────────────────
@@ -14065,9 +14058,13 @@ function _parseGeoJSON(data) {
         const lat = Number(coords[1]);
         if (!isFinite(lat) || !isFinite(lng))
             continue;
-        // Build label — textContent only, never rendered as HTML
+        // Build label — textContent only, never rendered as HTML.
+        // GeoCodeJSON (Nominatim) nests the label under properties.geocoding.label.
+        const geocodingMeta = properties?.["geocoding"];
         const rawLabel = properties?.["label"] ??
+            geocodingMeta?.["label"] ??
             properties?.["display_name"] ??
+            geocodingMeta?.["name"] ??
             properties?.["name"] ??
             `${lat.toFixed(5)}, ${lng.toFixed(5)}`;
         const label = String(rawLabel).slice(0, 200);
@@ -14090,6 +14087,10 @@ function _parseGeoJSON(data) {
  * © 2026 Mattieu Pottier — MIT License
  * https://geoleaf.dev
  */
+/** Stops event propagation to prevent map pan/zoom while interacting. */
+function _stopProp(e) {
+    e.stopPropagation();
+}
 /**
  * Builds and mounts the geocoding search control into a map container.
  *
@@ -14103,40 +14104,37 @@ function mountGeocodingControl(mapContainer, provider, config, onSelect) {
     const debounceMs = config.debounceMs ?? 300;
     const minChars = config.minChars ?? 3;
     const limit = config.resultLimit ?? 5;
-    const placeholder = config.placeholder ?? "Rechercher une adresse\u2026";
-    const position = config.position ?? "top-right";
+    const placeholder = config.placeholder ?? "Rechercher une adresse…";
+    const position = config.position ?? "top-left";
     // ── DOM construction ──────────────────────────────────────────────────────
-    const wrapper = document.createElement("div");
-    wrapper.className = `gl-geocoding-ctrl gl-geocoding-ctrl--${position}`;
-    wrapper.setAttribute("role", "search");
-    wrapper.setAttribute("aria-label", "Recherche d\u2019adresse");
-    const input = document.createElement("input");
-    input.type = "search";
-    input.className = "gl-geocoding-input";
-    input.placeholder = placeholder;
-    input.setAttribute("autocomplete", "off");
-    input.setAttribute("autocorrect", "off");
-    input.setAttribute("spellcheck", "false");
-    input.setAttribute("aria-label", placeholder);
+    // Outer wrapper: carries positioning classes and event-stop listeners.
+    // The pill (.gl-pill-search) and the dropdown (<ul>) are block siblings
+    // inside it so the dropdown never distorts the pill’s flex layout.
+    const ctrlWrapper = document.createElement("div");
+    ctrlWrapper.className = `gl-geocoding-ctrl gl-geocoding-ctrl--${position}`;
+    const pill = createPillSearchInput({
+        placeholder,
+        ariaLabel: "Recherche d’adresse",
+        submitAriaLabel: "Lancer la recherche",
+        clearAriaLabel: "Effacer la recherche",
+        inputType: "search",
+        onInput: (value) => _onInput(value),
+        onSubmit: (value) => _onSubmit(value),
+        onClear: () => _clearResults(),
+    });
+    const { root: pillRoot, input } = pill;
     input.setAttribute("aria-autocomplete", "list");
     input.setAttribute("aria-expanded", "false");
     input.setAttribute("aria-haspopup", "listbox");
     input.setAttribute("aria-owns", "gl-geocoding-results");
-    const clearBtn = document.createElement("button");
-    clearBtn.type = "button";
-    clearBtn.className = "gl-geocoding-clear";
-    clearBtn.setAttribute("aria-label", "Effacer la recherche");
-    clearBtn.textContent = "\u00d7"; // ×
-    clearBtn.hidden = true;
     const resultsList = document.createElement("ul");
     resultsList.className = "gl-geocoding-results";
     resultsList.id = "gl-geocoding-results";
     resultsList.setAttribute("role", "listbox");
     resultsList.hidden = true;
-    wrapper.appendChild(input);
-    wrapper.appendChild(clearBtn);
-    wrapper.appendChild(resultsList);
-    mapContainer.appendChild(wrapper);
+    ctrlWrapper.appendChild(pillRoot);
+    ctrlWrapper.appendChild(resultsList);
+    mapContainer.appendChild(ctrlWrapper);
     // ── Internal state ────────────────────────────────────────────────────────
     let _debounceTimer = null;
     let _currentResults = [];
@@ -14152,7 +14150,7 @@ function mountGeocodingControl(mapContainer, provider, config, onSelect) {
             li.className = "gl-geocoding-result-item";
             li.setAttribute("role", "option");
             li.setAttribute("aria-selected", "false");
-            li.setAttribute("data-idx", String(idx));
+            li.dataset.idx = String(idx);
             li.textContent = result.label; // safe — textContent, not innerHTML
             resultsList.appendChild(li);
         });
@@ -14163,14 +14161,8 @@ function mountGeocodingControl(mapContainer, provider, config, onSelect) {
         resultsList.hidden = true;
         input.setAttribute("aria-expanded", "false");
     }
-    function _clear() {
-        input.value = "";
-        clearBtn.hidden = true;
-        _clearResults();
-        input.focus();
-    }
     async function _doSearch(query) {
-        wrapper.classList.add("gl-geocoding-ctrl--loading");
+        ctrlWrapper.classList.add("gl-geocoding-ctrl--loading");
         try {
             const results = await provider.search(query, limit);
             // Discard stale responses if the input changed while fetching
@@ -14179,12 +14171,12 @@ function mountGeocodingControl(mapContainer, provider, config, onSelect) {
             }
         }
         finally {
-            wrapper.classList.remove("gl-geocoding-ctrl--loading");
+            ctrlWrapper.classList.remove("gl-geocoding-ctrl--loading");
         }
     }
-    function _onInput() {
-        const query = input.value.trim();
-        clearBtn.hidden = query.length === 0;
+    /** Debounced input handler — triggers a search when minChars is reached. */
+    function _onInput(rawValue) {
+        const query = rawValue.trim();
         if (_debounceTimer !== null)
             clearTimeout(_debounceTimer);
         if (query.length < minChars) {
@@ -14193,24 +14185,30 @@ function mountGeocodingControl(mapContainer, provider, config, onSelect) {
         }
         _debounceTimer = setTimeout(() => void _doSearch(query), debounceMs);
     }
+    /** Immediate submit — skips debounce (Enter key or magnifier click). */
+    function _onSubmit(rawValue) {
+        const query = rawValue.trim();
+        if (query.length < minChars)
+            return;
+        if (_debounceTimer !== null) {
+            clearTimeout(_debounceTimer);
+            _debounceTimer = null;
+        }
+        void _doSearch(query);
+    }
     function _onResultClick(e) {
         const target = e.target.closest("[data-idx]");
         if (!target)
             return;
-        const idx = Number(target.getAttribute("data-idx"));
+        const idx = Number(target.dataset.idx);
         const result = _currentResults[idx];
         if (!result)
             return;
         input.value = result.label;
-        clearBtn.hidden = false;
         _clearResults();
         onSelect(result);
     }
-    function _onKeyDown(e) {
-        if (e.key === "Escape") {
-            _clear();
-            return;
-        }
+    function _onListKeyDown(e) {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             const items = resultsList.querySelectorAll(".gl-geocoding-result-item");
             if (items.length === 0)
@@ -14219,7 +14217,7 @@ function mountGeocodingControl(mapContainer, provider, config, onSelect) {
             const current = resultsList.querySelector("[aria-selected='true']");
             let nextIdx = 0;
             if (current) {
-                const currentIdx = Number(current.getAttribute("data-idx"));
+                const currentIdx = Number(current.dataset.idx);
                 nextIdx =
                     e.key === "ArrowDown"
                         ? Math.min(currentIdx + 1, items.length - 1)
@@ -14235,45 +14233,44 @@ function mountGeocodingControl(mapContainer, provider, config, onSelect) {
         }
         if (e.key === "Enter") {
             const selected = resultsList.querySelector("[aria-selected='true']");
-            // Click fires _onResultClick which handles selection
-            selected?.click();
+            if (selected) {
+                // Pre-empt the helper's onSubmit when a result is highlighted
+                e.preventDefault();
+                e.stopPropagation();
+                selected.click();
+            }
         }
     }
     function _onDocumentClick(e) {
-        if (!wrapper.contains(e.target)) {
+        if (!ctrlWrapper.contains(e.target)) {
             _clearResults();
         }
     }
-    /** Stops event propagation to prevent map pan/zoom while interacting. */
-    function _stopProp(e) {
-        e.stopPropagation();
-    }
     // ── Event listeners ───────────────────────────────────────────────────────
-    input.addEventListener("input", _onInput);
-    input.addEventListener("keydown", _onKeyDown);
-    clearBtn.addEventListener("click", _clear);
+    // Arrow / Enter navigation through the results dropdown — bound at capture
+    // phase to run before the pill helper's keydown handler (Enter → submit).
+    input.addEventListener("keydown", _onListKeyDown, true);
     resultsList.addEventListener("click", _onResultClick);
     document.addEventListener("click", _onDocumentClick);
     // Prevent map interactions when user is engaging with the geocoding widget
-    wrapper.addEventListener("mousedown", _stopProp);
-    wrapper.addEventListener("touchstart", _stopProp, { passive: true });
-    wrapper.addEventListener("dblclick", _stopProp);
-    wrapper.addEventListener("wheel", _stopProp, { passive: false });
+    ctrlWrapper.addEventListener("mousedown", _stopProp);
+    ctrlWrapper.addEventListener("touchstart", _stopProp, { passive: true });
+    ctrlWrapper.addEventListener("dblclick", _stopProp);
+    ctrlWrapper.addEventListener("wheel", _stopProp, { passive: false });
     // ── Destroy / cleanup ─────────────────────────────────────────────────────
     return function destroy() {
         if (_debounceTimer !== null) {
             clearTimeout(_debounceTimer);
         }
-        input.removeEventListener("input", _onInput);
-        input.removeEventListener("keydown", _onKeyDown);
-        clearBtn.removeEventListener("click", _clear);
+        input.removeEventListener("keydown", _onListKeyDown, true);
         resultsList.removeEventListener("click", _onResultClick);
         document.removeEventListener("click", _onDocumentClick);
-        wrapper.removeEventListener("mousedown", _stopProp);
-        wrapper.removeEventListener("touchstart", _stopProp);
-        wrapper.removeEventListener("dblclick", _stopProp);
-        wrapper.removeEventListener("wheel", _stopProp);
-        wrapper.remove();
+        ctrlWrapper.removeEventListener("mousedown", _stopProp);
+        ctrlWrapper.removeEventListener("touchstart", _stopProp);
+        ctrlWrapper.removeEventListener("dblclick", _stopProp);
+        ctrlWrapper.removeEventListener("wheel", _stopProp);
+        pill.destroy();
+        ctrlWrapper.remove();
     };
 }
 
@@ -14323,7 +14320,8 @@ function _dispatchResult(result) {
  * @internal
  */
 function _onSelect(result, flyToZoom) {
-    const adapter = _g$4.GeoLeaf?.getMap?.();
+    // GeoLeaf.getMap(id) requires an explicit id — use Core.getMap() instead.
+    const adapter = _g$4.GeoLeaf?.Core?.getMap?.() ?? _g$4.GeoLeaf?.getAllMaps?.()[0] ?? null;
     if (adapter) {
         if (result.bounds) {
             adapter.fitBounds({
@@ -14348,7 +14346,9 @@ function _onMapReady() {
     const config = _getConfig();
     if (!config.enabled)
         return;
-    const adapter = _g$4.GeoLeaf?.getMap?.();
+    // Core.getMap() holds the adapter created by the main init path.
+    // GeoLeaf.getMap(id) requires an explicit id and returns null without one.
+    const adapter = _g$4.GeoLeaf?.Core?.getMap?.() ?? _g$4.GeoLeaf?.getAllMaps?.()[0] ?? null;
     const container = adapter?.getContainer?.() ?? null;
     if (!container)
         return;
@@ -14906,6 +14906,9 @@ function initBasemaps({ GeoLeaf, cfg, map, AppLog }) {
             // 3D terrain configuration
             if (def.terrain)
                 entry.terrain = def.terrain;
+            // WMTS configuration (IGN and other WMTS providers)
+            if (def.wmts)
+                entry.wmts = def.wmts;
             basemapsFromConfig[key] = entry;
         });
     }
@@ -16893,45 +16896,45 @@ async function loadModule(moduleName) {
     switch (moduleName) {
         // POI convenience: core first, then renderers + extras in parallel
         case "poi":
-            await import('./chunks/geoleaf-poi-core-DlMc5ShN.js');
+            await import('./chunks/geoleaf-poi-core-CvfSQSwi.js');
             await Promise.all([
-                import('./chunks/geoleaf-poi-renderers-BQTr956H.js'),
-                import('./chunks/geoleaf-poi-extras-DlMc5ShN.js'),
+                import('./chunks/geoleaf-poi-renderers-DYHxeVFp.js'),
+                import('./chunks/geoleaf-poi-extras-CvfSQSwi.js'),
             ]);
             break;
         // Granular POI sub-chunks
         case "poiCore":
-            await import('./chunks/geoleaf-poi-core-DlMc5ShN.js');
+            await import('./chunks/geoleaf-poi-core-CvfSQSwi.js');
             break;
         case "poiRenderers":
-            await import('./chunks/geoleaf-poi-renderers-BQTr956H.js');
+            await import('./chunks/geoleaf-poi-renderers-DYHxeVFp.js');
             break;
         case "poiExtras":
-            await import('./chunks/geoleaf-poi-extras-DlMc5ShN.js');
+            await import('./chunks/geoleaf-poi-extras-CvfSQSwi.js');
             break;
         case "basemapSelector":
-            await import('./chunks/geoleaf-basemap-selector-BQTr956H.js');
+            await import('./chunks/geoleaf-basemap-selector-DYHxeVFp.js');
             break;
         case "route":
-            await import('./chunks/geoleaf-route-BQTr956H.js');
+            await import('./chunks/geoleaf-route-DYHxeVFp.js');
             break;
         case "layerManager":
-            await import('./chunks/geoleaf-layer-manager-C8IH1hTI.js');
+            await import('./chunks/geoleaf-layer-manager-D2pRx7Nx.js');
             break;
         case "legend":
-            await import('./chunks/geoleaf-legend-DSM1Iw1a.js');
+            await import('./chunks/geoleaf-legend-B_6NjiCY.js');
             break;
         case "labels":
-            await import('./chunks/geoleaf-labels-D1JtHYXd.js');
+            await import('./chunks/geoleaf-labels-BDs_K8qr.js');
             break;
         case "themes":
-            await import('./chunks/geoleaf-themes-C6eliVEm.js');
+            await import('./chunks/geoleaf-themes-BBrwmQcZ.js');
             break;
         case "table":
-            await import('./chunks/geoleaf-table-hX39D48Z.js');
+            await import('./chunks/geoleaf-table-D3meGBVO.js');
             break;
         case "search":
-            await import('./chunks/geoleaf-search-DEAo6acR.js').then(function (n) { return n.s; });
+            await import('./chunks/geoleaf-search-DxwtrSb2.js').then(function (n) { return n.s; });
             break;
         default: {
             // TypeScript exhaustiveness guard — `moduleName` is `never` here for
@@ -16956,16 +16959,16 @@ async function loadModule(moduleName) {
  */
 async function loadAllSecondaryModules() {
     // poi-core must be ready before poi-renderers and poi-extras
-    await import('./chunks/geoleaf-poi-core-DlMc5ShN.js');
+    await import('./chunks/geoleaf-poi-core-CvfSQSwi.js');
     await Promise.all([
-        import('./chunks/geoleaf-poi-renderers-BQTr956H.js'),
-        import('./chunks/geoleaf-poi-extras-DlMc5ShN.js'),
-        import('./chunks/geoleaf-route-BQTr956H.js'),
-        import('./chunks/geoleaf-layer-manager-C8IH1hTI.js'),
-        import('./chunks/geoleaf-legend-DSM1Iw1a.js'),
-        import('./chunks/geoleaf-labels-D1JtHYXd.js'),
-        import('./chunks/geoleaf-themes-C6eliVEm.js'),
-        import('./chunks/geoleaf-table-hX39D48Z.js'),
+        import('./chunks/geoleaf-poi-renderers-DYHxeVFp.js'),
+        import('./chunks/geoleaf-poi-extras-CvfSQSwi.js'),
+        import('./chunks/geoleaf-route-DYHxeVFp.js'),
+        import('./chunks/geoleaf-layer-manager-D2pRx7Nx.js'),
+        import('./chunks/geoleaf-legend-B_6NjiCY.js'),
+        import('./chunks/geoleaf-labels-BDs_K8qr.js'),
+        import('./chunks/geoleaf-themes-BBrwmQcZ.js'),
+        import('./chunks/geoleaf-table-D3meGBVO.js'),
     ]);
 }
 

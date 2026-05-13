@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "guyane-biodiversite",
-  "_generatedAt": 1778670088035,
+  "_generatedAt": 1778715736011,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/guyane-biodiversite/icons/sprite_guyane.svg",
@@ -243,6 +243,32 @@
         "type": "maplibre",
         "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
         "attribution": "© IGN France — Geoportail"
+      },
+      "ign-satellite": {
+        "id": "ign-satellite",
+        "label": "IGN Satellite",
+        "type": "wmts",
+        "wmts": {
+          "getCapabilitiesUrl": "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetCapabilities",
+          "layer": "ORTHOIMAGERY.ORTHOPHOTOS",
+          "tileMatrixSet": "PM",
+          "format": "image/jpeg"
+        },
+        "attribution": "Geoportail France",
+        "offline": false
+      },
+      "ign-cadastre": {
+        "id": "ign-cadastre",
+        "label": "IGN Cadastre",
+        "type": "wmts",
+        "wmts": {
+          "getCapabilitiesUrl": "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetCapabilities",
+          "layer": "CADASTRALPARCELS.PARCELLAIRE_EXPRESS",
+          "tileMatrixSet": "PM",
+          "format": "image/png"
+        },
+        "attribution": "Geoportail France",
+        "offline": false
       }
     }
   },

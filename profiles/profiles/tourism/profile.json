@@ -28,6 +28,11 @@
         "layerLoadDelay": 200,
         "fitBoundsOnThemeChange": false
     },
+    "geocodingConfig": {
+        "enabled": true,
+        "provider": "nominatim",
+        "countrycodes": "ar"
+    },
     "clusteringConfig": {
         "enabled": true,
         "strategy": "by-layer",
