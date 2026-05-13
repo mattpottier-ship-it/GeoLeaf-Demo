@@ -1,13 +1,13 @@
 import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, p as getLabel, ab as registerDict, o as domCreate, K as blockMapPropagation, ac as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ad as resolvePoiColors, ae as StyleValidator, af as StyleValidatorRules, H as AbstractRenderer, ag as SimpleTextRenderer, ah as DataNormalizer, M as StyleLoader, x as Config$3, ai as DataConverter, aj as ProfileLoader, ak as ConfigNormalizer, al as ProfileLoader$1, am as ProfileManager, an as StorageHelper, ao as TaxonomyManager, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ap as getDistance, A as getActiveProfile, aq as ensureMap, ar as validateCoordinates, as as validateNumber, C as Core, at as Helpers$1, au as Validators, av as initI18n, aw as padBounds, ax as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-B0_WoP8o.js';
-import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-D2hDk-23.js';
+import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-BSmB7R6w.js';
 import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-CTMFX9Ro.js';
-import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-NB-nOyq3.js';
-import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-BaNK15Zi.js';
-import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-B7IiaczI.js';
-import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-uAINdndZ.js';
-export { c as Themes } from './chunks/geoleaf-chunk-themes-uAINdndZ.js';
+import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-I8PXg3cg.js';
+import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-BlXcZAcO.js';
+import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-Dq7V3LCX.js';
+import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-DRSeta0A.js';
+export { c as Themes } from './chunks/geoleaf-chunk-themes-DRSeta0A.js';
 import { b as POI, c as POIAddFormContract, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-FqfrA0V3.js';
-import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-5yxJ1ZuM.js';
+import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-BMze4BV3.js';
 export { S as Search } from './chunks/geoleaf-search-DEAo6acR.js';
 
 /**
@@ -12340,6 +12340,7 @@ const PluginRegistry = {
             "flatgeobuf",
             "file-import",
             "print",
+            "measure",
         ]);
         const standard = [..._registry$1.values()].filter((e) => e.loaded &&
             (e.type === "standard"
@@ -16915,19 +16916,19 @@ async function loadModule(moduleName) {
             await import('./chunks/geoleaf-route-BQTr956H.js');
             break;
         case "layerManager":
-            await import('./chunks/geoleaf-layer-manager-CnFuVGVb.js');
+            await import('./chunks/geoleaf-layer-manager-C8IH1hTI.js');
             break;
         case "legend":
-            await import('./chunks/geoleaf-legend-CkF1ODXi.js');
+            await import('./chunks/geoleaf-legend-DSM1Iw1a.js');
             break;
         case "labels":
-            await import('./chunks/geoleaf-labels-DWD9sBQ6.js');
+            await import('./chunks/geoleaf-labels-D1JtHYXd.js');
             break;
         case "themes":
-            await import('./chunks/geoleaf-themes-R_9c2kMW.js');
+            await import('./chunks/geoleaf-themes-C6eliVEm.js');
             break;
         case "table":
-            await import('./chunks/geoleaf-table-CttTjosz.js');
+            await import('./chunks/geoleaf-table-hX39D48Z.js');
             break;
         case "search":
             await import('./chunks/geoleaf-search-DEAo6acR.js').then(function (n) { return n.s; });
@@ -16960,11 +16961,11 @@ async function loadAllSecondaryModules() {
         import('./chunks/geoleaf-poi-renderers-BQTr956H.js'),
         import('./chunks/geoleaf-poi-extras-DlMc5ShN.js'),
         import('./chunks/geoleaf-route-BQTr956H.js'),
-        import('./chunks/geoleaf-layer-manager-CnFuVGVb.js'),
-        import('./chunks/geoleaf-legend-CkF1ODXi.js'),
-        import('./chunks/geoleaf-labels-DWD9sBQ6.js'),
-        import('./chunks/geoleaf-themes-R_9c2kMW.js'),
-        import('./chunks/geoleaf-table-CttTjosz.js'),
+        import('./chunks/geoleaf-layer-manager-C8IH1hTI.js'),
+        import('./chunks/geoleaf-legend-DSM1Iw1a.js'),
+        import('./chunks/geoleaf-labels-D1JtHYXd.js'),
+        import('./chunks/geoleaf-themes-C6eliVEm.js'),
+        import('./chunks/geoleaf-table-hX39D48Z.js'),
     ]);
 }
 

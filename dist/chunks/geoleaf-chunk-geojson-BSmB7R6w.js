@@ -2732,6 +2732,8 @@ function bindMapLibrePopup(layerId, def, nativeMap, subLayerIds) {
             nativeMap.on("click", subId, (e) => {
                 if (!e.features || e.features.length === 0)
                     return;
+                if (nativeMap.__geoleafExclusiveMode)
+                    return;
                 const feature = e.features[0];
                 // Skip cluster features — they have point_count, not real data properties.
                 // Cluster clicks are handled separately by bindGeoJSONClusterEvents (zoom in).
@@ -2783,10 +2785,12 @@ function bindMapLibrePopup(layerId, def, nativeMap, subLayerIds) {
         const cursorIds = _interactionSubLayerIds(subLayerIds).filter((id) => nativeMap.getLayer(id));
         for (const cId of cursorIds) {
             nativeMap.on("mousemove", cId, () => {
-                nativeMap.getCanvas().style.cursor = "pointer";
+                if (!nativeMap.__geoleafExclusiveMode)
+                    nativeMap.getCanvas().style.cursor = "pointer";
             });
             nativeMap.on("mouseleave", cId, () => {
-                nativeMap.getCanvas().style.cursor = "";
+                if (!nativeMap.__geoleafExclusiveMode)
+                    nativeMap.getCanvas().style.cursor = "";
             });
         }
     }
@@ -2838,6 +2842,8 @@ function bindMapLibreTooltip(layerId, def, nativeMap, subLayerIds) {
             if (nativeMap.getZoom() < tooltipMinZoom)
                 return;
             if (!e.features || e.features.length === 0)
+                return;
+            if (nativeMap.__geoleafExclusiveMode)
                 return;
             const tsState = _getTooltipState(nativeMap);
             // Only the topmost (highest z-index) layer shows a tooltip.
@@ -5415,4 +5421,4 @@ if (_g.GeoLeaf && !_g.GeoLeaf._StyleRules && GeoJSONStyleResolver) {
 const GeoJSONCore = GeoJSONModule;
 
 export { FeatureValidator as F, GeoJSONCore as G, Loader as L, PopupTooltip as P, VisibilityManager as V, WorkerManager as W, GeoJSONShared as a, LayerManager$1 as b, LayerManager$3 as c, LayerManager$2 as d, LayerManager as e, Loader$3 as f, Loader$2 as g, Loader$1 as h, LayerConfigManager as i, GeoJSONClustering as j, GeoJSONStyleResolver as k, VectorTiles as l, setupDataDeps as m, normalizeStyle as n, setupSingleLayerDeps as o, setupPopupTooltipDeps as p, setupProfileDeps as s };
-//# sourceMappingURL=geoleaf-chunk-geojson-D2hDk-23.js.map
+//# sourceMappingURL=geoleaf-chunk-geojson-BSmB7R6w.js.map

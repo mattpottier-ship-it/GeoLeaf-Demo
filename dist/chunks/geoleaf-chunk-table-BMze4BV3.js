@@ -1,5 +1,5 @@
 import { O as events, L as Log, p as getLabel, G as DOMSecurity, I as createElement, P as getNestedValue } from './geoleaf-chunk-core-utils-B0_WoP8o.js';
-import { a as GeoJSONShared, V as VisibilityManager } from './geoleaf-chunk-geojson-D2hDk-23.js';
+import { a as GeoJSONShared, V as VisibilityManager } from './geoleaf-chunk-geojson-BSmB7R6w.js';
 
 /**
  * GeoLeaf Contract — Table (lazy-chunk boundary)
@@ -2371,4 +2371,4 @@ Object.defineProperties(TableModule, {
 TableContract.register(Table, TablePanel);
 
 export { TableContract as T, Table as a };
-//# sourceMappingURL=geoleaf-chunk-table-5yxJ1ZuM.js.map
+//# sourceMappingURL=geoleaf-chunk-table-BMze4BV3.js.map

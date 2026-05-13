@@ -1,5 +1,5 @@
 import { o as domCreate, L as Log, C as Core, k as isScaleInRange, j as calculateMapScale, p as getLabel } from './geoleaf-chunk-core-utils-B0_WoP8o.js';
-import { G as GeoJSONCore } from './geoleaf-chunk-geojson-D2hDk-23.js';
+import { G as GeoJSONCore } from './geoleaf-chunk-geojson-BSmB7R6w.js';
 
 /**
  * GeoLeaf UI Components - Common shared module
@@ -1362,4 +1362,4 @@ const LabelButtonManager = {
 };
 
 export { Labels as L, _UIComponents as _, LabelButtonManager as a, _LabelRenderer as b };
-//# sourceMappingURL=geoleaf-chunk-labels-NB-nOyq3.js.map
+//# sourceMappingURL=geoleaf-chunk-labels-I8PXg3cg.js.map
