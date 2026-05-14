@@ -4481,6 +4481,14 @@ class SectionOrchestrator {
             tags: () => comp.renderTags(section, fieldValue),
             rating: () => comp.renderRating(section, fieldValue),
             reviews: () => comp.renderReviews(section, fieldValue),
+            // S5 alignment: types managed by plugin-editor form-renderer (no reference back)
+            radio: () => f.renderText(section, poi, fieldValue),
+            checkbox: () => f.renderText(section, poi, String(fieldValue ?? "")),
+            dropdown: () => f.renderText(section, poi, fieldValue),
+            phone: () => f.renderText(section, poi, fieldValue),
+            price: () => f.renderText(section, poi, this._formatPrice(fieldValue)),
+            coordinates: () => f.renderText(section, poi, this._formatCoords(fieldValue)),
+            hours: () => this._renderHoursTable(section, fieldValue),
         };
         const fn = DISPATCH[section.type];
         if (!fn) {
@@ -4489,6 +4497,60 @@ class SectionOrchestrator {
             return null;
         }
         return await fn();
+    }
+    /** @private */
+    _formatPrice(value) {
+        if (!value || typeof value !== "object")
+            return String(value ?? "");
+        try {
+            return new Intl.NumberFormat(undefined, {
+                style: "currency",
+                currency: String(value.currency || "EUR"),
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 2,
+            }).format(Number(value.amount ?? 0));
+        }
+        catch {
+            return `${value.amount ?? ""} ${value.currency ?? ""}`.trim();
+        }
+    }
+    /** @private */
+    _formatCoords(value) {
+        if (!value || typeof value !== "object")
+            return String(value ?? "");
+        const lat = typeof value.lat === "number" ? value.lat.toFixed(6) : "";
+        const lng = typeof value.lng === "number" ? value.lng.toFixed(6) : "";
+        return lat && lng ? `${lat}, ${lng}` : "";
+    }
+    /** @private */
+    _renderHoursTable(section, value) {
+        if (!value || typeof value !== "object")
+            return null;
+        const DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+        const table = document.createElement("table");
+        table.className = "gl-poi-hours";
+        for (const day of DAYS) {
+            const slots = value[day] ?? [];
+            const tr = document.createElement("tr");
+            const dayTd = document.createElement("td");
+            dayTd.className = "gl-poi-hours__day";
+            dayTd.textContent = day.charAt(0).toUpperCase() + day.slice(1);
+            const hoursTd = document.createElement("td");
+            hoursTd.className = "gl-poi-hours__slots";
+            if (!slots.length || slots[0]?.closed) {
+                hoursTd.textContent = section.closedLabel || "—";
+            }
+            else {
+                hoursTd.textContent = slots
+                    .filter((s) => !s.closed)
+                    .map((s) => `${s.open}–${s.close}`)
+                    .join(", ");
+            }
+            tr.appendChild(dayTd);
+            tr.appendChild(hoursTd);
+            table.appendChild(tr);
+        }
+        return table;
     }
     /**
      * Recupere the value of a field avec support du dot notation.
@@ -6890,4 +6952,4 @@ var poiCore_contract = /*#__PURE__*/Object.freeze({
 });
 
 export { Assemblers as A, ContentBuilderCore as C, FieldRenderers as F, Helpers as H, LightboxManager as L, MediaRenderers as M, POIMarkers as P, RendererCore$1 as R, SectionOrchestrator as S, UIBehaviors as U, POIShared as a, POI as b, POIAddFormContract as c, ContentBuilderShared as d, POINormalizers as e, POIPopup as f, POISidepanel as g, POIRenderers as h, POICore as i, ComponentRenderers as j, RendererLinks as k, POICoreContract as l };
-//# sourceMappingURL=geoleaf-chunk-poi-CIMYQFf4.js.map
+//# sourceMappingURL=geoleaf-chunk-poi-wab1BBmO.js.map

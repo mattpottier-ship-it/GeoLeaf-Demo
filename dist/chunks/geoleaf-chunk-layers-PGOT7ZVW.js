@@ -1,8 +1,8 @@
 import { L as Log, v as validateUrl, i as dispatchGeoLeafEvent, G as DOMSecurity, o as domCreate, x as Config, M as StyleLoader, p as getLabel, K as blockMapPropagation } from './geoleaf-chunk-core-utils-CGzgeOnm.js';
 import { G as GeoJSONCore, a as GeoJSONShared } from './geoleaf-chunk-geojson-Cb7z5K-I.js';
 import { L as Labels, a as LabelButtonManager, _ as _UIComponents } from './geoleaf-chunk-labels-CRJhnuZN.js';
-import { L as Legend } from './geoleaf-chunk-legend-ocC0_8sN.js';
-import { _ as _ThemeApplier } from './geoleaf-chunk-themes-DbPJCjeg.js';
+import { L as Legend } from './geoleaf-chunk-legend-EiidBdJl.js';
+import { _ as _ThemeApplier } from './geoleaf-chunk-themes-DxlJDPyv.js';
 
 /*!
  * GeoLeaf Core – Baselayers / URL Utilities
@@ -3149,4 +3149,4 @@ const _LayerManagerShared = {
 const LMShared = _LayerManagerShared;
 
 export { BasemapSelector as B, LayerManager as L, StyleSelector as S, LegendContract as a, LMControl as b, LMRenderer as c, LMShared as d, Baselayers as e };
-//# sourceMappingURL=geoleaf-chunk-layers-D7C6tPLK.js.map
+//# sourceMappingURL=geoleaf-chunk-layers-PGOT7ZVW.js.map

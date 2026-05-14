@@ -1,9 +1,9 @@
 import { x as Config, L as Log, p as getLabel, N as FetchHelper, G as DOMSecurity, o as domCreate, I as createElement, C as Core, M as StyleLoader } from './geoleaf-chunk-core-utils-CGzgeOnm.js';
 import { G as GeoJSONCore, a as GeoJSONShared, L as Loader, V as VisibilityManager, b as LayerManager$1 } from './geoleaf-chunk-geojson-Cb7z5K-I.js';
-import { a as POIShared } from './geoleaf-chunk-poi-CIMYQFf4.js';
-import { L as LayerManager, a as LegendContract, S as StyleSelector } from './geoleaf-chunk-layers-D7C6tPLK.js';
+import { a as POIShared } from './geoleaf-chunk-poi-wab1BBmO.js';
+import { L as LayerManager, a as LegendContract, S as StyleSelector } from './geoleaf-chunk-layers-PGOT7ZVW.js';
 import { R as Route } from './geoleaf-chunk-route-CsfSgGqY.js';
-import { L as Legend } from './geoleaf-chunk-legend-ocC0_8sN.js';
+import { L as Legend } from './geoleaf-chunk-legend-EiidBdJl.js';
 import { L as Labels, a as LabelButtonManager } from './geoleaf-chunk-labels-CRJhnuZN.js';
 
 /**
@@ -1994,4 +1994,4 @@ const Themes = {
 _g.GeoLeaf.Themes = Themes;
 
 export { ThemeSelector as T, _ThemeApplier as _, ThemeCache as a, _ThemeLoader as b, Themes as c };
-//# sourceMappingURL=geoleaf-chunk-themes-DbPJCjeg.js.map
+//# sourceMappingURL=geoleaf-chunk-themes-DxlJDPyv.js.map

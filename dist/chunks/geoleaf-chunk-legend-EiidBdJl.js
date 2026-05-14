@@ -1,5 +1,5 @@
 import { L as Log, o as domCreate, K as blockMapPropagation, G as DOMSecurity, p as getLabel, x as Config, B as compareByOrder } from './geoleaf-chunk-core-utils-CGzgeOnm.js';
-import { P as POIMarkers, a as POIShared } from './geoleaf-chunk-poi-CIMYQFf4.js';
+import { P as POIMarkers, a as POIShared } from './geoleaf-chunk-poi-wab1BBmO.js';
 import { _ as _UIComponents } from './geoleaf-chunk-labels-CRJhnuZN.js';
 
 /**
@@ -1144,4 +1144,4 @@ const LegendModule = {
 const Legend = LegendModule;
 
 export { Legend as L, LegendControl as a, LegendGenerator as b, LegendRenderer as c };
-//# sourceMappingURL=geoleaf-chunk-legend-ocC0_8sN.js.map
+//# sourceMappingURL=geoleaf-chunk-legend-EiidBdJl.js.map
