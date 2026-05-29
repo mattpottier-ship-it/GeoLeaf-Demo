@@ -1,14 +1,14 @@
-import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, p as getLabel, ab as registerDict, o as domCreate, K as blockMapPropagation, ac as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ad as resolvePoiColors, ae as StyleValidator, af as StyleValidatorRules, H as AbstractRenderer, ag as SimpleTextRenderer, ah as DataNormalizer, M as StyleLoader, x as Config$3, ai as DataConverter, aj as ProfileLoader, ak as ConfigNormalizer, al as ProfileLoader$1, am as ProfileManager, an as StorageHelper, ao as TaxonomyManager, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ap as getDistance, A as getActiveProfile, aq as ensureMap, ar as validateCoordinates, as as validateNumber, C as Core, at as Helpers$1, au as Validators, av as initI18n, aw as padBounds, ax as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-CGzgeOnm.js';
-import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-Cb7z5K-I.js';
-import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-CsfSgGqY.js';
-import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-CRJhnuZN.js';
-import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-EiidBdJl.js';
-import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-PGOT7ZVW.js';
-import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-DxlJDPyv.js';
-export { c as Themes } from './chunks/geoleaf-chunk-themes-DxlJDPyv.js';
-import { b as POI, c as POIAddFormContract, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-wab1BBmO.js';
-import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-CtcO5nRU.js';
-export { S as Search } from './chunks/geoleaf-search-Bnq8wD_e.js';
+import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, p as getLabel, ab as registerDict, o as domCreate, K as blockMapPropagation, ac as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ad as resolvePoiColors, ae as StyleValidator, af as StyleValidatorRules, H as AbstractRenderer, ag as SimpleTextRenderer, ah as DataNormalizer, M as StyleLoader, x as Config$3, ai as DataConverter, aj as ProfileLoader, ak as ConfigNormalizer, al as ProfileLoader$1, am as ProfileManager, an as StorageHelper, ao as TaxonomyManager, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ap as getDistance, A as getActiveProfile, aq as ensureMap, ar as validateCoordinates, as as validateNumber, C as Core, at as Helpers$1, au as Validators, av as initI18n, aw as padBounds, ax as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-DgMMxIOr.js';
+import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-BRrtWid7.js';
+import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-Dm95RsIj.js';
+import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-9H31yyT7.js';
+import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-C_DNLGcS.js';
+import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-67pkrYH8.js';
+import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-CybYLxLu.js';
+export { c as Themes } from './chunks/geoleaf-chunk-themes-CybYLxLu.js';
+import { b as POI, c as POIAddFormContract, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-Bd21HeOP.js';
+import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-BsY8y7jR.js';
+export { S as Search } from './chunks/geoleaf-search-JY6fxapj.js';
 
 /**
  * @module globals.core
@@ -25,7 +25,7 @@ export { S as Search } from './chunks/geoleaf-search-Bnq8wD_e.js';
  *   - **B2** — `Utils` (animation, DOM, events, fetch, file validation,
  *     lazy loading, map helpers, object utils, performance, scale, timers)
  *
- * Also sets `_g.GeoLeaf._version` from the Rollup-injected `"2.1.8"`
+ * Also sets `_g.GeoLeaf._version` from the Rollup-injected `"3.0.0"`
  * constant, falling back to `'1.1.1-dev'` in development mode.
  *
  * @see globals for the orchestrator and import order
@@ -36,7 +36,7 @@ const _g$j = typeof globalThis !== "undefined" ? globalThis : typeof window !== 
 _g$j.GeoLeaf = _g$j.GeoLeaf || {};
 // Version injectable at build time — fallback for dev without build step
 _g$j.GeoLeaf._version =
-    "2.1.8" ;
+    "3.0.0" ;
 // -- B1 assignations ----------------------------------------------------------
 _g$j.GeoLeaf.Log = Log;
 _g$j.GeoLeaf.Errors = Errors;
@@ -9781,7 +9781,7 @@ async function _loadQrcode() {
     if (_qrcodeFactory)
         return _qrcodeFactory;
     if (!_loaderPromise) {
-        _loaderPromise = import('./chunks/geoleaf-qrcode-9W0U9KLq.js').then(function (n) { return n.q; }).then((mod) => {
+        _loaderPromise = import('./chunks/geoleaf-qrcode-CSBF2BCQ.js').then(function (n) { return n.q; }).then((mod) => {
             // qrcode-generator is CommonJS — Rollup CJS interop exposes the
             // factory under `.default`. Fall back to the namespace itself for
             // bundlers that already strip the CJS wrapper.
@@ -14621,15 +14621,22 @@ _g$2.GeoLeaf.getAllMaps = function () {
         ? ctrl.managers.factory.getAllMapInstances()
         : [];
 };
+/**
+ * @deprecated Use `GeoLeaf.Core.destroy(mapId)` instead. Kept as an alias that
+ * destroys the keyed Core instance and also purges the legacy factory registry.
+ */
 _g$2.GeoLeaf.removeMap = function (id) {
-    const ctrl = _g$2.GeoLeaf._APIController;
-    if (ctrl &&
-        ctrl.managers &&
-        ctrl.managers.factory &&
-        typeof ctrl.managers.factory.removeMapInstance === "function") {
-        return ctrl.managers.factory.removeMapInstance(id);
+    Log.warn("[GeoLeaf] removeMap() is deprecated — use GeoLeaf.Core.destroy(mapId).");
+    let destroyed = false;
+    const core = _g$2.GeoLeaf?.Core;
+    if (core && typeof core.destroy === "function") {
+        destroyed = core.destroy(id);
     }
-    return false;
+    const ctrl = _g$2.GeoLeaf._APIController;
+    if (ctrl?.managers?.factory?.removeMapInstance) {
+        ctrl.managers.factory.removeMapInstance(id);
+    }
+    return destroyed;
 };
 _g$2.GeoLeaf.getModule = function (name) {
     const ctrl = _g$2.GeoLeaf._APIController;
@@ -16898,45 +16905,45 @@ async function loadModule(moduleName) {
     switch (moduleName) {
         // POI convenience: core first, then renderers + extras in parallel
         case "poi":
-            await import('./chunks/geoleaf-poi-core-DgRUGp5T.js');
+            await import('./chunks/geoleaf-poi-core-D8uh1utR.js');
             await Promise.all([
-                import('./chunks/geoleaf-poi-renderers-WKKdINiB.js'),
-                import('./chunks/geoleaf-poi-extras-DgRUGp5T.js'),
+                import('./chunks/geoleaf-poi-renderers-CU-3iqyx.js'),
+                import('./chunks/geoleaf-poi-extras-D8uh1utR.js'),
             ]);
             break;
         // Granular POI sub-chunks
         case "poiCore":
-            await import('./chunks/geoleaf-poi-core-DgRUGp5T.js');
+            await import('./chunks/geoleaf-poi-core-D8uh1utR.js');
             break;
         case "poiRenderers":
-            await import('./chunks/geoleaf-poi-renderers-WKKdINiB.js');
+            await import('./chunks/geoleaf-poi-renderers-CU-3iqyx.js');
             break;
         case "poiExtras":
-            await import('./chunks/geoleaf-poi-extras-DgRUGp5T.js');
+            await import('./chunks/geoleaf-poi-extras-D8uh1utR.js');
             break;
         case "basemapSelector":
-            await import('./chunks/geoleaf-basemap-selector-WKKdINiB.js');
+            await import('./chunks/geoleaf-basemap-selector-CU-3iqyx.js');
             break;
         case "route":
-            await import('./chunks/geoleaf-route-WKKdINiB.js');
+            await import('./chunks/geoleaf-route-CU-3iqyx.js');
             break;
         case "layerManager":
-            await import('./chunks/geoleaf-layer-manager-DvGdphbv.js');
+            await import('./chunks/geoleaf-layer-manager-BDSbFBVp.js');
             break;
         case "legend":
-            await import('./chunks/geoleaf-legend-DqwLk5x0.js');
+            await import('./chunks/geoleaf-legend-DX-jO7Gg.js');
             break;
         case "labels":
-            await import('./chunks/geoleaf-labels-h0F-VXIK.js');
+            await import('./chunks/geoleaf-labels-Dw8oLgMA.js');
             break;
         case "themes":
-            await import('./chunks/geoleaf-themes-bv179IWm.js');
+            await import('./chunks/geoleaf-themes-k78YiQ5_.js');
             break;
         case "table":
-            await import('./chunks/geoleaf-table-PhztADHh.js');
+            await import('./chunks/geoleaf-table-I7dyxwRn.js');
             break;
         case "search":
-            await import('./chunks/geoleaf-search-Bnq8wD_e.js').then(function (n) { return n.s; });
+            await import('./chunks/geoleaf-search-JY6fxapj.js').then(function (n) { return n.s; });
             break;
         default: {
             // TypeScript exhaustiveness guard — `moduleName` is `never` here for
@@ -16961,16 +16968,16 @@ async function loadModule(moduleName) {
  */
 async function loadAllSecondaryModules() {
     // poi-core must be ready before poi-renderers and poi-extras
-    await import('./chunks/geoleaf-poi-core-DgRUGp5T.js');
+    await import('./chunks/geoleaf-poi-core-D8uh1utR.js');
     await Promise.all([
-        import('./chunks/geoleaf-poi-renderers-WKKdINiB.js'),
-        import('./chunks/geoleaf-poi-extras-DgRUGp5T.js'),
-        import('./chunks/geoleaf-route-WKKdINiB.js'),
-        import('./chunks/geoleaf-layer-manager-DvGdphbv.js'),
-        import('./chunks/geoleaf-legend-DqwLk5x0.js'),
-        import('./chunks/geoleaf-labels-h0F-VXIK.js'),
-        import('./chunks/geoleaf-themes-bv179IWm.js'),
-        import('./chunks/geoleaf-table-PhztADHh.js'),
+        import('./chunks/geoleaf-poi-renderers-CU-3iqyx.js'),
+        import('./chunks/geoleaf-poi-extras-D8uh1utR.js'),
+        import('./chunks/geoleaf-route-CU-3iqyx.js'),
+        import('./chunks/geoleaf-layer-manager-BDSbFBVp.js'),
+        import('./chunks/geoleaf-legend-DX-jO7Gg.js'),
+        import('./chunks/geoleaf-labels-Dw8oLgMA.js'),
+        import('./chunks/geoleaf-themes-k78YiQ5_.js'),
+        import('./chunks/geoleaf-table-I7dyxwRn.js'),
     ]);
 }
 
@@ -17143,19 +17150,23 @@ const GeoLeafAPI = Object.assign(existing, {
             : [];
     },
     /**
-     * Destroys and removes a managed map adapter instance.
+     * @deprecated Use `GeoLeaf.Core.destroy(mapId)` instead. Kept as an alias that
+     * destroys the keyed Core instance and also purges the legacy factory registry.
      * @param {string} id - DOM element id of the map container to remove.
-     * @returns {boolean} `true` if the map was found and removed, `false` otherwise.
+     * @returns {boolean} `true` if an instance was found and destroyed, `false` otherwise.
      */
     removeMap: function (id) {
-        const ctrl = existing._APIController;
-        if (ctrl &&
-            ctrl.managers &&
-            ctrl.managers.factory &&
-            typeof ctrl.managers.factory.removeMapInstance === "function") {
-            return ctrl.managers.factory.removeMapInstance(id);
+        Log.warn("[GeoLeaf] removeMap() is deprecated — use GeoLeaf.Core.destroy(mapId).");
+        let destroyed = false;
+        const core = existing?.Core;
+        if (core && typeof core.destroy === "function") {
+            destroyed = core.destroy(id);
         }
-        return false;
+        const ctrl = existing._APIController;
+        if (ctrl?.managers?.factory?.removeMapInstance) {
+            ctrl.managers.factory.removeMapInstance(id);
+        }
+        return destroyed;
     },
     /**
      * Returns the current health status of the GeoLeaf APIController.

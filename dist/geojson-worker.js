@@ -11,7 +11,7 @@
  * If the Service Worker (core ou complete) est registered, les requests
  * fetch() requests here will be intercepted by the SW cache-first strategy.
  *
- * Version: 2.1.8
+ * Version: 3.0.0
  * @module geojson/geojson-worker
  */
 /* eslint-env worker */
