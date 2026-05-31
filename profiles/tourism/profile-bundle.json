@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "tourism",
-  "_generatedAt": 1780136883199,
+  "_generatedAt": 1780262247774,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/tourism/icons/sprite_tourism.svg",
@@ -756,6 +756,11 @@
   "layersFile": {
     "layers": [
       {
+        "id": "sites_rosario",
+        "configFile": "layers/sites_rosario/sites_rosario_config.json",
+        "layerManagerId": "data-tourism"
+      },
+      {
         "id": "eco_regions",
         "configFile": "layers/eco_regions/eco_regions_config.json",
         "layerManagerId": "data-conservation"
@@ -1009,6 +1014,150 @@
     ]
   },
   "layerConfigs": {
+    "sites_rosario": {
+      "id": "sites_rosario",
+      "label": "Sites touristiques – Rosario",
+      "zIndex": 97,
+      "geometry": "point",
+      "geometryType": "point",
+      "enableEdition": true,
+      "enableEditionFull": true,
+      "imageUploadEndpoint": "/api/upload",
+      "interactiveShape": true,
+      "showIconsOnMap": true,
+      "data": {
+        "directory": "data",
+        "file": "sites_rosario.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.title"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": true,
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.title",
+            "variant": "title"
+          },
+          {
+            "type": "text",
+            "label": "Adresse",
+            "field": "properties.adresse"
+          },
+          {
+            "type": "text",
+            "label": "Statut",
+            "field": "properties.statut"
+          }
+        ]
+      },
+      "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+          {
+            "type": "text",
+            "label": "Adresse",
+            "field": "properties.adresse"
+          },
+          {
+            "type": "longtext",
+            "label": "Description détaillée",
+            "field": "properties.description_longue"
+          },
+          {
+            "type": "list",
+            "label": "Services disponibles",
+            "field": "properties.services"
+          },
+          {
+            "type": "tags",
+            "label": "Mots-clés",
+            "field": "properties.mots_cles",
+            "options": [
+              {
+                "value": "patrimoine",
+                "label": "Patrimoine"
+              },
+              {
+                "value": "histoire",
+                "label": "Histoire"
+              },
+              {
+                "value": "nature",
+                "label": "Nature"
+              },
+              {
+                "value": "culture",
+                "label": "Culture"
+              },
+              {
+                "value": "gratuit",
+                "label": "Gratuit"
+              },
+              {
+                "value": "enfants",
+                "label": "Enfants"
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "label": "Horaires d'ouverture",
+            "field": "properties.horaires",
+            "columns": [
+              {
+                "key": "jour",
+                "label": "Jour"
+              },
+              {
+                "key": "horaire",
+                "label": "Horaire"
+              }
+            ]
+          },
+          {
+            "type": "link",
+            "label": "Site web",
+            "field": "properties.site_web"
+          },
+          {
+            "type": "badge",
+            "label": "Statut",
+            "field": "properties.statut"
+          },
+          {
+            "type": "image",
+            "label": "Photo principale",
+            "field": "properties.photo_principale"
+          },
+          {
+            "type": "gallery",
+            "label": "Galerie photos",
+            "field": "properties.galerie",
+            "maxCount": 8,
+            "maxSizeMb": 5
+          }
+        ]
+      }
+    },
     "eco_regions": {
       "id": "eco_regions",
       "label": "Eco régions",
@@ -1623,6 +1772,22 @@
       "geometryType": "point",
       "enableEdition": true,
       "enableEditionFull": true,
+      "editableGeometryTypes": [
+        "Point"
+      ],
+      "formSchema": [
+        {
+          "id": "nom",
+          "type": "text",
+          "label": "Nom",
+          "required": true
+        },
+        {
+          "id": "description",
+          "type": "longtext",
+          "label": "Description"
+        }
+      ],
       "interactiveShape": true,
       "showIconsOnMap": true,
       "data": {

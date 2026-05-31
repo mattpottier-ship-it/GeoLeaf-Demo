@@ -1,6 +1,11 @@
 {
     "layers": [
         {
+            "id": "sites_rosario",
+            "configFile": "layers/sites_rosario/sites_rosario_config.json",
+            "layerManagerId": "data-tourism"
+        },
+        {
             "id": "eco_regions",
             "configFile": "layers/eco_regions/eco_regions_config.json",
             "layerManagerId": "data-conservation"

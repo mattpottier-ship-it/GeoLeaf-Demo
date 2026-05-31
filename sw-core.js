@@ -32,7 +32,7 @@
 // In production, all SW console.log calls are removed at build time via terser
 const _SW_DEBUG = typeof true !== "undefined" ? true : false;
 
-const CACHE_VERSION = "geoleaf-v3.0.0";
+const CACHE_VERSION = "geoleaf-v3.0.0-1780262246942";
 const CACHE_STATIC = `${CACHE_VERSION}-static`;
 const CACHE_PROFILE_PREFIX = `${CACHE_VERSION}-profile-`;
 const CACHE_TILES = `${CACHE_VERSION}-tiles`;

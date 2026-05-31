@@ -6,6 +6,11 @@
     "geometryType": "point",
     "enableEdition": true,
     "enableEditionFull": true,
+    "editableGeometryTypes": ["Point"],
+    "formSchema": [
+        { "id": "nom", "type": "text", "label": "Nom", "required": true },
+        { "id": "description", "type": "longtext", "label": "Description" }
+    ],
     "interactiveShape": true,
     "showIconsOnMap": true,
     "data": {
