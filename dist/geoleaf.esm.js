@@ -1,13 +1,13 @@
 import { L as Log, Q as Errors, y as CONSTANTS, u as Security, R as CSRFToken, U as Utils, T as AnimationHelper, V as getAnimationHelper, I as createElement, G as DOMSecurity, W as ErrorLogger, X as EventHelpers, Y as EventListenerManager, O as events, Z as globalEventManager, _ as bus, $ as createEventBus, N as FetchHelper, a0 as FetchError, a1 as FileValidator, a2 as MapHelpers, a3 as PerformanceProfiler, a4 as getPerformanceProfiler, a5 as LazyLoader, a6 as getLazyLoader, a7 as TimerManager, a8 as setNestedValue, a9 as hasNestedPath, P as getNestedValue$1, aa as clearScaleCache, k as isScaleInRange, j as calculateMapScale, p as getLabel, ab as registerDict, o as domCreate, K as blockMapPropagation, ac as haversineDistance, z as StyleResolver, D as getColorsFromLayerStyle, ad as resolvePoiColors, ae as StyleValidator, af as StyleValidatorRules, H as AbstractRenderer, ag as SimpleTextRenderer, ah as DataNormalizer, M as StyleLoader, x as Config$3, ai as DataConverter, aj as ProfileLoader, ak as ConfigNormalizer, al as ProfileLoader$1, am as ProfileManager, an as StorageHelper, ao as TaxonomyManager, l as debounce, q as resolveField, m as escapeHtml, g as getLog, ap as getDistance, A as getActiveProfile, aq as ensureMap, ar as validateCoordinates, as as validateNumber, C as Core, at as Helpers$1, au as Validators, av as initI18n, aw as padBounds, ax as GeoLeafError } from './chunks/geoleaf-chunk-core-utils-CWXgIxbg.js';
-import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-Btv8fIbZ.js';
+import { c as LayerManager, d as LayerManager$1, b as LayerManager$2, e as LayerManager$3, f as Loader, g as Loader$1, h as Loader$2, L as Loader$3, i as LayerConfigManager, a as GeoJSONShared, j as GeoJSONClustering, F as FeatureValidator, n as normalizeStyle, k as GeoJSONStyleResolver, l as VectorTiles, V as VisibilityManager, W as WorkerManager, P as PopupTooltip, G as GeoJSONCore, s as setupProfileDeps, m as setupDataDeps, o as setupSingleLayerDeps, p as setupPopupTooltipDeps } from './chunks/geoleaf-chunk-geojson-nlv0TCVM.js';
 import { a as RouteLayerManager, b as RouteLoaders, c as RoutePopupBuilder, d as RouteStyleResolver, R as Route } from './chunks/geoleaf-chunk-route-BYak9B7z.js';
-import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-cO31ZcFG.js';
-import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-CGgJcIR_.js';
-import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-dRl0YY9j.js';
-import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-BNzRtYEs.js';
-export { c as Themes } from './chunks/geoleaf-chunk-themes-BNzRtYEs.js';
+import { a as LabelButtonManager, b as _LabelRenderer, L as Labels, _ as _UIComponents } from './chunks/geoleaf-chunk-labels-D-oB63HP.js';
+import { a as LegendControl, b as LegendGenerator, c as LegendRenderer, L as Legend } from './chunks/geoleaf-chunk-legend-BOgQISfA.js';
+import { B as BasemapSelector, b as LMControl, c as LMRenderer, d as LMShared, S as StyleSelector, e as Baselayers, L as LayerManager$4 } from './chunks/geoleaf-chunk-layers-Bl4JW9rv.js';
+import { T as ThemeSelector, a as ThemeCache, b as _ThemeLoader, _ as _ThemeApplier } from './chunks/geoleaf-chunk-themes-v5fM1AxV.js';
+export { c as Themes } from './chunks/geoleaf-chunk-themes-v5fM1AxV.js';
 import { b as POI, c as POIAddFormContract, C as ContentBuilderCore, H as Helpers, d as ContentBuilderShared, A as Assemblers, a as POIShared, e as POINormalizers, P as POIMarkers, f as POIPopup, g as POISidepanel, h as POIRenderers, i as POICore, j as ComponentRenderers, R as RendererCore, L as LightboxManager, k as RendererLinks, S as SectionOrchestrator, U as UIBehaviors, l as POICoreContract, F as FieldRenderers, M as MediaRenderers } from './chunks/geoleaf-chunk-poi-BFL85CzE.js';
-import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-Fg41EG0y.js';
+import { T as TableContract, a as Table } from './chunks/geoleaf-chunk-table-C9YHjM2a.js';
 export { S as Search } from './chunks/geoleaf-search-4nmmTzo0.js';
 
 /**
@@ -8309,10 +8309,25 @@ function _appendRegistryIcons(scroll) {
         table: domState.options?.showTable !== false,
         filters: domState.options?.showFilterPanel !== false,
     };
+    const _SVG_TAGS = [
+        "svg",
+        "path",
+        "circle",
+        "rect",
+        "line",
+        "polyline",
+        "polygon",
+        "g",
+        "defs",
+        "use",
+    ];
     for (const mod of registry.getAll()) {
         if (!mod.ui?.mobileIcon)
             continue;
         if (mod.id in showMap && !showMap[mod.id])
+            continue;
+        // Idempotent — skip if already rendered (e.g. after a re-render call)
+        if (scroll.querySelector(`[data-gl-sheet="${mod.id}"]`))
             continue;
         const icon = mod.ui.mobileIcon;
         // Guard 1 — profileKey: respect config-driven visibility (implements IModuleUISlot contract)
@@ -8322,10 +8337,12 @@ function _appendRegistryIcons(scroll) {
             if (visible === false)
                 continue;
         }
-        // Guard 2 — requiresPlugin: only show if the backing plugin is loaded
+        // Guard 2 — requiresPlugin: show if loaded OR lazy-available (S4 lazy-load)
         if (icon.requiresPlugin) {
             const pluginReg = globalThis.GeoLeaf?.plugins;
-            if (!pluginReg?.isLoaded?.(icon.requiresPlugin))
+            const loaded = pluginReg?.isLoaded?.(icon.requiresPlugin);
+            const lazyAvailable = pluginReg?.isLazyAvailable?.(icon.requiresPlugin);
+            if (!loaded && !lazyAvailable)
                 continue;
         }
         const btn = document.createElement("button");
@@ -8341,18 +8358,38 @@ function _appendRegistryIcons(scroll) {
         if (mod.ui.desktopTabButton)
             btn.setAttribute("data-gl-desktop-slot", "");
         // @security Route module-provided SVG through sanitizer to strip scripts/handlers
-        DOMSecurity.setSafeHTML(btn, icon.icon, [
-            "svg",
-            "path",
-            "circle",
-            "rect",
-            "line",
-            "polyline",
-            "polygon",
-            "g",
-            "defs",
-            "use",
-        ]);
+        DOMSecurity.setSafeHTML(btn, icon.icon, _SVG_TAGS);
+        scroll.appendChild(btn);
+    }
+    // Lazy plugins (S4): render toolbar buttons for plugins registered lazy but not yet loaded.
+    // Buttons are added here so they appear immediately at boot without loading the bundle.
+    const pluginReg = globalThis.GeoLeaf?.plugins;
+    const lazySlots = pluginReg?.getLazyUISlots?.() ?? [];
+    for (const slot of lazySlots) {
+        const icon = slot.mobileIcon;
+        if (!icon)
+            continue;
+        // Idempotent — skip if the button was already added above (loaded plugin path)
+        if (scroll.querySelector(`[data-gl-sheet="${slot.id}"]`))
+            continue;
+        // Guard — profileKey
+        if (icon.profileKey) {
+            const cfg = globalThis.GeoLeaf?.Config;
+            const visible = cfg?.get?.(icon.profileKey, true);
+            if (visible === false)
+                continue;
+        }
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "gl-map-toolbar__btn";
+        btn.setAttribute("data-gl-sheet", slot.id);
+        btn.setAttribute("aria-label", getLabel(icon.labelKey));
+        btn.setAttribute("data-tooltip", getLabel(icon.labelKey));
+        btn.setAttribute("aria-expanded", "false");
+        if (icon.action)
+            btn.setAttribute("data-gl-toolbar-action", icon.action);
+        // @security
+        DOMSecurity.setSafeHTML(btn, icon.icon, _SVG_TAGS);
         scroll.appendChild(btn);
     }
 }
@@ -9029,8 +9066,20 @@ function onToolbarClick(e) {
         return;
     }
     // Generic dispatch for plugin-registered actions (e.g. "print").
-    // Plugins listen for 'geoleaf:toolbar:action' to handle their own button.
+    // For lazy plugins: load the bundle first, then dispatch so the listener is ready.
     if (action) {
+        const plugins = globalThis.GeoLeaf?.plugins;
+        if (plugins?.isLazyAction?.(action)) {
+            plugins.ensureLoadedForAction(action)
+                .then(() => {
+                document.dispatchEvent(new CustomEvent("geoleaf:toolbar:action", {
+                    detail: { action, element: target },
+                    bubbles: false,
+                }));
+            })
+                .catch((err) => console.error("[GeoLeaf] lazy plugin load failed:", err));
+            return;
+        }
         document.dispatchEvent(new CustomEvent("geoleaf:toolbar:action", {
             detail: { action, element: target },
             bubbles: false,
@@ -9227,7 +9276,18 @@ function appendShareButtonToTabs(tabs) {
  * Injects registry-declared `desktopTabButton` slots into the desktop tab
  * strip. Extracted from desktop-panel.ts to keep it within the 700-line limit.
  */
-const _SVG_ALLOWED = ["svg", "path", "circle", "rect", "line", "polyline", "polygon", "g", "defs", "use"];
+const _SVG_ALLOWED = [
+    "svg",
+    "path",
+    "circle",
+    "rect",
+    "line",
+    "polyline",
+    "polygon",
+    "g",
+    "defs",
+    "use",
+];
 /**
  * Iterates `registry.getAll()`, applies profileKey + requiresPlugin guards,
  * and inserts a `.gl-rp-registry-tab-btn` for each module that declares
@@ -9235,6 +9295,24 @@ const _SVG_ALLOWED = ["svg", "path", "circle", "rect", "line", "polyline", "poly
  * the bottom stack reads: separator → [registry buttons] → share → theme.
  * Idempotent — skips modules already injected.
  */
+function _dispatchDesktopAction(action, btn) {
+    const plugins = globalThis.GeoLeaf?.plugins;
+    if (plugins?.isLazyAction?.(action)) {
+        plugins.ensureLoadedForAction(action)
+            .then(() => {
+            document.dispatchEvent(new CustomEvent("geoleaf:toolbar:action", {
+                detail: { action, element: btn },
+                bubbles: false,
+            }));
+        })
+            .catch((err) => console.error("[GeoLeaf] lazy plugin load failed:", err));
+        return;
+    }
+    document.dispatchEvent(new CustomEvent("geoleaf:toolbar:action", {
+        detail: { action, element: btn },
+        bubbles: false,
+    }));
+}
 function appendRegistryTabButtons(tabs) {
     const registry = globalThis.GeoLeaf?.registry;
     if (!registry)
@@ -9254,10 +9332,12 @@ function appendRegistryTabButtons(tabs) {
             if (visible === false)
                 continue;
         }
-        // Guard 2 — requiresPlugin
+        // Guard 2 — requiresPlugin: show if loaded OR lazy-available (S4 lazy-load)
         if (btnDef.requiresPlugin) {
             const pluginReg = globalThis.GeoLeaf?.plugins;
-            if (!pluginReg?.isLoaded?.(btnDef.requiresPlugin))
+            const loaded = pluginReg?.isLoaded?.(btnDef.requiresPlugin);
+            const lazyAvailable = pluginReg?.isLazyAvailable?.(btnDef.requiresPlugin);
+            if (!loaded && !lazyAvailable)
                 continue;
         }
         const btn = document.createElement("button");
@@ -9270,12 +9350,47 @@ function appendRegistryTabButtons(tabs) {
         if (btnDef.action)
             btn.setAttribute("data-gl-toolbar-action", btnDef.action);
         btn.addEventListener("click", () => {
-            document.dispatchEvent(new CustomEvent("geoleaf:toolbar:action", {
-                detail: { action: btnDef.action ?? mod.id, element: btn },
-                bubbles: false,
-            }));
+            _dispatchDesktopAction(btnDef.action ?? mod.id, btn);
         });
         // @security Route module-provided SVG through sanitizer
+        DOMSecurity.setSafeHTML(btn, btnDef.icon, _SVG_ALLOWED);
+        if (themeToggle) {
+            tabs.insertBefore(btn, themeToggle);
+        }
+        else {
+            tabs.appendChild(btn);
+        }
+    }
+    // Lazy plugins (S4): render desktop tab buttons for plugins registered lazy but not yet loaded.
+    const pluginReg = globalThis.GeoLeaf?.plugins;
+    const lazySlots = pluginReg?.getLazyUISlots?.() ?? [];
+    for (const slot of lazySlots) {
+        const btnDef = slot.desktopTabButton;
+        if (!btnDef)
+            continue;
+        // Idempotent
+        if (tabs.querySelector(`[data-gl-desktop-tab="${slot.id}"]`))
+            continue;
+        // Guard — profileKey
+        if (btnDef.profileKey) {
+            const cfg = globalThis.GeoLeaf?.Config;
+            const visible = cfg?.get?.(btnDef.profileKey, true);
+            if (visible === false)
+                continue;
+        }
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "gl-rp-tab-btn gl-rp-registry-tab-btn";
+        btn.setAttribute("data-gl-desktop-tab", slot.id);
+        const label = getLabel(btnDef.labelKey);
+        btn.setAttribute("aria-label", label);
+        btn.title = label;
+        if (btnDef.action)
+            btn.setAttribute("data-gl-toolbar-action", btnDef.action);
+        btn.addEventListener("click", () => {
+            _dispatchDesktopAction(btnDef.action ?? slot.id, btn);
+        });
+        // @security
         DOMSecurity.setSafeHTML(btn, btnDef.icon, _SVG_ALLOWED);
         if (themeToggle) {
             tabs.insertBefore(btn, themeToggle);
@@ -12193,6 +12308,8 @@ const BootInfo = {
  */
 const _registry$1 = new Map(); // name → { name, version, loaded, loadedAt, metadata }
 const _lazyResolvers = new Map(); // name → () => Promise<void>
+/** Lazy plugin UI descriptors — keyed by action name. */
+const _lazyUISlots = new Map(); // action → { id, pluginName, mobileIcon?, desktopTabButton? }
 /**
  * Dispatches a GeoLeaf custom event on `document` (inline, no external import).
  * Same pattern used by baselayers/registry.ts to avoid circular dependencies.
@@ -12237,6 +12354,57 @@ const PluginRegistry = {
      */
     registerLazy(name, resolver) {
         _lazyResolvers.set(name, resolver);
+    },
+    /**
+     * Returns true if the plugin is registered lazy but not yet loaded.
+     * Used by toolbar guards to show buttons before the bundle downloads.
+     * @param {string} name
+     */
+    isLazyAvailable(name) {
+        return _lazyResolvers.has(name) && !PluginRegistry.isLoaded(name);
+    },
+    /**
+     * Associates a toolbar action with a lazy plugin and its UI descriptor.
+     * Call before `GeoLeaf.boot()` (e.g. from init.js) for each lazy plugin.
+     * @param {string} action - toolbar action id (e.g. "print")
+     * @param {string} pluginName - plugin registry name (e.g. "print")
+     * @param ui - optional UI descriptor { mobileIcon?, desktopTabButton? }
+     */
+    registerLazyForAction(action, pluginName, ui) {
+        _lazyUISlots.set(action, { id: String(action), pluginName: String(pluginName), ...ui });
+    },
+    /**
+     * Returns true if the action is backed by a lazy plugin that is not yet loaded.
+     * Used by the toolbar interceptor before dispatching actions.
+     * @param {string} action
+     */
+    isLazyAction(action) {
+        const entry = _lazyUISlots.get(action);
+        return !!entry && PluginRegistry.isLazyAvailable(entry.pluginName);
+    },
+    /**
+     * Loads the plugin backing the given action if it is lazy and not yet loaded.
+     * No-op if the plugin is already loaded or the action is not lazy.
+     * @param {string} action
+     */
+    async ensureLoadedForAction(action) {
+        const entry = _lazyUISlots.get(action);
+        if (entry && PluginRegistry.isLazyAvailable(entry.pluginName)) {
+            await PluginRegistry.load(entry.pluginName);
+        }
+    },
+    /**
+     * Returns the UI descriptors of all registered lazy plugins that are not yet loaded.
+     * Consumed by toolbar renderers to show buttons before the bundle downloads.
+     */
+    getLazyUISlots() {
+        const slots = [];
+        for (const [, entry] of _lazyUISlots) {
+            if (PluginRegistry.isLazyAvailable(entry.pluginName)) {
+                slots.push(entry);
+            }
+        }
+        return slots;
     },
     /**
      * Checks if a plugin is currently loaded.
@@ -12368,6 +12536,7 @@ const PluginRegistry = {
     // Internal access — do not use outside GeoLeaf
     _registry: _registry$1,
     _lazyResolvers,
+    _lazyUISlots,
 };
 /** Core internal module names — excluded from standard plugin report. */
 function _isCoreName(name) {
@@ -15492,6 +15661,8 @@ _app$1.initApp = async function (cfg) {
     // ========================================================
     let _loadingToast = null;
     document.addEventListener("geoleaf:theme:applying", function () {
+        // R-perf S1 — mark the start of the data-loading toast interval
+        _pm("geoleaf:theme:applying");
         // Display a persistent toast if the notification system is ready
         if (GeoLeaf$1._UINotifications && GeoLeaf$1._UINotifications.container) {
             _loadingToast = GeoLeaf$1._UINotifications.info(getLabel("toast.init.loading"), {
@@ -15543,6 +15714,24 @@ _app$1.initApp = async function (cfg) {
         }
     });
     document.addEventListener("geoleaf:theme:applied", function (event) {
+        // R-perf S1 — measure the data-loading toast interval (applying → applied)
+        if (window.__GEOLEAF_PERF__) {
+            _pm("geoleaf:theme:applied");
+            try {
+                performance.measure("geoleaf:theme-data-load", "geoleaf:theme:applying", "geoleaf:theme:applied");
+                const _entries = performance.getEntriesByName("geoleaf:theme-data-load", "measure");
+                if (_entries.length) {
+                    const _layerCount = event?.detail?.layerCount ?? "?";
+                    AppLog.info("[Perf] Theme data load: " +
+                        _entries[_entries.length - 1].duration.toFixed(1) +
+                        "ms (" +
+                        _layerCount +
+                        " couches)");
+                }
+            }
+            catch (_e) {
+            }
+        }
         // Close the persistent loading toast
         if (_loadingToast &&
             GeoLeaf$1._UINotifications &&
@@ -15943,11 +16132,13 @@ class ModuleRegistry {
     _initialized = false;
     // ── register ──────────────────────────────────────────────────────────────
     register(module) {
+        // Idempotent: lazy-loaded plugins call registry.register() after boot — skip silently.
+        if (this._modules.has(module.id))
+            return;
         if (this._initialized) {
-            throw new GeoLeafError(`ModuleRegistry: cannot register module '${module.id}' after init() has been called.`);
-        }
-        if (this._modules.has(module.id)) {
-            throw new GeoLeafError(`ModuleRegistry: a module with id '${module.id}' is already registered.`);
+            // Post-boot registration (lazy plugin): store for UI queries; lifecycle init not called.
+            this._modules.set(module.id, module);
+            return;
         }
         this._modules.set(module.id, module);
     }
@@ -16023,7 +16214,7 @@ class ModuleRegistry {
         // Validate dependencies — every declared dep must be registered.
         for (const id of ids) {
             const mod = this._modules.get(id);
-            for (const dep of (mod.dependencies ?? [])) {
+            for (const dep of mod.dependencies ?? []) {
                 if (!this._modules.has(dep)) {
                     throw new GeoLeafError(`ModuleRegistry: module '${id}' declared dependency '${dep}' ` +
                         `which is not registered.`);
@@ -16041,7 +16232,7 @@ class ModuleRegistry {
         }
         for (const id of ids) {
             const mod = this._modules.get(id);
-            for (const dep of (mod.dependencies ?? [])) {
+            for (const dep of mod.dependencies ?? []) {
                 inDegree.set(id, (inDegree.get(id) ?? 0) + 1);
                 dependants.get(dep).push(id);
             }
@@ -16093,7 +16284,7 @@ class ModuleRegistry {
             stack.add(id);
             path.push(id);
             const mod = this._modules.get(id);
-            for (const dep of (mod.dependencies ?? [])) {
+            for (const dep of mod.dependencies ?? []) {
                 if (dfs(dep))
                     return true;
             }
@@ -16658,6 +16849,43 @@ class ShareModule {
  */
 const GeoLeaf = _g$1.GeoLeaf;
 const _app = (GeoLeaf._app = GeoLeaf._app || {});
+// R-perf S1 — enable perf instrumentation via the URL query param `?perf=1`.
+// Runs at bundle-eval time, before any boot/init performance mark — so the very
+// first cold-load marks are captured. Once seen, the flag is latched into
+// sessionStorage so it survives reloads even though the permalink rewrites the
+// URL and drops the query param. Disable with `?perf=0`. No effect by default.
+try {
+    if (typeof window !== "undefined" && !window.__GEOLEAF_PERF__) {
+        const _perfParam = new URLSearchParams(window.location.search).get("perf");
+        let _perfOn = _perfParam === "1" || _perfParam === "true";
+        if (_perfParam === "0" || _perfParam === "false") {
+            _perfOn = false;
+            try {
+                window.sessionStorage?.removeItem("__GEOLEAF_PERF__");
+            }
+            catch (_s) {
+            }
+        }
+        else if (!_perfParam) {
+            // No explicit param — fall back to the latched session flag.
+            try {
+                _perfOn = window.sessionStorage?.getItem("__GEOLEAF_PERF__") === "1";
+            }
+            catch (_s) {
+            }
+        }
+        if (_perfOn) {
+            window.__GEOLEAF_PERF__ = true;
+            try {
+                window.sessionStorage?.setItem("__GEOLEAF_PERF__", "1");
+            }
+            catch (_s) {
+            }
+        }
+    }
+}
+catch (_e) {
+}
 // ── Sprint 3 — ModuleRegistry setup ──────────────────────────────────────────
 // Modules are registered here, at module-init time, before startApp() is called.
 // Registration order does NOT determine initialization order — the registry
@@ -16935,19 +17163,19 @@ async function loadModule(moduleName) {
             await import('./chunks/geoleaf-route-BnEcfMum.js');
             break;
         case "layerManager":
-            await import('./chunks/geoleaf-layer-manager-BucBSiXI.js');
+            await import('./chunks/geoleaf-layer-manager-BZEb_NFP.js');
             break;
         case "legend":
-            await import('./chunks/geoleaf-legend-DB_GBHZq.js');
+            await import('./chunks/geoleaf-legend-BIG6gcBs.js');
             break;
         case "labels":
-            await import('./chunks/geoleaf-labels-CtBGKEoB.js');
+            await import('./chunks/geoleaf-labels-BgPUEf3w.js');
             break;
         case "themes":
-            await import('./chunks/geoleaf-themes-gYgrsn5T.js');
+            await import('./chunks/geoleaf-themes-tSRFfvPE.js');
             break;
         case "table":
-            await import('./chunks/geoleaf-table-BZX9tlQW.js');
+            await import('./chunks/geoleaf-table-DfOmoj4v.js');
             break;
         case "search":
             await import('./chunks/geoleaf-search-4nmmTzo0.js').then(function (n) { return n.s; });
@@ -16980,11 +17208,11 @@ async function loadAllSecondaryModules() {
         import('./chunks/geoleaf-poi-renderers-BnEcfMum.js'),
         import('./chunks/geoleaf-poi-extras-y5Oqc07j.js'),
         import('./chunks/geoleaf-route-BnEcfMum.js'),
-        import('./chunks/geoleaf-layer-manager-BucBSiXI.js'),
-        import('./chunks/geoleaf-legend-DB_GBHZq.js'),
-        import('./chunks/geoleaf-labels-CtBGKEoB.js'),
-        import('./chunks/geoleaf-themes-gYgrsn5T.js'),
-        import('./chunks/geoleaf-table-BZX9tlQW.js'),
+        import('./chunks/geoleaf-layer-manager-BZEb_NFP.js'),
+        import('./chunks/geoleaf-legend-BIG6gcBs.js'),
+        import('./chunks/geoleaf-labels-BgPUEf3w.js'),
+        import('./chunks/geoleaf-themes-tSRFfvPE.js'),
+        import('./chunks/geoleaf-table-DfOmoj4v.js'),
     ]);
 }
 
