@@ -1,0 +1,66 @@
+{
+    "id": "parcours",
+    "label": "Parcours (démo édition)",
+    "zIndex": 96,
+    "geometry": "polyline",
+    "geometryType": "polyline",
+    "enableEdition": true,
+    "enableEditionFull": true,
+    "editableGeometryTypes": ["LineString"],
+    "formSchema": [
+        { "id": "nom", "type": "text", "label": "Nom du parcours", "required": true },
+        {
+            "id": "type_parcours",
+            "type": "dropdown",
+            "label": "Type",
+            "options": [
+                { "value": "randonnee", "label": "Randonnée" },
+                { "value": "velo", "label": "Vélo" },
+                { "value": "route", "label": "Route" }
+            ]
+        },
+        {
+            "id": "difficulte",
+            "type": "dropdown",
+            "label": "Difficulté",
+            "options": [
+                { "value": "facile", "label": "Facile" },
+                { "value": "moyen", "label": "Moyen" },
+                { "value": "difficile", "label": "Difficile" }
+            ]
+        },
+        { "id": "distance_km", "type": "number", "label": "Distance (km)", "min": 0 },
+        { "id": "description", "type": "longtext", "label": "Description", "rows": 4 }
+    ],
+    "interactiveShape": true,
+    "data": {
+        "directory": "data",
+        "file": "parcours.geojson"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [{ "id": "defaut", "label": "défaut", "file": "defaut.json" }]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [{ "type": "text", "field": "properties.nom" }]
+    },
+    "popup": {
+        "enabled": true,
+        "fields": [
+            { "type": "text", "field": "properties.nom", "variant": "title" },
+            { "type": "text", "label": "Type", "field": "properties.type_parcours" },
+            { "type": "text", "label": "Distance (km)", "field": "properties.distance_km" }
+        ]
+    },
+    "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+            { "type": "badge", "label": "Type", "field": "properties.type_parcours" },
+            { "type": "badge", "label": "Difficulté", "field": "properties.difficulte" },
+            { "type": "text", "label": "Distance (km)", "field": "properties.distance_km" },
+            { "type": "longtext", "label": "Description", "field": "properties.description" }
+        ]
+    }
+}

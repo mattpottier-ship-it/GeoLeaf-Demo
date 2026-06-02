@@ -6,6 +6,16 @@
             "layerManagerId": "data-tourism"
         },
         {
+            "id": "parcours",
+            "configFile": "layers/parcours/parcours_config.json",
+            "layerManagerId": "data-tourism"
+        },
+        {
+            "id": "zones",
+            "configFile": "layers/zones/zones_config.json",
+            "layerManagerId": "data-tourism"
+        },
+        {
             "id": "eco_regions",
             "configFile": "layers/eco_regions/eco_regions_config.json",
             "layerManagerId": "data-conservation"

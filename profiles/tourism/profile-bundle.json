@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "tourism",
-  "_generatedAt": 1780315813593,
+  "_generatedAt": 1780410496310,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/tourism/icons/sprite_tourism.svg",
@@ -761,6 +761,16 @@
         "layerManagerId": "data-tourism"
       },
       {
+        "id": "parcours",
+        "configFile": "layers/parcours/parcours_config.json",
+        "layerManagerId": "data-tourism"
+      },
+      {
+        "id": "zones",
+        "configFile": "layers/zones/zones_config.json",
+        "layerManagerId": "data-tourism"
+      },
+      {
         "id": "eco_regions",
         "configFile": "layers/eco_regions/eco_regions_config.json",
         "layerManagerId": "data-conservation"
@@ -1022,6 +1032,125 @@
       "geometryType": "point",
       "enableEdition": true,
       "enableEditionFull": true,
+      "editableGeometryTypes": [
+        "Point"
+      ],
+      "formSchema": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Titre",
+          "required": true
+        },
+        {
+          "id": "description",
+          "type": "longtext",
+          "label": "Description courte",
+          "rows": 3
+        },
+        {
+          "id": "description_longue",
+          "type": "longtext",
+          "label": "Description détaillée",
+          "rows": 6
+        },
+        {
+          "id": "adresse",
+          "type": "text",
+          "label": "Adresse"
+        },
+        {
+          "id": "statut",
+          "type": "dropdown",
+          "label": "Statut",
+          "options": [
+            {
+              "value": "Ouvert",
+              "label": "Ouvert"
+            },
+            {
+              "value": "Fermé",
+              "label": "Fermé"
+            },
+            {
+              "value": "Temporairement fermé",
+              "label": "Temporairement fermé"
+            }
+          ]
+        },
+        {
+          "id": "mots_cles",
+          "type": "tags",
+          "label": "Mots-clés",
+          "options": [
+            {
+              "value": "patrimoine",
+              "label": "Patrimoine"
+            },
+            {
+              "value": "histoire",
+              "label": "Histoire"
+            },
+            {
+              "value": "culture",
+              "label": "Culture"
+            },
+            {
+              "value": "nature",
+              "label": "Nature"
+            },
+            {
+              "value": "gratuit",
+              "label": "Gratuit"
+            },
+            {
+              "value": "enfants",
+              "label": "Enfants"
+            }
+          ]
+        },
+        {
+          "id": "services",
+          "type": "list",
+          "label": "Services disponibles",
+          "maxItems": 12
+        },
+        {
+          "id": "horaires",
+          "type": "table",
+          "label": "Horaires d'ouverture",
+          "columns": [
+            {
+              "key": "jour",
+              "label": "Jour"
+            },
+            {
+              "key": "horaire",
+              "label": "Horaire"
+            }
+          ]
+        },
+        {
+          "id": "site_web",
+          "type": "url",
+          "label": "Site web"
+        },
+        {
+          "id": "photo_principale",
+          "type": "image",
+          "label": "Photo principale",
+          "uploadEndpoint": "/api/upload",
+          "maxSizeMb": 5
+        },
+        {
+          "id": "galerie",
+          "type": "gallery",
+          "label": "Galerie photos",
+          "uploadEndpoint": "/api/upload",
+          "maxCount": 8,
+          "maxSizeMb": 5
+        }
+      ],
       "imageUploadEndpoint": "/api/upload",
       "interactiveShape": true,
       "showIconsOnMap": true,
@@ -1154,6 +1283,262 @@
             "field": "properties.galerie",
             "maxCount": 8,
             "maxSizeMb": 5
+          }
+        ]
+      }
+    },
+    "parcours": {
+      "id": "parcours",
+      "label": "Parcours (démo édition)",
+      "zIndex": 96,
+      "geometry": "polyline",
+      "geometryType": "polyline",
+      "enableEdition": true,
+      "enableEditionFull": true,
+      "editableGeometryTypes": [
+        "LineString"
+      ],
+      "formSchema": [
+        {
+          "id": "nom",
+          "type": "text",
+          "label": "Nom du parcours",
+          "required": true
+        },
+        {
+          "id": "type_parcours",
+          "type": "dropdown",
+          "label": "Type",
+          "options": [
+            {
+              "value": "randonnee",
+              "label": "Randonnée"
+            },
+            {
+              "value": "velo",
+              "label": "Vélo"
+            },
+            {
+              "value": "route",
+              "label": "Route"
+            }
+          ]
+        },
+        {
+          "id": "difficulte",
+          "type": "dropdown",
+          "label": "Difficulté",
+          "options": [
+            {
+              "value": "facile",
+              "label": "Facile"
+            },
+            {
+              "value": "moyen",
+              "label": "Moyen"
+            },
+            {
+              "value": "difficile",
+              "label": "Difficile"
+            }
+          ]
+        },
+        {
+          "id": "distance_km",
+          "type": "number",
+          "label": "Distance (km)",
+          "min": 0
+        },
+        {
+          "id": "description",
+          "type": "longtext",
+          "label": "Description",
+          "rows": 4
+        }
+      ],
+      "interactiveShape": true,
+      "data": {
+        "directory": "data",
+        "file": "parcours.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.nom"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": true,
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.nom",
+            "variant": "title"
+          },
+          {
+            "type": "text",
+            "label": "Type",
+            "field": "properties.type_parcours"
+          },
+          {
+            "type": "text",
+            "label": "Distance (km)",
+            "field": "properties.distance_km"
+          }
+        ]
+      },
+      "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+          {
+            "type": "badge",
+            "label": "Type",
+            "field": "properties.type_parcours"
+          },
+          {
+            "type": "badge",
+            "label": "Difficulté",
+            "field": "properties.difficulte"
+          },
+          {
+            "type": "text",
+            "label": "Distance (km)",
+            "field": "properties.distance_km"
+          },
+          {
+            "type": "longtext",
+            "label": "Description",
+            "field": "properties.description"
+          }
+        ]
+      }
+    },
+    "zones": {
+      "id": "zones",
+      "label": "Zones (démo édition)",
+      "zIndex": 42,
+      "geometry": "polygon",
+      "geometryType": "polygon",
+      "enableEdition": true,
+      "enableEditionFull": true,
+      "editableGeometryTypes": [
+        "Polygon"
+      ],
+      "formSchema": [
+        {
+          "id": "nom",
+          "type": "text",
+          "label": "Nom de la zone",
+          "required": true
+        },
+        {
+          "id": "categorie",
+          "type": "dropdown",
+          "label": "Catégorie",
+          "options": [
+            {
+              "value": "protegee",
+              "label": "Protégée"
+            },
+            {
+              "value": "amenagement",
+              "label": "Aménagement"
+            },
+            {
+              "value": "etude",
+              "label": "Étude"
+            }
+          ]
+        },
+        {
+          "id": "surface_ha",
+          "type": "number",
+          "label": "Surface (ha)",
+          "min": 0
+        },
+        {
+          "id": "description",
+          "type": "longtext",
+          "label": "Description",
+          "rows": 4
+        }
+      ],
+      "interactiveShape": true,
+      "data": {
+        "directory": "data",
+        "file": "zones.geojson"
+      },
+      "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [
+          {
+            "id": "defaut",
+            "label": "défaut",
+            "file": "defaut.json"
+          }
+        ]
+      },
+      "tooltip": {
+        "mode": "hover",
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.nom"
+          }
+        ]
+      },
+      "popup": {
+        "enabled": true,
+        "fields": [
+          {
+            "type": "text",
+            "field": "properties.nom",
+            "variant": "title"
+          },
+          {
+            "type": "text",
+            "label": "Catégorie",
+            "field": "properties.categorie"
+          },
+          {
+            "type": "text",
+            "label": "Surface (ha)",
+            "field": "properties.surface_ha"
+          }
+        ]
+      },
+      "sidepanelConfig": {
+        "enabled": true,
+        "detailLayout": [
+          {
+            "type": "badge",
+            "label": "Catégorie",
+            "field": "properties.categorie"
+          },
+          {
+            "type": "text",
+            "label": "Surface (ha)",
+            "field": "properties.surface_ha"
+          },
+          {
+            "type": "longtext",
+            "label": "Description",
+            "field": "properties.description"
           }
         ]
       }
