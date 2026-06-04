@@ -1,0 +1,42 @@
+{
+    "id": "cadastre_echantillon",
+    "label": "Cadastre (échantillon Cayenne)",
+    "tooltipMode": "hover",
+    "zIndex": 15,
+    "interactiveShape": true,
+    "geometry": "polygon",
+    "data": {
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=CADASTRALPARCELS.PARCELLAIRE_EXPRESS:parcelle&outputFormat=application/json&count=200&srsName=EPSG:4326&bbox=-52.34,4.92,-52.30,4.95,EPSG:4326",
+        "directory": "data",
+        "licence": "Licence Ouverte — IGN PCI / Parcellaire Express (data.geopf.fr) — échantillon emprise Cayenne"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [{ "id": "defaut", "label": "Défaut", "file": "defaut.json" }]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.section", "label": "Section" },
+            { "field": "properties.numero", "label": "Numéro" },
+            { "field": "properties.contenance", "label": "Contenance (m²)" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.section", "label": "Section", "sortable": true, "width": "25%" },
+            { "field": "properties.numero", "label": "Numéro", "sortable": true, "width": "25%" },
+            {
+                "field": "properties.contenance",
+                "label": "Contenance (m²)",
+                "sortable": true,
+                "width": "50%"
+            }
+        ]
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

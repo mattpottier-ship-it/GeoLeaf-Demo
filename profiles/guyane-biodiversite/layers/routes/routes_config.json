@@ -1,0 +1,40 @@
+{
+    "id": "routes",
+    "label": "Réseau routier (BD TOPO)",
+    "tooltipMode": "hover",
+    "zIndex": 20,
+    "interactiveShape": true,
+    "geometry": "line",
+    "data": {
+        "dataUrl": "https://data.geopf.fr/wfs/ows?service=WFS&version=2.0.0&request=GetFeature&typeName=BDTOPO_V3:troncon_de_route&outputFormat=application/json&count=300&srsName=EPSG:4326&bbox=-52.40,4.85,-52.25,4.98,EPSG:4326",
+        "directory": "data",
+        "licence": "Licence Ouverte v2.0 — IGN BD TOPO® (data.geopf.fr) — échantillon emprise Cayenne"
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [{ "id": "defaut", "label": "Défaut", "file": "defaut.json" }]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.nature", "label": "Nature" },
+            { "field": "properties.importance", "label": "Importance" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.nature", "label": "Nature", "sortable": true, "width": "50%" },
+            {
+                "field": "properties.importance",
+                "label": "Importance",
+                "sortable": true,
+                "width": "50%"
+            }
+        ]
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

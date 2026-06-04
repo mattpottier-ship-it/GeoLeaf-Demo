@@ -1,0 +1,17 @@
+{
+    "zoomConfig": {
+        "minZoom": 5,
+        "maxZoom": 18,
+        "defaultZoom": 8
+    },
+    "style": {
+        "type": "circle",
+        "paint": {
+            "circle-radius": 7,
+            "circle-color": "#2a9d8f",
+            "circle-stroke-color": "#ffffff",
+            "circle-stroke-width": 2,
+            "circle-opacity": 0.9
+        }
+    }
+}

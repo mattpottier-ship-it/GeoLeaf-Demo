@@ -1,0 +1,64 @@
+{
+    "id": "demo_qgis",
+    "label": "Démo PostGIS (QGIS)",
+    "tooltipMode": "hover",
+    "zIndex": 90,
+    "interactiveShape": true,
+    "geometry": "point",
+    "data": {
+        "directory": "data",
+        "licence": "Démo GeoLeaf — PostGIS diffusé via API OGC (qgis.geoleaf.dev)",
+        "ogcApi": {
+            "url": "https://qgis.geoleaf.dev/demo_qgis",
+            "headers": {
+                "Accept": "application/geo+json"
+            },
+            "autoRefresh": false
+        }
+    },
+    "enableEdition": true,
+    "editableGeometryTypes": ["Point"],
+    "formSchema": [
+        { "id": "nom", "type": "text", "label": "Nom", "required": true },
+        { "id": "is_public", "type": "checkbox", "label": "Public" }
+    ],
+    "write": {
+        "enabled": true,
+        "endpoint": "https://qgis.geoleaf.dev/demo_qgis",
+        "auth": "bearer",
+        "dialect": "collection",
+        "geometryProperty": "geom",
+        "properties": ["nom", "is_public"]
+    },
+    "tooltip": {
+        "mode": "hover",
+        "fields": [
+            { "field": "properties.nom", "label": "Nom" },
+            { "field": "properties.is_public", "label": "Public" }
+        ]
+    },
+    "popup": {
+        "enabled": true,
+        "fields": [
+            { "type": "text", "field": "properties.nom", "variant": "title" },
+            { "type": "text", "label": "Public", "field": "properties.is_public" }
+        ]
+    },
+    "table": {
+        "enabled": true,
+        "columns": [
+            { "field": "properties.nom", "label": "Nom", "sortable": true, "width": "60%" },
+            { "field": "properties.is_public", "label": "Public", "sortable": true, "width": "40%" }
+        ],
+        "searchFields": ["properties.nom"],
+        "defaultSort": { "field": "properties.nom", "order": "asc" }
+    },
+    "styles": {
+        "directory": "styles",
+        "default": "defaut.json",
+        "available": [{ "id": "defaut", "label": "Défaut", "file": "defaut.json" }]
+    },
+    "clustering": {
+        "enabled": false
+    }
+}

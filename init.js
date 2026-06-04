@@ -103,5 +103,18 @@ fetch('demo-header.html')
     });
 })();
 
+// DEMO/DEV ONLY — PostGIS/OGC backend (qgis.geoleaf.dev) for the "Guyane" profile.
+// Configures the Connector so reads (demo_qgis) and writes (addpoi/editor) carry the
+// bearer token. Guarded to localhost/127.0.0.1 so this dev JWT NEVER activates on a
+// deployed origin (e.g. demo.geoleaf.dev). Production = real login flow via
+// GeoLeaf.Connector.configure({ auth: { endpoint } }) that issues a per-user token.
+if (window.GeoLeaf?.Connector && /^(127\.0\.0\.1|localhost)$/.test(location.hostname)) {
+    await GeoLeaf.Connector.configure({
+        baseUrl: 'https://qgis.geoleaf.dev',
+        // eslint-disable-next-line no-secrets/no-secrets -- dev-only JWT, localhost-guarded, exp ~30d
+        getToken: async () => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZ2VvbGVhZl9lZGl0b3IiLCJleHAiOjE3ODMxMTQ2MTF9.lmvZ5VGEjSGm3zw65uGfKkOIFlv_bNFvdox1t_QItmA',
+    });
+}
+
 // Bootstrap GeoLeaf
 GeoLeaf.boot();

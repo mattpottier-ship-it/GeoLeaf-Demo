@@ -1,14 +1,17 @@
 {
     "id": "guyane-biodiversite",
-    "label": "Guyane — Biodiversité & Territoire",
-    "version": "1.0.0",
-    "description": "Profil de démonstration GeoLeaf-JS — Biodiversité guyanaise : observations GBIF, zones protégées PAG, cours d'eau, itinéraires randonnée, sites touristiques, communes, déforestation radar.",
+    "label": "Guyane",
+    "version": "1.1.0",
+    "description": "Profil de démonstration GeoLeaf-JS — Guyane : couche PostGIS distante (demo_qgis via API OGC, lecture/écriture authentifiée), cadastre, réseau routier, PLU/GPU et communes.",
     "map": {
         "center": [-53.0, 4.0],
         "zoom": 7,
         "minZoom": 5,
         "maxZoom": 18,
-        "bounds": [[2.1, -54.6], [5.8, -51.6]]
+        "bounds": [
+            [2.1, -54.6],
+            [5.8, -51.6]
+        ]
     },
     "Files": {
         "taxonomyFile": "taxonomy.json",
@@ -46,6 +49,18 @@
         }
     },
     "poiAddConfig": {
-        "enabled": false
+        "enabled": true
+    },
+    "editorConfig": {
+        "enabled": true,
+        "api": {
+            "baseUrl": "https://qgis.geoleaf.dev",
+            "geometryProperty": "geom",
+            "timeoutMs": 8000
+        },
+        "persistence": {
+            "mode": "online",
+            "dialect": "collection"
+        }
     }
 }

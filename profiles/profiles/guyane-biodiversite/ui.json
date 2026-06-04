@@ -13,6 +13,7 @@
         "showScale": true,
         "showCacheButton": true,
         "showAddPoi": true,
+        "showEditor": true,
         "permalink": {
             "enabled": true,
             "mode": "hash"
@@ -25,7 +26,7 @@
         "radiusMax": 200,
         "radiusStep": 1,
         "radiusDefault": 20,
-        "searchPlaceholder": "Rechercher une espèce, un site…",
+        "searchPlaceholder": "Rechercher un nom, une parcelle…",
         "filters": [
             {
                 "id": "searchText",
@@ -34,10 +35,11 @@
                 "placeholder": "Rechercher...",
                 "searchFields": [
                     "title",
-                    "properties.name",
-                    "properties.species",
-                    "properties.vernacularName",
-                    "properties.nom"
+                    "properties.nom",
+                    "properties.nom_officiel",
+                    "properties.libelle",
+                    "properties.section",
+                    "properties.nature"
                 ]
             },
             {
@@ -46,17 +48,6 @@
                 "label": "Recherche par proximité",
                 "buttonLabel": "Activer",
                 "instructionText": "Cliquez sur la carte pour définir le point central"
-            },
-            {
-                "id": "categories",
-                "type": "tree",
-                "label": "Catégories"
-            },
-            {
-                "id": "tags",
-                "type": "multiselect-tags",
-                "label": "Tags",
-                "field": "attributes.tags"
             }
         ],
         "actions": {
@@ -70,20 +61,20 @@
         "collapsedByDefault": true,
         "sections": [
             {
-                "id": "data-tourisme",
-                "label": "Tourisme & Randonnée",
+                "id": "data-demo",
+                "label": "Démo PostGIS",
                 "order": 1,
                 "collapsedByDefault": false
             },
             {
-                "id": "data-biodiversite",
-                "label": "Biodiversité",
+                "id": "data-urbanisme",
+                "label": "Urbanisme (cadastre, PLU)",
                 "order": 2,
                 "collapsedByDefault": false
             },
             {
-                "id": "data-hydrographie",
-                "label": "Hydrographie",
+                "id": "data-reseaux",
+                "label": "Réseaux",
                 "order": 3,
                 "collapsedByDefault": true
             },

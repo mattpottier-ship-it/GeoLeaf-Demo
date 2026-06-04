@@ -1,0 +1,15 @@
+{
+    "zoomConfig": {
+        "minZoom": 6,
+        "maxZoom": 18,
+        "defaultZoom": 12
+    },
+    "style": {
+        "type": "line",
+        "paint": {
+            "line-color": "#e76f51",
+            "line-width": 2,
+            "line-opacity": 0.85
+        }
+    }
+}
