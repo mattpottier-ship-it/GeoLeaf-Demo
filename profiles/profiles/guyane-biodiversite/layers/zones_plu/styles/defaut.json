@@ -5,11 +5,9 @@
         "defaultZoom": 13
     },
     "style": {
-        "type": "fill",
-        "paint": {
-            "fill-color": "#8d99ae",
-            "fill-opacity": 0.3,
-            "fill-outline-color": "#2b2d42"
-        }
+        "fillColor": "#8d99ae",
+        "fillOpacity": 0.3,
+        "color": "#2b2d42",
+        "weight": 1
     }
 }

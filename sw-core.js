@@ -32,7 +32,7 @@
 // In production, all SW console.log calls are removed at build time via terser
 const _SW_DEBUG = typeof true !== "undefined" ? true : false;
 
-const CACHE_VERSION = "geoleaf-v3.0.0-1780533163812";
+const CACHE_VERSION = "geoleaf-v3.0.0-1780937025734";
 const CACHE_STATIC = `${CACHE_VERSION}-static`;
 const CACHE_PROFILE_PREFIX = `${CACHE_VERSION}-profile-`;
 const CACHE_TILES = `${CACHE_VERSION}-tiles`;
@@ -40,7 +40,7 @@ const CACHE_RUNTIME = `${CACHE_VERSION}-runtime`;
 
 // Core assets to pre-cache — injected by build-deploy.cjs at build time
 const STATIC_ASSETS = [
-    "index.html", "dist/geoleaf.esm.js?v=1780533163926", "dist/geoleaf-main.min.css?v=1780533163926"
+    "index.html", "dist/geoleaf.esm.js?v=1780937025841", "dist/geoleaf-main.min.css?v=1780937025841"
 ];
 
 // URLs to never cache
@@ -280,6 +280,13 @@ function _isTileFile(path) {
 function isTileRequest(url) {
     const hostname = url.hostname;
     const path = url.pathname;
+
+    // 0. IGN Géoplateforme — route every resource through the tile strategy for
+    //    parity with the premium SW. The lite SW has no IndexedDB, so full vector
+    //    offline still requires the premium sw.js; this only aligns routing.
+    if (hostname.includes("data.geopf.fr")) {
+        return true;
+    }
 
     // 1. Providers vectoriels — only les vrais files tiles (.pbf/.mvt/.png),
     //    PAS les metadata (styles JSON, TileJSON) qui doivent passer par networkFirst.

@@ -7,7 +7,8 @@
             "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
             "fallbackUrl": "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
             "attribution": "© IGN France — Geoportail",
-            "defaultBasemap": true
+            "defaultBasemap": true,
+            "offline": true
         },
         "positron": {
             "id": "positron",

@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "guyane-biodiversite",
-  "_generatedAt": 1780533163926,
+  "_generatedAt": 1780937025840,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/guyane-biodiversite/icons/sprite_guyane.svg",
@@ -331,13 +331,10 @@
       "geometry": "point",
       "data": {
         "directory": "data",
-        "licence": "Démo GeoLeaf — PostGIS diffusé via API OGC (qgis.geoleaf.dev)",
-        "ogcApi": {
-          "url": "https://qgis.geoleaf.dev/demo_qgis",
-          "headers": {
-            "Accept": "application/geo+json"
-          },
-          "autoRefresh": false
+        "licence": "Démo GeoLeaf — PostGIS via PostgREST (qgis.geoleaf.dev)",
+        "dataUrl": "https://qgis.geoleaf.dev/demo_qgis",
+        "headers": {
+          "Accept": "application/geo+json"
         }
       },
       "enableEdition": true,

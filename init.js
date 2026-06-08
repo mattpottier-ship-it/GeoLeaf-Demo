@@ -103,17 +103,28 @@ fetch('demo-header.html')
     });
 })();
 
-// DEMO/DEV ONLY — PostGIS/OGC backend (qgis.geoleaf.dev) for the "Guyane" profile.
-// Configures the Connector so reads (demo_qgis) and writes (addpoi/editor) carry the
-// bearer token. Guarded to localhost/127.0.0.1 so this dev JWT NEVER activates on a
-// deployed origin (e.g. demo.geoleaf.dev). Production = real login flow via
-// GeoLeaf.Connector.configure({ auth: { endpoint } }) that issues a per-user token.
-if (window.GeoLeaf?.Connector && /^(127\.0\.0\.1|localhost)$/.test(location.hostname)) {
-    await GeoLeaf.Connector.configure({
-        baseUrl: 'https://qgis.geoleaf.dev',
-        // eslint-disable-next-line no-secrets/no-secrets -- dev-only JWT, localhost-guarded, exp ~30d
-        getToken: async () => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiZ2VvbGVhZl9lZGl0b3IiLCJleHAiOjE3ODMxMTQ2MTF9.lmvZ5VGEjSGm3zw65uGfKkOIFlv_bNFvdox1t_QItmA',
-    });
+// ── DEV-ONLY — Connector bootstrap (auth) ───────────────────────────────────
+// Loads an optional, git-ignored local file `connector.local.js` that defines
+// `window.GEOLEAF_DEV_CONNECTOR = { baseUrl, getToken }` (a dev JWT for the demo
+// PostGIS/PostgREST backend). Used to attach the bearer on authenticated reads
+// (private feature) and addpoi/editor writes when testing locally.
+// Double safety: the token lives ONLY in the git-ignored file (never in this
+// committed script), AND activation is restricted to localhost/127.0.0.1 so it
+// never runs on a deployed origin. Template: connector.local.example.js.
+// Production must use a real login flow (Connector `auth.endpoint`).
+if (/^(127\.0\.0\.1|localhost)$/.test(location.hostname)) {
+    try {
+        await import('./connector.local.js');
+    } catch (_e) {
+        /* no local dev connector configured — fine */
+    }
+    if (window.GEOLEAF_DEV_CONNECTOR && window.GeoLeaf?.Connector?.configure) {
+        try {
+            await GeoLeaf.Connector.configure(window.GEOLEAF_DEV_CONNECTOR);
+        } catch (e) {
+            console.warn('[GeoLeaf] Connector dev config failed:', e);
+        }
+    }
 }
 
 // Bootstrap GeoLeaf

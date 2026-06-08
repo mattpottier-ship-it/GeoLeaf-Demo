@@ -6,7 +6,8 @@
             "type": "maplibre",
             "style": "https://data.geopf.fr/annexes/ressources/vectorTiles/styles/PLAN.IGN/standard.json",
             "attribution": "© IGN France — Geoportail",
-            "defaultBasemap": true
+            "defaultBasemap": true,
+            "offline": true
         },
         "positron": {
             "id": "positron",

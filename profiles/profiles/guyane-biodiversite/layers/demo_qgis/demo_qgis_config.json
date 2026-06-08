@@ -7,13 +7,10 @@
     "geometry": "point",
     "data": {
         "directory": "data",
-        "licence": "Démo GeoLeaf — PostGIS diffusé via API OGC (qgis.geoleaf.dev)",
-        "ogcApi": {
-            "url": "https://qgis.geoleaf.dev/demo_qgis",
-            "headers": {
-                "Accept": "application/geo+json"
-            },
-            "autoRefresh": false
+        "licence": "Démo GeoLeaf — PostGIS via PostgREST (qgis.geoleaf.dev)",
+        "dataUrl": "https://qgis.geoleaf.dev/demo_qgis",
+        "headers": {
+            "Accept": "application/geo+json"
         }
     },
     "enableEdition": true,

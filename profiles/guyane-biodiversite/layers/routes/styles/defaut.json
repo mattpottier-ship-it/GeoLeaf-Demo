@@ -5,11 +5,8 @@
         "defaultZoom": 12
     },
     "style": {
-        "type": "line",
-        "paint": {
-            "line-color": "#e76f51",
-            "line-width": 2,
-            "line-opacity": 0.85
-        }
+        "color": "#e76f51",
+        "weight": 2,
+        "opacity": 0.85
     }
 }
