@@ -253,6 +253,52 @@
         initLangSelector();
     }
 
+    // ============================================================
+    // 5) Popup action buttons demo (type:"action")
+    //    Wires a handler for the "demo:fiche-backend" button configured
+    //    in profiles/tourism/layers/sites_rosario — illustrates both
+    //    the event channel and the rich await-able handler registry.
+    // ============================================================
+    function registerDemoPopupActions() {
+        var GeoLeaf = window.GeoLeaf;
+        if (!GeoLeaf || !GeoLeaf.Popup || typeof GeoLeaf.Popup.registerActionHandler !== 'function') {
+            return false;
+        }
+
+        // (a) Loosely-coupled listener — fires for every popup action.
+        if (GeoLeaf.events && typeof GeoLeaf.events.on === 'function') {
+            GeoLeaf.events.on('geoleaf:popup:action', function (e) {
+                DemoLog.info('[Demo] event geoleaf:popup:action', e.detail);
+            });
+        }
+
+        // (b) Rich handler — busy state + popup close. A real handler would
+        //     open a backend form / POST to Odoo with a CSRF token here.
+        GeoLeaf.Popup.registerActionHandler('demo:fiche-backend', function (ctx) {
+            DemoLog.info('[Demo] handler demo:fiche-backend — payload:', ctx.properties, 'featureId:', ctx.featureId);
+            return new Promise(function (resolve) {
+                // Simulated backend latency — the button shows its busy state meanwhile.
+                setTimeout(function () {
+                    var titre = (ctx.properties && ctx.properties.title) || ctx.featureId || 'POI';
+                    alert(
+                        '✅ Action démo « ' + titre + ' »\n\n' +
+                        'Ici un vrai handler ouvrirait un formulaire backend (Odoo), ferait un POST, etc.\n' +
+                        'Le bouton est resté en état "busy" pendant le traitement.'
+                    );
+                    ctx.close();
+                    resolve();
+                }, 800);
+            });
+        });
+
+        DemoLog.info('[Demo] Popup action handler registered (demo:fiche-backend)');
+        return true;
+    }
+
+    if (!registerDemoPopupActions()) {
+        document.addEventListener('geoleaf:app:ready', registerDemoPopupActions, { once: true });
+    }
+
     DemoLog.info('[Demo] Demo extensions loaded');
 
 })();

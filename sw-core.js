@@ -32,7 +32,7 @@
 // In production, all SW console.log calls are removed at build time via terser
 const _SW_DEBUG = typeof true !== "undefined" ? true : false;
 
-const CACHE_VERSION = "geoleaf-v3.0.0-1780937025734";
+const CACHE_VERSION = "geoleaf-v3.0.0-1781028835987";
 const CACHE_STATIC = `${CACHE_VERSION}-static`;
 const CACHE_PROFILE_PREFIX = `${CACHE_VERSION}-profile-`;
 const CACHE_TILES = `${CACHE_VERSION}-tiles`;
@@ -40,7 +40,7 @@ const CACHE_RUNTIME = `${CACHE_VERSION}-runtime`;
 
 // Core assets to pre-cache — injected by build-deploy.cjs at build time
 const STATIC_ASSETS = [
-    "index.html", "dist/geoleaf.esm.js?v=1780937025841", "dist/geoleaf-main.min.css?v=1780937025841"
+    "index.html", "dist/geoleaf.esm.js?v=1781028836081", "dist/geoleaf-main.min.css?v=1781028836081"
 ];
 
 // URLs to never cache

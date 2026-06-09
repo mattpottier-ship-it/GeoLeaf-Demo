@@ -1,7 +1,7 @@
 {
   "_bundleVersion": "1.0",
   "_profileId": "tourism",
-  "_generatedAt": 1780937025802,
+  "_generatedAt": 1781028836043,
   "taxonomy": {
     "icons": {
       "spriteUrl": "profiles/tourism/icons/sprite_tourism.svg",
@@ -1195,6 +1195,27 @@
             "type": "text",
             "label": "Statut",
             "field": "properties.statut"
+          },
+          {
+            "type": "action",
+            "actionId": "demo:fiche-backend",
+            "label": "Ouvrir la fiche (démo)",
+            "variant": "primary",
+            "order": 98,
+            "confirm": "Lancer l'action de démonstration ?",
+            "payloadFields": [
+              "title",
+              "adresse",
+              "statut"
+            ]
+          },
+          {
+            "type": "action",
+            "actionId": "demo:site-web",
+            "label": "Site web",
+            "variant": "secondary",
+            "order": 99,
+            "href": "https://geoleaf.dev"
           }
         ]
       },
